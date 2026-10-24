@@ -2,7 +2,7 @@
  * Apocalypse Run War Room | independent frontend enhancement pack.
  * Uses existing public payload only. No backend, season, or DB changes.
  */
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import maplibregl, { type GeoJSONSource, type Map as MapLibreMap, type Marker as MapLibreMarker } from 'maplibre-gl';
 import { cellToBoundary, cellToLatLng, isValidCell } from 'h3-js';
