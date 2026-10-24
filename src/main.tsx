@@ -13,7 +13,6 @@ type FactionScore={id:Faction;score:number;ownedCells:number;players?:number};
 type Payload={schemaVersion:number;asOf:string;war:{factions:FactionScore[];players:{total:number;active24h:number};discoveredCells:number;contestedCells:number};season:{number:number;startsAt:string;endsAt:string;factions:FactionScore[];leader?:Faction|null}|null;events:WarEvent[];cells:Territory[]};
 const API=import.meta.env.VITE_PUBLIC_WAR_API as string|undefined;
 const EMPTY:Payload={schemaVersion:1,asOf:'',war:{factions:[{id:'HUMAN',score:0,ownedCells:0},{id:'ZOMBIE',score:0,ownedCells:0}],players:{total:0,active24h:0},discoveredCells:0,contestedCells:0},season:null,events:[],cells:[]};
-const name=(f:Faction)=>f==='HUMAN'?'RESISTÊNCIA':'HORDA';
 const number=(v:number)=>new Intl.NumberFormat('pt-BR').format(v);
 function validate(data:unknown):Payload {if(!data||typeof data!=='object')throw Error('Resposta inválida');const p=data as Payload;if(p.schemaVersion!==1||!p.war||!Array.isArray(p.war.factions)||!Array.isArray(p.events)||!Array.isArray(p.cells))throw Error('Contrato incompatível');return p;}
 function WorldMap({cells}:{cells:Territory[]}){
