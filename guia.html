@@ -35,7 +35,7 @@ main{max-width:1380px;margin:auto;padding:0 36px}.kicker{color:#89c7a3;font-size
   <header class="site-header">
     <div class="header-inner">
       <a class="wordmark" href="./" aria-label="Voltar à Sala de Guerra"><span class="logo-symbol" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="M20 3 35 11.5V28.5L20 37 5 28.5V11.5L20 3Z" stroke="currentColor" stroke-width="1.6"/><path d="M20 9v22M9 20h22" stroke="currentColor" stroke-width="1.4"/><circle cx="20" cy="20" r="5.5" fill="currentColor"/></svg></span><span><span class="wordmark-top">APOCALYPSE <b>RUN</b></span><small>PROTOCOLO DE CAMPO</small></span></a>
-      <div class="header-utility"><span class="live-pip" aria-hidden="true"></span><span class="header-version" id="headerVersion">GUIA 0.15.0</span><a class="return-link" href="./" title="Voltar para a Sala de Guerra"><span class="return-text">Sala de Guerra</span><span aria-hidden="true">↗</span></a></div>
+      <div class="header-utility"><span class="live-pip" aria-hidden="true"></span><span class="header-version" id="headerVersion">GUIA 0.15.1</span><a class="return-link" href="./" title="Voltar para a Sala de Guerra"><span class="return-text">Sala de Guerra</span><span aria-hidden="true">↗</span></a></div>
     </div>
   </header>
 
@@ -75,7 +75,7 @@ main{max-width:1380px;margin:auto;padding:0 36px}.kicker{color:#89c7a3;font-size
 
     <section class="last-call" aria-labelledby="lastCallTitle"><span class="kicker">REDE DE SOBREVIVÊNCIA</span><h2 id="lastCallTitle">O caminho está lá fora.</h2><p>Quando terminar, volte à Sala de Guerra para observar o mundo que está ajudando a construir.</p><div class="last-call-actions"><a href="./" class="primary-cta">Abrir Sala de Guerra <span aria-hidden="true">↗</span></a><button class="quiet-cta" type="button" id="openGlossary">Glossário rápido <span aria-hidden="true">＋</span></button></div></section>
   </main>
-  <footer class="site-footer"><div><strong>APOCALYPSE RUN</strong><span>GUIA DE CAMPO • VERSÃO ALPHA</span></div><div class="footer-meta"><span id="footerVersion">Base 0.15.0 · build 88</span><span id="footerReview">Covil verificado em 26/10/2026</span><span>Material público. Sem dados pessoais.</span></div></footer>
+  <footer class="site-footer"><div><strong>APOCALYPSE RUN</strong><span>GUIA DE CAMPO • VERSÃO ALPHA</span></div><div class="footer-meta"><span id="footerVersion">Base 0.15.1 · build 92</span><span id="footerReview">Covil verificado em 26/10/2026</span><span>Material público. Sem dados pessoais.</span></div></footer>
 
   <dialog id="glossaryDialog" class="glossary-dialog" aria-labelledby="glossaryTitle"><div class="glossary-head"><div><span class="kicker">REFERÊNCIA RÁPIDA</span><h2 id="glossaryTitle">Dicionário da guerra</h2></div><button type="button" class="close-dialog" id="closeGlossary" aria-label="Fechar glossário">✕</button></div><div class="glossary-list" id="glossaryList"></div><div class="glossary-footer"><button type="button" id="closeGlossaryBottom">Voltar ao tutorial</button></div></dialog>
   <script type="module">
@@ -83,14 +83,14 @@ main{max-width:1380px;margin:auto;padding:0 36px}.kicker{color:#89c7a3;font-size
  * APOCALYPSE RUN • GUIA DE CAMPO
  * Fonte de verdade: docs/covil-de-memorias.md no repositório PRIVADO
  * danielmvr/apocalypse-run-android. Revisar o Covil antes de publicar alterações.
- * Snapshot validado: 26/10/2026; Android 0.15.0/build 88.
+ * Snapshot validado: 26/10/2026; Android 0.15.1/build 92.
  * Guia público: não copiar códigos de convite, H3 reais, tokens ou relatórios privados.
  */
 const GUIDE_META = {
   name: 'Guia de Campo',
-  appVersion: '0.15.0', build: 88, reviewedAt: '26/10/2026',
-  source: 'Covil de Memórias, app Android e documentação de Energia 2.0',
-  sourceCommit: 'a49f09a9bd6eb66b7cec098f33f70d1f88bbc4d7',
+  appVersion: '0.15.1', build: 92, reviewedAt: '26/10/2026',
+  source: 'Covil de Memórias, Android e antifraude de patrulhas mistas (0.15.1)',
+  sourceCommit: '13bc0023ce568b6260f3e84bd8f6a01f6208db05',
   download: 'https://github.com/danielmvr/apocalypse-run-downloads/releases/download/alpha-debug-latest/app-debug.apk',
   changelog: 'https://github.com/danielmvr/apocalypse-run-downloads/releases/tag/alpha-debug-latest',
   warRoom: './',
@@ -103,11 +103,11 @@ const CHAPTERS = [
     where:'Android · instalação do APK', icon:'download',
     steps:[
       ['Garanta seu convite', 'O acesso online está em testes e usa um código individual, de uso único e com validade. Peça-o ao responsável pela Alpha; o APK sozinho não libera sua conta.'],
-      ['Baixe o aplicativo', 'Use o canal público oficial de APKs e abra o arquivo no seu Android. Se o sistema pedir confirmação para instalar um APK dessa origem, examine a solicitação antes de prosseguir.'],
+      ['Baixe o aplicativo', 'Use o canal público oficial de APKs e abra o arquivo no seu Android. A versão publicada nesta revisão é a 0.15.1/build 92. O mesmo link recebe novas versões; confirme a versão mostrada no canal oficial. Se o Android pedir confirmação para instalar o APK, examine a solicitação antes de prosseguir.'],
       ['Abra o jogo', 'A primeira tela apresenta as facções. O jogo não exige criar senha ou informar e-mail para entrar na Alpha. O cadastro online acontecerá dentro do aplicativo.'],
     ],
     sport:{ title:'O que você precisa fazer', lead:'Instalar, ter o convite em mãos e abrir o aplicativo. Não há nenhum ajuste de estratégia necessário agora.', focus:['Convite e instalação são etapas diferentes.', 'Se já instalou, avance para a escolha da facção.']},
-    tactical:{title:'Antes de começar',lead:'Confirme a versão instalada e preserve a instalação durante os testes.',focus:['O link é sempre atualizado para o APK mais recente.', 'A identidade da Alpha está vinculada à instalação. Evite limpar os dados ou desinstalar antes de confirmar uma forma de recuperar o acesso.', 'Uma atualização do APK deve ser instalada por cima da anterior quando compatível.']},
+    tactical:{title:'Antes de começar',lead:'Confirme a versão instalada e preserve a instalação durante os testes.',focus:['O link oficial é atualizado com novos APKs; confira versão e build no canal de distribuição. Na revisão deste guia, 0.15.1/build 92.', 'A identidade da Alpha está vinculada à instalação. Evite limpar os dados ou desinstalar antes de confirmar uma forma de recuperar o acesso.', 'Uma atualização do APK deve ser instalada por cima da anterior quando compatível.']},
     note:'Distribuição Alpha Android. Não é um cadastro público aberto nem um aplicativo já lançado na Play Store.',
     faq:[['Preciso de um e-mail ou senha?', 'Não para este fluxo. A Alpha cria uma sessão autenticada internamente e vincula seu convite e apelido à identidade desta instalação.'],['Posso usar o mesmo convite de outra pessoa?', 'Não. Os convites são individuais e de uso único.']],
     source:'Covil: distribuição pública de APK · docs/online-api-v1.md'
@@ -153,9 +153,9 @@ const CHAPTERS = [
       ['Escolha um percurso seguro', 'Prefira uma caminhada a pé em local permitido e seguro, sem precisar mexer no telefone durante o movimento.'],
     ],
     sport:{title:'Simples assim',lead:'Dê as permissões necessárias para o GPS, guarde o celular e faça sua caminhada. O jogo acompanha o percurso e avalia o movimento.',focus:['A distância válida pode ser menor do que a distância total percorrida.', 'Pequenas pausas não exigem comandos estratégicos.']},
-    tactical:{title:'Como o movimento é analisado',lead:'GPS, velocidade, precisão e sensores disponíveis ajudam o sistema a distinguir deslocamentos elegíveis de trechos incertos.',focus:['O limite conservador atual é 9 km/h. Corrida mais rápida não deve ser presumida como válida para conquistas territoriais.', 'Suspeita de veículo, localização simulada e requalificação podem impedir influência online.', 'Sensores complementam, mas não substituem o GPS na distância.']},
-    note:'Não use o aplicativo enquanto dirige nem tente fazer o jogo contabilizar deslocamentos de moto ou carro.',
-    faq:[['Por que alguns metros não contam?', 'O filtro descarta ou suspende trechos com qualidade GPS insuficiente, saltos e velocidades suspeitas. Isso protege a justiça da guerra territorial.']],
+    tactical:{title:'Como o movimento é analisado',lead:'GPS, velocidade, precisão e sensores disponíveis ajudam o sistema a distinguir deslocamentos elegíveis de trechos incertos.',focus:['O limite conservador atual é 9 km/h. Corrida mais rápida não deve ser presumida como válida para conquistas territoriais.', 'Trechos de deslocamento não pedestre ou com GPS incerto podem ser descartados. Na 0.15.1, uma suspeita isolada não elimina automaticamente os trechos de caminhada comprovados; adulteração de localização ou prova contraditória seguem sujeitas a bloqueio.', 'Sensores complementam, mas não substituem o GPS na distância.']},
+    note:'Use a patrulha para caminhada ou corrida a pé elegível, nunca para deslocamento não pedestre, como carro, ônibus, moto, bicicleta, patinete, skate ou patins. O GPS analisa evidências e pode não reconhecer o meio de deslocamento com certeza.',
+    faq:[['Por que alguns metros não contam?', 'Trechos com sinal impreciso, saltos GPS, velocidades incompatíveis ou retomada sem evidência são descartados. Se houver caminhada comprovada antes ou depois, ela pode continuar válida, desde que cumpra os limites do jogo.']],
     source:'Covil: movimento multissensor · docs/multisensor-motion.md · ApocalypseApp.kt'
   },
   {
@@ -198,11 +198,11 @@ const CHAPTERS = [
       ['Acompanhe quando quiser', 'A tela mostra distância válida, tempo, estado do GPS, células observadas e possíveis alertas. Não é preciso tocar nos hexágonos.'],
       ['Finalize ao terminar', 'Ao concluir a caminhada, toque em “ENCERRAR PATRULHA”. O aplicativo prepara o resumo e o envio conforme a autorização.'],
     ],
-    sport:{title:'Seu objetivo é caminhar',lead:'Use o jogo como companhia. Comece, guarde o telefone, caminhe de verdade e encerre. A avaliação territorial e as operações automáticas acontecem pelo sistema quando houver condições.',focus:['Meta inicial prática: superar 500 m válidos e 5 min móveis.', 'Não tente compensar o GPS caminhando com o telefone na mão.', 'Trechos pausados ou suspeitos podem não ser creditados.']},
-    tactical:{title:'Um trajeto também é uma decisão',lead:'Você pode preparar uma operação antes de sair e direcionar o percurso a estruturas conhecidas de forma segura.',focus:['Uma patrulha territorial elegível precisa de ≥500 m aceitos e ≥300 s móveis, sem vetos de veículo/mock/requalificação.', 'Para uma célula contribuir, é necessário registro territorial qualificado: ≥50 m e ≥4 segmentos nela.', 'O servidor pode reconhecer até seis células por patrulha e respeita o limite de contribuição por jogador/célula/dia UTC.', 'Operações de Energia e recompensas só são avaliadas conforme a elegibilidade real e o estado atual da área.']},
+    sport:{title:'Seu objetivo é caminhar',lead:'Use o jogo como companhia. Comece, guarde o telefone, caminhe de verdade e encerre. A avaliação territorial e as operações automáticas acontecem pelo sistema quando houver condições.',focus:['Meta inicial prática: superar 500 m válidos e 5 min móveis.', 'Não tente compensar o GPS caminhando com o telefone na mão.', 'Trechos suspeitos não são creditados, mas trechos a pé comprovados antes e depois deles podem continuar elegíveis.']},
+    tactical:{title:'Um trajeto também é uma decisão',lead:'Você pode preparar uma operação antes de sair e direcionar o percurso a estruturas conhecidas de forma segura.',focus:['Uma patrulha territorial exige ≥500 m GPS aceitos e ≥300 s de movimento comprovado por evidências consistentes. Trechos descartados não somam; uma ocorrência isolada de deslocamento não pedestre não veta toda a patrulha. Localização simulada comprovada, adulteração ou prova contraditória seguem impedimentos.', 'Para uma célula contribuir, é necessário registro territorial qualificado: ≥50 m e ≥4 segmentos nela.', 'O servidor pode reconhecer até seis células por patrulha e respeita o limite de contribuição por jogador/célula/dia UTC. Uma mudança de sinal ou pausa não autoriza traçar uma reta entre os trechos válidos.', 'Operações de Energia e recompensas só são avaliadas conforme a elegibilidade real e o estado atual da área.']},
     note:'Não existe ganho garantido só por iniciar GPS. Faça o trajeto sempre de maneira segura e dentro dos limites de acesso público.',
-    faq:[['Posso correr?', 'O jogo acompanha atividade física, mas o filtro territorial publicado ainda usa limite conservador de 9 km/h. Corrida rápida pode ficar fora da distância elegível.'],['O app detecta passos?', 'Quando disponíveis, passos e acelerômetro ajudam a análise. A distância continua vindo do GPS.']],
-    source:'Covil: progressão e validação GPS · docs/online-api-v1.md · ApocalypseApp.kt'
+    faq:[['Posso correr?', 'O jogo acompanha atividade física, mas o filtro territorial publicado ainda usa limite conservador de 9 km/h. Corrida rápida pode ficar fora da distância elegível.'],['O app detecta passos?', 'Quando disponíveis, passos e acelerômetro ajudam a análise. A distância continua vindo do GPS.'],['Já posso patrulhar sem celular usando smartwatch?', 'Ainda não. A integração com relógios/Health Connect está apenas em estudo; não há importação de treinos habilitada nem pontuação territorial por atividades registradas só no relógio.']],
+    source:'Covil: antifraude-patrulhas-mistas.md · docs/mixed-patrol-antifraud.md · ApocalypseApp.kt'
   },
   {
     id:'resultado',part:'SUA PRIMEIRA PATRULHA',number:'08',time:'2 MIN',title:'Entenda o debriefing',
@@ -210,14 +210,14 @@ const CHAPTERS = [
     where:'PATRULHA → DEBRIEFING / ÚLTIMA PATRULHA',icon:'activity',
     steps:[
       ['Leia sua distância válida', 'Confira metros aceitos, tempo, ritmo em movimento e as estatísticas mostradas no relatório.'],
-      ['Confira o estado online', 'Na REDE DE CAMPO, veja quantas patrulhas foram enviadas e quantas aguardam sincronização.'],
+      ['Confira confirmação, pendência ou recusa', 'No DEBRIEFING, uma patrulha pode estar aguardando confirmação do servidor, confirmada com número de contribuições ou com envio recusado. Na REDE DE CAMPO, confira os envios pendentes. Registrar uma atividade não garante influência territorial.'],
       ['Explore o cartão da atividade', 'Você pode gerar um cartão visual com estatísticas e trajeto validado. Revise a prévia e a proteção dos extremos antes de compartilhar.'],
     ],
-    sport:{title:'O resumo é seu registro de progresso',lead:'Mesmo quando uma caminhada não altera o mundo, você pode consultar o que o GPS aceitou e acompanhar sua evolução.',focus:['A atividade curta pode ficar salva sem liberar pontos ou Energia.', 'O debriefing diferencia ganhos locais e créditos online confirmados.', 'Compartilhar o cartão é opcional.']},
-    tactical:{title:'Interprete o recibo do servidor',lead:'Não confunda ter enviado com ter conquistado um território. A aceitação e a elegibilidade são verificações distintas.',focus:['“Enviada” indica processamento/registro; a influência exige os critérios territoriais.', 'O relatório de Energia distingue produção, crédito, perda pelo teto e gasto real.', 'Um mesmo UUID reenviado não cria influência duplicada; dados offline são conciliados ao conectar.']},
-    note:'Se faltar internet, o sistema pode guardar a patrulha autorizada e sincronizar depois. Isso não significa que a facção já recebeu os pontos.',
-    faq:[['Distância no debriefing menor que no relógio?', 'O Apocalypse Run usa a distância GPS aceita por seus próprios filtros. O telefone e outros relógios podem usar critérios diferentes.']],
-    source:'Covil: atividade/compartilhamento · docs/activity-sharing.md · online-api-v1.md'
+    sport:{title:'O resumo é seu registro de progresso',lead:'Mesmo quando uma caminhada não altera o mundo, você pode consultar o que o GPS aceitou e acompanhar sua evolução.',focus:['A atividade curta pode ficar salva sem liberar pontos ou Energia.', 'O debriefing diferencia ganhos locais, carteira online e contribuições confirmadas pelo servidor.', 'Compartilhar o cartão é opcional.']},
+    tactical:{title:'Interprete o recibo do servidor',lead:'Não confunda ter enviado com ter conquistado um território. A aceitação e a elegibilidade são verificações distintas.',focus:['Um ACK de envio não significa necessariamente uma contribuição: confira o estado confirmado e o número de contribuições do servidor.', 'O relatório de Energia distingue produção, crédito, perda pelo teto e gasto real.', 'Um mesmo UUID reenviado não cria influência duplicada; dados offline aguardam confirmação e são conciliados ao conectar. Trechos sem evidência consistente podem receber ACK sem contribuição.']},
+    note:'NOVO NA 0.15.1: uma suspeita isolada não descarta a caminhada comprovada. Recuperações históricas já feitas reconheceram somente direitos pessoais demonstráveis; não refizeram ataques, missões, biologia nem placares de temporadas anteriores.',
+    faq:[['Distância no debriefing menor que no relógio?', 'O Apocalypse Run usa a distância GPS aceita por seus próprios filtros. O telefone e outros relógios podem usar critérios diferentes.'],['E se o GPS registrar um trecho suspeito entre duas caminhadas?', 'A versão 0.15.1 pode manter as partes comprovadas antes e depois. Os trechos descartados não somam, e a validação final depende da evidência enviada ao servidor.'],['As patrulhas antigas ganharam territórios retroativos?', 'Não. A reconciliação administrativa reconheceu apenas direitos pessoais comprováveis, sem reconstruir resultados de guerra passados.']],
+    source:'Covil: antifraude-patrulhas-mistas.md · docs/mixed-patrol-antifraud.md · docs/activity-sharing.md'
   },
   {
     id:'controle',part:'DOMINE O MUNDO',number:'09',time:'4 MIN',title:'Como sua caminhada move a guerra',
@@ -316,8 +316,10 @@ const GLOSSARY = [
   ['Convite Alpha','Código individual e de uso único que permite vincular a identidade ao mundo compartilhado.'],
   ['Facção','O lado real do jogador: Resistência (humanos) ou Horda (zumbis).'],
   ['Esportista / Estrategista','Dois jeitos de aprender e participar, não são duas contas ou classes obrigatórias.'],
-  ['Patrulha','Atividade real registrada pelo GPS e submetida às regras de validação.'],
-  ['Distância válida','Metros aceitos pelo filtro do próprio jogo. Não é a distância bruta do telefone.'],
+  ['Patrulha','Atividade real registrada pelo GPS e submetida às regras de validação. Um envio recebido não garante influência no mundo.'],
+  ['Distância válida','Metros aceitos pelo filtro GPS do jogo. Trechos descartados não somam, mas não necessariamente anulam o restante comprovado.'],
+  ['Deslocamento não pedestre','Movimento que não corresponde à caminhada/corrida a pé prevista no jogo, inclusive com transporte ou equipamentos de locomoção. O GPS não identifica com certeza todos os meios.'],
+  ['Patrulha mista','Atividade com trechos GPS elegíveis e trechos descartados. Na 0.15.1, segmentos comprovados podem continuar válidos sem crédito aos trechos rejeitados.'],
   ['H3 / hexágono','Célula geográfica usada para descoberta, influência e disputa territorial.'],
   ['Influência / controle','Valor do território de 0 a 1000, alterado pelo servidor após evidência elegível.'],
   ['Energia online','Carteira validada pelo servidor; distinta do saldo legado local.'],
@@ -372,20 +374,26 @@ function renderProgress(){
 }
 
 function showEligibilityTool(){
- return `<section class="eligibility-demo" aria-labelledby="demoTitle"><span class="demo-label">SIMULAÇÃO DE TREINO · NÃO ENVIA DADOS</span><h4 id="demoTitle">Sua patrulha passaria pelo básico?</h4><p>Experimente valores fictícios. Isso é uma conferência educativa dos requisitos gerais, não um resultado do servidor.</p><div class="demo-inputs"><label>Metros GPS aceitos<input id="demoMeters" type="number" min="0" max="200000" inputmode="numeric" value="620" /></label><label>Segundos em movimento<input id="demoSeconds" type="number" min="0" max="100000" inputmode="numeric" value="380" /></label></div><label class="demo-vehicle"><input id="demoIncident" type="checkbox" /> Houve um episódio impeditivo (veículo ou GPS simulado)</label><div class="demo-result" id="demoResult" role="status"></div><p class="demo-disclaimer">Ainda é necessário ter evidência válida por célula H3 (≥50 m e 4 segmentos), ausência de demais vetos e confirmação oficial da API. O simulador não altera o jogo.</p></section>`;
+ return `<section class="eligibility-demo" aria-labelledby="demoTitle"><span class="demo-label">SIMULAÇÃO DE TREINO · NÃO ENVIA DADOS</span><h4 id="demoTitle">Sua patrulha passaria pelo básico?</h4><p>Informe apenas os metros e segundos de caminhada comprovada, excluindo trechos descartados. Valores fictícios não substituem a análise do servidor.</p><div class="demo-inputs"><label>Metros GPS aceitos<input id="demoMeters" type="number" min="0" max="200000" inputmode="numeric" value="620" /></label><label>Segundos de movimento comprovado<input id="demoSeconds" type="number" min="0" max="100000" inputmode="numeric" value="380" /></label></div><label class="demo-vehicle"><input id="demoIncident" type="checkbox" /> Houve trecho descartado ou suspeito no percurso</label><label class="demo-vehicle"><input id="demoMock" type="checkbox" /> Há localização simulada comprovada ou prova de movimento contraditória</label><div class="demo-result" id="demoResult" role="status"></div><p class="demo-disclaimer">Uma suspeita isolada não zera a caminhada válida. Ainda são necessárias evidências consistentes por célula H3 (≥50 m e ≥4 segmentos), precisão, ausência de outros bloqueios e confirmação oficial. O simulador não altera o jogo.</p></section>`;
 }
 function updateEligibility(){
  const out=$('demoResult');if(!out)return;
  const m=Math.max(0,Number($('demoMeters').value)||0);
  const s=Math.max(0,Number($('demoSeconds').value)||0);
- const incident=$('demoIncident').checked;
- const basic=m>=500&&s>=300&&!incident;
+ const hasDiscarded=$('demoIncident').checked;
+ const hasBlock=$('demoMock').checked;
+ const basic=m>=500&&s>=300&&!hasBlock;
  out.classList.toggle('bad',!basic);
  const reasons=[];
- if(m<500)reasons.push('precisa de mais metros válidos');
- if(s<300)reasons.push('precisa de mais tempo em movimento');
- if(incident)reasons.push('há episódio impeditivo');
- out.innerHTML=basic?'<strong>✓ Critérios gerais atendidos.</strong> O servidor ainda verificará as demais evidências e condições territoriais.':`<strong>• Ainda não atende ao básico.</strong> ${enc(reasons.join(' · '))}.`;
+ if(m<500)reasons.push('faltam metros GPS válidos');
+ if(s<300)reasons.push('falta movimento elegível comprovado');
+ if(hasBlock)reasons.push('a evidência simulada/contraditória bloqueia a avaliação');
+ if(basic){
+   const note=hasDiscarded?' Há trecho descartado, mas isso não anula automaticamente os segmentos comprovados.':'';
+   out.innerHTML='<strong>✓ Mínimos de distância e tempo atendidos.</strong>'+note+' O servidor ainda precisa validar toda a evidência territorial.';
+ }else{
+   out.innerHTML=`<strong>• Ainda não atende ao básico.</strong> ${enc(reasons.join(' · '))}.`;
+ }
 }
 
 function renderChapter(){
@@ -402,7 +410,7 @@ function renderChapter(){
  const done=completed.has(c.id);$('completeChapter').classList.toggle('is-done',done);
  $('completeChapter').innerHTML=done?'✓ Etapa concluída':'Marcar como concluído <span aria-hidden="true">✓</span>';
  if(c.id==='patrulha'){
-   for(const id of ['demoMeters','demoSeconds','demoIncident'])$(id)?.addEventListener('input',updateEligibility);
+   for(const id of ['demoMeters','demoSeconds','demoIncident','demoMock'])$(id)?.addEventListener('input',updateEligibility);
    updateEligibility();
  }
 }
