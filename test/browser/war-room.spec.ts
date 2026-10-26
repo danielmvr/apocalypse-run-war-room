@@ -63,12 +63,36 @@ test('expired season is unavailable if the API still returns the previous week',
   await expect(page.locator('.season-line strong')).toHaveText(['--', '--']);
 });
 
-test('API outage keeps the last territorial snapshot and reports the error', async ({ page }) => {
+test('API outage identifies previous data and reading time on mobile/desktop, then recovers', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 900 });
   await page.goto('test/browser/harness.html');
   await expect(page.locator('.score.human .score-main')).toContainText('950');
+  await expect(page.locator('.live')).toHaveClass('live online');
+  const previousTime = await page.locator('.timestamp').textContent();
   await page.route('**/public-war-fixture', route => route.fulfill({ status: 503, json: { error: 'Data unavailable' } }));
   await page.getByRole('button', { name: 'Atualizar', exact: true }).click();
-  await expect(page.locator('.sync')).toContainText('Indisponível: HTTP 503');
+  for (const width of [390, 1440]) {
+    await page.setViewportSize({ width, height: 900 });
+    const warning = page.getByRole('status').filter({ hasText: 'dados anteriores' });
+    await expect(warning).toBeVisible();
+    await expect(warning).toContainText('Falha na atualização');
+    await expect(warning).toContainText(previousTime!);
+    await expect(page.locator('.live')).not.toHaveClass(/online/);
+    await expect(page.locator('.score.human .score-main')).toContainText('950');
+    await expect(page.locator('.season-line strong')).toHaveText(['25', '10']);
+    if (width === 390) {
+      await expect(page.locator('.ar-site-marker')).toHaveCount(6);
+      await page.clock.resume();
+      await page.waitForFunction(() => !(window as any).warMap.isMoving());
+      await page.screenshot({ path: '.qa/war-room-mobile-stale.png', fullPage: true });
+    }
+  }
+  await page.setViewportSize({ width: 390, height: 900 });
+  await page.route('**/public-war-fixture', route => route.fulfill({ json: { ...payload(), asOf: '2026-10-25T21:01:00Z' } }));
+  await page.getByRole('button', { name: 'Atualizar', exact: true }).click();
+  await expect(page.locator('.sync')).toContainText('Atualizado');
+  await expect(page.locator('.timestamp--warning')).toHaveCount(0);
+  await expect(page.locator('.live')).toHaveClass('live online');
   await expect(page.locator('.score.human .score-main')).toContainText('950');
 });
 
@@ -80,6 +104,9 @@ test('all six pin tips meet H3 centers through zoom, desktop/mobile resize, filt
   await page.waitForFunction(() => !(window as any).warMap.isMoving());
   for (const width of [1440, 390, 320]) {
     await page.setViewportSize({ width, height: 900 });
+    const credit = page.locator('footer').getByRole('link', { name: '© OpenStreetMap contributors · ODbL' });
+    await expect(credit).toBeVisible();
+    await expect(credit).toHaveAttribute('href', 'https://www.openstreetmap.org/copyright');
     for (const zoom of [9, 13, 16]) {
       await page.evaluate(zoom => (window as any).warMap.jumpTo({ center: [0, 0], zoom }), zoom);
       await page.waitForFunction(() => !(window as any).warMap.isMoving());

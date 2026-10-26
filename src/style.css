@@ -3,3 +3,7 @@
 
 .filters button{min-height:44px;min-width:44px}.filters button:focus-visible,.sync button:focus-visible{outline:2px solid #d9ffe9;outline-offset:3px}.filters{flex-wrap:wrap}.sync button{min-width:44px;min-height:44px;justify-content:center;align-items:center}.season-status{font-size:12px;line-height:1.6;color:#c6d9ce;margin:15px 0 0}.progress--unavailable{background:#33443d}.progress--unavailable span{visibility:hidden}.fine{line-height:1.7}.score{min-width:0}.score-main{overflow-wrap:anywhere}
 @media(max-width:600px){.shell{padding:0 12px}.score-label{gap:6px;letter-spacing:.7px}.score{padding:16px 10px}.score-main{font-size:38px}.score-foot{line-height:1.6}.war-scores{grid-template-columns:minmax(0,1fr) 24px minmax(0,1fr)}.panel{padding:14px}.map-counter{bottom:32px;left:8px;font-size:10px;padding:6px 8px}.legend{flex-wrap:wrap;row-gap:10px}.filters button{flex:1;padding:10px 8px;font-size:12px}.season-line{font-size:13px}.season-line strong{font-size:30px}.fine{font-size:12px}.headline h2{font-size:32px}.header .eyebrow{letter-spacing:1.3px}.ar-map-viewport .maplibregl-ctrl-group button{width:44px;height:44px}}
+
+footer{flex-wrap:wrap;align-items:center;gap:12px}.map-credit{color:#a7beb0;font-size:11px;line-height:1.6;padding:4px 0;text-underline-offset:3px}.map-credit:focus-visible{outline:2px solid #d9ffe9;outline-offset:3px}
+
+.headline--warning{flex-wrap:wrap;gap:14px}.headline .timestamp--warning{display:block;flex-basis:100%;color:#e8ce9a;font-size:12px;line-height:1.7}.timestamp--warning strong{font-weight:600}
