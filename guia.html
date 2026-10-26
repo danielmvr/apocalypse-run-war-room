@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#081211" />
+  <meta name="description" content="Guia interativo do Apocalypse Run: do primeiro convite à sua primeira patrulha. Jornadas Esportista e Estrategista." />
+  <title>Guia de Campo | Apocalypse Run</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap');
+:root{--bg:#07100f;--surface:#101c1a;--surface2:#172923;--line:#2a4139;--line2:#38584a;--ink:#edf4ed;--muted:#8da69b;--muted2:#607d70;--green:#8ff0b5;--green2:#39b67e;--gold:#ffd49b;--gold2:#d9a458;--red:#f38b80;--font-head:'Barlow Condensed','Arial Narrow',Impact,sans-serif;--font:'DM Sans',system-ui,Arial,sans-serif;scroll-behavior:smooth;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-padding-top:92px}body{margin:0;color:var(--ink);background:var(--bg);font:400 14px/1.6 var(--font);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button,input{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.33}button:focus-visible,a:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--green);outline-offset:4px}::selection{background:#58c18e;color:#07100f}.skip{position:absolute;left:12px;top:-100px;background:var(--green);color:#04120b;padding:10px 16px;z-index:100}.skip:focus{top:12px}
+.ambient-horizon{position:absolute;top:0;right:0;left:0;height:800px;z-index:-1;overflow:hidden;pointer-events:none;background:radial-gradient(ellipse 700px 440px at 66% 14%,#2041378a 0%,transparent 78%),radial-gradient(ellipse 480px 290px at 19% 46%,#1b39284b 0%,transparent 90%),linear-gradient(180deg,#0c1a17 0%,#07100f 96%)}.ambient-horizon:after{content:'';position:absolute;inset:0;opacity:.3;background-image:linear-gradient(#63877717 1px,transparent 1px),linear-gradient(90deg,#63877717 1px,transparent 1px);background-size:74px 74px;mask-image:linear-gradient(#0006,transparent)}.ambient-horizon i{position:absolute;display:block;border:1px solid #507b6242;transform:rotate(30deg);aspect-ratio:1/1;border-radius:30%;width:550px;right:-240px;top:-120px}.ambient-horizon i:nth-child(2){width:740px;right:-330px;top:-220px;border-color:#507b6224}.ambient-horizon i:nth-child(3){width:960px;right:-420px;top:-350px;border-color:#507b6215}
+.site-header{border-bottom:1px solid #3954444f;background:#07110ee9;backdrop-filter:blur(20px);position:sticky;top:0;z-index:20}.header-inner{max-width:1380px;margin:0 auto;padding:14px 36px;display:flex;align-items:center;justify-content:space-between;min-height:78px}.wordmark{display:flex;align-items:center;gap:12px}.logo-symbol{color:var(--green);display:block;width:44px;height:44px}.logo-symbol svg{width:100%;height:100%}.wordmark-top{font:800 23px/1 var(--font-head);letter-spacing:1.9px;display:block}.wordmark-top b{color:var(--green)}.wordmark small{display:block;color:#7d988c;font-size:9px;letter-spacing:2.1px;font-weight:700;margin-top:5px}.header-utility{display:flex;align-items:center;gap:13px}.live-pip{height:7px;width:7px;border-radius:50%;background:var(--green2);box-shadow:0 0 15px #47c881}.header-version{font-size:10px;font-weight:700;letter-spacing:1.6px;color:#abcaba}.return-link{border:1px solid #52786180;background:#163127;color:#b9efd0;border-radius:5px;padding:10px 15px;font-weight:800;font-size:11px;letter-spacing:.4px;display:flex;gap:11px;align-items:center;transition:background .15s}.return-link:hover{background:#244b38}
+main{max-width:1380px;margin:auto;padding:0 36px}.kicker{color:#89c7a3;font-size:10px;letter-spacing:2.5px;font-weight:800}.hero{min-height:556px;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:4vw;padding:67px 0 84px}.eyebrow{display:flex;gap:12px;align-items:center;color:#97b7a2;letter-spacing:2.3px;font-size:10px;font-weight:800}.tiny-diamond{width:8px;height:8px;background:var(--green);transform:rotate(45deg);box-shadow:0 0 10px #6ae99a}.eyebrow .line{height:1px;background:#5b8570;width:35px}.hero h1{font:800 clamp(64px,6.1vw,94px)/.92 var(--font-head);letter-spacing:-.6px;text-transform:uppercase;margin:27px 0 26px;text-wrap:balance}.hero h1 em{font-style:normal;color:var(--green)}.hero-copy>p{max-width:575px;font-size:16px;color:#adc3b6;line-height:1.8;margin:0 0 29px}.hero-copy>p strong{color:#e9f3ec;font-weight:700}.hero-actions,.last-call-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px}.primary-cta{border:0;background:var(--green);color:#0b2115;display:inline-flex;gap:30px;align-items:center;justify-content:space-between;font-weight:800;font-size:12px;letter-spacing:.15px;padding:15px 20px;border-radius:5px;box-shadow:0 7px 28px #2da46a27;transition:transform .15s,background .15s}.primary-cta:hover{background:#b1ffd0;transform:translateY(-1px)}.quiet-cta{border:1px solid #4a6a58;background:#0e2019a3;color:#bcd5c5;padding:14px 18px;font-size:12px;font-weight:700;border-radius:5px;display:inline-flex;align-items:center;gap:19px}.quiet-cta:hover{background:#183328}.hero-art{height:410px;position:relative;border:1px solid #507b5d66;background:radial-gradient(ellipse 50% 55% at 50% 50%,#2a5b4048,transparent 90%),#0c1916;overflow:hidden;box-shadow:0 25px 90px #0007}.art-grid{position:absolute;inset:0;background-image:linear-gradient(#8bc49a13 1px,transparent 1px),linear-gradient(90deg,#8bc49a13 1px,transparent 1px);background-size:31px 31px;mask-image:radial-gradient(ellipse at center,#000,transparent 90%)}.art-corner{position:absolute;width:19px;height:19px;border:2px solid var(--green);opacity:.7;z-index:2}.art-corner.tl{left:16px;top:16px;border-right:0;border-bottom:0}.art-corner.tr{right:16px;top:16px;border-left:0;border-bottom:0}.art-corner.bl{left:16px;bottom:16px;border-right:0;border-top:0}.art-corner.br{right:16px;bottom:16px;border-left:0;border-top:0}.art-label{position:absolute;left:31px;top:33px;color:#9ddbb4;font-size:9px;letter-spacing:2px;font-weight:800}.art-cross{position:absolute;right:30px;top:25px;color:#45785e;font-size:36px}.art-center{position:absolute;inset:56px 10px 75px;display:flex;flex-direction:column;align-items:center;justify-content:center}.art-sketch{height:205px;width:205px;display:flex;align-items:center;justify-content:center;color:#74ca9a;filter:drop-shadow(0 0 14px #40bb6f2e)}.art-sketch svg{height:100%;width:100%}.art-center>span{font-size:9px;font-weight:800;color:#89ae9c;letter-spacing:2.3px}.art-center>b{font:700 21px var(--font-head);letter-spacing:1.1px;color:#d9f3e0}.mission-route{position:absolute;bottom:25px;left:22px;right:22px;display:flex;justify-content:space-between;gap:9px;border-top:1px solid #46645379;padding-top:14px}.mission-route span{font-size:9px;letter-spacing:1.3px;color:#8ba997;display:flex;align-items:center;gap:5px}.mission-route b{color:var(--green)}
+.profiles{padding:20px 0 58px}.section-heading{display:flex;align-items:end;justify-content:space-between;gap:26px;margin-bottom:26px}.section-heading h2{font:800 clamp(33px,4.2vw,46px)/1.05 var(--font-head);text-transform:uppercase;letter-spacing:.4px;margin:9px 0 8px}.section-heading p{margin:0;color:#94b1a1;font-size:13px}.profile-explainer{max-width:280px;text-align:right;font-size:12px;color:#819e8d;line-height:1.7}.profile-explainer strong{color:#b7dbc2}.profile-grid{display:grid;grid-template-columns:1fr 1fr;gap:17px}.profile-card{appearance:none;text-align:left;position:relative;padding:25px 30px 25px;border:1px solid #355b467e;background:linear-gradient(121deg,#183127 0%,#101e1b 73%);color:var(--ink);border-radius:8px;min-height:222px;display:flex;flex-direction:column;align-items:flex-start;transition:transform .16s,border-color .16s,background .16s;overflow:hidden}.profile-card:hover{transform:translateY(-2px);border-color:#7edea8}.profile-card[aria-pressed=true]{border-color:var(--green);box-shadow:inset 0 0 0 1px #7de8a451,0 10px 40px #49b9820b}.profile-card.strategist{background:linear-gradient(118deg,#322a20,#1a1e1b 72%);border-color:#80684966}.profile-card.strategist[aria-pressed=true]{border-color:var(--gold);box-shadow:inset 0 0 0 1px #ffd49b55,0 10px 40px #dbad5c0d}.profile-card .profile-emblem{position:absolute;right:28px;top:33px;width:52px;height:52px;color:#83e7ad}.profile-card.strategist .profile-emblem{color:#e5ba7e}.profile-emblem svg{height:100%;width:100%}.profile-numeral{font-size:9px;letter-spacing:2px;font-weight:800;color:#83cfa6}.strategist .profile-numeral{color:#ddb87e}.profile-name{font:800 34px var(--font-head);letter-spacing:.4px;margin-top:15px;display:block}.checkmark{display:none;vertical-align:middle;font:800 13px var(--font);border-radius:100%;background:var(--green);padding:3px 6px;color:#10301e;margin-left:10px}.profile-card[aria-pressed=true] .checkmark{display:inline-block}.strategist .checkmark{background:var(--gold)}.profile-description{font-size:12px;max-width:470px;line-height:1.7;color:#adc8b7;min-height:42px}.strategist .profile-description{color:#cfc1ad}.profile-foot{display:block;margin-top:auto;padding-top:14px;font-size:10px;letter-spacing:1px;font-weight:800;color:#9de6b6}.strategist .profile-foot{color:#f6c98c}.profile-foot>span{margin-left:8px}
+.guide-section{padding:25px 0 95px;border-top:1px solid #38574855}.guide-section-heading{padding-top:22px}.text-action{border:0;background:none;color:#8eb9a3;font-size:11px;letter-spacing:.3px;padding:8px}.text-action:hover{color:#c6fbd9}.progress-surface{border:1px solid #365d48;background:linear-gradient(100deg,#102820,#101c1a);padding:23px 25px;margin:0 0 23px;border-radius:8px}.progress-top{display:flex;justify-content:space-between;align-items:end;gap:14px}.progress-label{display:block;font-size:9px;letter-spacing:2px;color:#7caf91;font-weight:800}.progress-top strong{display:block;font:700 24px var(--font-head);margin-top:5px;text-transform:uppercase;letter-spacing:.6px}.progress-value{font:800 29px var(--font-head);color:var(--green);white-space:nowrap}.progress-track{height:5px;background:#274138;margin-top:16px;border-radius:5px;overflow:hidden}.progress-track>span{display:block;height:100%;background:linear-gradient(90deg,#53b77d,#b6ffd0);width:0%;transition:width .3s}.progress-helper{font-size:10px;color:#749080;margin-top:11px}.tutorial-layout{display:grid;grid-template-columns:320px minmax(0,1fr);align-items:start;gap:20px}.chapter-index{border:1px solid #2b4038;background:#0f1a18;border-radius:8px;position:sticky;top:101px;overflow:hidden;max-height:calc(100vh - 120px);display:flex;flex-direction:column}.index-heading{display:flex;align-items:center;justify-content:space-between;padding:21px 22px 15px}.index-heading h3{font:800 25px var(--font-head);text-transform:uppercase;margin:4px 0 0}.index-dot{height:9px;width:9px;background:#6ad99b;border-radius:50%;box-shadow:0 0 0 5px #3cbd7030}.search-wrap{border:1px solid #345145;background:#142520;margin:0 16px 14px;display:flex;align-items:center;gap:7px;padding:0 12px;border-radius:6px;color:#79b494}.search-wrap>span{font-size:23px}.search-wrap input{width:100%;border:0;background:transparent;color:#e6f5e8;font-size:12px;padding:11px 2px;outline:none}.search-wrap input::placeholder{color:#77988a}.chapter-nav{overflow-y:auto;scrollbar-color:#3e6850 transparent;flex:1;padding:0 10px 14px}.index-phase{font-size:9px;letter-spacing:1.9px;color:#78a98a;font-weight:800;padding:15px 12px 7px;display:block}.index-button{width:100%;text-align:left;display:grid;grid-template-columns:29px 1fr 16px;align-items:center;gap:11px;border:1px solid transparent;background:transparent;color:#a7beb0;padding:11px 10px;border-radius:5px}.index-button:hover{background:#1a3326}.index-button[aria-current=step]{background:#213c2e;border-color:#4a8b64;color:#e6f6e8}.index-button .num{font:800 19px var(--font-head);color:#718e7e}.index-button[aria-current=step] .num{color:var(--green)}.index-button .chapter-name{font-size:11px;font-weight:700;line-height:1.35}.index-button .done{font:800 12px var(--font);color:#1b442d;background:#87deb2;border-radius:50%;height:16px;width:16px;text-align:center;line-height:16px}.index-button .pending{height:7px;width:7px;border-radius:50%;border:1px solid #526d5b;margin-left:4px}.index-empty{padding:15px;font-size:12px;color:#97ac9e}.index-bottom{flex:none;border-top:1px solid #2b4436;padding:14px 19px;color:#6e977f;font-size:9px;letter-spacing:1.1px;font-weight:800}.signal-mark{color:var(--green)}.mobile-index-head{display:none}
+.chapter-card{min-width:0;border:1px solid #32463b;background:linear-gradient(180deg,#14201c,#101a18 60%);border-radius:8px;overflow:hidden;box-shadow:0 10px 32px #0002}.chapter-inner{padding:35px 42px}.chapter-topline{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#91ac9b;font-size:10px;font-weight:800;letter-spacing:2px}.chapter-number{color:var(--green)}.chapter-card.is-tactical .chapter-number{color:var(--gold)}.chapter-time{border:1px solid #365446;padding:6px 9px;border-radius:4px;letter-spacing:.5px;color:#90af98}.chapter-card h3{font:800 clamp(38px,4.5vw,55px)/1 var(--font-head);text-transform:uppercase;letter-spacing:.2px;margin:19px 0 16px;max-width:800px}.chapter-lead{color:#b0c6b6;font-size:14px;line-height:1.8;max-width:700px;margin:0 0 23px}.location-tag{display:inline-flex;align-items:center;gap:9px;padding:10px 13px;border:1px solid #345d47;background:#19302670;border-radius:5px;font-size:11px;font-weight:700;color:#a4d6b8}.location-tag svg{color:#8bdbae;flex:none}.step-label{margin:35px 0 18px;font-size:10px;letter-spacing:2px;font-weight:800;color:#8ab49b}.action-list{list-style:none;padding:0;margin:0;counter-reset:actions;display:grid;gap:13px}.action-list li{display:grid;grid-template-columns:32px 1fr;gap:14px}.action-list .action-num{font:800 21px var(--font-head);color:#82c99f;width:32px;height:34px;border-radius:5px;display:flex;align-items:center;justify-content:center;border:1px solid #47745666;background:#213e3055}.action-content{padding:0 0 12px;border-bottom:1px solid #3042378c;min-width:0}.action-content strong{display:block;font-size:13px;color:#edf8ec;font-weight:800;margin:0 0 3px}.action-content p{color:#99b0a0;font-size:12px;line-height:1.72;margin:0}.branch-brief{background:#17382873;border:1px solid #4d926c66;border-radius:7px;padding:20px 23px;margin-top:30px;position:relative;overflow:hidden}.branch-brief:before{content:'◎';font-size:90px;font-weight:100;position:absolute;right:10px;top:-31px;color:#7ed6a214;pointer-events:none}.chapter-card.is-tactical .branch-brief{background:#49351c45;border-color:#a2804a77}.chapter-card.is-tactical .branch-brief:before{color:#d9b16d17}.branch-prefix{font-size:9px;letter-spacing:2px;font-weight:800;color:#8fd8aa}.chapter-card.is-tactical .branch-prefix{color:#e7c48d}.branch-brief h4{font:800 30px var(--font-head);text-transform:uppercase;margin:8px 0 7px}.branch-brief>p{max-width:700px;font-size:12px;color:#d1e3d4;line-height:1.75;margin:0 0 15px}.chapter-card.is-tactical .branch-brief>p{color:#e7dbc9}.focus-list{list-style:none;margin:0;padding:0;display:grid;gap:9px}.focus-list li{display:grid;grid-template-columns:13px 1fr;gap:7px;color:#bcdbca;font-size:12px;line-height:1.6}.chapter-card.is-tactical .focus-list li{color:#d9cbb4}.focus-list li:before{content:'›';color:#8edfa9;font-weight:800}.chapter-card.is-tactical .focus-list li:before{color:#f2c68c}.alert-note{display:flex;gap:11px;align-items:flex-start;background:#1d2922;border-left:3px solid #dfa761;padding:15px 16px;margin-top:22px;color:#c9bda9;font-size:11px;line-height:1.7}.alert-note .alert-mark{font-weight:900;color:#f8cb86;font-size:15px}.faq-wrap{margin-top:32px}.faq-wrap>h4{font-size:10px;letter-spacing:2.1px;color:#9bbb9f;font-weight:800;margin-bottom:9px}.faq-item{border-bottom:1px solid #3550406b}.faq-item summary{list-style:none;padding:13px 0;display:flex;justify-content:space-between;gap:10px;align-items:center;font-size:12px;font-weight:800;color:#dceade;cursor:pointer}.faq-item summary::-webkit-details-marker{display:none}.faq-item summary:after{content:'+';font-size:21px;font-weight:400;color:#92c3a4}.faq-item[open] summary:after{content:'−'}.faq-item p{font-size:12px;color:#a4bba9;line-height:1.8;padding:0 10px 15px 0;margin:0}.source-tag{margin-top:22px;font-size:9px;color:#6e9180;line-height:1.7;display:flex;gap:7px}.source-tag strong{font-weight:800;color:#81ad90}.chapter-controls{display:flex;gap:10px;justify-content:space-between;align-items:center;border-top:1px solid #2f483d;padding:19px 25px;background:#0d1715}.nav-step{display:inline-flex;gap:7px;align-items:center;justify-content:center;font-size:11px;font-weight:800;border-radius:5px;padding:12px 15px;min-height:43px;white-space:nowrap}.secondary-step{background:transparent;color:#a0c3ab;border:1px solid #486450}.finish-step{background:#214633;color:#bcf6d0;border:1px solid #538f6a}.finish-step.is-done{background:#2f5a41;color:#e1ffe9;border-color:#81d59d}.next-step{background:var(--green);color:#0d2717;border:1px solid var(--green)}.nav-step:hover:not(:disabled){filter:brightness(1.13)}
+.eligibility-demo{margin-top:31px;background:#0a1915;border:1px solid #386e50;border-radius:8px;padding:22px}.demo-label{font-size:9px;letter-spacing:2px;font-weight:800;color:#8fd6a8}.eligibility-demo h4{font:800 26px var(--font-head);text-transform:uppercase;margin:5px 0 8px}.eligibility-demo p{color:#91b09e;font-size:11px;line-height:1.7;margin:0 0 15px}.demo-inputs{display:grid;grid-template-columns:1fr 1fr;gap:13px}.demo-inputs label{font-size:10px;display:flex;flex-direction:column;gap:5px;color:#a8d1b6;font-weight:700}.demo-inputs input{background:#182e22;border:1px solid #55725b;border-radius:5px;padding:11px;color:#f0fff0;font-size:15px;font-weight:700;width:100%;min-width:0}.demo-vehicle{margin:12px 0;display:flex;align-items:center;gap:9px;color:#b8d0bf;font-size:11px}.demo-vehicle input{accent-color:#8dd9a5}.demo-result{padding:12px 13px;border:1px solid #527553;background:#1c3225;border-radius:5px;font-size:12px;color:#c7efcf}.demo-result.bad{border-color:#6e5344;background:#35251e;color:#ffd8b7}.demo-disclaimer{font-size:10px!important;color:#809988!important;margin:11px 0 0!important}
+.last-call{padding:53px 30px 62px;border:1px solid #41644b;background:radial-gradient(circle at 100% 0%,#2d5137 0%,transparent 55%),linear-gradient(90deg,#172d23,#101c19);margin:0 0 65px;position:relative;overflow:hidden}.last-call:before{content:'AR';font:900 260px/.8 var(--font-head);position:absolute;right:30px;top:8px;color:#ffffff08;pointer-events:none}.last-call h2{font:800 56px/1 var(--font-head);text-transform:uppercase;margin:12px 0}.last-call p{font-size:13px;color:#a3bfad;margin:0 0 23px;max-width:650px}.last-call-actions{position:relative}.site-footer{max-width:1380px;padding:0 36px 37px;display:flex;align-items:flex-start;justify-content:space-between;gap:30px;margin:auto;color:#7e9786}.site-footer>div:first-child{display:flex;flex-direction:column}.site-footer strong{font:800 22px var(--font-head);letter-spacing:1px}.site-footer span{font-size:9px;letter-spacing:1.3px}.footer-meta{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:13px}.footer-meta span{border-left:1px solid #396448;padding-left:13px}
+.glossary-dialog{max-width:min(650px,calc(100vw - 20px));width:100%;max-height:min(88vh,840px);color:var(--ink);border:1px solid #72947b;background:#111f1b;border-radius:9px;padding:0;box-shadow:0 30px 90px #000c}.glossary-dialog::backdrop{background:#020907ce;backdrop-filter:blur(4px)}.glossary-head{padding:25px 26px 20px;display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid #345445}.glossary-head h2{font:800 38px var(--font-head);margin:7px 0 0;text-transform:uppercase}.close-dialog{width:40px;height:40px;border:1px solid #51715e;border-radius:5px;background:#1f3b2b;color:#d6f0df}.glossary-list{padding:10px 25px;overflow:auto;max-height:58vh}.glossary-row{display:grid;grid-template-columns:175px 1fr;gap:16px;padding:15px 0;border-bottom:1px solid #324739}.glossary-row dt{color:#b4efcb;font-weight:800;font-size:12px}.glossary-row dd{margin:0;color:#aec3b3;font-size:12px}.glossary-footer{padding:18px 25px;border-top:1px solid #345445}.glossary-footer button{background:#8fefb2;color:#143324;padding:11px 17px;border:0;border-radius:4px;font-weight:800}
+@media(min-width:1200px){.chapter-index{max-height:calc(100vh - 110px)}}
+@media(max-width:1050px){.hero{gap:28px;min-height:480px}.hero h1{font-size:70px}.hero-art{height:375px}.tutorial-layout{grid-template-columns:270px minmax(0,1fr)}.chapter-inner{padding:29px 30px}.profile-card{padding:23px}}
+@media(max-width:800px){main{padding:0 21px}.header-inner{padding:12px 21px;min-height:73px}.hero{grid-template-columns:1fr;padding:47px 0 56px;gap:35px}.hero h1{font-size:clamp(62px,10vw,85px)}.hero-art{height:285px}.art-sketch{height:160px;width:160px}.art-center{inset:30px 10px 58px}.art-center>b{font-size:18px}.mission-route{bottom:18px}.profiles{padding-bottom:41px}.tutorial-layout{grid-template-columns:1fr}.chapter-index{position:relative;top:auto;max-height:none;overflow:visible}.chapter-nav{max-height:360px;overflow:auto}.chapter-card h3{font-size:49px}.profile-explainer{display:none}}
+@media(max-width:590px){body{font-size:13px}main{padding:0 15px}.header-inner{padding:11px 15px;min-height:65px}.logo-symbol{width:38px;height:38px}.wordmark-top{font-size:19px}.wordmark small{font-size:7px;letter-spacing:1.4px}.header-utility{gap:8px}.header-version,.live-pip{display:none}.return-link{font-size:10px;padding:8px 10px;gap:5px}.hero{padding:42px 0 37px;gap:25px}.eyebrow{font-size:8px;gap:7px;letter-spacing:1.4px}.hero h1{font-size:clamp(52px,13vw,74px);margin:22px 0 16px}.hero-copy>p{font-size:13px;line-height:1.78;margin-bottom:19px}.hero-actions{gap:8px}.primary-cta,.quiet-cta{padding:12px 13px;font-size:10px;gap:8px}.hero-art{height:245px}.art-label{top:27px;left:25px;font-size:7px}.art-sketch{height:142px;width:142px}.art-center{inset:30px 10px 47px}.art-center>span{font-size:7px}.art-center>b{font-size:17px}.mission-route{bottom:13px;left:15px;right:15px;gap:3px;padding-top:9px}.mission-route span{font-size:7px;letter-spacing:.3px}.profiles{padding:11px 0 34px}.section-heading{margin-bottom:19px;gap:9px}.section-heading h2{font-size:35px}.section-heading p{font-size:11px}.kicker{font-size:9px}.profile-grid{grid-template-columns:1fr;gap:10px}.profile-card{min-height:169px;padding:19px 19px 17px}.profile-card .profile-emblem{right:18px;top:25px;width:39px;height:39px}.profile-numeral{font-size:8px}.profile-name{font-size:30px;margin-top:7px}.profile-description{font-size:11px;min-height:0;max-width:90%}.profile-foot{font-size:9px;padding-top:10px}.guide-section{padding:20px 0 50px}.text-action{font-size:9px;white-space:nowrap}.guide-section-heading{align-items:start}.progress-surface{padding:17px;margin-bottom:11px}.progress-top strong{font-size:22px}.progress-value{font-size:25px}.progress-helper{font-size:9px}.chapter-index{border-radius:6px}.index-heading{padding:14px 16px 8px}.index-heading h3{font-size:22px}.search-wrap{margin:0 12px 9px}.mobile-index-head{display:flex;padding:10px 14px;border-top:1px solid #304a3b;align-items:center;justify-content:space-between;color:#9aaf9e;font-size:9px;font-weight:800;letter-spacing:1px}.mobile-index-head button{background:#23412f;color:#b9eecb;border:1px solid #4c7c57;border-radius:4px;font-size:10px;padding:7px 10px}.chapter-nav{display:none}.chapter-index.expanded .chapter-nav{display:block}.index-bottom{font-size:8px;padding:10px 13px}.chapter-inner{padding:23px 19px}.chapter-topline{font-size:9px;letter-spacing:1.1px}.chapter-time{font-size:8px}.chapter-card h3{font-size:43px;margin:17px 0 12px}.chapter-lead{font-size:12px}.location-tag{font-size:10px;padding:9px;line-height:1.5}.step-label{margin:24px 0 13px}.action-list{gap:11px}.action-list li{grid-template-columns:28px 1fr;gap:9px}.action-list .action-num{font-size:18px;width:28px}.action-content strong{font-size:12px}.action-content p{font-size:11px}.branch-brief{padding:15px 15px;margin-top:22px}.branch-brief h4{font-size:26px}.branch-brief>p,.focus-list li{font-size:11px}.alert-note{font-size:10px;padding:11px}.faq-wrap{margin-top:24px}.faq-item summary,.faq-item p{font-size:11px}.chapter-controls{padding:12px 9px;gap:6px;display:grid;grid-template-columns:1fr auto 1fr}.nav-step{min-height:46px;font-size:9px;padding:9px 7px;white-space:normal}.finish-step{max-width:146px}.next-step{min-width:69px}.demo-inputs{gap:8px}.eligibility-demo{padding:16px}.demo-inputs label{font-size:9px}.demo-inputs input{font-size:13px}.last-call{padding:36px 20px;margin-bottom:45px}.last-call h2{font-size:43px}.last-call p{font-size:12px}.last-call:before{font-size:150px}.site-footer{padding:0 15px 34px;display:block}.footer-meta{justify-content:flex-start;margin-top:12px;gap:7px}.footer-meta span{border:0;padding:0}.glossary-row{grid-template-columns:1fr;gap:3px;padding:12px 0}.glossary-list{padding:8px 18px}.glossary-head{padding:19px}.glossary-head h2{font-size:30px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+@media print{body{color:#101c18;background:#fff}.site-header,.ambient-horizon,.hero-art,.chapter-index,.hero-actions,.profile-grid,.chapter-controls,.last-call,.site-footer,.progress-surface{display:none}.hero{min-height:0;padding:0}.hero h1{font-size:40px}.chapter-card{box-shadow:none;border:0}.branch-brief{border:1px solid #aaa;color:#111}.chapter-inner{padding:0}main{padding:15px}}
+.chapter-support{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 0 46px}.support-link{display:inline-flex;background:#8de8ae;color:#0d2918;font-size:10px;font-weight:800;border:1px solid #8de8ae;border-radius:4px;padding:9px 13px}.support-link:hover{background:#b5ffd0}.support-secondary{display:inline-flex;border:1px solid #51705a;color:#9fdcb0;font-size:10px;font-weight:800;border-radius:4px;padding:9px 13px}.support-secondary:hover{background:#21402d}@media(max-width:590px){.chapter-support{margin-left:37px}}
+
+</style>
+</head>
+<body>
+  <a class="skip" href="#chapter">Ir direto ao tutorial</a>
+  <div class="ambient-horizon" aria-hidden="true"><i></i><i></i><i></i></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="./" aria-label="Voltar à Sala de Guerra"><span class="logo-symbol" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none"><path d="M20 3 35 11.5V28.5L20 37 5 28.5V11.5L20 3Z" stroke="currentColor" stroke-width="1.6"/><path d="M20 9v22M9 20h22" stroke="currentColor" stroke-width="1.4"/><circle cx="20" cy="20" r="5.5" fill="currentColor"/></svg></span><span><span class="wordmark-top">APOCALYPSE <b>RUN</b></span><small>PROTOCOLO DE CAMPO</small></span></a>
+      <div class="header-utility"><span class="live-pip" aria-hidden="true"></span><span class="header-version" id="headerVersion">GUIA 0.15.0</span><a class="return-link" href="./" title="Voltar para a Sala de Guerra"><span class="return-text">Sala de Guerra</span><span aria-hidden="true">↗</span></a></div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="tiny-diamond"></span> ARQUIVO 001 <span class="line"></span> MANUAL DE SOBREVIVÊNCIA</div>
+        <h1 id="heroTitle">O mundo mudou.<br/><em>Seu primeiro passo</em><br/>muda com ele.</h1>
+        <p>Do convite à sua primeira patrulha. Um guia de verdade para começar no <strong>Apocalypse Run</strong>, sem precisar aprender toda a guerra de uma vez.</p>
+        <div class="hero-actions"><button type="button" class="primary-cta" id="startGuide">Começar tutorial <span aria-hidden="true">↗</span></button><button type="button" class="quiet-cta" id="showGlossaryIntro">Entender os termos <span aria-hidden="true">＋</span></button></div>
+      </div>
+      <div class="hero-art" aria-label="Sequência de início de jogo: convite, facção, patrulha e guerra">
+        <div class="art-grid" aria-hidden="true"></div><div class="art-cross" aria-hidden="true">✛</div>
+        <div class="art-corner tl"></div><div class="art-corner tr"></div><div class="art-corner bl"></div><div class="art-corner br"></div>
+        <div class="art-label">PROTOCOLO // 001</div>
+        <div class="art-center"><div class="art-sketch"><svg viewBox="0 0 240 240" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width="1.4"><path d="m120 17 89 51v104l-89 51-89-51V68l89-51Z"/><path d="m120 42 68 39v78l-68 39-68-39V81l68-39Z" opacity=".5"/><path d="M120 17v206M31 68l178 104M209 68 31 172" opacity=".35"/><circle cx="120" cy="120" r="43" stroke-dasharray="5 8"/><circle cx="120" cy="120" r="26"/><path d="M120 84v72M84 120h72"/><circle cx="120" cy="120" r="5" fill="currentColor"/></g></svg></div><span>LOCALIZAÇÃO CONFIRMADA</span><b>O INÍCIO DA SUA JORNADA</b></div>
+        <div class="mission-route"><span><b>01</b> CONVITE</span><span><b>02</b> FACÇÃO</span><span><b>03</b> PATRULHA</span><span><b>04</b> GUERRA</span></div>
+      </div>
+    </section>
+
+    <section class="profiles" aria-labelledby="profilesTitle">
+      <div class="section-heading"><div><span class="kicker">01 / ESCOLHA SEU RITMO</span><h2 id="profilesTitle">Como você quer jogar?</h2><p>As duas rotas ensinam o mesmo jogo. Você pode alternar quando quiser.</p></div><div class="profile-explainer">Não é uma escolha de conta ou facção. <strong>É o jeito de aprender.</strong></div></div>
+      <div class="profile-grid" role="group" aria-label="Selecionar estilo de tutorial">
+        <button type="button" class="profile-card" id="sportSelect" data-mode="sport" aria-pressed="true"><span class="profile-numeral">01 / ROTA LIVRE</span><span class="profile-emblem" aria-hidden="true"><svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M11 25 17 18l4 4 8-10M8 31h20"/><circle cx="24" cy="8" r="3"/><path d="m12 12 6-2 5 5-4 5-7 2"/></svg></span><span class="profile-name">ESPORTISTA <span class="checkmark" aria-hidden="true">✓</span></span><span class="profile-description">Quero caminhar, acompanhar meu progresso e deixar as decisões de Energia com o jogo.</span><span class="profile-foot">Foco no automático <span aria-hidden="true">↗</span></span></button>
+        <button type="button" class="profile-card strategist" id="tacticalSelect" data-mode="tactical" aria-pressed="false"><span class="profile-numeral">02 / ROTA TÁTICA</span><span class="profile-emblem" aria-hidden="true"><svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 2v32M2 18h32"/><circle cx="18" cy="18" r="10"/><circle cx="18" cy="18" r="4"/><path d="M18 9v-3M18 27v3M9 18H6M27 18h3"/></svg></span><span class="profile-name">ESTRATEGISTA <span class="checkmark" aria-hidden="true">✓</span></span><span class="profile-description">Quero planejar minhas patrulhas, entender o território e escolher operações manualmente.</span><span class="profile-foot">Foco nas decisões <span aria-hidden="true">↗</span></span></button>
+      </div>
+    </section>
+
+    <section class="guide-section" id="roteiro" aria-labelledby="roadmapTitle">
+      <div class="section-heading guide-section-heading"><div><span class="kicker">02 / INSTRUÇÕES DE CAMPO</span><h2 id="roadmapTitle">Seu roteiro, passo a passo.</h2><p id="roadmapIntro">Acompanhe no celular e marque as etapas que já concluiu.</p></div><button type="button" class="text-action" id="resetProgress">Reiniciar progresso <span aria-hidden="true">↺</span></button></div>
+      <div class="progress-surface" aria-label="Seu progresso no tutorial"><div class="progress-top"><div><span class="progress-label">SEU PROGRESSO</span><strong id="progressTitle">Primeiro contato</strong></div><span class="progress-value" id="progressCount">0 / 14</span></div><div class="progress-track" role="progressbar" aria-label="Capítulos concluídos" aria-valuemin="0" aria-valuemax="14" aria-valuenow="0" id="progressTrack"><span id="progressFill"></span></div><div class="progress-helper">Salvo somente neste navegador. Não altera sua conta do jogo.</div></div>
+      <div class="tutorial-layout">
+        <aside class="chapter-index" aria-label="Índice do tutorial"><div class="index-heading"><div><span class="kicker">NAVEGAÇÃO</span><h3>Índice de campo</h3></div><span class="index-dot" aria-hidden="true"></span></div><label class="search-wrap"><span aria-hidden="true">⌕</span><input id="chapterSearch" type="search" placeholder="Buscar assunto..." autocomplete="off" aria-label="Buscar capítulos" /></label><div class="mobile-index-head"><span>ETAPAS DO GUIA</span><button type="button" id="toggleIndex" aria-expanded="false" aria-controls="chapterNav">Abrir índice <span aria-hidden="true">⌄</span></button></div><nav id="chapterNav" class="chapter-nav" aria-label="Capítulos"></nav><div class="index-bottom"><span class="signal-mark">◉</span> CONTEÚDO BASEADO NO APK ATUAL</div></aside>
+        <article class="chapter-card" id="chapter" tabindex="-1" aria-live="polite"><div id="chapterContent"></div><div class="chapter-controls"><button type="button" id="previousChapter" class="nav-step secondary-step" aria-label="Capítulo anterior">← Anterior</button><button type="button" id="completeChapter" class="nav-step finish-step">Marcar como concluído <span aria-hidden="true">✓</span></button><button type="button" id="nextChapter" class="nav-step next-step">Próximo →</button></div></article>
+      </div>
+    </section>
+
+    <section class="last-call" aria-labelledby="lastCallTitle"><span class="kicker">REDE DE SOBREVIVÊNCIA</span><h2 id="lastCallTitle">O caminho está lá fora.</h2><p>Quando terminar, volte à Sala de Guerra para observar o mundo que está ajudando a construir.</p><div class="last-call-actions"><a href="./" class="primary-cta">Abrir Sala de Guerra <span aria-hidden="true">↗</span></a><button class="quiet-cta" type="button" id="openGlossary">Glossário rápido <span aria-hidden="true">＋</span></button></div></section>
+  </main>
+  <footer class="site-footer"><div><strong>APOCALYPSE RUN</strong><span>GUIA DE CAMPO • VERSÃO ALPHA</span></div><div class="footer-meta"><span id="footerVersion">Base 0.15.0 · build 88</span><span id="footerReview">Covil verificado em 26/10/2026</span><span>Material público. Sem dados pessoais.</span></div></footer>
+
+  <dialog id="glossaryDialog" class="glossary-dialog" aria-labelledby="glossaryTitle"><div class="glossary-head"><div><span class="kicker">REFERÊNCIA RÁPIDA</span><h2 id="glossaryTitle">Dicionário da guerra</h2></div><button type="button" class="close-dialog" id="closeGlossary" aria-label="Fechar glossário">✕</button></div><div class="glossary-list" id="glossaryList"></div><div class="glossary-footer"><button type="button" id="closeGlossaryBottom">Voltar ao tutorial</button></div></dialog>
+  <script type="module">
+/*
+ * APOCALYPSE RUN • GUIA DE CAMPO
+ * Fonte de verdade: docs/covil-de-memorias.md no repositório PRIVADO
+ * danielmvr/apocalypse-run-android. Revisar o Covil antes de publicar alterações.
+ * Snapshot validado: 26/10/2026; Android 0.15.0/build 88.
+ * Guia público: não copiar códigos de convite, H3 reais, tokens ou relatórios privados.
+ */
+const GUIDE_META = {
+  name: 'Guia de Campo',
+  appVersion: '0.15.0', build: 88, reviewedAt: '26/10/2026',
+  source: 'Covil de Memórias, app Android e documentação de Energia 2.0',
+  sourceCommit: 'a49f09a9bd6eb66b7cec098f33f70d1f88bbc4d7',
+  download: 'https://github.com/danielmvr/apocalypse-run-downloads/releases/download/alpha-debug-latest/app-debug.apk',
+  changelog: 'https://github.com/danielmvr/apocalypse-run-downloads/releases/tag/alpha-debug-latest',
+  warRoom: './',
+};
+
+const CHAPTERS = [
+  {
+    id:'instalacao', part:'COMECE AQUI', number:'01', time:'2 MIN', title:'Sua entrada na zona de sobrevivência',
+    deck:'Antes de caminhar, instale a versão Alpha e confirme que tem o convite individual de acesso.',
+    where:'Android · instalação do APK', icon:'download',
+    steps:[
+      ['Garanta seu convite', 'O acesso online está em testes e usa um código individual, de uso único e com validade. Peça-o ao responsável pela Alpha; o APK sozinho não libera sua conta.'],
+      ['Baixe o aplicativo', 'Use o canal público oficial de APKs e abra o arquivo no seu Android. Se o sistema pedir confirmação para instalar um APK dessa origem, examine a solicitação antes de prosseguir.'],
+      ['Abra o jogo', 'A primeira tela apresenta as facções. O jogo não exige criar senha ou informar e-mail para entrar na Alpha. O cadastro online acontecerá dentro do aplicativo.'],
+    ],
+    sport:{ title:'O que você precisa fazer', lead:'Instalar, ter o convite em mãos e abrir o aplicativo. Não há nenhum ajuste de estratégia necessário agora.', focus:['Convite e instalação são etapas diferentes.', 'Se já instalou, avance para a escolha da facção.']},
+    tactical:{title:'Antes de começar',lead:'Confirme a versão instalada e preserve a instalação durante os testes.',focus:['O link é sempre atualizado para o APK mais recente.', 'A identidade da Alpha está vinculada à instalação. Evite limpar os dados ou desinstalar antes de confirmar uma forma de recuperar o acesso.', 'Uma atualização do APK deve ser instalada por cima da anterior quando compatível.']},
+    note:'Distribuição Alpha Android. Não é um cadastro público aberto nem um aplicativo já lançado na Play Store.',
+    faq:[['Preciso de um e-mail ou senha?', 'Não para este fluxo. A Alpha cria uma sessão autenticada internamente e vincula seu convite e apelido à identidade desta instalação.'],['Posso usar o mesmo convite de outra pessoa?', 'Não. Os convites são individuais e de uso único.']],
+    source:'Covil: distribuição pública de APK · docs/online-api-v1.md'
+  },
+  {
+    id:'faccao',part:'COMECE AQUI',number:'02',time:'3 MIN',title:'Escolha quem você será',
+    deck:'O mundo se divide entre a Resistência humana e a Horda zumbi. Conheça os dois lados antes de confirmar.',
+    where:'Primeiro acesso · SEU PRIMEIRO PASSO',icon:'shield',
+    steps:[
+      ['Explore as duas facções', 'Toque em Resistência ou Horda para ver a história e a identidade visual. Você pode voltar e conhecer o outro caminho sem confirmar.'],
+      ['Escolha sua aparência', 'No fluxo de entrada, escolha a apresentação inicial do personagem e da facção. A aparência é visual; não muda as regras de GPS nem a força da facção.'],
+      ['Confirme seu lado', 'Toque em “CONFIRMAR: SOU RESISTÊNCIA” ou “CONFIRMAR: SOU HORDA”. A confirmação é uma escolha real, não uma prévia.'],
+    ],
+    sport:{title:'Qual lado escolher?',lead:'Escolha o universo com o qual você mais se identifica. Caminhar funciona nos dois lados.',focus:['Resistência: explorar, proteger e retomar.', 'Horda: expandir, contaminar e dominar.', 'Nenhuma facção exige que você seja um jogador competitivo.']},
+    tactical:{title:'Entenda o equilíbrio de ingresso',lead:'O jogo pode aplicar uma condição temporária a novos participantes da facção dominante para manter a guerra disputada.',focus:['Com mais de 60% dos pontos territoriais e ao menos 3 células dominadas no mundo, um novo integrante da facção dominante pode receber influência territorial de 80% por 24 horas.', 'A medida não reduz metros GPS, XP, energia ou mérito de conquistas.', 'Confira “EQUILÍBRIO ENTRE FACÇÕES” na escolha. A confirmação definitiva acontece no servidor ao entrar na Alpha.']},
+    note:'“Prévia visual da outra facção” posteriormente muda apenas o tema. Enquanto a prévia estiver ativa, novas patrulhas ficam bloqueadas.',
+    faq:[['Posso trocar de facção depois?', 'A escolha inicial é bloqueada quando você começa atividades válidas ou se vincula à identidade online. O sistema biológico pode transformar sua facção efetiva ao longo da temporada, seguindo as regras do jogo.'],['Esportista e Estrategista são facções?', 'Não. São estilos de participação que ensinamos neste guia; ambos podem jogar na Resistência ou na Horda.']],
+    source:'Covil: onboarding-equilibrio-cooperacao · FactionOnboarding.kt'
+  },
+  {
+    id:'conta',part:'COMECE AQUI',number:'03',time:'3 MIN',title:'Entre na Alpha Online',
+    deck:'Agora você conecta o seu personagem ao mundo compartilhado. É a etapa que transforma sua caminhada em participação na guerra.',
+    where:'PATRULHA → REDE DE CAMPO / ALPHA ONLINE',icon:'key',
+    steps:[
+      ['Abra “REDE DE CAMPO / ALPHA ONLINE”', 'Na tela PATRULHA, localize o painel de entrada. Use a facção real escolhida na etapa anterior.'],
+      ['Preencha “Seu apelido” e “Convite individual”', 'Digite um apelido com pelo menos dois caracteres e insira seu código individual. Não divulgue seu convite ou dados da conta.'],
+      ['Leia e autorize o envio', 'Marque o consentimento se concordar com o envio das próximas atividades: horários, distância, decisões do GPS e setores aproximados visitados.'],
+      ['Toque em “ENTRAR NA ALPHA ONLINE”', 'Aguarde a confirmação. Quando der certo, você verá o apelido, o estado de envio e a contagem de patrulhas sincronizadas.'],
+    ],
+    sport:{title:'O que fica automático?',lead:'Depois de entrar e manter o envio ativo, as próximas patrulhas autorizadas são encaminhadas para o servidor sem você precisar enviar uma por uma.',focus:['Se estiver sem internet, as atividades autorizadas podem ficar aguardando sincronização.', 'Quando a rede voltar, confira se há patrulhas pendentes.', 'Não é necessário entrar novamente a cada caminhada.']},
+    tactical:{title:'Controle do envio e privacidade',lead:'A identidade online é única para esta instalação e o envio é autorizado quando a patrulha começa.',focus:['“PAUSAR ENVIO” interrompe a autorização de novas patrulhas; não transforma automaticamente atividades antigas em online.', '“SINCRONIZAR” solicita atualização das atividades pendentes e do mundo.', 'A facção efetiva é controlada pelo servidor. Testar a prévia visual adversária não troca seu lado.']},
+    note:'Se você já estiver no meio de uma patrulha, encerre-a antes de ingressar na rede de testes.',
+    faq:[['Entrei, mas o mundo não atualizou. O que faço?', 'Confira a conexão, o estado “ENVIO AUTOMÁTICO ATIVO” e use “SINCRONIZAR”. Uma atualização pode demorar se houver atividades pendentes.'],['Posso perder minha conta se reinstalar?', 'A identidade desta Alpha está vinculada à instalação. Antes de limpar dados ou reinstalar, solicite orientações de recuperação ao responsável pelo teste.']],
+    source:'Covil: identidade/consentimento · OnlineAlphaPanel.kt · docs/online-api-v1.md'
+  },
+  {
+    id:'permissoes',part:'COMECE AQUI',number:'04',time:'2 MIN',title:'Prepare o GPS para a rua',
+    deck:'O jogo precisa de uma medição real de movimento. O GPS decide a distância e os sensores ajudam a interpretar o deslocamento.',
+    where:'PATRULHA → INICIAR PATRULHA GPS',icon:'crosshair',
+    steps:[
+      ['Ative a localização do telefone', 'Para funcionar corretamente, permita acesso à localização precisa quando o Android solicitar. Confirme que o GPS está ligado.'],
+      ['Autorize a atividade física se desejar', 'Quando disponível, a permissão de passos é opcional. Sem ela, ou sem acelerômetro/contagem de passos, o aplicativo mantém a análise conservadora pelo GPS.'],
+      ['Escolha um percurso seguro', 'Prefira uma caminhada a pé em local permitido e seguro, sem precisar mexer no telefone durante o movimento.'],
+    ],
+    sport:{title:'Simples assim',lead:'Dê as permissões necessárias para o GPS, guarde o celular e faça sua caminhada. O jogo acompanha o percurso e avalia o movimento.',focus:['A distância válida pode ser menor do que a distância total percorrida.', 'Pequenas pausas não exigem comandos estratégicos.']},
+    tactical:{title:'Como o movimento é analisado',lead:'GPS, velocidade, precisão e sensores disponíveis ajudam o sistema a distinguir deslocamentos elegíveis de trechos incertos.',focus:['O limite conservador atual é 9 km/h. Corrida mais rápida não deve ser presumida como válida para conquistas territoriais.', 'Suspeita de veículo, localização simulada e requalificação podem impedir influência online.', 'Sensores complementam, mas não substituem o GPS na distância.']},
+    note:'Não use o aplicativo enquanto dirige nem tente fazer o jogo contabilizar deslocamentos de moto ou carro.',
+    faq:[['Por que alguns metros não contam?', 'O filtro descarta ou suspende trechos com qualidade GPS insuficiente, saltos e velocidades suspeitas. Isso protege a justiça da guerra territorial.']],
+    source:'Covil: movimento multissensor · docs/multisensor-motion.md · ApocalypseApp.kt'
+  },
+  {
+    id:'mapa',part:'SUA PRIMEIRA PATRULHA',number:'05',time:'3 MIN',title:'Leia o mapa de guerra',
+    deck:'As ruas estão divididas em células hexagonais H3. Cada território pode ter uma estrutura, controle e dono.',
+    where:'PATRULHA → Mapa Operacional',icon:'map',
+    steps:[
+      ['Localize sua região no mapa', 'O mapa de ruas usa conexão e mostra células reconhecidas e estruturas que já fazem parte do seu mundo.'],
+      ['Observe as cores', 'Verde representa Resistência, vermelho representa Horda e tons neutros indicam territórios sem domínio estável.'],
+      ['Reconheça estruturas', 'Ruínas, Abrigo, Rádio, Laboratório, Depósito e Fortaleza influenciam as possibilidades estratégicas da área.'],
+    ],
+    sport:{title:'Você não precisa decorar o mapa',lead:'Passe pelos lugares normalmente. O sistema reconhece células conforme a evidência da sua patrulha e consulta o mundo ao sincronizar.',focus:['Você não precisa clicar em cada hexágono para registrar movimento.', 'As estruturas são oportunidades do jogo, não pontos de encontro reais.']},
+    tactical:{title:'O que procurar no mapa',lead:'O valor territorial depende da estrutura. A influência altera controle, mas nem toda passagem produz conquista.',focus:['Ruínas: 100 pontos; Abrigo: 120; Rádio: 180.', 'Laboratório: 200; Depósito: 150; Fortaleza: 300.', 'O mundo usa classificação híbrida onde há dados; em outras regiões permanece o método determinístico de fallback.']},
+    note:'Um território visto no mapa não é necessariamente um território controlado por você. A posse depende do estado oficial do servidor.',
+    faq:[['O pin representa exatamente onde tenho de ir?', 'Ele é um marcador informativo da estrutura da célula H3, não uma instrução para entrar em terrenos privados ou restritos.']],
+    source:'Covil: territórios-hibridos-war-room · docs/field-progression-api.md'
+  },
+  {
+    id:'estilo',part:'SUA PRIMEIRA PATRULHA',number:'06',time:'2 MIN',title:'Como você quer participar?',
+    deck:'Dois jeitos de viver a mesma guerra. A diferença é o quanto você decide antes de sair.',
+    where:'PATRULHA → indicador ENERGIA → CENTRAL DE ENERGIA',icon:'route',
+    steps:[
+      ['Abra a Central de Energia', 'No PAINEL DO OPERADOR, toque no indicador “ENERGIA • ONLINE ↗”. A Central é o lugar para consultar ou planejar operações.'],
+      ['Escolha Automático ou Manual', 'Essa opção controla a utilização estratégica de Energia. Não cria outro jogador, não troca facção e não altera a validação GPS.'],
+      ['Saia para a patrulha', 'Depois de definir suas preferências, volte à aba PATRULHA. Não é preciso operar a Central durante o exercício.'],
+    ],
+    sport:{title:'Seu caminho: AUTOMÁTICO',lead:'Escolha Automático para o sistema procurar oportunidades úteis, dentro das mesmas regras do Manual.',focus:['Equilibrado distribui atenção entre oportunidades.', 'Defensivo e Ofensivo mudam a prioridade.','Confira se “Gasto automático permitido” está ligado se quiser autorizar consumo.', 'É possível pausar o gasto automático mantendo a caminhada funcionando.']},
+    tactical:{title:'Seu caminho: MANUAL',lead:'Em Manual, você decide qual operação preparar e de qual estrutura aliada conhecida virá o efeito.',focus:['A Central exibe custos, fontes elegíveis e possíveis efeitos.', 'Preparar reserva Energia, mas o débito só ocorre se a oportunidade realmente produz benefício.', 'Planeje antes da patrulha: durante o GPS ativo você consulta, mas não reconfigura operações.']},
+    note:'Este seletor Esportista/Estrategista é apenas uma forma de apresentar o guia. No aplicativo, a configuração real é Automático ou Manual, dentro da Central de Energia.',
+    faq:[['O Automático é mais fraco?', 'Não deve ser. Ambos usam o mesmo motor, oportunidades, custos e limites. Nenhum benefício é garantido sem atividade elegível.'],['Sou Esportista: preciso abrir a Central?', 'Para conferir e ajustar o Automático, sim, mas não para administrar manualmente cada operação durante uma caminhada.']],
+    source:'Covil: diretriz Esportista/Estrategista · docs/energy-api.md · EnergyCenterPanel.kt'
+  },
+  {
+    id:'patrulha',part:'SUA PRIMEIRA PATRULHA',number:'07',time:'5 MIN+',title:'Sua primeira patrulha',
+    deck:'Chegou a hora. Caminhe no mundo real enquanto o Apocalypse Run registra o movimento válido.',
+    where:'PATRULHA → ▶ INICIAR PATRULHA GPS',icon:'footprints',
+    steps:[
+      ['Toque em “INICIAR PATRULHA GPS”', 'O aplicativo prepara a facção efetiva e inicia a medição após as permissões necessárias.'],
+      ['Caminhe no seu ritmo', 'Para a influência territorial online, procure acumular ao menos 500 m de distância aceita e 5 minutos efetivamente em movimento.'],
+      ['Acompanhe quando quiser', 'A tela mostra distância válida, tempo, estado do GPS, células observadas e possíveis alertas. Não é preciso tocar nos hexágonos.'],
+      ['Finalize ao terminar', 'Ao concluir a caminhada, toque em “ENCERRAR PATRULHA”. O aplicativo prepara o resumo e o envio conforme a autorização.'],
+    ],
+    sport:{title:'Seu objetivo é caminhar',lead:'Use o jogo como companhia. Comece, guarde o telefone, caminhe de verdade e encerre. A avaliação territorial e as operações automáticas acontecem pelo sistema quando houver condições.',focus:['Meta inicial prática: superar 500 m válidos e 5 min móveis.', 'Não tente compensar o GPS caminhando com o telefone na mão.', 'Trechos pausados ou suspeitos podem não ser creditados.']},
+    tactical:{title:'Um trajeto também é uma decisão',lead:'Você pode preparar uma operação antes de sair e direcionar o percurso a estruturas conhecidas de forma segura.',focus:['Uma patrulha territorial elegível precisa de ≥500 m aceitos e ≥300 s móveis, sem vetos de veículo/mock/requalificação.', 'Para uma célula contribuir, é necessário registro territorial qualificado: ≥50 m e ≥4 segmentos nela.', 'O servidor pode reconhecer até seis células por patrulha e respeita o limite de contribuição por jogador/célula/dia UTC.', 'Operações de Energia e recompensas só são avaliadas conforme a elegibilidade real e o estado atual da área.']},
+    note:'Não existe ganho garantido só por iniciar GPS. Faça o trajeto sempre de maneira segura e dentro dos limites de acesso público.',
+    faq:[['Posso correr?', 'O jogo acompanha atividade física, mas o filtro territorial publicado ainda usa limite conservador de 9 km/h. Corrida rápida pode ficar fora da distância elegível.'],['O app detecta passos?', 'Quando disponíveis, passos e acelerômetro ajudam a análise. A distância continua vindo do GPS.']],
+    source:'Covil: progressão e validação GPS · docs/online-api-v1.md · ApocalypseApp.kt'
+  },
+  {
+    id:'resultado',part:'SUA PRIMEIRA PATRULHA',number:'08',time:'2 MIN',title:'Entenda o debriefing',
+    deck:'Ao encerrar, a atividade passa por duas camadas: o registro local e o reconhecimento online.',
+    where:'PATRULHA → DEBRIEFING / ÚLTIMA PATRULHA',icon:'activity',
+    steps:[
+      ['Leia sua distância válida', 'Confira metros aceitos, tempo, ritmo em movimento e as estatísticas mostradas no relatório.'],
+      ['Confira o estado online', 'Na REDE DE CAMPO, veja quantas patrulhas foram enviadas e quantas aguardam sincronização.'],
+      ['Explore o cartão da atividade', 'Você pode gerar um cartão visual com estatísticas e trajeto validado. Revise a prévia e a proteção dos extremos antes de compartilhar.'],
+    ],
+    sport:{title:'O resumo é seu registro de progresso',lead:'Mesmo quando uma caminhada não altera o mundo, você pode consultar o que o GPS aceitou e acompanhar sua evolução.',focus:['A atividade curta pode ficar salva sem liberar pontos ou Energia.', 'O debriefing diferencia ganhos locais e créditos online confirmados.', 'Compartilhar o cartão é opcional.']},
+    tactical:{title:'Interprete o recibo do servidor',lead:'Não confunda ter enviado com ter conquistado um território. A aceitação e a elegibilidade são verificações distintas.',focus:['“Enviada” indica processamento/registro; a influência exige os critérios territoriais.', 'O relatório de Energia distingue produção, crédito, perda pelo teto e gasto real.', 'Um mesmo UUID reenviado não cria influência duplicada; dados offline são conciliados ao conectar.']},
+    note:'Se faltar internet, o sistema pode guardar a patrulha autorizada e sincronizar depois. Isso não significa que a facção já recebeu os pontos.',
+    faq:[['Distância no debriefing menor que no relógio?', 'O Apocalypse Run usa a distância GPS aceita por seus próprios filtros. O telefone e outros relógios podem usar critérios diferentes.']],
+    source:'Covil: atividade/compartilhamento · docs/activity-sharing.md · online-api-v1.md'
+  },
+  {
+    id:'controle',part:'DOMINE O MUNDO',number:'09',time:'4 MIN',title:'Como sua caminhada move a guerra',
+    deck:'Cada hexágono tem um valor de controle de 0 a 1000. O jogo calcula ataque, defesa e domínio a partir de patrulhas elegíveis.',
+    where:'Mapa Operacional / REPORT / War Room',icon:'hex',
+    steps:[
+      ['Descubra uma célula', 'O seu movimento fornece evidências de passagem por hexágonos H3. Descobrir uma área não garante sua captura.'],
+      ['Contribua para a influência', 'Se a patrulha for elegível, o servidor verifica as células válidas e ajusta o controle conforme as regras da estrutura e facção.'],
+      ['Acompanhe quem domina', 'Controle alto (≥650) pertence à Resistência; baixo (≤350), à Horda; entre eles, a disputa fica contestada.'],
+    ],
+    sport:{title:'Seu papel é manter a rotina',lead:'O simples hábito de caminhar pelos lugares aceitos pode descobrir áreas e apoiar sua facção. Você não precisa ficar recalculando influência.',focus:['A conquista de território exige progresso acumulado, não apenas cruzar um hexágono.', 'Outros jogadores e NPCs também alteram o mundo.']},
+    tactical:{title:'Escolha onde sua influência importa',lead:'Estruturas têm valores diferentes e padrões distintos de ataque e defesa.',focus:['Um jogador contribui no máximo uma vez para a mesma célula por dia UTC, respeitando os critérios de patrulha.', 'Até seis células podem gerar contribuição numa patrulha elegível.', 'A pontuação territorial soma o valor das estruturas efetivamente dominadas; pontuação semanal é outra conta.', 'Os NPCs geram movimento territorial e pressão, mas não fazem pontuação semanal como um jogador.']},
+    note:'O jogo não garante que uma facção preserve uma célula depois da patrulha. A posse evolui com a disputa.',
+    faq:[['Por que um território aparece cinza?', 'Ele pode estar contestado, sem domínio consolidado, mesmo que já tenha recebido influência.']],
+    source:'Covil: field-progression-api.md · war-report-api.md'
+  },
+  {
+    id:'energia',part:'DOMINE O MUNDO',number:'10',time:'4 MIN',title:'Energia 2.0: transforme movimento em opções',
+    deck:'A carteira online é separada da energia local antiga e permite operações situacionais ligadas às estruturas.',
+    where:'PATRULHA → ENERGIA • ONLINE ↗ → CENTRAL DE ENERGIA',icon:'bolt',
+    steps:[
+      ['Ganhe Energia com atividade válida', 'A carteira online recebe aproximadamente 7 pontos por quilômetro GPS elegível, calculados cumulativamente; há bônus único inicial e bônus diário de 2 km quando aplicáveis.'],
+      ['Confira saldo e reservas', 'A Central separa Energia disponível da reservada. A capacidade combinada é de 90.'],
+      ['Permita ou prepare um uso', 'No Automático, o sistema busca uma operação útil conforme sua estratégia. No Manual, você pode preparar uma operação antecipadamente.'],
+      ['Leia o efeito real', 'Só há débito quando o efeito elegível acrescenta um benefício. Uma reserva não é um gasto definitivo.'],
+    ],
+    sport:{title:'Ative e esqueça',lead:'Escolha Automático, uma prioridade e confirme se o gasto está permitido. O sistema não gasta indiscriminadamente: procura alternativas úteis sob limites.',focus:['Estratégias: Equilibrado, Defensivo ou Ofensivo.', 'Você pode pausar gastos automáticos sem perder a opção de registrar patrulhas.', 'Não precisa aprender os custos de cada estrutura para começar.']},
+    tactical:{title:'Planeje a carteira',lead:'O Manual mostra as fontes reconhecidas e permite preparar a melhor oportunidade antes de sair.',focus:['Ruínas: reconhecimento (10); Rádio: inteligência (10); Abrigo: proteção biológica (15).', 'Laboratório: estabilização (20); Depósito: ofensiva (20); Fortaleza: defesa preparada (20).', 'Até 1 operação preparada, 1 efeito consumido por patrulha e 3 consumos/dia UTC. Validade de até 24 h ou fim da temporada.', 'A reserva mínima ajustável (0 a 60) protege o saldo que você prefere não comprometer.']},
+    note:'A carteira online não soma automaticamente a Energia local legado. Recompensas online exigem recebimento e validação do servidor.',
+    faq:[['Se preparar uma operação, gasto na hora?', 'Não. Preparar reserva saldo. O débito só ocorre com efeito adicional válido; cancelamento ou expiração pode liberar a reserva.'],['Se deixar automático, o app vai capturar células sozinho?', 'Não. Automático gere as oportunidades de Energia. Influência territorial continua exigindo patrulha GPS real e elegível.']],
+    source:'Covil: energia-2.md · docs/energy-api.md · EnergyCenterPanel.kt'
+  },
+  {
+    id:'missoes',part:'DOMINE O MUNDO',number:'11',time:'4 MIN',title:'Ordens de Sobrevivência e Conquistas',
+    deck:'Além de dominar terrenos, suas patrulhas podem cumprir objetivos diários, semanais e especiais.',
+    where:'PATRULHA → MISSÕES / CONQUISTAS',icon:'flag',
+    steps:[
+      ['Abra a Central de Missões', 'Na área PATRULHA, use o atalho de MISSÕES para consultar suas Ordens de Sobrevivência.'],
+      ['Leia o objetivo e o prazo', 'Cada oferta pode exigir patrulhas, contribuição territorial, estrutura já descoberta ou situação biológica. Verifique se está disponível.'],
+      ['Confira Conquistas', 'A aba CONQUISTAS acompanha marcos e méritos pessoais, independentes do placar de guerra.'],
+    ],
+    sport:{title:'Avance naturalmente',lead:'Algumas missões e conquistas progridem com patrulhas elegíveis. Você pode consultar objetivos ao final da caminhada, sem perseguir cada um.',focus:['A lista se adapta ao seu progresso e às condições do servidor.', 'Nem toda missão dá pontos da temporada.', 'Missões podem não aparecer até que sejam elegíveis.']},
+    tactical:{title:'Organize sua operação',lead:'Leia dificuldade, disponibilidade, progresso, categoria e efeito da recompensa antes de escolher um percurso.',focus:['Há missões fáceis, médias, difíceis e especiais, inclusive objetivos estruturais e biológicos.', 'Pontos semanais de missões obedecem a orçamento/limites. Pontuação prevista não é promessa de crédito.', 'Benefícios táticos de uso único só são consumidos se houver efeito válido e dentro da validade.']},
+    note:'O tutorial não promete missões específicas em todas as contas: a oferta depende do jogador, do mundo e da temporada.',
+    faq:[['Por que minha Central está vazia?', 'A disponibilidade é calculada pelo servidor. Sincronize e confira a identidade habilitada. Algumas missões dependem de progresso, estruturas descobertas ou condições especiais.']],
+    source:'Covil: missões-2.md · docs/mission-engine-api.md · docs/mission-tactics.md'
+  },
+  {
+    id:'biologia',part:'DOMINE O MUNDO',number:'12',time:'3 MIN',title:'Contágio, cura e estado biológico',
+    deck:'O risco não está apenas no território. Sua exposição pode mudar quando você atravessa zonas hostis.',
+    where:'ESTADO BIO / Laboratórios',icon:'bio',
+    steps:[
+      ['Consulte “ESTADO BIO”', 'A aba mostra o estado biológico da sua identidade e informações confirmadas pelo servidor.'],
+      ['Entenda o risco', 'Contribuições qualificadas em território inimigo podem elevar a exposição; patrulhas seguras e tratamento em Laboratório aliado podem reduzi-la.'],
+      ['Observe alertas de transformação', 'Uma transformação real é determinada pelo servidor, não pela prévia de aparência da outra facção.'],
+    ],
+    sport:{title:'O sistema cuida do cálculo',lead:'Você pode continuar acompanhando suas caminhadas sem fazer escolhas a cada hexágono. Consulte a aba ESTADO BIO quando surgir um alerta.',focus:['Se sua facção efetiva mudar, a identidade e a progressão continuam vinculadas.', 'O cuidado e a exposição dependem da contribuição real da patrulha.']},
+    tactical:{title:'Proteja ou pressione',lead:'Estruturas e rotas têm riscos e oportunidades, com limites por episódio e tratamentos.',focus:['Laboratório inimigo eleva o risco; Laboratório aliado pode tratar uma exposição elegível.', 'Há limites de episódios positivos e tratamentos por temporada.', 'Missões especiais e operações de Energia podem oferecer apoio biológico, sem substituir uma patrulha real.']},
+    note:'As transformações seguem as regras da temporada. Não existe botão livre para trocar de facção a qualquer momento.',
+    faq:[['Se eu mudar de facção, perco minhas conquistas?', 'O progresso pessoal é preservado. A facção efetiva pode mudar pelo sistema biológico, e escolhas de fim de temporada seguem as regras da campanha.']],
+    source:'Covil: temporadas-contagio-cura.md · docs/player-biology-api.md'
+  },
+  {
+    id:'temporadas',part:'DOMINE O MUNDO',number:'13',time:'3 MIN',title:'Temporadas e Sala de Guerra',
+    deck:'O conflito é dividido em semanas. A Sala de Guerra pública permite acompanhar o panorama coletivo sem acessar sua conta.',
+    where:'REPORT / War Room pública',icon:'trophy',
+    steps:[
+      ['Conheça as duas pontuações', 'Pontos territoriais representam estruturas dominadas agora. Pontos de temporada contam realizações válidas no período semanal.'],
+      ['Acompanhe a semana', 'A temporada segue o calendário de segunda-feira a segunda-feira, à meia-noite de Brasília, usando regras do servidor.'],
+      ['Abra a Sala de Guerra', 'O site público mostra placar territorial, placar semanal, territórios conhecidos e eventos recentes.'],
+    ],
+    sport:{title:'Uma olhada depois do treino',lead:'Use a Sala de Guerra como placar da comunidade. Sua rotina importa mesmo sem acompanhar cada ataque e retomada.',focus:['Você participa jogando pelo app, não pelo site.', 'A Sala de Guerra é observação pública; não controla a facção nem altera Energia.']},
+    tactical:{title:'Leia a evolução do conflito',lead:'Compare os pontos da semana com os territórios dominados, acompanhe estruturas e eventos e decida onde vale contribuir.',focus:['Defesas, capturas, retomadas e missões qualificadas podem pontuar no período.', 'Os eventos e os números da War Room são um retrato agregado sujeito a intervalo de cache.', 'A virada de temporada fecha o placar anterior e abre outro. Não misture pontos do mundo com pontos semanais.']},
+    note:'Pontuação da temporada não significa quantidade de jogadores nem soma permanente de territórios.',
+    faq:[['A Sala de Guerra permite atacar pelo navegador?', 'Não. É um painel público, somente leitura. Ações reais acontecem por meio das patrulhas e dos sistemas autorizados do app.']],
+    source:'Covil: temporadas-contagio-cura.md · docs/season-engine-api.md · War Room pública'
+  },
+  {
+    id:'coop',part:'DOMINE O MUNDO',number:'14',time:'3 MIN',title:'Caminhar com aliados',
+    deck:'Quem gosta de companhia pode formar uma sessão cooperativa sem depender de bluetooth ou da descoberta automática de pessoas.',
+    where:'PATRULHA → painel de COOPERAÇÃO',icon:'users',
+    steps:[
+      ['Forme um grupo', 'Um líder cria um grupo temporário e compartilha manualmente um convite. Participam de 2 a 6 jogadores habilitados, inclusive de facções diferentes.'],
+      ['Combine o horário', 'O líder confirma a partida e cada pessoa começa sua própria patrulha GPS na janela definida pelo grupo.'],
+      ['Confira o reconhecimento', 'O servidor avalia as duas atividades, os intervalos e as células compartilhadas; terminar junto não é recompensa garantida.'],
+    ],
+    sport:{title:'Caminhada em companhia',lead:'Combine uma caminhada com amigos, entre no grupo antes do início e registre sua atividade normalmente.',focus:['Cada pessoa precisa instalar, ter conta Alpha ativa e começar a própria patrulha.', 'A participação é opcional. Você pode caminhar sozinho quando quiser.']},
+    tactical:{title:'Condições de reconhecimento',lead:'Os convites de grupo duram 10 minutos; o líder confirma a partida, e os participantes iniciam em até 5 minutos.',focus:['As atividades elegíveis exigem 500 m e 300 s móveis, além de sobreposição e evidência territorial comum.', 'Duas células qualificadas compartilhadas e pelo menos 300 m agregados de evidência comum são critérios do reconhecimento.', 'Os dias cooperativos rendem marcos pessoais, sem multiplicar automaticamente influência ou pontos territoriais.']},
+    note:'Compartilhe apenas o convite de cooperação com as pessoas escolhidas. Ele é diferente do convite individual de entrada na Alpha.',
+    faq:[['Jogadores de facções opostas podem caminhar juntos?', 'Sim. A cooperação aceita grupos mistos. Isso não altera a facção de cada participante.']],
+    source:'Covil: onboarding-equilibrio-cooperacao.md · docs/cooperation-api.md'
+  }
+];
+
+const GLOSSARY = [
+  ['Convite Alpha','Código individual e de uso único que permite vincular a identidade ao mundo compartilhado.'],
+  ['Facção','O lado real do jogador: Resistência (humanos) ou Horda (zumbis).'],
+  ['Esportista / Estrategista','Dois jeitos de aprender e participar, não são duas contas ou classes obrigatórias.'],
+  ['Patrulha','Atividade real registrada pelo GPS e submetida às regras de validação.'],
+  ['Distância válida','Metros aceitos pelo filtro do próprio jogo. Não é a distância bruta do telefone.'],
+  ['H3 / hexágono','Célula geográfica usada para descoberta, influência e disputa territorial.'],
+  ['Influência / controle','Valor do território de 0 a 1000, alterado pelo servidor após evidência elegível.'],
+  ['Energia online','Carteira validada pelo servidor; distinta do saldo legado local.'],
+  ['Reservada','Energia separada para uma operação ainda não consumida.'],
+  ['Contágio / exposição','Sistema biológico da campanha, dependente de encontros territoriais e regras do servidor.'],
+  ['Temporada','Ciclo semanal de disputa, com pontuação distinta do domínio territorial.'],
+  ['NPC','Opositor não controlado por pessoa, capaz de afetar influência e o estado do mundo.']
+];
+
+
+
+const $ = (id) => document.getElementById(id);
+const enc = (value) => String(value ?? '').replace(/[&<>"']/g, (char) => ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[char]));
+const routeNames = {sport:'ESPORTISTA',tactical:'ESTRATEGISTA'};
+const url = new URL(window.location.href);
+const selectFromUrl = url.searchParams.get('modo');
+const storedMode = safeRead('ar.guide.mode');
+let mode = selectFromUrl === 'estrategista' || selectFromUrl === 'tactical' ? 'tactical' : selectFromUrl === 'esportista' || selectFromUrl === 'sport' ? 'sport' : storedMode === 'tactical' ? 'tactical' : 'sport';
+const asked = url.searchParams.get('etapa');
+let active = CHAPTERS.findIndex(ch=>ch.id === asked);
+if (active < 0) active = 0;
+let searchText = '';
+let completed = loadProgress();
+
+function safeRead(key) {try{return localStorage.getItem(key)}catch{return null}}
+function safeWrite(key,value){try{localStorage.setItem(key,value)}catch{}}
+function progressKey(){return `ar.guide.v015.${mode}`}
+function loadProgress(){try{const v=JSON.parse(safeRead(progressKey())||'[]');return new Set(Array.isArray(v)?v.filter(id=>CHAPTERS.some(c=>c.id===id)):[])}catch{return new Set()}}
+function saveProgress(){safeWrite(progressKey(),JSON.stringify([...completed]))}
+function linkState(replace=true){const u=new URL(window.location.href);u.searchParams.set('modo',mode==='sport'?'esportista':'estrategista');u.searchParams.set('etapa',CHAPTERS[active].id);history[replace?'replaceState':'pushState']({},'',u)}
+
+function renderNav(){
+  const nav=$('chapterNav');let last='';let visible=0;
+  nav.innerHTML=CHAPTERS.map((c,i)=>{
+    const text=[c.title,c.deck,c.where,c.part,...c.steps.flat(),...c.sport.focus,...c.tactical.focus].join(' ').toLocaleLowerCase('pt-BR');
+    if(searchText&&!text.includes(searchText))return '';
+    visible++;
+    const phase=c.part===last?'':`<div class="index-phase">${enc(c.part)}</div>`;
+    last=c.part;
+    const done=completed.has(c.id);
+    return `${phase}<button type="button" class="index-button" data-index="${i}" ${i===active?'aria-current="step"':''} aria-label="Etapa ${c.number}: ${enc(c.title)}${done?', concluída':''}"><span class="num">${c.number}</span><span class="chapter-name">${enc(c.title)}</span><span class="${done?'done':'pending'}" aria-hidden="true">${done?'✓':''}</span></button>`;
+  }).join('') || `<p class="index-empty">Nenhum assunto encontrado. Tente outra palavra.</p>`;
+  nav.querySelectorAll('button[data-index]').forEach(btn=>btn.addEventListener('click',()=>openChapter(Number(btn.dataset.index),true)));
+}
+
+function renderProgress(){
+ const count=completed.size;
+ $('progressCount').textContent=`${count} / ${CHAPTERS.length}`;
+ $('progressTitle').textContent=count===0?'PRIMEIRO CONTATO':count===CHAPTERS.length?'PROTOCOLO CONCLUÍDO':count<5?'IDENTIDADE EM FORMAÇÃO':count<9?'EM PATRULHA':'OPERADOR EM ATIVIDADE';
+ $('progressFill').style.width=`${count/CHAPTERS.length*100}%`;
+ const t=$('progressTrack');t.setAttribute('aria-valuenow',String(count));t.setAttribute('aria-valuemax',String(CHAPTERS.length));
+}
+
+function showEligibilityTool(){
+ return `<section class="eligibility-demo" aria-labelledby="demoTitle"><span class="demo-label">SIMULAÇÃO DE TREINO · NÃO ENVIA DADOS</span><h4 id="demoTitle">Sua patrulha passaria pelo básico?</h4><p>Experimente valores fictícios. Isso é uma conferência educativa dos requisitos gerais, não um resultado do servidor.</p><div class="demo-inputs"><label>Metros GPS aceitos<input id="demoMeters" type="number" min="0" max="200000" inputmode="numeric" value="620" /></label><label>Segundos em movimento<input id="demoSeconds" type="number" min="0" max="100000" inputmode="numeric" value="380" /></label></div><label class="demo-vehicle"><input id="demoIncident" type="checkbox" /> Houve um episódio impeditivo (veículo ou GPS simulado)</label><div class="demo-result" id="demoResult" role="status"></div><p class="demo-disclaimer">Ainda é necessário ter evidência válida por célula H3 (≥50 m e 4 segmentos), ausência de demais vetos e confirmação oficial da API. O simulador não altera o jogo.</p></section>`;
+}
+function updateEligibility(){
+ const out=$('demoResult');if(!out)return;
+ const m=Math.max(0,Number($('demoMeters').value)||0);
+ const s=Math.max(0,Number($('demoSeconds').value)||0);
+ const incident=$('demoIncident').checked;
+ const basic=m>=500&&s>=300&&!incident;
+ out.classList.toggle('bad',!basic);
+ const reasons=[];
+ if(m<500)reasons.push('precisa de mais metros válidos');
+ if(s<300)reasons.push('precisa de mais tempo em movimento');
+ if(incident)reasons.push('há episódio impeditivo');
+ out.innerHTML=basic?'<strong>✓ Critérios gerais atendidos.</strong> O servidor ainda verificará as demais evidências e condições territoriais.':`<strong>• Ainda não atende ao básico.</strong> ${enc(reasons.join(' · '))}.`;
+}
+
+function renderChapter(){
+ const c=CHAPTERS[active];const b=c[mode];const t=mode==='sport'?'ESPORTISTA • OPERAÇÃO AUTOMÁTICA':'ESTRATEGISTA • DECISÃO TÁTICA';
+ const steps=c.steps.map(([title,description],i)=>`<li><span class="action-num">${String(i+1).padStart(2,'0')}</span><div class="action-content"><strong>${enc(title)}</strong><p>${enc(description)}</p></div></li>`).join('');
+ const faq=c.faq.map(([q,a])=>`<details class="faq-item"><summary>${enc(q)}</summary><p>${enc(a)}</p></details>`).join('');
+ const extra=c.id==='patrulha'?showEligibilityTool():'';
+ const links=c.id==='instalacao'?`<div class="chapter-support"><a href="${enc(GUIDE_META.download)}" target="_blank" rel="noopener noreferrer" class="support-link">Baixar APK Alpha ↗</a><a href="${enc(GUIDE_META.changelog)}" target="_blank" rel="noopener noreferrer" class="support-secondary">Ver canal de versões</a></div>`:c.id==='temporadas'?`<div class="chapter-support"><a href="${enc(GUIDE_META.warRoom)}" class="support-link">Abrir Sala de Guerra ↗</a></div>`:'';
+ $('chapterContent').innerHTML=`<div class="chapter-inner"><div class="chapter-topline"><span><span class="chapter-number">CAPÍTULO ${enc(c.number)}</span> / ${enc(c.part)}</span><span class="chapter-time">LEITURA ${enc(c.time)}</span></div><h3>${enc(c.title)}</h3><p class="chapter-lead">${enc(c.deck)}</p><div class="location-tag"><svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m10 1 7 4v10l-7 4-7-4V5l7-4Z"/><path d="M10 7v6M7 10h6"/></svg><span>NO APLICATIVO · ${enc(c.where)}</span></div><div class="step-label">PASSO A PASSO · O QUE FAZER</div><ol class="action-list">${steps}</ol>${links}<div class="branch-brief"><span class="branch-prefix">${t}</span><h4>${enc(b.title)}</h4><p>${enc(b.lead)}</p><ul class="focus-list">${b.focus.map(x=>`<li>${enc(x)}</li>`).join('')}</ul></div>${extra}<div class="alert-note"><span class="alert-mark">!</span><span>${enc(c.note)}</span></div><div class="faq-wrap"><h4>DÚVIDAS MAIS COMUNS</h4>${faq}</div><div class="source-tag"><strong>VERIFICADO NO COVIL</strong><span>${enc(c.source)}</span></div></div>`;
+ $('chapter').classList.toggle('is-tactical',mode==='tactical');
+ $('previousChapter').disabled=active===0;
+ $('nextChapter').disabled=active===CHAPTERS.length-1;
+ $('nextChapter').textContent=active===CHAPTERS.length-1?'Fim do roteiro':'Próximo →';
+ const done=completed.has(c.id);$('completeChapter').classList.toggle('is-done',done);
+ $('completeChapter').innerHTML=done?'✓ Etapa concluída':'Marcar como concluído <span aria-hidden="true">✓</span>';
+ if(c.id==='patrulha'){
+   for(const id of ['demoMeters','demoSeconds','demoIncident'])$(id)?.addEventListener('input',updateEligibility);
+   updateEligibility();
+ }
+}
+
+function renderProfiles(){
+ for(const [selected,card] of [['sport',$('sportSelect')],['tactical',$('tacticalSelect')]])card.setAttribute('aria-pressed',String(mode===selected));
+ $('roadmapIntro').textContent=mode==='sport'?'Versão Esportista: o essencial para caminhar e deixar a estratégia automática trabalhar.':'Versão Estrategista: a mesma jornada, com planejamento e regras detalhadas.';
+}
+function render(){renderProfiles();renderProgress();renderNav();renderChapter();}
+function openChapter(index,scroll=false,replace=false){if(index<0||index>=CHAPTERS.length)return;active=index;renderNav();renderChapter();linkState(replace);if(scroll){const el=$('chapter');el.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});}}
+function selectMode(next){if(next===mode)return;mode=next;completed=loadProgress();safeWrite('ar.guide.mode',mode);render();linkState();}
+function openGlossary(){const dialog=$('glossaryDialog');if(!dialog.open)dialog.showModal()}
+function closeGlossary(){$('glossaryDialog').close()}
+
+$('sportSelect').addEventListener('click',()=>selectMode('sport'));
+$('tacticalSelect').addEventListener('click',()=>selectMode('tactical'));
+$('previousChapter').addEventListener('click',()=>openChapter(active-1,true));
+$('nextChapter').addEventListener('click',()=>openChapter(active+1,true));
+$('completeChapter').addEventListener('click',()=>{const id=CHAPTERS[active].id;if(completed.has(id))completed.delete(id);else completed.add(id);saveProgress();renderProgress();renderNav();renderChapter()});
+$('chapterSearch').addEventListener('input',e=>{searchText=String(e.target.value).toLocaleLowerCase('pt-BR').trim();renderNav();if(searchText){document.querySelector('.chapter-index')?.classList.add('expanded')}});
+$('toggleIndex').addEventListener('click',()=>{const idx=document.querySelector('.chapter-index');const expanded=idx.classList.toggle('expanded');$('toggleIndex').setAttribute('aria-expanded',String(expanded));$('toggleIndex').innerHTML=expanded?'Fechar índice <span aria-hidden="true">⌃</span>':'Abrir índice <span aria-hidden="true">⌄</span>'});
+$('startGuide').addEventListener('click',()=>document.querySelector('#roteiro').scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'}));
+$('resetProgress').addEventListener('click',()=>{if(!window.confirm('Reiniciar somente as etapas marcadas neste estilo de tutorial?'))return;completed.clear();saveProgress();render()});
+for(const id of ['openGlossary','showGlossaryIntro'])$(id).addEventListener('click',openGlossary);
+for(const id of ['closeGlossary','closeGlossaryBottom'])$(id).addEventListener('click',closeGlossary);
+$('glossaryDialog').addEventListener('click',event=>{if(event.target===$('glossaryDialog'))closeGlossary()});
+$('glossaryList').innerHTML=GLOSSARY.map(([term,definition])=>`<dl class="glossary-row"><dt>${enc(term)}</dt><dd>${enc(definition)}</dd></dl>`).join('');
+$('headerVersion').textContent=`GUIA ${GUIDE_META.appVersion}`;
+$('footerVersion').textContent=`Base ${GUIDE_META.appVersion} · build ${GUIDE_META.build}`;
+$('footerReview').textContent=`Covil verificado em ${GUIDE_META.reviewedAt}`;
+window.addEventListener('popstate',()=>{const p=new URL(window.location.href).searchParams;const newMode=p.get('modo')==='estrategista'?'tactical':'sport';const ix=CHAPTERS.findIndex(c=>c.id===p.get('etapa'));mode=newMode;completed=loadProgress();active=ix>=0?ix:0;render()});
+render();linkState(true);
+
+</script>
+</body>
+</html>

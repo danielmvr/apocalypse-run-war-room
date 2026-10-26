@@ -1,0 +1,10 @@
+/* Guia de Campo is an independent static section at /guia/.
+   The War Room stays the home page and its existing data flow is untouched. */
+.header-quicklinks{display:flex;align-items:center;gap:16px}
+.guide-entry-link{display:inline-flex;align-items:center;gap:9px;justify-content:center;min-height:40px;padding:8px 13px;border:1px solid #659875;background:linear-gradient(110deg,#244231,#162a25);border-radius:6px;color:#c4f8d9;text-decoration:none;font-size:10px;font-weight:800;letter-spacing:1.1px;white-space:nowrap;transition:background .15s ease,border-color .15s ease}
+.guide-entry-link:hover{background:#31593e;border-color:#9cebb4;color:#edfff1}
+.guide-entry-link:focus-visible{outline:2px solid #b4ffd0;outline-offset:3px}
+.guide-entry-arrow{color:#8cd7aa;font-size:13px}
+@media(max-width:850px){.header-quicklinks{gap:8px}.guide-entry-link{font-size:9px;padding:8px 9px;gap:5px;letter-spacing:.3px}.guide-entry-link svg{width:15px;height:15px}}
+@media(max-width:420px){.guide-entry-link{gap:5px;font-size:9px;min-height:35px;padding:7px}.guide-entry-link .guide-entry-arrow{display:none}}
+@media(max-width:340px){.guide-entry-link span{display:none}.guide-entry-link{padding:8px;min-width:37px}}
