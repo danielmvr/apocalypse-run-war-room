@@ -1,6 +1,6 @@
 /**
  * Apocalypse Run War Room | independent frontend enhancement pack.
- * Uses existing public payload only. No backend, season, or DB changes.
+ * Uses the public payload only. No credentials or private game RPCs.
  */
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
@@ -62,6 +62,10 @@ function labelStructure(structure: string) {
 function markerNode(cell: WarTerritory, onSelect: (id: string) => void) {
   const definition = STRUCTURES[cell.structure];
   const Icon = definition?.icon ?? MapPin;
+  // MapLibre owns the wrapper's absolute position and transform. The visual
+  // tip ends at this wrapper's bottom center, without per-territory offsets.
+  const marker = document.createElement('div');
+  marker.className = 'ar-site-marker';
   const button = document.createElement('button');
   button.type = 'button';
   button.className = `ar-site-pin ar-site-pin--${side(cell.owner).className}`;
@@ -74,7 +78,8 @@ function markerNode(cell: WarTerritory, onSelect: (id: string) => void) {
     event.stopPropagation();
     onSelect(cell.id);
   });
-  return button;
+  marker.append(button);
+  return marker;
 }
 
 export function EnhancedWarMap({ cells }: { cells: WarTerritory[] }) {
@@ -110,7 +115,7 @@ export function EnhancedWarMap({ cells }: { cells: WarTerritory[] }) {
           id: 'ar-war-fill', type: 'fill', source: 'ar-war-cells',
           paint: {
             'fill-color': ['match', ['get', 'owner'], 'HUMAN', '#3dbd82', 'ZOMBIE', '#ff695f', '#a0adb0'],
-            'fill-opacity': 0.32,
+            'fill-opacity': ['interpolate', ['linear'], ['zoom'], 8, 0.2, 14, 0.32],
           },
         });
         instance.addLayer({
@@ -133,7 +138,10 @@ export function EnhancedWarMap({ cells }: { cells: WarTerritory[] }) {
       setFailed(true);
       return;
     }
+    const observer = new ResizeObserver(() => instance.resize());
+    observer.observe(container.current);
     return () => {
+      observer.disconnect();
       markers.current.forEach((marker) => marker.remove());
       markers.current = [];
       map.current = null;
@@ -158,6 +166,8 @@ export function EnhancedWarMap({ cells }: { cells: WarTerritory[] }) {
       return new maplibregl.Marker({
         element: markerNode(cell, setSelectedId),
         anchor: 'bottom',
+        offset: [0, 0],
+        subpixelPositioning: true,
       }).setLngLat([longitude, latitude]).addTo(instance);
     });
     if (!firstFit.current && features.length) {
@@ -183,7 +193,7 @@ export function EnhancedWarMap({ cells }: { cells: WarTerritory[] }) {
       <div className="ar-map-viewport" ref={container} role="region" aria-label="Mapa dos territórios em disputa" />
       {failed && <div className="ar-map-message">Mapa indisponível neste dispositivo. A lista de estruturas permanece abaixo.</div>}
       <div className="ar-map-tools">
-        <button onClick={focusOnWar} type="button" disabled={!ready || !liveCells.length} title="Centralizar territórios">
+        <button onClick={focusOnWar} type="button" disabled={!ready || !liveCells.length} title="Centralizar territórios" aria-label="Centralizar territórios">
           <Crosshair size={16} aria-hidden="true" /> <span>Centralizar</span>
         </button>
       </div>
@@ -265,7 +275,7 @@ export function WarEventFeed({ events, available }: { events: WarEventRecord[]; 
         {([['ALL', 'Todos'], ['HUMAN', 'Resistência'], ['ZOMBIE', 'Horda']] as const).map(([id, label]) => (
           <button type="button" key={id} onClick={() => setFilter(id)} aria-pressed={filter === id} className={filter === id ? 'active' : ''}>{label}</button>
         ))}
-        <span className="ar-event-filter__count">{current.length} ocorrências</span>
+        <span className="ar-event-filter__count">{current.length} {current.length === 1 ? 'ocorrência' : 'ocorrências'}</span>
       </div>
       {current.length ? (
         <ol className="ar-event-list">

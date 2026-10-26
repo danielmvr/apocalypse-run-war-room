@@ -4,15 +4,20 @@ Frontend estático de observação de guerra do Apocalypse Run. React 19, TypeSc
 
 ## Status da integração
 
-**Não há API pública configurada.** A auditoria de 24/10/2026 mostrou que as RPCs `ar_world`, `ar_war_report` e `ar_season_report` exigem tester autenticado. O frontend não utiliza credenciais do jogo nem publica dados reais sem uma API deliberadamente autorizada. Exibe `--` até existir resposta válida. O mapa básico utiliza tiles CARTO Dark Matter (serviço externo; conferir termos/limites de uso antes de divulgação ampla).
+**v0.2.0 preparada para revisão; publicação é uma etapa separada.** O frontend usa somente `VITE_PUBLIC_WAR_API`. A Edge `war-room-public` v3 já era pública; sua fonte foi trazida para `supabase/functions/war-room-public/index.ts` e ampliada localmente com a leitura sazonal canônica. O status efetivo de aplicação/publicação está em [docs/war-room-v0.2.0.md](docs/war-room-v0.2.0.md).
+
+As RPCs do jogo `ar_world`, `ar_war_report` e `ar_season_report` continuam privadas. A temporada pública usa apenas `ar_war_room_season()`, com execução restrita ao servidor. O navegador não recebe credenciais. `season:null`, resposta sazonal inválida ou temporada vencida exibem indisponibilidade e `--`, preservando os dados territoriais. Zeros oficiais e empates continuam válidos. O mapa usa tiles CARTO Dark Matter (serviço externo; conferir termos/limites antes de divulgação ampla).
 
 ## Rodar localmente
 
 ```bash
-npm install
+npm ci
 cp .env.example .env.local
 npm run dev
 npm run build
+npm test
+npx playwright install chromium
+npm run test:browser
 ```
 
 Configure `VITE_PUBLIC_WAR_API` somente após implantar um endpoint público read-only específico. Nunca inclua `service_role`, senhas ou tokens de tester no GitHub Pages.
@@ -23,7 +28,7 @@ Configure `VITE_PUBLIC_WAR_API` somente após implantar um endpoint público rea
 {
   "schemaVersion":1,"asOf":"2026-10-24T13:00:00Z",
   "war":{"factions":[{"id":"HUMAN","score":0,"ownedCells":0},{"id":"ZOMBIE","score":0,"ownedCells":0}],"players":{"total":0,"active24h":0},"discoveredCells":0,"contestedCells":0},
-  "season":{"number":1,"startsAt":"2026-10-19T03:00:00Z","endsAt":"2026-10-26T03:00:00Z","factions":[{"id":"HUMAN","score":0,"ownedCells":0},{"id":"ZOMBIE","score":0,"ownedCells":0}],"leader":null},
+  "season":{"number":1,"startsAt":"2026-10-19T03:00:00Z","endsAt":"2026-10-26T03:00:00Z","factions":[{"id":"HUMAN","score":0},{"id":"ZOMBIE","score":0}],"leader":null},
   "events":[],"cells":[]
 }
 ```
@@ -33,9 +38,9 @@ Configure `VITE_PUBLIC_WAR_API` somente após implantar um endpoint público rea
 ## Implantação no GitHub Pages
 
 1. Criar repositório público `apocalypse-run-war-room` (separado do repositório Android privado).
-2. Enviar o conteúdo desta pasta para a branch `main`, e gerar `package-lock.json` no primeiro `npm install`.
+2. Revisar a PR e validar o CI antes de integrar à `main`; `package-lock.json` fixa a instalação.
 3. Em Settings → Pages, definir Source `GitHub Actions`.
-4. O workflow `.github/workflows/pages.yml` gera `dist/` e publica o site no Pages. URL esperada após deploy (não verificada): `https://danielmvr.github.io/apocalypse-run-war-room/`.
+4. O workflow `.github/workflows/pages.yml` testa contrato/Edge, Chromium e build na PR, sem deploy. Push na `main` ou execução manual na `main` publica `dist/` no Pages pelo fluxo existente.
 5. Configurar o endpoint read-only com CORS para a origem do site; inserir a URL nas variáveis de build de forma segura (a URL pública não é segredo). O Vite só lê VITE_PUBLIC_WAR_API durante o build. Sem ela, o site permanece em modo seguro.
 
 ## Auditoria 24/10/2026
@@ -46,7 +51,7 @@ Configure `VITE_PUBLIC_WAR_API` somente após implantar um endpoint público rea
 - `ar_war_report`, `ar_world`, `ar_season_report`, `ar_season_telemetry`: EXECUTE não concedido a anon.
 - `ar_world(p_cell_ids text[])`: não assume cobertura global; necessita rota pública paginada/câmera.
 - A pontuação da temporada e a territorial são independentes e devem preservar sua fonte canônica.
-- **Pendente**: criar/revisar camada pública com output allowlist, rate limit/cache, ACLs e testes de acesso anon. Não elevar permissões das RPCs internas.
+- Registro histórico: a camada pública foi criada depois dessa auditoria. A versão remota observada no início desta entrega era `war-room-public` v3, com `season:null`; o código local da v0.2.0 preserva limites e allowlist dessa versão. Não elevar permissões das RPCs internas.
 
 ## Fontes oficiais
 
