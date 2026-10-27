@@ -7,7 +7,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import maplibregl, { type GeoJSONSource, type Map as MapLibreMap, type Marker as MapLibreMarker } from 'maplibre-gl';
 import { cellToBoundary, cellToLatLng, isValidCell } from 'h3-js';
 import {
-  Activity, Castle, Crosshair, FlaskConical, Landmark, MapPin,
+  Activity, Castle, Crosshair, Eye, EyeOff, FlaskConical, Landmark, MapPin,
   RadioTower, Shield, Skull, Tent, Warehouse, X,
 } from 'lucide-react';
 import 'maplibre-gl/dist/maplibre-gl.css';
@@ -91,9 +91,13 @@ export function EnhancedWarMap({ cells }: { cells: WarTerritory[] }) {
   const [ready, setReady] = useState(false);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [failed, setFailed] = useState(false);
+  const [showPins, setShowPins] = useState(true);
   cellsRef.current = cells;
   const selected = cells.find((cell) => cell.id === selectedId);
   const liveCells = useMemo(() => cells.filter((cell) => isValidCell(cell.id)), [cells]);
+  useEffect(() => {
+    if (selectedId && !liveCells.some((cell) => cell.id === selectedId)) setSelectedId(null);
+  }, [selectedId, liveCells]);
 
   useEffect(() => {
     if (!container.current) return;
@@ -161,7 +165,7 @@ export function EnhancedWarMap({ cells }: { cells: WarTerritory[] }) {
     source?.setData({ type: 'FeatureCollection', features });
 
     markers.current.forEach((marker) => marker.remove());
-    markers.current = liveCells.map((cell) => {
+    markers.current = showPins ? liveCells.map((cell) => {
       const [latitude, longitude] = cellToLatLng(cell.id);
       return new maplibregl.Marker({
         element: markerNode(cell, setSelectedId),
@@ -169,7 +173,7 @@ export function EnhancedWarMap({ cells }: { cells: WarTerritory[] }) {
         offset: [0, 0],
         subpixelPositioning: true,
       }).setLngLat([longitude, latitude]).addTo(instance);
-    });
+    }) : [];
     if (!firstFit.current && features.length) {
       const bounds = new maplibregl.LngLatBounds();
       for (const feature of features) {
@@ -178,7 +182,7 @@ export function EnhancedWarMap({ cells }: { cells: WarTerritory[] }) {
       instance.fitBounds(bounds, { padding: 75, maxZoom: 13.6, duration: 500 });
       firstFit.current = true;
     }
-  }, [liveCells, ready]);
+  }, [liveCells, ready, showPins]);
 
   function focusOnWar() {
     const instance = map.current;
@@ -195,6 +199,9 @@ export function EnhancedWarMap({ cells }: { cells: WarTerritory[] }) {
       <div className="ar-map-tools">
         <button onClick={focusOnWar} type="button" disabled={!ready || !liveCells.length} title="Centralizar territórios" aria-label="Centralizar territórios">
           <Crosshair size={16} aria-hidden="true" /> <span>Centralizar</span>
+        </button>
+        <button onClick={() => setShowPins((visible) => !visible)} type="button" disabled={!ready} aria-pressed={!showPins} aria-label={showPins ? 'Ocultar pins das estruturas' : 'Mostrar pins das estruturas'} title={showPins ? 'Ocultar pins das estruturas' : 'Mostrar pins das estruturas'}>
+          {showPins ? <EyeOff size={16} aria-hidden="true" /> : <Eye size={16} aria-hidden="true" />} <span>{showPins ? 'Ocultar pins' : 'Mostrar pins'}</span>
         </button>
       </div>
       {selected && (
@@ -216,11 +223,16 @@ export function EnhancedWarMap({ cells }: { cells: WarTerritory[] }) {
 }
 
 /** Compact structure inventory, counted from actual public territory records. */
-export function StrategicStructureStrip({ cells }: { cells: WarTerritory[] }) {
+export function StrategicStructureStrip({ cells, available = true }: { cells: WarTerritory[]; available?: boolean }) {
   const items = Object.entries(STRUCTURES)
     .map(([id, definition]) => ({ id, definition, count: cells.filter((cell) => cell.structure === id).length }))
     .filter((item) => item.count > 0);
-  if (!items.length) return null;
+  if (!items.length) return (
+    <div className="ar-strategy-strip" aria-label="Estruturas descobertas por categoria">
+      <span className="ar-strategy-strip__title">ESTRUTURAS DETECTADAS</span>
+      <p className="ar-strategy-strip__empty" role="status">{available ? 'Nenhuma estrutura encontrada neste filtro.' : 'Aguardando estruturas da API pública.'}</p>
+    </div>
+  );
   return (
     <div className="ar-strategy-strip" aria-label="Estruturas descobertas por categoria">
       <span className="ar-strategy-strip__title">ESTRUTURAS DETECTADAS</span>
