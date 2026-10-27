@@ -1,0 +1,31 @@
+/* Controles complementares: preserva a camada H3 e a âncora dos pins. */
+.ar-map-tools{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.ar-map-tools button{min-height:43px;min-width:43px}
+.ar-map-tools button:focus-visible{outline:2px solid #cbffe1;outline-offset:3px}
+.ar-map-tools button[aria-pressed="true"]{background:#2b4e3f;border-color:#85cba1;color:#f1fff5}
+.ar-map-filter-note{font-size:10px;color:#8da99b;line-height:1.6;margin:10px 0 0}
+.ar-strategy-strip__empty{font-size:12px;color:#a1b8ab;line-height:1.6;padding:8px 0 0;margin:5px 0 0}
+@media(max-width:600px){
+  .ar-map-tools{gap:6px}
+  .ar-map-tools button{min-width:44px;min-height:44px;padding:9px;justify-content:center}
+  .ar-map-filter-note{font-size:10px}
+  .filters button{min-width:calc(25% - 8px);padding:10px 5px}
+}
+
+/* Cronômetro da temporada: calendário oficial da API, atualização visual local a cada segundo. */
+.ar-season-timer{margin:16px 0 18px;padding:17px 15px 13px;background:linear-gradient(125deg,#0e2a25,#102020 75%);border:1px solid #3c6755;border-radius:9px;min-width:0}
+.ar-season-timer__heading{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:5px 12px;font-size:10px;letter-spacing:1.1px;font-weight:800;color:#a6ebca}
+.ar-season-timer__source{font-size:9px;letter-spacing:.5px;color:#779c8d;font-weight:600}
+.ar-season-timer__digits{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin:13px 0 10px;font-variant-numeric:tabular-nums}
+.ar-season-timer__unit{min-width:0;padding:9px 3px 7px;text-align:center;background:#0a1819;border:1px solid #355b4b;border-radius:6px}
+.ar-season-timer__unit strong{display:block;font:800 clamp(21px,2.4vw,32px)/1 'Barlow Condensed',system-ui,sans-serif;letter-spacing:1px;color:#ddffeb}
+.ar-season-timer__unit span{display:block;margin-top:5px;font-size:9px;font-weight:700;color:#96baa6;letter-spacing:.7px}
+.ar-season-timer__progress{height:4px;background:#203b32;overflow:hidden;border-radius:4px}
+.ar-season-timer__progress span{display:block;height:100%;background:#71d8a1;transition:width 1s linear}
+.ar-season-timer__fine{font-size:10px;line-height:1.5;color:#86a89a;margin:9px 0 0}
+.ar-season-timer__message{font-size:13px;color:#deeee2;line-height:1.6;margin:12px 0 4px}
+.ar-season-timer--ended{border-color:#665944;background:linear-gradient(125deg,#2a2821,#1c2321)}
+.ar-season-timer--ended .ar-season-timer__heading{color:#e2c78f}
+.ar-season-timer--unavailable{border-color:#3b4a43;background:#15201e}
+@media(max-width:600px){.ar-season-timer{padding:14px 11px}.ar-season-timer__unit strong{font-size:28px}.ar-season-timer__unit{padding:8px 2px 6px}}
+@media(prefers-reduced-motion:reduce){.ar-season-timer__progress span{transition:none}}
