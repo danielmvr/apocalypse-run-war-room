@@ -27,6 +27,19 @@ main{max-width:1380px;margin:auto;padding:0 36px}.kicker{color:#89c7a3;font-size
 @media print{body{color:#101c18;background:#fff}.site-header,.ambient-horizon,.hero-art,.chapter-index,.hero-actions,.profile-grid,.chapter-controls,.last-call,.site-footer,.progress-surface{display:none}.hero{min-height:0;padding:0}.hero h1{font-size:40px}.chapter-card{box-shadow:none;border:0}.branch-brief{border:1px solid #aaa;color:#111}.chapter-inner{padding:0}main{padding:15px}}
 .chapter-support{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 0 46px}.support-link{display:inline-flex;background:#8de8ae;color:#0d2918;font-size:10px;font-weight:800;border:1px solid #8de8ae;border-radius:4px;padding:9px 13px}.support-link:hover{background:#b5ffd0}.support-secondary{display:inline-flex;border:1px solid #51705a;color:#9fdcb0;font-size:10px;font-weight:800;border-radius:4px;padding:9px 13px}.support-secondary:hover{background:#21402d}@media(max-width:590px){.chapter-support{margin-left:37px}}
 
+
+/* Motion Graphic 01 · primeira patrulha GPS · CSS/SVG/JS locais, sem dependências */
+.patrol-motion{--pm-green:#91eeb6;--pm-grey:#94a6aa;--pm-amber:#f0bd7c;margin:31px 0 0;border:1px solid #426b55;border-radius:12px;overflow:hidden;background:linear-gradient(155deg,#13271e 0%,#0b1718 62%,#121b18 100%);box-shadow:0 24px 60px #0002}
+.pm-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:20px 23px 12px}.pm-overline{font-size:9px;letter-spacing:2.1px;color:#8fdaa9;font-weight:800}.pm-heading h4{font:800 clamp(25px,3.3vw,34px)/1.04 var(--font-head);letter-spacing:.35px;margin:7px 0;color:#f0fbef;text-transform:uppercase}.pm-heading p{font-size:11px;line-height:1.65;color:#96b1a1;margin:8px 0 0}.pm-flag{font-size:9px;letter-spacing:.8px;font-weight:800;white-space:nowrap;color:#e8c998;border:1px solid #675942;background:#3f331c55;border-radius:5px;padding:8px}
+.pm-map-wrap{margin:0 16px;position:relative;border:1px solid #385249;border-radius:8px;overflow:hidden;background:#081215}.pm-map{width:100%;height:auto;display:block;min-height:185px;max-height:345px;background:radial-gradient(ellipse at 40% 50%,#152d28,#071014 75%)}
+.pm-grid-line{stroke:#38504b;stroke-width:1;stroke-opacity:.18}.pm-road{fill:none;stroke:#42514f;stroke-width:11;stroke-linecap:round;stroke-linejoin:round;opacity:.42}.pm-road-inner{fill:none;stroke:#82918b;stroke-width:1.5;stroke-linecap:round;opacity:.35}.pm-hex{fill:#397954;fill-opacity:.09;stroke:#8adba9;stroke-opacity:.33;stroke-width:1.7}.pm-hex.pm-hex--near{fill-opacity:.16;stroke-opacity:.5}.pm-valid-bg{fill:none;stroke:#153e2a;stroke-width:13;stroke-linecap:round}.pm-valid-line{fill:none;stroke:#84ffc0;stroke-width:5;stroke-linecap:round;filter:url(#pmGlow)}.pm-discard-bg{fill:none;stroke:#56636a;stroke-width:11;stroke-linecap:round;opacity:.5;stroke-dasharray:7 7}.pm-discard-line{fill:none;stroke:#efac76;stroke-width:4;stroke-linecap:round;stroke-dasharray:5 9}.pm-map-label{fill:#6d8881;font:800 12px 'DM Sans',sans-serif;letter-spacing:2px}.pm-marker-halo{fill:#8cfbb5;opacity:.16}.pm-marker-body{fill:#b1ffce;stroke:#163929;stroke-width:4}.pm-marker-core{fill:#193e2c}.pm-map-corner{position:absolute;top:12px;left:14px;font-size:9px;font-weight:800;letter-spacing:1.2px;color:#a8d7be;background:#0b181bd9;border:1px solid #466957;padding:6px 8px;border-radius:4px;pointer-events:none}.pm-map-corner:before{content:'';display:inline-block;width:6px;height:6px;background:#86ecae;border-radius:50%;margin-right:7px;box-shadow:0 0 12px #86ecae}
+.pm-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;padding:13px 16px 2px}.pm-metric{background:#0f201b;border:1px solid #2f4b3a;border-radius:6px;padding:11px 11px 9px;min-width:0}.pm-metric:last-child{border-color:#5e5242;background:#2e251b35}.pm-metric span{display:block;font-size:9px;letter-spacing:.65px;font-weight:800;color:#a0b9a8}.pm-metric strong{font:800 clamp(24px,4vw,36px)/1.13 var(--font-head);color:#b4ffce;display:block;margin-top:4px}.pm-metric:last-child strong{color:#f4c18b}.pm-metric small{color:#779387;font-size:9px}
+.pm-scene-panel{margin:12px 16px 12px;padding:17px 19px;border-radius:7px;border:1px solid #446d51;background:linear-gradient(115deg,#173323,#11221f)}.pm-scene-panel.is-warning{background:linear-gradient(115deg,#32271c,#1e221e);border-color:#8c6a43}.pm-scene-panel.is-neutral{background:#15211f;border-color:#405a50}.pm-scene-head{display:flex;align-items:center;justify-content:space-between;gap:9px;flex-wrap:wrap}.pm-scene-counter{font:800 9px var(--font);letter-spacing:1.6px;color:#91cca6}.pm-state{display:inline-flex;align-items:center;gap:6px;color:#a9e8bd;font-size:10px;font-weight:800}.pm-state:before{content:'';width:7px;height:7px;background:#86efb1;border-radius:50%}.pm-scene-panel.is-warning .pm-state{color:#ffd09d}.pm-scene-panel.is-warning .pm-state:before{background:#f3b270}.pm-scene-panel.is-neutral .pm-state:before{background:#8eaba0}.pm-scene-panel h5{font:800 clamp(21px,3vw,27px)/1.1 var(--font-head);text-transform:uppercase;letter-spacing:.3px;margin:8px 0 7px}.pm-scene-panel p{font-size:12px;line-height:1.75;color:#d0e2d5;margin:0;min-height:42px}.pm-controls{margin:0 16px 15px;display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}.pm-control-buttons{display:flex;gap:7px}.pm-button{min-height:44px;display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:5px;border:1px solid #5c826c;color:#dcf7df;background:#233c2d;font:800 11px var(--font);padding:10px 14px}.pm-button--primary{color:#10271c;background:#9cebbb;border-color:#9cebbb}.pm-button--primary:hover{background:#cbffda}.pm-button--secondary:hover{background:#2d503a}.pm-button:focus-visible,.pm-step:focus-visible{outline:2px solid #caffdc;outline-offset:3px}.pm-playback{color:#83a290;font-size:10px;letter-spacing:.3px}.pm-track{height:3px;background:#263e33;margin:0 16px 14px;overflow:hidden;border-radius:5px}.pm-track-fill{display:block;height:100%;background:linear-gradient(90deg,#4dba7c,#b1ffd0);width:0%}.pm-steps{display:flex;gap:7px;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:#406551 transparent;padding:0 16px 15px}.pm-step{flex:1 0 89px;min-height:48px;text-align:left;border:1px solid #324c3f;background:#111f1b;color:#90ac99;border-radius:5px;padding:7px 9px;scroll-snap-align:start;font:700 10px/1.25 var(--font)}.pm-step .pm-step-num{font:800 14px var(--font-head);display:block;color:#789784}.pm-step[aria-current=step]{background:#214431;color:#e9ffec;border-color:#8bdda7}.pm-step[aria-current=step] .pm-step-num{color:#a5ffbf}.pm-disclaimer{padding:11px 16px 14px;border-top:1px solid #34524272;color:#879d90;font-size:10px;line-height:1.6;margin:0}.pm-disclaimer strong{color:#b2d6be}
+.chapter-card.is-tactical .pm-scene-panel{border-color:#7e6c4c;background:linear-gradient(115deg,#342d20,#1a241e)}.chapter-card.is-tactical .pm-scene-counter{color:#f1c78d}
+@media(max-width:590px){.pm-heading{padding:16px 13px 10px;flex-wrap:wrap;gap:6px}.pm-flag{font-size:8px}.pm-map-wrap{margin:0 9px}.pm-map{min-height:150px}.pm-metrics{padding:10px 9px 0;gap:5px}.pm-metric{padding:8px 6px}.pm-metric span{font-size:8px}.pm-metric strong{font-size:25px}.pm-metric small{font-size:8px}.pm-scene-panel{margin:9px;padding:14px}.pm-scene-panel p{font-size:11px;min-height:54px}.pm-controls{margin:0 9px 11px}.pm-button{padding:9px 11px;font-size:10px}.pm-playback{width:100%;text-align:right}.pm-track{margin:0 9px 11px}.pm-steps{padding:0 9px 13px}.pm-step{flex:0 0 112px}.pm-disclaimer{padding:11px 12px 13px}}
+@media(prefers-reduced-motion:reduce){.pm-valid-line,.pm-discard-line{filter:none}.pm-map *{animation:none!important;transition:none!important}}
+@media print{.patrol-motion{break-inside:avoid}.pm-control-buttons,.pm-steps,.pm-track,.pm-playback{display:none}.pm-map{max-height:250px}}
+
 </style>
 </head>
 <body>
@@ -411,6 +424,32 @@ function renderProgress(){
  const t=$('progressTrack');t.setAttribute('aria-valuenow',String(count));t.setAttribute('aria-valuemax',String(CHAPTERS.length));
 }
 
+
+function showPatrolMotion(){
+ return `<section class="patrol-motion" id="patrolMotion" aria-labelledby="pmTitle" data-simulation="true">
+  <div class="pm-heading"><div><span class="pm-overline">MOTION GRAPHIC 01 / MISSÃO DE APRENDIZADO</span><h4 id="pmTitle">Sua caminhada, quadro a quadro</h4><p>Uma animação interativa para entender o que conta, o que é descartado e como a atividade é avaliada.</p></div><span class="pm-flag">EXEMPLO FICTÍCIO</span></div>
+  <div class="pm-map-wrap"><svg class="pm-map" id="pmMap" viewBox="0 0 700 330" role="img" aria-label="Mapa ilustrativo com percurso verde para caminhada aceita, trecho pontilhado âmbar para deslocamento não elegível e hexágonos fictícios.">
+  <defs><pattern id="pmGrid" width="28" height="28" patternUnits="userSpaceOnUse"><path d="M28 0H0V28" fill="none" stroke="#567368" stroke-width=".6" opacity=".12"/></pattern><filter id="pmGlow" x="-45%" y="-45%" width="190%" height="190%"><feGaussianBlur stdDeviation="1.9" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter><mask id="pmDiscardMask" maskUnits="userSpaceOnUse"><path id="pmDiscardMaskPath" d="M315 178C349 140 370 112 407 117" fill="none" stroke="white" stroke-width="15" stroke-linecap="round"/></mask></defs>
+  <rect width="700" height="330" fill="url(#pmGrid)"/>
+  <g aria-hidden="true"><path class="pm-road" d="M-30 270L122 212L215 141L360 175L510 96L739 120M-50 103L92 160L260 104L397 137L521 213L750 175M185 -35L244 83L230 207L303 353M490 -30L454 85L502 200L448 370M50 10L104 100L150 340M-60 20L310 24L740 12"/><path class="pm-road-inner" d="M-30 270L122 212L215 141L360 175L510 96L739 120M-50 103L92 160L260 104L397 137L521 213L750 175M185 -35L244 83L230 207L303 353M490 -30L454 85L502 200L448 370M50 10L104 100L150 340"/></g>
+  <g aria-hidden="true"><polygon class="pm-hex pm-hex--near" points="188,104 251,140 251,211 188,247 125,211 125,140"/><polygon class="pm-hex" points="313,104 376,140 376,211 313,247 251,211 251,140"/><polygon class="pm-hex pm-hex--near" points="438,33 501,69 501,140 438,176 375,140 375,69"/><polygon class="pm-hex" points="563,104 626,140 626,211 563,247 500,211 500,140"/><polygon class="pm-hex" points="563,-38 626,-2 626,69 563,105 500,69 500,-2"/></g>
+  <g aria-hidden="true"><text x="38" y="82" class="pm-map-label">SETOR A</text><text x="520" y="282" class="pm-map-label">SETOR B</text></g>
+  <path class="pm-valid-bg" d="M84 238C126 224 160 204 197 189S268 171 315 178"/><path class="pm-valid-bg" d="M407 117C445 130 480 150 510 135S570 90 614 82"/>
+  <path id="pmPath1" class="pm-valid-line" d="M84 238C126 224 160 204 197 189S268 171 315 178"/>
+  <path id="pmPath2Base" class="pm-discard-bg" d="M315 178C349 140 370 112 407 117"/>
+  <path id="pmPath2" class="pm-discard-line" mask="url(#pmDiscardMask)" d="M315 178C349 140 370 112 407 117"/>
+  <path id="pmPath3" class="pm-valid-line" d="M407 117C445 130 480 150 510 135S570 90 614 82"/>
+  <g id="pmMarker" aria-hidden="true" transform="translate(84 238)"><circle class="pm-marker-halo" r="22"/><circle class="pm-marker-body" r="10"/><circle class="pm-marker-core" r="3"/></g>
+  </svg><span class="pm-map-corner">CAMINHO SIMULADO • GPS</span></div>
+  <div class="pm-metrics"><div class="pm-metric"><span>METROS ACEITOS</span><strong id="pmValid">0</strong><small>m</small></div><div class="pm-metric"><span>TEMPO MÓVEL</span><strong id="pmTime">0:00</strong><small>min:s</small></div><div class="pm-metric"><span>TRECHO DESCARTADO</span><strong id="pmDiscard">0</strong><small>m, ilustrativo</small></div></div>
+  <div class="pm-scene-panel" id="pmScenePanel" aria-live="polite" aria-atomic="true"><div class="pm-scene-head"><span class="pm-scene-counter" id="pmSceneCounter">CENA 01 / 07</span><span class="pm-state" id="pmState">PRONTA</span></div><h5 id="pmSceneTitle">GPS preparado</h5><p id="pmSceneText">Toque em Reproduzir para acompanhar uma patrulha fictícia.</p></div>
+  <div class="pm-controls"><div class="pm-control-buttons"><button type="button" class="pm-button pm-button--primary" id="pmPlay" aria-label="Reproduzir animação da primeira patrulha">▶ Reproduzir</button><button type="button" class="pm-button pm-button--secondary" id="pmRestart" aria-label="Recomeçar animação da primeira patrulha">↺ Reiniciar</button></div><span class="pm-playback" id="pmPlayback">Interativo · Sem dados reais</span></div>
+  <div class="pm-track" role="progressbar" id="pmProgress" aria-label="Progresso da animação" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span class="pm-track-fill" id="pmTrackFill"></span></div>
+  <div class="pm-steps" aria-label="Escolher uma cena da demonstração">${['Preparar','Caminhar','Pausar','Descartar','Retomar','Encerrar','Analisar'].map((title,index)=>`<button type="button" class="pm-step" data-pm-step="${index}" ${index===0?'aria-current="step"':''} aria-label="Ir para cena ${index+1}: ${title}"><span class="pm-step-num">${String(index+1).padStart(2,'0')}</span>${title}</button>`).join('')}</div>
+  <p class="pm-disclaimer"><strong>Atenção:</strong> exemplo pedagógico, com números e hexágonos fictícios. A análise verdadeira depende de GPS, validação por célula H3, regras antifraude e resposta do servidor. Nenhuma recompensa é concedida pelo tutorial.</p>
+ </section>`;
+}
+
 function showEligibilityTool(){
  return `<section class="eligibility-demo" aria-labelledby="demoTitle"><span class="demo-label">SIMULAÇÃO DE TREINO · NÃO ENVIA DADOS</span><h4 id="demoTitle">Sua patrulha passaria pelo básico?</h4><p>Informe apenas os metros e segundos de caminhada comprovada, excluindo trechos descartados. Valores fictícios não substituem a análise do servidor.</p><div class="demo-inputs"><label>Metros GPS aceitos<input id="demoMeters" type="number" min="0" max="200000" inputmode="numeric" value="620" /></label><label>Segundos de movimento comprovado<input id="demoSeconds" type="number" min="0" max="100000" inputmode="numeric" value="380" /></label></div><label class="demo-vehicle"><input id="demoIncident" type="checkbox" /> Houve trecho descartado ou suspeito no percurso</label><label class="demo-vehicle"><input id="demoMock" type="checkbox" /> Há localização simulada comprovada ou prova de movimento contraditória</label><div class="demo-result" id="demoResult" role="status"></div><p class="demo-disclaimer">Uma suspeita isolada não zera a caminhada válida. Ainda são necessárias evidências consistentes por célula H3 (≥50 m e ≥4 segmentos), precisão, ausência de outros bloqueios e confirmação oficial. O simulador não altera o jogo.</p></section>`;
 }
@@ -434,11 +473,111 @@ function updateEligibility(){
  }
 }
 
+
+const PATROL_MOTION_STAGES = [
+ {name:'GPS preparado',badge:'PRONTA',duration:2400,tone:'neutral',valid:0,seconds:0,discard:0,reveal:[0,0,0],segment:0,
+  sport:'Você toca em Iniciar patrulha. O jogo prepara a leitura do GPS, mas ainda não há metros válidos.',
+  tactical:'O aplicativo confirma o estado necessário para registrar GPS. Nenhuma célula é conquistada apenas ao iniciar.'},
+ {name:'Caminhada registrada',badge:'EM MOVIMENTO',duration:3300,tone:'ok',valid:180,seconds:110,discard:0,reveal:[1,0,0],segment:1,
+  sport:'Os metros aceitos e o tempo em movimento começam a subir. Continue caminhando naturalmente.',
+  tactical:'180 m válidos e 110 s móveis neste exemplo. Ainda é menos que os mínimos gerais de 500 m e 300 s.'},
+ {name:'Pausa no percurso',badge:'PAUSADA',duration:2400,tone:'neutral',valid:180,seconds:110,discard:0,reveal:[1,0,0],segment:0,
+  sport:'Se você para, a distância não aumenta. Não precisa mexer no celular para retomar a caminhada.',
+  tactical:'Durante a parada, os 180 m válidos são preservados. O relógio total pode seguir, mas o movimento qualificado não aumenta.'},
+ {name:'Trecho não elegível',badge:'DESCARTADO',duration:3000,tone:'warning',valid:180,seconds:110,discard:140,reveal:[1,1,0],segment:2,
+  sport:'Um trecho não elegível fica de fora da conta. Isso não apaga a caminhada válida anterior.',
+  tactical:'140 m descartados apenas no exemplo. O segmento suspeito não soma, mas suspeita isolada não elimina automaticamente os 180 m anteriores.'},
+ {name:'Caminhada retomada',badge:'EM MOVIMENTO',duration:4200,tone:'ok',valid:620,seconds:380,discard:140,reveal:[1,1,1],segment:3,
+  sport:'Você volta a caminhar e termina com 620 m válidos e 6 min 20 s de movimento, superando os mínimos gerais.',
+  tactical:'620 m GPS aceitos e 380 s móveis. O total supera 500 m/300 s; cada hexágono ainda precisa de evidência territorial própria.'},
+ {name:'Patrulha encerrada',badge:'AGUARDANDO ENVIO',duration:2500,tone:'neutral',valid:620,seconds:380,discard:140,reveal:[1,1,1],segment:0,
+  sport:'Ao encerrar, sua atividade fica registrada. Com envio autorizado e conexão, ela pode ser sincronizada automaticamente.',
+  tactical:'Registro local, envio, recibo de recebimento e efeitos confirmados pelo servidor são etapas diferentes. Nenhuma conquista é presumida.'},
+ {name:'Conferência final',badge:'ANÁLISE ILUSTRATIVA',duration:3400,tone:'ok',valid:620,seconds:380,discard:140,reveal:[1,1,1],segment:0,
+  sport:'Simulação concluída! Os mínimos gerais foram alcançados, mas isso não garante conquista, Energia ou pontos.',
+  tactical:'Os mínimos gerais foram satisfeitos no exemplo. Influência exige prova por célula (≥50 m e ≥4 segmentos), limites do servidor e confirmação oficial.'}
+];
+let disposePatrolMotion = () => {};
+function bindPatrolMotion(){
+ const root=$('patrolMotion');if(!root)return;
+ const mapPaths=['pmPath1','pmPath2','pmPath3'].map(id=>$(id));
+ const lengths=mapPaths.map(path=>path.getTotalLength());
+ const marker=$('pmMarker');
+ const maskPath=$('pmDiscardMaskPath');
+ const stages=PATROL_MOTION_STAGES;
+ const total=stages.reduce((n,s)=>n+s.duration,0);
+ const offsets=[];let cumulative=0;for(const scene of stages){offsets.push(cumulative);cumulative+=scene.duration;}
+ const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ let elapsed=0,playing=false,frame=null,lastTick=0,lastStage=-1;
+ const steps=[...root.querySelectorAll('[data-pm-step]')];
+ function frameAt(time){
+  const t=Math.max(0,Math.min(total,time));let index=stages.length-1;
+  for(let i=0;i<stages.length;i++){if(t<offsets[i]+stages[i].duration){index=i;break;}}
+  const part=Math.max(0,Math.min(1,(t-offsets[index])/stages[index].duration));
+  const scene=stages[index],prior=stages[Math.max(0,index-1)];
+  const blend=(key)=>Math.round((index===0?0:prior[key])+(scene[key]-(index===0?0:prior[key]))*part);
+  const visible=scene.reveal.map((v,j)=>{
+   const before=index===0?0:prior.reveal[j];return before+(v-before)*part;
+  });
+  return {t,index,part,scene,valid:blend('valid'),seconds:blend('seconds'),discard:blend('discard'),visible};
+ }
+ function show(time){
+  const state=frameAt(time);
+  mapPaths.forEach((path,j)=>{
+   const fraction=Math.max(0,Math.min(1,state.visible[j]));
+   path.style.strokeDasharray=j===1?'5 9':String(lengths[j]);
+   if(j===1){path.style.strokeDashoffset='0';path.style.opacity=fraction>0?'1':'0';maskPath.style.strokeDasharray=String(lengths[j]);maskPath.style.strokeDashoffset=String(lengths[j]*(1-fraction));$('pmPath2Base').style.opacity=fraction>0?'.5':'0';}
+   else {path.style.strokeDashoffset=String(lengths[j]*(1-fraction));path.style.opacity=fraction>0?'1':'0';}
+  });
+  let x=84,y=238;
+  if(state.index>=4){const fraction=state.visible[2];const p=mapPaths[2].getPointAtLength(lengths[2]*fraction);x=p.x;y=p.y;}
+  else if(state.index>=3){const fraction=state.visible[1];const p=mapPaths[1].getPointAtLength(lengths[1]*fraction);x=p.x;y=p.y;}
+  else if(state.index>=1){const fraction=state.visible[0];const p=mapPaths[0].getPointAtLength(lengths[0]*fraction);x=p.x;y=p.y;}
+  marker.setAttribute('transform',`translate(${x.toFixed(2)} ${y.toFixed(2)})`);
+  $('pmValid').textContent=String(state.valid);
+  $('pmTime').textContent=`${Math.floor(state.seconds/60)}:${String(state.seconds%60).padStart(2,'0')}`;
+  $('pmDiscard').textContent=String(state.discard);
+  if(state.index!==lastStage){
+   lastStage=state.index;
+   $('pmScenePanel').classList.toggle('is-warning',state.scene.tone==='warning');
+   $('pmScenePanel').classList.toggle('is-neutral',state.scene.tone==='neutral');
+   $('pmSceneCounter').textContent=`CENA ${String(state.index+1).padStart(2,'0')} / 07`;
+   $('pmState').textContent=state.scene.badge;
+   $('pmSceneTitle').textContent=state.scene.name;
+   $('pmSceneText').textContent=state.scene[mode];
+   steps.forEach((button,i)=>{if(i===state.index)button.setAttribute('aria-current','step');else button.removeAttribute('aria-current')});
+  }
+  $('pmTrackFill').style.width=`${(100*state.t/total).toFixed(2)}%`;
+  $('pmProgress').setAttribute('aria-valuenow',String(Math.round(100*state.t/total)));
+  $('pmPlayback').textContent=reduced?'Movimento reduzido: use os quadros':playing?'Reproduzindo · Simulação':state.t>=total?'Fim da demonstração':'Interativo · Sem dados reais';
+ }
+ function stop(){playing=false;if(frame!==null)cancelAnimationFrame(frame);frame=null;lastTick=0;$('pmPlay').textContent=reduced?'Próximo quadro':'▶ Reproduzir';$('pmPlay').setAttribute('aria-label',reduced?'Avançar um quadro da animação':'Reproduzir animação da primeira patrulha');}
+ function tick(stamp){if(!playing)return;if(lastTick)elapsed=Math.min(total,elapsed+Math.min(stamp-lastTick,200));lastTick=stamp;show(elapsed);if(elapsed>=total){stop();show(elapsed);return;}frame=requestAnimationFrame(tick);}
+ function play(){
+  if(reduced){let next=stages.findIndex((_,i)=>offsets[i]>elapsed);if(next<0)next=0;elapsed=offsets[next]+stages[next].duration-1;lastStage=-1;show(elapsed);return;}
+  if(playing){stop();show(elapsed);return;}
+  if(elapsed>=total){elapsed=0;lastStage=-1;}
+  playing=true;lastTick=0;$('pmPlay').textContent='Ⅱ Pausar';$('pmPlay').setAttribute('aria-label','Pausar animação da primeira patrulha');frame=requestAnimationFrame(tick);
+ }
+ function restart(){stop();elapsed=0;lastStage=-1;show(elapsed);}
+ const onPlay=()=>play();const onRestart=()=>restart();
+ const onStep=(event)=>{const index=Number(event.currentTarget.getAttribute('data-pm-step'));stop();elapsed=offsets[index]+(index===0?0:Math.min(stages[index].duration-1,stages[index].duration*0.999));lastStage=-1;show(elapsed);};
+ const onHidden=()=>{if(document.visibilityState==='hidden'&&playing){stop();show(elapsed);}};
+ $('pmPlay').addEventListener('click',onPlay);
+ $('pmRestart').addEventListener('click',onRestart);
+ steps.forEach(button=>button.addEventListener('click',onStep));
+ document.addEventListener('visibilitychange',onHidden);
+ if(reduced){$('pmPlay').textContent='Próximo quadro';$('pmPlay').setAttribute('aria-label','Avançar um quadro da animação');}
+ show(0);
+ disposePatrolMotion=()=>{stop();document.removeEventListener('visibilitychange',onHidden);};
+}
+
 function renderChapter(){
+ disposePatrolMotion();disposePatrolMotion=()=>{};
  const c=CHAPTERS[active];const b=c[mode];const t=mode==='sport'?'ESPORTISTA • OPERAÇÃO AUTOMÁTICA':'ESTRATEGISTA • DECISÃO TÁTICA';
  const steps=c.steps.map(([title,description],i)=>`<li><span class="action-num">${String(i+1).padStart(2,'0')}</span><div class="action-content"><strong>${enc(title)}</strong><p>${enc(description)}</p></div></li>`).join('');
  const faq=c.faq.map(([q,a])=>`<details class="faq-item"><summary>${enc(q)}</summary><p>${enc(a)}</p></details>`).join('');
- const extra=c.id==='patrulha'?showEligibilityTool():'';
+ const extra=c.id==='patrulha'?`${showPatrolMotion()}${showEligibilityTool()}`:'';
  const links=c.id==='instalacao'?`<div class="chapter-support"><a href="${enc(GUIDE_META.download)}" target="_blank" rel="noopener noreferrer" class="support-link">Baixar APK Alpha ↗</a><a href="${enc(GUIDE_META.changelog)}" target="_blank" rel="noopener noreferrer" class="support-secondary">Ver canal de versões</a></div>`:c.id==='temporadas'?`<div class="chapter-support"><a href="${enc(GUIDE_META.warRoom)}" class="support-link">Abrir Sala de Guerra ↗</a></div>`:'';
  $('chapterContent').innerHTML=`<div class="chapter-inner"><div class="chapter-topline"><span><span class="chapter-number">CAPÍTULO ${enc(c.number)}</span> / ${enc(c.part)}</span><span class="chapter-time">LEITURA ${enc(c.time)}</span></div><h3>${enc(c.title)}</h3><p class="chapter-lead">${enc(c.deck)}</p><div class="location-tag"><svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m10 1 7 4v10l-7 4-7-4V5l7-4Z"/><path d="M10 7v6M7 10h6"/></svg><span>NO APLICATIVO · ${enc(c.where)}</span></div><div class="step-label">PASSO A PASSO · O QUE FAZER</div><ol class="action-list">${steps}</ol>${links}<div class="branch-brief"><span class="branch-prefix">${t}</span><h4>${enc(b.title)}</h4><p>${enc(b.lead)}</p><ul class="focus-list">${b.focus.map(x=>`<li>${enc(x)}</li>`).join('')}</ul></div>${extra}<div class="alert-note"><span class="alert-mark">!</span><span>${enc(c.note)}</span></div><div class="faq-wrap"><h4>DÚVIDAS MAIS COMUNS</h4>${faq}</div><div class="source-tag"><strong>VERIFICADO NO COVIL</strong><span>${enc(c.source)}</span></div></div>`;
  $('chapter').classList.toggle('is-tactical',mode==='tactical');
@@ -448,6 +587,7 @@ function renderChapter(){
  const done=completed.has(c.id);$('completeChapter').classList.toggle('is-done',done);
  $('completeChapter').innerHTML=done?'✓ Etapa concluída':'Marcar como concluído <span aria-hidden="true">✓</span>';
  if(c.id==='patrulha'){
+   bindPatrolMotion();
    for(const id of ['demoMeters','demoSeconds','demoIncident','demoMock'])$(id)?.addEventListener('input',updateEligibility);
    updateEligibility();
  }
