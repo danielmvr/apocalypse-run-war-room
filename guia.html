@@ -287,6 +287,80 @@ main{max-width:1380px;margin:auto;padding:0 36px}.kicker{color:#89c7a3;font-size
 @media(max-width:375px){.am-controls .am-next{flex:1 1 100%}.am-controls button{flex:1 1 0}.am-tag{white-space:normal}}
 @media(prefers-reduced-motion:reduce){.awakening-motion *, .awakening-motion *:before,.awakening-motion *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
+
+/* Motion Graphic 09 · DEBRIEFING · auditoria pedagogica, valores ficticios */
+.debrief-motion{--dm-lime:#91f1b7;--dm-amber:#f3bb77;--dm-fog:#92aca4;--dm-ink:#ecf9ef;--dm-void:#081513;margin:30px 0 0;border:1px solid #456e58;background:radial-gradient(circle at 100% 0%,#1e413022,transparent 40%),linear-gradient(155deg,#11241c,#091414 75%);border-radius:13px;overflow:hidden;box-shadow:0 24px 65px #0004;font-family:var(--font)}
+.dm-intro{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:22px 23px 15px}
+.dm-kicker{color:var(--dm-lime);font-size:9px;letter-spacing:2px;font-weight:800}
+.dm-intro h4{margin:7px 0 5px;font:800 clamp(26px,4.5vw,38px)/1 var(--font-head);color:var(--dm-ink);text-transform:uppercase}
+.dm-intro p{max-width:600px;color:#a5bcb0;font-size:12px;line-height:1.6;margin:8px 0 0}
+.dm-stamp{border:1px solid #866a46;color:#f4ce9a;background:#40312270;font-weight:800;letter-spacing:1px;font-size:9px;border-radius:5px;padding:8px 10px;white-space:nowrap}
+.dm-chooser{padding:2px 22px 15px;display:grid;gap:10px;grid-template-columns:1fr}
+.dm-chooser-label{font-size:10px;letter-spacing:1.25px;color:#93b49e;font-weight:800}
+.dm-choices{display:flex;flex-wrap:wrap;gap:7px}
+.dm-choices button{font:700 11px var(--font);padding:9px 12px;color:#c3d5cb;min-height:40px;border:1px solid #3f5a4a;background:#132720;border-radius:6px;cursor:pointer;transition:background .18s,box-shadow .18s}
+.dm-choices button[aria-pressed=true]{background:#275b40;border-color:#8bebaa;color:#f1fff1;box-shadow:inset 0 0 0 1px #8bebaa55}
+.dm-choices.dm-choices--network button[aria-pressed=true]{background:#22423d;border-color:#90c7bc}
+.dm-stage{margin:0 16px;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(200px,.83fr);gap:11px}
+.dm-map{position:relative;background:#0b1a18;border:1px solid #385348;border-radius:9px;min-width:0;overflow:hidden}
+.dm-map svg{width:100%;height:100%;min-height:245px;display:block}
+.dm-street{fill:none;stroke:#506560;stroke-width:11;stroke-linecap:round;opacity:.4}
+.dm-street-inner{fill:none;stroke:#789087;stroke-width:1.7;stroke-linecap:round;opacity:.35}
+.dm-grid{stroke:#5b7668;stroke-width:1;stroke-opacity:.13}
+.dm-h3{fill:#25593d;fill-opacity:.24;stroke:#6dbe8d;stroke-opacity:.58;stroke-width:2}
+.dm-h3[data-state=active]{fill:#2e8152;fill-opacity:.45;stroke:#a3ffc4;stroke-opacity:1}
+.dm-h3[data-state=rejected]{fill:#736044;fill-opacity:.16;stroke:#e5b077;stroke-opacity:.58}
+.dm-h3-label{font:800 12px var(--font);letter-spacing:1.4px;fill:#bfd6bf;pointer-events:none}
+.dm-route-base{fill:none;stroke:#1e4832;stroke-width:14;stroke-linecap:round;stroke-linejoin:round}
+.dm-route-green{fill:none;stroke:#92ffc2;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;filter:url(#dmGlow)}
+.dm-route-orange{fill:none;stroke:#eab87e;stroke-width:5;stroke-dasharray:9 9;stroke-linecap:round;opacity:.9}
+.dm-pulse{fill:none;stroke:#bcffce;stroke-width:2;opacity:.55}
+.dm-dot{fill:#c3ffe1;stroke:#16382b;stroke-width:4}
+.dm-map-floating{position:absolute;top:12px;left:12px;display:flex;align-items:center;gap:7px;background:#0b191be8;border:1px solid #3e6854;padding:7px 9px;border-radius:4px;font-size:9px;color:#bbddc9;letter-spacing:1.2px;font-weight:800}
+.dm-map-floating:before{content:'';display:block;width:6px;height:6px;background:#95f6b7;border-radius:50%;box-shadow:0 0 9px #6dffc9}
+.dm-dossier{border:1px solid #3b5a49;border-radius:9px;background:#12251f;display:flex;flex-direction:column;min-width:0;padding:15px}
+.dm-dossier-kicker{color:#90cba4;font-size:9px;font-weight:800;letter-spacing:1.4px}
+.dm-result-status{font:800 clamp(24px,2.6vw,35px)/1.12 var(--font-head);color:#b1ffd0;text-transform:uppercase;margin:12px 0 6px;min-height:64px;overflow-wrap:anywhere}
+.dm-result-status[data-tone=warning]{color:#f4cd92}
+.dm-result-status[data-tone=muted]{color:#c4d5ca}
+.dm-dossier-info{font-size:11px;line-height:1.6;color:#a8c0af;min-height:67px}
+.dm-track{display:grid;gap:12px;margin-top:auto;padding-top:16px}
+.dm-track-step{display:flex;gap:10px;align-items:center;color:#788d81;font-size:11px;font-weight:700}
+.dm-track-step>span{width:22px;height:22px;display:grid;place-items:center;flex-shrink:0;border:1px solid #4a6755;border-radius:50%;font:800 10px var(--font);color:inherit}
+.dm-track-step[data-state=active]{color:#b9ffd0}.dm-track-step[data-state=active]>span{border-color:#9be5ae;background:#28513a;color:#d6ffe2}
+.dm-track-step[data-state=done]{color:#9ab5a5}.dm-track-step[data-state=done]>span{border-color:#456b55;color:#8ce2af}
+.dm-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;padding:12px 16px 0}
+.dm-metric{background:#0e221b;border:1px solid #345541;border-radius:7px;padding:12px 12px 11px;min-width:0}
+.dm-metric.is-removed{background:#2b231a;border-color:#705940}
+.dm-metric span{display:block;color:#9cb5a8;text-transform:uppercase;font-size:9px;line-height:1.35;font-weight:800;letter-spacing:.6px}
+.dm-metric strong{display:block;font:800 clamp(24px,3.7vw,34px)/1.04 var(--font-head);margin:6px 0 3px;color:#b1ffcb;font-variant-numeric:tabular-nums;white-space:nowrap}
+.dm-metric.is-removed strong{color:#f3c68d}.dm-metric small{font-size:9px;color:#849e8e}
+.dm-info{margin:12px 16px 0;border:1px solid #456b52;border-radius:8px;padding:16px 18px;background:linear-gradient(110deg,#183825,#11231d)}
+.dm-info.is-warning{background:linear-gradient(110deg,#39291e,#1e241e);border-color:#91734c}
+.dm-info.is-muted{background:#18251f;border-color:#446251}
+.dm-info-top{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.dm-scene-number{font-size:9px;font-weight:800;letter-spacing:1.2px;color:#b2d5be}
+.dm-scene-state{color:#c2efd0;font-size:10px;font-weight:800}
+.dm-info.is-warning .dm-scene-state{color:#ffd297}
+.dm-info h5{font:800 clamp(24px,3.8vw,33px)/1.06 var(--font-head);text-transform:uppercase;margin:9px 0 6px;color:#f1fff1}
+.dm-info p{font-size:12px;color:#bad1be;line-height:1.65;margin:0}
+.dm-branch{margin-top:11px;padding-top:10px;border-top:1px solid #436651;color:#d7f4de;font-size:11px;line-height:1.6}
+.dm-branch strong{color:#96f0b1}
+.dm-timeline{margin:14px 16px 0;display:flex;gap:5px;overflow-x:auto;scrollbar-width:thin;scrollbar-color:#587562 transparent;padding-bottom:5px;scroll-snap-type:x proximity}
+.dm-timeline button{font:800 10px var(--font);border:1px solid #3b5b48;border-radius:5px;background:#12261e;color:#91af9c;cursor:pointer;padding:9px 11px;min-height:39px;min-width:88px;flex:1 0 auto;scroll-snap-align:start;white-space:nowrap}
+.dm-timeline button[aria-current=step]{color:#eefff2;background:#25583c;border-color:#86ecab}
+.dm-controls{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:13px 16px 15px}
+.dm-controls button{border:1px solid #4e7758;border-radius:6px;color:#d9f3de;background:#1a3528;min-height:42px;cursor:pointer;padding:9px 13px;font:800 11px var(--font)}
+.dm-controls button.dm-play{border-color:#95eeaf;color:#102d1d;background:#a2f1b9}
+.dm-counter{margin-left:auto;color:#90b5a0;font:800 10px var(--font);white-space:nowrap;font-variant-numeric:tabular-nums}
+.dm-progress{margin:0 16px 16px;background:#254136;border-radius:999px;height:5px;overflow:hidden}
+.dm-progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#59bd84,#affbd0);transition:width .18s linear}
+.dm-disclaimer{border-top:1px solid #345440;color:#9eb9a9;font-size:10px;line-height:1.65;margin:0;padding:13px 17px 16px}
+.debrief-motion button:focus-visible{outline:2px solid #d0ffdb;outline-offset:2px}
+@media(max-width:740px){.dm-stage{grid-template-columns:1fr}.dm-dossier{min-height:0}.dm-result-status{min-height:0;margin:8px 0}.dm-dossier-info{min-height:0}.dm-track{display:flex;flex-wrap:wrap;gap:9px;padding-top:9px}.dm-track-step{flex:1 0 110px;font-size:10px}.dm-map svg{height:auto;min-height:210px;max-height:300px}.dm-intro{padding:19px 17px 12px}.dm-chooser{padding:3px 17px 15px}}
+@media(max-width:430px){.dm-intro{display:block}.dm-stamp{display:inline-block;margin-top:12px}.dm-choices button{flex:1 1 auto}.dm-stage{margin:0 10px;gap:8px}.dm-metrics{gap:5px;padding:9px 10px 0}.dm-metric{padding:9px 7px}.dm-metric span{font-size:8px}.dm-metric strong{font-size:clamp(22px,6.8vw,31px)}.dm-metric small{font-size:8px}.dm-info{margin:9px 10px 0;padding:13px}.dm-timeline{margin:12px 10px 0}.dm-controls{padding:12px 10px}.dm-controls button{flex:1 1 auto}.dm-counter{margin:4px auto 0}.dm-progress{margin:0 10px 13px}}
+@media(prefers-reduced-motion:reduce){.debrief-motion *, .debrief-motion *:before, .debrief-motion *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
 </style>
 </head>
 <body>
@@ -1648,7 +1722,134 @@ function bindAwakeningMotion(){
  repaint();disposeAwakeningMotion=()=>{stop();document.removeEventListener('visibilitychange',onHidden);};
 }
 
+
+/* Motion Graphic 09 · DEBRIEFING · dados ficticios e fluxo real do Covil */
+const DEBRIEF_SCENES=[
+  {short:'Fim do GPS',title:'Patrulha encerrada',state:'REGISTRO LOCAL',duration:3400,desc:'O jogo encerra a captura GPS e preserva seu relatório local. O total do trajeto ainda não equivale à distância aceita.',sport:'Você já pode conferir sua caminhada, mesmo sem conexão.',tactical:'A patrulha conserva sua identidade e o registro local. Envio e crédito territorial são etapas separadas.'},
+  {short:'Filtro GPS',title:'Cada metro sob análise',state:'VALIDAÇÃO DO PERCURSO',duration:3800,desc:'Os filtros analisam precisão, saltos, retomadas e segmentos inconsistentes. Nem todo deslocamento medido vira distância elegível.',sport:'A parte verde representa caminhada aceita; o laranja mostra o que não será creditado.',tactical:'Trechos rejeitados não são unidos por uma linha fictícia. Sensores auxiliares não substituem GPS aceito.'},
+  {short:'Trecho descartado',title:'O trecho suspeito não apaga o resto',state:'PATRULHA MISTA',duration:4000,desc:'Na 0.15.1 e seguintes, um trecho suspeito isolado não anula automaticamente a caminhada comprovada antes e depois dele.',sport:'Uma pausa ou trecho descartado não precisa destruir todo o seu esforço.',tactical:'Somente segmentos comprovados entram nos metros aceitos e no tempo de movimento. Fraude de localização comprovada continua bloqueada.'},
+  {short:'Debrief local',title:'Seu resumo vem primeiro',state:'DEBRIEFING NO APARELHO',duration:3300,desc:'Você vê distância aceita, tempo em movimento e observações. Esse relatório local não é uma confirmação dos pontos da facção.',sport:'Seu progresso pessoal pode ser consultado independentemente da guerra.',tactical:'Compare metros aceitos e tempo elegível. Para influência territorial, a referência é pelo menos 500 m e 300 s, além das evidências por célula.'},
+  {short:'Fila de envio',title:'A atividade segue para a rede',state:'SINCRONIZAÇÃO AUTOMÁTICA',duration:3700,desc:'Quando há autorização e rede, o app envia a patrulha pela fila durável. Se estiver offline, ela pode aguardar a próxima oportunidade de sincronização.',sport:'Não é necessário apertar um botão de sincronização toda vez.',tactical:'O reenvio usa a mesma identidade de patrulha; a confirmação pendente não autoriza inventar efeitos nem duplicar recompensas.'},
+  {short:'Recibo',title:'Recebida não significa conquistada',state:'RESPOSTA DO SERVIDOR',duration:4200,desc:'O servidor pode receber a atividade e devolver um recibo, mas isso não garante contribuição territorial nem pontos da temporada.',sport:'A confirmação de envio e os resultados da guerra são coisas diferentes.',tactical:'O recibo de envio, os requisitos GPS e o efeito canônico por célula são verificados separadamente.'},
+  {short:'Evidência H3',title:'A célula também precisa de prova',state:'VERIFICAÇÃO TERRITORIAL',duration:3900,desc:'Para disputar um hexágono, a patrulha precisa de evidência qualificada por célula H3 e cumprir os limites da guerra.',sport:'Nem toda caminhada perto de uma estrutura conta como ataque ou defesa.',tactical:'A regra-base exige pelo menos 50 m e quatro segmentos por célula H3; respeita máximo de seis contribuições e uma por jogador/célula/dia UTC.'},
+  {short:'Resultado',title:'Agora, sim, leia o resultado',state:'CONCILIAÇÃO DO DEBRIEFING',duration:4600,desc:'Somente o resultado confirmado do servidor informa os efeitos reais. Se a rede falhar ou faltarem requisitos, não há vitória inventada.',sport:'A caminhada continua registrada. Acompanhe o status sem confundir animação com recompensa.',tactical:'ACK, confirmação de efeitos, elegibilidade e contribuição são informações independentes. O servidor é a fonte final de verdade.'}
+];
+const DEBRIEF_CASES={
+  mixed:{name:'Caminhada mista',raw:920,accepted:680,discarded:240,moving:390,h3:2,evidence:true},
+  short:{name:'Patrulha curta',raw:420,accepted:315,discarded:105,moving:220,h3:0,evidence:false},
+  noH3:{name:'Sem evidência H3',raw:820,accepted:640,discarded:180,moving:380,h3:0,evidence:false}
+};
+function showDebriefMotion(){
+ const makeHex=(x,y,r)=>Array.from({length:6},(_,i)=>{const a=(i*60-30)*Math.PI/180;return `${(x+Math.cos(a)*r).toFixed(1)},${(y+Math.sin(a)*r).toFixed(1)}`}).join(' ');
+ const hexes=[[188,130],[311,184],[422,128]].map(([x,y],i)=>`<g><polygon class="dm-h3" data-dm-h3="${i}" points="${makeHex(x,y,66)}"/><text class="dm-h3-label" x="${x}" y="${y+5}" text-anchor="middle">H3 ${i+1}</text></g>`).join('');
+ const roads=['M-15 40L185 42 398 15 730 74','M40 280L215 198 450 288 710 210','M85 -20L230 140 285 330','M415 -20L430 128 550 333','M-25 160L190 125 440 118 720 142'];
+ const roadMarkup=roads.map(p=>`<path d="${p}" class="dm-street"/><path d="${p}" class="dm-street-inner"/>`).join('');
+ const timeline=DEBRIEF_SCENES.map((sc,i)=>`<button type="button" data-dm-scene="${i}" aria-current="${i===0?'step':'false'}">${String(i+1).padStart(2,'0')} ${sc.short}</button>`).join('');
+ return `<section class="debrief-motion" id="debriefMotion" aria-labelledby="dmTitle" data-simulation="true">
+ <div class="dm-intro"><div><span class="dm-kicker">MOTION GRAPHIC 09 / ANÁLISE DE PATRULHA</span><h4 id="dmTitle">O que aconteceu com minha caminhada?</h4><p>Da última amostra GPS ao recibo de guerra. Explore diferentes atividades fictícias e veja por que distância registrada e contribuição confirmada são coisas diferentes.</p></div><span class="dm-stamp">DADOS FICTÍCIOS</span></div>
+ <div class="dm-chooser"><span class="dm-chooser-label">01 / ESCOLHA UMA PATRULHA</span><div class="dm-choices" role="group" aria-label="Tipo de patrulha simulada"><button type="button" data-dm-case="mixed" aria-pressed="true">Caminhada mista</button><button type="button" data-dm-case="short" aria-pressed="false">Abaixo do mínimo</button><button type="button" data-dm-case="noH3" aria-pressed="false">Sem prova H3</button></div><span class="dm-chooser-label">02 / SIMULE A CONEXÃO</span><div class="dm-choices dm-choices--network" role="group" aria-label="Estado fictício da conexão"><button type="button" data-dm-network="online" aria-pressed="true">● Com internet</button><button type="button" data-dm-network="offline" aria-pressed="false">○ Sem internet</button></div></div>
+ <div class="dm-stage"><div class="dm-map"><svg viewBox="0 0 650 315" role="img" aria-label="Mapa ilustrativo com células H3, rota verde para caminhada válida e faixa âmbar para trecho descartado"><defs><filter id="dmGlow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><g>${roadMarkup}</g><g>${hexes}</g><path class="dm-route-base" d="M82 264 Q125 221 175 222 L280 177 Q325 155 353 198 L435 158 Q490 122 550 75"/><path class="dm-route-green" id="dmPathA" d="M82 264 Q125 221 175 222 L280 177"/><path class="dm-route-orange" id="dmPathBad" d="M280 177 Q325 155 353 198"/><path class="dm-route-green" id="dmPathB" d="M353 198 L435 158 Q490 122 550 75"/><circle class="dm-pulse" id="dmPulse" cx="82" cy="264" r="17"/><circle class="dm-dot" id="dmMarker" cx="82" cy="264" r="8"/><g font-family="sans-serif" fill="#bed7c3" font-size="11"><text x="46" y="289">INÍCIO</text><text x="546" y="59">FIM</text></g></svg><div class="dm-map-floating">ROTAS ILUSTRATIVAS · SEM GPS REAL</div></div>
+ <div class="dm-dossier"><span class="dm-dossier-kicker">TRANSMISSÃO / ANÁLISE</span><strong class="dm-result-status" id="dmResultStatus" data-tone="muted" role="status">REGISTRO LOCAL</strong><div class="dm-dossier-info" id="dmResultInfo">Sua atividade começa como um registro do aparelho.</div><div class="dm-track" aria-label="Etapas de processamento"><div class="dm-track-step" data-dm-step="0" data-state="active"><span>1</span>Local</div><div class="dm-track-step" data-dm-step="1" data-state="idle"><span>2</span>Fila</div><div class="dm-track-step" data-dm-step="2" data-state="idle"><span>3</span>Servidor</div><div class="dm-track-step" data-dm-step="3" data-state="idle"><span>4</span>Território</div></div></div></div>
+ <div class="dm-metrics" aria-label="Métricas de patrulha fictícia"><div class="dm-metric"><span>Metros aceitos</span><strong id="dmAccepted">0</strong><small>do filtro GPS</small></div><div class="dm-metric"><span>Tempo elegível</span><strong id="dmMoving">0s</strong><small>movimento comprovado</small></div><div class="dm-metric is-removed"><span>Metros descartados</span><strong id="dmDiscarded">0</strong><small>não contam na guerra</small></div></div>
+ <div class="dm-info" id="dmInfo"><div class="dm-info-top"><span class="dm-scene-number" id="dmSceneNumber">CENA 01 / 08</span><span class="dm-scene-state" id="dmSceneState">REGISTRO LOCAL</span></div><h5 id="dmSceneTitle">Patrulha encerrada</h5><p id="dmSceneText">Seu percurso será analisado.</p><div class="dm-branch"><strong id="dmBranchLabel">ESPORTISTA / </strong><span id="dmBranchText">Sua atividade fica registrada no aparelho.</span></div></div>
+ <div class="dm-timeline" role="group" aria-label="Selecionar uma das oito etapas do debriefing">${timeline}</div>
+ <div class="dm-controls"><button type="button" class="dm-play" id="dmPlay" aria-label="Reproduzir animação do debriefing">▶ Reproduzir</button><button type="button" id="dmRestart">↺ Reiniciar</button><button type="button" id="dmPrevious">← Anterior</button><button type="button" id="dmNext">Próxima →</button><span class="dm-counter" id="dmCounter">01 / 08</span></div><div class="dm-progress" aria-hidden="true"><span id="dmProgress"></span></div>
+ <p class="dm-disclaimer"><strong>Importante:</strong> esta é uma simulação educativa, não um diagnóstico do seu GPS. Os metros, células, recibos e efeitos mostrados são fictícios. Mesmo uma patrulha aparentemente elegível depende de autenticação, cotas, evidência e confirmação oficial do servidor.</p></section>`;
+}
+let disposeDebriefMotion=()=>{};
+function bindDebriefMotion(){
+ const root=$('debriefMotion');if(!root)return;
+ const scenes=DEBRIEF_SCENES, reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ let which='mixed',network='online',index=0,playing=false,raf=null,started=0,elapsed=0;
+ const el=id=>root.querySelector('#'+id);
+ const sceneButtons=[...root.querySelectorAll('[data-dm-scene]')];
+ const routeEls=[el('dmPathA'),el('dmPathBad'),el('dmPathB')];
+ const routeLength=routeEls.map(p=>p.getTotalLength());
+ const begins=[];let total=0;scenes.forEach(sc=>{begins.push(total);total+=sc.duration;});
+ const pathForScene=[0,.2,.32,.73,.93,1,1,1];
+ const marked=[0,0,0,0,1,2,2,3];
+ const t0=()=>{const data=DEBRIEF_CASES[which];return data;};
+ function stop(){playing=false;if(raf!==null){cancelAnimationFrame(raf);raf=null}el('dmPlay').textContent='▶ Reproduzir';el('dmPlay').setAttribute('aria-label','Reproduzir animação do debriefing')}
+ function setPath(p,ratio){const len=p.getTotalLength(),clamp=Math.min(1,Math.max(0,ratio));p.style.strokeDasharray=`${(len*clamp).toFixed(1)} ${(len+2).toFixed(1)}`;p.style.strokeDashoffset='0'}
+ function paint(){
+  const data=t0(),sc=scenes[index];
+  const hasBasic=data.accepted>=500 && data.moving>=300;
+  const hasH3=hasBasic&&data.evidence;
+  const online=network==='online';
+  const gotReceipt=online&&index>=5;
+  const latest=index===7;
+  let status='REGISTRO LOCAL',detail='O registro e o servidor são etapas separadas.',tone='muted';
+  if(index>=4){status=online?'AGUARDANDO ENVIO':'SEM REDE';detail=online?'O envio automático é solicitado quando a fila está habilitada.':'O envio fica pendente até haver conexão e processamento.';tone='warning'}
+  if(gotReceipt){status='RECEBIDA';detail='O recibo confirma o processamento do envio, não uma conquista automática.';tone='muted'}
+  if(index>=6&&online){
+   status=hasBasic?(hasH3?'EVIDÊNCIA H3':'SEM CONTRIBUIÇÃO'):'ABAIXO DO MÍNIMO';
+   detail=hasBasic?(hasH3?'Duas células fictícias com evidência qualificada, ainda sujeitas às cotas e limites.':'Distância e tempo atingidos, mas sem prova suficiente por célula H3.'):'Faltaram metros GPS válidos e tempo de movimento comprovado.';
+   tone=hasH3?'success':'warning';
+  }
+  if(latest){
+   if(!online){status='PENDENTE';detail='Sem recibo, não há contribuição confirmada. O envio poderá ocorrer quando a rede voltar.';tone='warning'}
+   else if(!hasBasic){status='RECEBIDA · 0 CÉLULAS';detail='O servidor recebeu o registro hipotético, mas os mínimos de elegibilidade não foram cumpridos.';tone='warning'}
+   else if(!hasH3){status='RECEBIDA · 0 CÉLULAS';detail='O registro hipotético foi recebido, mas nenhuma célula demonstrou evidência territorial suficiente.';tone='warning'}
+   else{status='2 CÉLULAS · EXEMPLO';detail='Resultado hipotético com duas contribuições qualificadas. Na prática, apenas o recibo real confirma os efeitos.';tone='success'}
+  }
+  el('dmResultStatus').textContent=status;el('dmResultStatus').dataset.tone=tone;
+  el('dmResultInfo').textContent=detail;
+  let meters=index===0?0:index===1?Math.round(data.accepted*.42):index===2?Math.round(data.accepted*.7):data.accepted;
+  let seconds=index===0?0:index===1?Math.round(data.moving*.42):index===2?Math.round(data.moving*.7):data.moving;
+  let discarded=index<=1?0:index===2?data.discarded:data.discarded;
+  el('dmAccepted').textContent=meters.toLocaleString('pt-BR');el('dmMoving').textContent=seconds+'s';el('dmDiscarded').textContent=discarded.toLocaleString('pt-BR');
+  const svgPct=pathForScene[index];
+  setPath(routeEls[0],svgPct===0?0:Math.min(1,svgPct*2.1));
+  routeEls[1].style.visibility=svgPct<=.25?'hidden':'visible';
+  setPath(routeEls[2],svgPct<=.55?0:Math.min(1,(svgPct-.55)*2.5));
+  const end=svgPct<.3?routeEls[0]:svgPct<.6?routeEls[1]:routeEls[2];
+  const endPct=svgPct<.3?Math.min(1,svgPct*2.1):svgPct<.6?Math.min(1,(svgPct-.25)*2.15):Math.min(1,(svgPct-.55)*2.5);
+  const p=end.getPointAtLength(end.getTotalLength()*endPct);
+  for(const id of ['dmMarker','dmPulse']){el(id).setAttribute('cx',p.x.toFixed(1));el(id).setAttribute('cy',p.y.toFixed(1));}
+  root.querySelectorAll('[data-dm-h3]').forEach((h,i)=>h.dataset.state=(index>=6&&hasH3&&online&&i<2)?'active':(index>=6&&online&&!hasH3)?'rejected':'idle');
+  const currentStep=!online&&index>=4?1:marked[index];
+  root.querySelectorAll('[data-dm-step]').forEach((node,i)=>node.dataset.state=i<currentStep?'done':i===currentStep?'active':'idle');
+  el('dmSceneNumber').textContent=`CENA ${String(index+1).padStart(2,'0')} / 08`;
+  el('dmSceneState').textContent=network==='offline'&&index>=4?'AGUARDANDO REDE':sc.state;
+  el('dmSceneTitle').textContent=network==='offline'&&index>=5?'Sem rede, ainda sem recibo':sc.title;
+  let sentence=sc.desc;
+  if(index===2&&which==='short')sentence='Este percurso fictício tem trechos descartados e distância aceita insuficiente. Nenhum segmento descartado é somado ao restante.';
+  if(index===6&&which==='noH3')sentence='Os metros e o tempo mínimos foram atingidos, mas faltam os requisitos de 50 m e quatro segmentos nas células H3 para gerar contribuição.';
+  if(index>=4&&!online)sentence='Sem conexão, o registro fica pendente. O jogo não deve mostrar como confirmado um efeito que ainda não foi recebido e validado pelo servidor.';
+  el('dmSceneText').textContent=sentence;
+  el('dmBranchLabel').textContent=mode==='sport'?'ESPORTISTA / ':'ESTRATEGISTA / ';
+  el('dmBranchText').textContent=mode==='sport'?sc.sport:sc.tactical;
+  el('dmInfo').classList.toggle('is-warning',tone==='warning');el('dmInfo').classList.toggle('is-muted',tone==='muted');
+  sceneButtons.forEach((b,i)=>b.setAttribute('aria-current',i===index?'step':'false'));
+  root.querySelectorAll('[data-dm-case]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.dmCase===which)));
+  root.querySelectorAll('[data-dm-network]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.dmNetwork===network)));
+  el('dmCounter').textContent=`${String(index+1).padStart(2,'0')} / ${String(scenes.length).padStart(2,'0')}`;
+  el('dmProgress').style.width=((elapsed/total)*100).toFixed(1)+'%';
+ }
+ function seek(i){stop();index=Math.min(scenes.length-1,Math.max(0,i));elapsed=begins[index];paint()}
+ function frame(ts){if(!playing)return;if(!started)started=ts;const diff=Math.min(120,Math.max(0,ts-started));started=ts;elapsed+=diff;
+  if(elapsed>=total){elapsed=total;index=scenes.length-1;stop();paint();return;}
+  for(let i=scenes.length-1;i>=0;i--)if(elapsed>=begins[i]){index=i;break}
+  paint();raf=requestAnimationFrame(frame);
+ }
+ function toggle(){if(playing){stop();paint();return;}if(reduce){seek(Math.min(index+1,scenes.length-1));return;}
+  if(elapsed>=total){index=0;elapsed=0;}
+  playing=true;started=0;el('dmPlay').textContent='Ⅱ Pausar';el('dmPlay').setAttribute('aria-label','Pausar animação do debriefing');raf=requestAnimationFrame(frame);
+ }
+ root.querySelectorAll('[data-dm-case]').forEach(b=>b.addEventListener('click',()=>{which=b.dataset.dmCase;seek(0)}));
+ root.querySelectorAll('[data-dm-network]').forEach(b=>b.addEventListener('click',()=>{network=b.dataset.dmNetwork;seek(0)}));
+ sceneButtons.forEach((b,i)=>b.addEventListener('click',()=>seek(i)));
+ el('dmPlay').addEventListener('click',toggle);
+ el('dmRestart').addEventListener('click',()=>seek(0));
+ el('dmPrevious').addEventListener('click',()=>seek(index-1));
+ el('dmNext').addEventListener('click',()=>seek(index+1));
+ function onHidden(){if(document.hidden&&playing){stop();paint()}}
+ document.addEventListener('visibilitychange',onHidden);
+ paint();disposeDebriefMotion=()=>{stop();document.removeEventListener('visibilitychange',onHidden)};
+}
+
 function renderChapter(){
+ disposeDebriefMotion();disposeDebriefMotion=()=>{};
  disposeAwakeningMotion();disposeAwakeningMotion=()=>{};
  disposeCoopMotion();disposeCoopMotion=()=>{};
  disposeSeasonMotion();disposeSeasonMotion=()=>{};
@@ -1660,7 +1861,7 @@ function renderChapter(){
  const c=CHAPTERS[active];const b=c[mode];const t=mode==='sport'?'ESPORTISTA • OPERAÇÃO AUTOMÁTICA':'ESTRATEGISTA • DECISÃO TÁTICA';
  const steps=c.steps.map(([title,description],i)=>`<li><span class="action-num">${String(i+1).padStart(2,'0')}</span><div class="action-content"><strong>${enc(title)}</strong><p>${enc(description)}</p></div></li>`).join('');
  const faq=c.faq.map(([q,a])=>`<details class="faq-item"><summary>${enc(q)}</summary><p>${enc(a)}</p></details>`).join('');
- const extra=c.id==='instalacao'?showAwakeningMotion():c.id==='patrulha'?`${showPatrolMotion()}${showEligibilityTool()}`:c.id==='cacadas'?showHuntMotion():c.id==='energia'?showEnergyMotion():c.id==='controle'?showTerritoryMotion():c.id==='biologia'?showBiologyMotion():c.id==='temporadas'?showSeasonMotion():c.id==='coop'?showCoopMotion():'';
+ const extra=c.id==='instalacao'?showAwakeningMotion():c.id==='patrulha'?`${showPatrolMotion()}${showEligibilityTool()}`:c.id==='resultado'?showDebriefMotion():c.id==='cacadas'?showHuntMotion():c.id==='energia'?showEnergyMotion():c.id==='controle'?showTerritoryMotion():c.id==='biologia'?showBiologyMotion():c.id==='temporadas'?showSeasonMotion():c.id==='coop'?showCoopMotion():'';
  const links=c.id==='instalacao'?`<div class="chapter-support"><a href="${enc(GUIDE_META.download)}" target="_blank" rel="noopener noreferrer" class="support-link">Baixar APK Alpha ↗</a><a href="${enc(GUIDE_META.changelog)}" target="_blank" rel="noopener noreferrer" class="support-secondary">Ver canal de versões</a></div>`:c.id==='temporadas'?`<div class="chapter-support"><a href="${enc(GUIDE_META.warRoom)}" class="support-link">Abrir Sala de Guerra ↗</a></div>`:'';
  $('chapterContent').innerHTML=`<div class="chapter-inner"><div class="chapter-topline"><span><span class="chapter-number">CAPÍTULO ${enc(c.number)}</span> / ${enc(c.part)}</span><span class="chapter-time">LEITURA ${enc(c.time)}</span></div><h3>${enc(c.title)}</h3><p class="chapter-lead">${enc(c.deck)}</p><div class="location-tag"><svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m10 1 7 4v10l-7 4-7-4V5l7-4Z"/><path d="M10 7v6M7 10h6"/></svg><span>NO APLICATIVO · ${enc(c.where)}</span></div><div class="step-label">PASSO A PASSO · O QUE FAZER</div><ol class="action-list">${steps}</ol>${links}<div class="branch-brief"><span class="branch-prefix">${t}</span><h4>${enc(b.title)}</h4><p>${enc(b.lead)}</p><ul class="focus-list">${b.focus.map(x=>`<li>${enc(x)}</li>`).join('')}</ul></div>${extra}<div class="alert-note"><span class="alert-mark">!</span><span>${enc(c.note)}</span></div><div class="faq-wrap"><h4>DÚVIDAS MAIS COMUNS</h4>${faq}</div><div class="source-tag"><strong>VERIFICADO NO COVIL</strong><span>${enc(c.source)}</span></div></div>`;
  $('chapter').classList.toggle('is-tactical',mode==='tactical');
@@ -1670,6 +1871,7 @@ function renderChapter(){
  const done=completed.has(c.id);$('completeChapter').classList.toggle('is-done',done);
  $('completeChapter').innerHTML=done?'✓ Etapa concluída':'Marcar como concluído <span aria-hidden="true">✓</span>';
  if(c.id==='instalacao') bindAwakeningMotion();
+ if(c.id==='resultado') bindDebriefMotion();
  if(c.id==='cacadas') bindHuntMotion();
  if(c.id==='energia') bindEnergyMotion();
  if(c.id==='controle') bindTerritoryMotion();
