@@ -256,6 +256,24 @@ main{max-width:1380px;margin:auto;padding:0 36px}.kicker{color:#89c7a3;font-size
 @media(prefers-reduced-motion:reduce){.season-motion *, .season-motion *:before,.season-motion *:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 @media print{.sm-controls,.sm-timeline,.sm-selectors{display:none}.season-motion{box-shadow:none}.sm-main{grid-template-columns:1fr 1fr}}
 
+
+/* Motion Graphic 07 — Patrulha em Grupo. Somente simulação didática. */
+.coop-motion{--cm-mint:#92f4bd;--cm-red:#f58a82;--cm-amber:#f7c17e;--cm-dim:#9ab5a7;margin:30px 0 0;border:1px solid #3c7059;border-radius:13px;overflow:hidden;color:#eef8f0;background:radial-gradient(ellipse at 88% 0%,#23543b68,transparent 52%),linear-gradient(156deg,#112a21,#09171a 70%);box-shadow:0 25px 55px #0004}
+.cm-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:22px 23px 14px}
+.cm-kicker{font:900 9px var(--font);letter-spacing:2px;color:#9cf1bd}
+.cm-head h4{font:900 clamp(27px,4vw,38px)/1 var(--font-head);margin:7px 0 9px;text-transform:uppercase;color:#effff1}
+.cm-head p{font-size:12px;line-height:1.6;max-width:530px;color:#abc7b4;margin:0}
+.cm-stamp{font:900 9px var(--font);color:#f9dba7;background:#4d382a66;border:1px solid #766344;padding:9px 10px;border-radius:5px;letter-spacing:1px;white-space:nowrap}
+.cm-topchoices{display:flex;flex-wrap:wrap;gap:10px;margin:0 17px 13px}.cm-choice{display:flex;align-items:center;flex-wrap:wrap;gap:6px;padding:6px;border:1px solid #315644;border-radius:7px;background:#091b19}.cm-choice-label{font-size:10px;font-weight:800;color:#a4c6ae;margin:0 7px 0 5px;letter-spacing:.3px}.cm-choice button{border:1px solid transparent;background:transparent;color:#b1c3b8;border-radius:5px;padding:9px 12px;min-height:40px;font:800 11px var(--font);cursor:pointer}.cm-choice button[aria-pressed="true"]{background:#234c35;border-color:#6ebc8c;color:#d3ffe1}.cm-choice button:focus-visible,.cm-playback button:focus-visible,.cm-scenes button:focus-visible{outline:2px solid #efffca;outline-offset:2px}
+.cm-stage{margin:0 16px;border-radius:8px;overflow:hidden;border:1px solid #345749;background:#081419;position:relative}.cm-map{display:block;width:100%;height:auto;min-height:190px;max-height:350px}.cm-road{fill:none;stroke:#496058;stroke-width:14;stroke-linecap:round;stroke-linejoin:round;opacity:.33}.cm-road-detail{fill:none;stroke:#78988c;stroke-width:2;opacity:.35;stroke-linecap:round}.cm-cell{fill:#23503b;fill-opacity:.12;stroke:#79c59a;stroke-width:2;stroke-opacity:.35;transition:fill-opacity .25s,stroke-opacity .25s,fill .25s}.cm-cell[data-highlight="true"]{fill:#225f3b;fill-opacity:.68;stroke:#95f2b4;stroke-opacity:1}.cm-cell[data-highlight="false"]{fill:#23483b;fill-opacity:.13}.cm-cell[data-alert="true"]{fill:#5b3528;fill-opacity:.65;stroke:#f5b47b;stroke-opacity:1}.cm-cell-label{font:800 11px var(--font);fill:#89aa9c;letter-spacing:1px}.cm-route{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:7;stroke-dasharray:1 10000;opacity:.95}.cm-route-a{stroke:#88efb1;filter:drop-shadow(0 0 4px #3df6a777)}.cm-route-b{stroke:#e7cfa0;filter:drop-shadow(0 0 4px #d6b47577)}.cm-route-b[data-rival="true"]{stroke:#f28c87;filter:drop-shadow(0 0 4px #f28c8777)}.cm-dot{stroke:#122b24;stroke-width:4;fill:#b2ffd0;filter:drop-shadow(0 0 4px #4fdc9a88)}.cm-dot-b{fill:#ffe6bd}.cm-dot-b[data-rival="true"]{fill:#ffa19b}.cm-origin{stroke:#8db1a0;fill:#13261c;stroke-width:2}.cm-map-title{font:900 12px var(--font);letter-spacing:1.5px;fill:#c6e6d1}.cm-map-sub{font:800 10px var(--font);letter-spacing:.5px;fill:#789b8b}.cm-map-corner{position:absolute;left:12px;top:12px;background:#0b1d1ddd;border:1px solid #3f6b53;color:#a3eabb;font-size:9px;letter-spacing:1.1px;font-weight:900;padding:7px 10px;border-radius:5px;pointer-events:none}
+.cm-players{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:12px 16px}.cm-player{padding:11px 12px;background:#122922;border:1px solid #3c7152;border-radius:8px;min-width:0;display:flex;align-items:center;gap:9px}.cm-player:nth-child(2){border-color:#7b6b52;background:#26251c}.cm-player[data-distant="true"]{border-color:#8d594b;background:#2b201c}.cm-avatar{width:33px;height:33px;border-radius:7px;background:#28563c;color:#d9ffe5;border:1px solid #5da47b;display:grid;place-items:center;font:900 16px var(--font-head);flex:0 0 auto}.cm-player:nth-child(2) .cm-avatar{background:#57422c;border-color:#94744d;color:#ffe8bc}.cm-player[data-faction="Horda"] .cm-avatar{background:#602e2d;border-color:#a85c59;color:#ffd5d3}.cm-player strong{font:900 12px var(--font);display:block;color:#e9f6ed;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.cm-player small{font-size:10px;color:#9ab8a2;display:block;margin-top:3px;line-height:1.35}.cm-status{margin-left:auto;border:1px solid #446450;padding:5px 7px;color:#a0edb9;font:800 9px var(--font);border-radius:4px;white-space:nowrap}.cm-player[data-distant="true"] .cm-status{color:#ffc18e;border-color:#8e5a43}
+.cm-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:0 16px}.cm-metric{min-width:0;background:#0e241d;border:1px solid #294a3a;border-radius:7px;padding:10px 9px}.cm-metric small{display:block;text-transform:uppercase;color:#95b19f;font:800 9px/1.35 var(--font);letter-spacing:.45px;min-height:25px}.cm-metric strong{display:block;color:#b6f9cd;font:900 clamp(20px,3vw,30px)/1.05 var(--font-head);margin:6px 0 3px;white-space:nowrap}.cm-metric em{font:700 9px var(--font);color:#8aa696;font-style:normal}.cm-metric[data-alert="true"]{background:#33251d;border-color:#9a7150}.cm-metric[data-alert="true"] strong{color:#ffca8b}
+.cm-story{margin:12px 16px 0;border:1px solid #436d52;background:linear-gradient(114deg,#1b3b2a,#10251f);border-radius:8px;padding:16px 18px}.cm-story[data-tone="warning"]{background:linear-gradient(114deg,#34281e,#20231f);border-color:#896344}.cm-story[data-tone="finished"]{background:linear-gradient(114deg,#1c4534,#172e27);border-color:#82af81}.cm-story-top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:7px}.cm-counter{font:900 10px var(--font);letter-spacing:1.2px;color:#9cdeb2}.cm-state{font:900 10px var(--font);color:#e3c38c;letter-spacing:.5px}.cm-story h5{font:900 clamp(22px,3.3vw,30px)/1.06 var(--font-head);text-transform:uppercase;color:#f1fff1;margin:8px 0 8px}.cm-story p{font:400 12px/1.7 var(--font);color:#c1d7c6;margin:0}.cm-branch{margin-top:12px;padding:12px 13px;background:#0a201cc2;border:1px solid #325c43;border-radius:6px;color:#afe7c2;font:600 11px/1.55 var(--font)}
+.cm-timeline{display:flex;gap:5px;margin:14px 16px 10px;overflow-x:auto;padding-bottom:7px;scrollbar-color:#507c5e #12211b;scrollbar-width:thin;scroll-snap-type:x proximity}.cm-scenes{display:flex;gap:5px;min-width:max-content}.cm-scenes button{flex:0 0 auto;min-height:42px;white-space:nowrap;border:1px solid #3b5949;background:#13231e;color:#a9c4b3;font:800 10px var(--font);padding:9px 11px;border-radius:5px;cursor:pointer;scroll-snap-align:start}.cm-scenes button[aria-pressed="true"]{background:#276140;border-color:#91e7af;color:#fff}.cm-playback{display:flex;align-items:center;flex-wrap:wrap;gap:7px;margin:0 16px 11px}.cm-playback button{border:1px solid #4f7f5e;background:#173b2a;color:#d9ffe7;min-height:44px;padding:9px 15px;font:900 11px var(--font);border-radius:6px;cursor:pointer}.cm-playback button:disabled{opacity:.38;cursor:not-allowed}.cm-track{height:5px;overflow:hidden;margin:0 16px 15px;border-radius:6px;background:#244237}.cm-track span{display:block;width:0;height:100%;background:linear-gradient(90deg,#47b77a,#c2f8b8);transition:width .12s linear}.cm-note{margin:0 16px 19px;border-top:1px solid #2e5040;padding-top:11px;color:#9fbeac;font:500 10px/1.7 var(--font)}.cm-note strong{color:#d1f4d8}
+@media(max-width:720px){.cm-head{padding:17px 15px 13px;flex-wrap:wrap}.cm-stamp{font-size:8px}.cm-topchoices{margin:0 10px 12px}.cm-choice{width:100%}.cm-stage{margin:0 10px}.cm-players{margin:10px;gap:6px}.cm-player{padding:8px;gap:6px}.cm-avatar{width:27px;height:27px;font-size:13px}.cm-status{font-size:8px;padding:4px}.cm-metrics{margin:0 10px;gap:5px}.cm-metric{padding:9px 7px}.cm-metric strong{font-size:24px}.cm-metric small{font-size:8px;min-height:30px}.cm-story{margin:10px 10px 0;padding:13px}.cm-timeline{margin:12px 10px 8px}.cm-playback{margin:0 10px 10px}.cm-track{margin:0 10px 13px}.cm-note{margin:0 10px 15px}}
+@media(max-width:430px){.cm-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.cm-metric small{min-height:0}.cm-player strong{font-size:10px}.cm-player small{font-size:9px}.cm-status{display:none}.cm-choice button{padding:9px 11px}.cm-head h4{font-size:30px}}
+@media(prefers-reduced-motion:reduce){.cm-cell,.cm-track span{transition:none!important}}
+
 </style>
 </head>
 <body>
@@ -539,14 +557,14 @@ const CHAPTERS = [
     where:'PATRULHA → painel de COOPERAÇÃO',icon:'users',
     steps:[
       ['Forme um grupo', 'Um líder cria um grupo temporário e compartilha manualmente um convite. Participam de 2 a 6 jogadores habilitados, inclusive de facções diferentes.'],
-      ['Combine o horário', 'O líder confirma a partida e cada pessoa começa sua própria patrulha GPS na janela definida pelo grupo.'],
-      ['Confira o reconhecimento', 'O servidor avalia as duas atividades, os intervalos e as células compartilhadas; terminar junto não é recompensa garantida.'],
+      ['Confirme a partida', 'O líder confirma a partida com pelo menos duas pessoas. Isso não inicia o GPS dos parceiros: cada integrante precisa iniciar a própria patrulha em até 5 minutos.'],
+      ['Encerre e acompanhe o reconhecimento', 'Cada integrante encerra sua patrulha e o envio acontece na própria conta. O servidor compara intervalos e evidências H3; participar da sala não garante medalha ou bônus.'],
     ],
-    sport:{title:'Caminhada em companhia',lead:'Combine uma caminhada com amigos, entre no grupo antes do início e registre sua atividade normalmente.',focus:['Cada pessoa precisa instalar, ter conta Alpha ativa e começar a própria patrulha.', 'A participação é opcional. Você pode caminhar sozinho quando quiser.']},
-    tactical:{title:'Condições de reconhecimento',lead:'Os convites de grupo duram 10 minutos; o líder confirma a partida, e os participantes iniciam em até 5 minutos.',focus:['As atividades elegíveis exigem 500 m e 300 s móveis, além de sobreposição e evidência territorial comum.', 'Duas células qualificadas compartilhadas e pelo menos 300 m agregados de evidência comum são critérios do reconhecimento.', 'Os dias cooperativos rendem marcos pessoais, sem multiplicar automaticamente influência ou pontos territoriais.']},
+    sport:{title:'Caminhada em companhia',lead:'Combine uma caminhada com amigos, entre no grupo antes do início e registre sua atividade normalmente.',focus:['Cada pessoa precisa instalar, ter conta Alpha ativa, iniciar e encerrar a própria patrulha.', 'A participação é opcional. Você pode caminhar sozinho quando quiser.']},
+    tactical:{title:'Condições de reconhecimento',lead:'Os convites de grupo duram 10 minutos; o líder confirma a partida, e os participantes iniciam em até 5 minutos.',focus:['As atividades elegíveis exigem 500 m e 300 s móveis, além de sobreposição e evidência territorial comum.', 'Duas células H3 qualificadas compartilhadas, 300 m de evidência comum agregada e 300 s de sobreposição dos horários gerais são critérios do reconhecimento; não comprovam proximidade física simultânea.', 'Os dias cooperativos rendem marcos pessoais, sem multiplicar automaticamente influência ou pontos territoriais.']},
     note:'Compartilhe apenas o convite de cooperação com as pessoas escolhidas. Ele é diferente do convite individual de entrada na Alpha. Caçadas v1.0 são exclusivas de patrulha individual: um grupo ativo com ao menos dois participantes torna a Caçada inelegível.',
-    faq:[['Jogadores de facções opostas podem caminhar juntos?', 'Sim. A cooperação aceita grupos mistos. Isso não altera a facção de cada participante.']],
-    source:'Covil: onboarding-equilibrio-cooperacao.md · docs/cooperation-api.md'
+    faq:[['Jogadores de facções opostas podem caminhar juntos?', 'Sim. A cooperação aceita grupos mistos. Isso não altera a facção de cada participante.'],['O líder inicia o GPS de todos?', 'Não na versão 0.20.0. O líder confirma a partida do grupo, mas cada pessoa precisa iniciar e encerrar sua própria patrulha GPS.'],['O líder recebe a conquista de todos?', 'Não. O servidor avalia a elegibilidade de cada participante e sua dupla qualificada; não há prêmio extra por liderança.']],
+    source:'Covil: onboarding-equilibrio-cooperacao.md · docs/cooperation-api.md · CooperationPanel.kt · compatível com 0.20.0'
   },
   {
     id:'cacadas',part:'EVENTOS ESPECIAIS',number:'15',time:'5 MIN',title:'Caçadas: sobreviva à perseguição',
@@ -1277,6 +1295,125 @@ function bindSeasonMotion(){
 }
 
 
+
+/* Motion Graphic 07 — Cooperação Alpha 0.20.0. Nenhum dado real ou envio. */
+const COOP_MOTION_SCENES=[
+ {short:'Criar',title:'Um grupo começa com uma pessoa',state:'SALA EM FORMAÇÃO',tone:'normal',duration:2100,desc:'Um jogador habilitado abre uma sala temporária. O líder organiza o convite; ninguém começou uma patrulha ainda.',sport:'Para caminhar com amigos, basta criar uma sala em Patrulha → Cooperação.',tactical:'Grupos recebem de 2 a 6 contas habilitadas, inclusive facções mistas. Não há descoberta automática de jogadores.'},
+ {short:'Convidar',title:'O convite tem validade',state:'10 MIN PARA ENTRAR',tone:'normal',duration:2250,desc:'O líder compartilha um convite individual da sala. O código vale 10 minutos; quem entra precisa estar na rede Alpha.',sport:'Envie o convite só para as pessoas com quem deseja caminhar.',tactical:'Renovar o código invalida o anterior, mas não prolonga o prazo original da sala. Não confunda com convite de cadastro Alpha.'},
+ {short:'Entrar',title:'Dois integrantes, uma sala',state:'2 / 6 INTEGRANTES',tone:'normal',duration:2150,desc:'Um segundo jogador entra no grupo. Ele pode pertencer à mesma facção ou à rival, sem mudar seu lado real.',sport:'Aguarde todos entrarem antes da partida. Um grupo precisa de pelo menos duas pessoas.',tactical:'O servidor fecha a lista após a partida. A participação não muda facção, biologia nem recompensa normal da patrulha.'},
+ {short:'Partida',title:'O líder confirma a saída',state:'JANELA DE 5 MIN',tone:'warning',duration:2400,desc:'O líder confirma a partida. Isso NÃO liga o GPS dos parceiros. Cada pessoa inicia sua própria patrulha no aplicativo em até cinco minutos.',sport:'Assim que o líder confirmar, cada um toca em iniciar sua própria patrulha GPS.',tactical:'O tempo da partida vem do servidor. GPS de cada conta começa individualmente e a atividade deve terminar até seis horas após a partida.'},
+ {short:'Caminhar',title:'Duas patrulhas em movimento',state:'ATIVIDADES INDIVIDUAIS',tone:'normal',duration:2450,desc:'Cada participante registra sua caminhada. Para ser elegível, cada patrulha precisa cumprir os mínimos comuns de 500 metros válidos e 300 segundos em movimento.',sport:'Caminhem juntos e em segurança. O app contabiliza cada trajeto individualmente.',tactical:'É preciso atividade elegível de cada lado e sobreposição mínima de 300 segundos entre horários gerais das patrulhas.'},
+ {short:'Evidência',title:'O servidor procura prova comum',state:'COMPARAÇÃO H3',tone:'warning',duration:2400,desc:'O servidor procura duas células H3 qualificadas em comum e ao menos 300 metros de evidência agregada compartilhada. Convite sozinho não comprova proximidade física.',sport:'Entrar na sala não basta: caminhar em locais diferentes pode deixar a dupla sem reconhecimento.',tactical:'Cada lado precisa de ≥50 m e ≥4 segmentos em cada célula comum. A sobreposição de horários e H3 agregados não atesta presença simultânea célula a célula.'},
+ {short:'Enviar',title:'Cada um encerra e envia',state:'AGUARDANDO RECIBOS',tone:'normal',duration:2300,desc:'Cada integrante encerra sua patrulha. O envio e a confirmação podem chegar em momentos diferentes; o servidor associa as atividades autorizadas.',sport:'Você não precisa enviar a patrulha do colega. Cada conta tem seu próprio registro.',tactical:'A primeira patrulha recebida dentro da janela ocupa a vaga, mesmo curta. Uploads chegam em qualquer ordem até sete dias após a partida.'},
+ {short:'Resultado',title:'Reconhecimento sem pontos mágicos',state:'AVALIAÇÃO DO SERVIDOR',tone:'finished',duration:2500,desc:'Se uma dupla cumpre as condições, o dia cooperativo pode ser reconhecido. As medalhas pessoais usam 1, 5 e 20 dias; não há multiplicador de domínio, XP ou Energia.',sport:'Caminhar em grupo pode render conquistas de apoio. Seu progresso normal continua sendo pessoal.',tactical:'No máximo um dia cooperativo por data UTC de partida. Méritos únicos: 25, 50 e 100; o líder não recebe bônus automático.'}
+];
+function showCoopMotion(){
+ const stations=[[110,112],[220,112],[330,112],[165,214],[275,214],[385,214]];
+ const hex=(x,y,r)=>Array.from({length:6},(_,i)=>{const ang=(i*60-30)*Math.PI/180;return `${(x+Math.cos(ang)*r).toFixed(1)},${(y+Math.sin(ang)*r).toFixed(1)}`;}).join(' ');
+ const cells=stations.map(([x,y],i)=>`<g><polygon class="cm-cell" data-cm-cell="${i}" points="${hex(x,y,58)}"/><text class="cm-cell-label" x="${x}" y="${y+5}" text-anchor="middle">H3 ${String(i+1).padStart(2,'0')}</text></g>`).join('');
+ const buttons=COOP_MOTION_SCENES.map((s,i)=>`<button type="button" data-cm-scene="${i}" aria-pressed="${i===0}" aria-label="Cena ${i+1}: ${s.short}">${String(i+1).padStart(2,'0')} ${s.short}</button>`).join('');
+ return `<section class="coop-motion" id="coopMotion" data-simulation="true" aria-labelledby="cmTitle">
+ <div class="cm-head"><div><span class="cm-kicker">MOTION GRAPHIC 07 / JORNADA COOPERATIVA</span><h4 id="cmTitle">Juntos, mas cada passo conta.</h4><p>Da sala de espera ao reconhecimento oficial: uma simulação de patrulha em grupo, sem GPS real nem convite verdadeiro.</p></div><span class="cm-stamp">EXEMPLO FICTÍCIO</span></div>
+ <div class="cm-topchoices"><div class="cm-choice" role="group" aria-label="Distância entre os participantes na simulação"><span class="cm-choice-label">Percurso:</span><button type="button" data-cm-path="together" aria-pressed="true">✓ Em comum</button><button type="button" data-cm-path="apart" aria-pressed="false">↗ Sem áreas comuns</button></div><div class="cm-choice" role="group" aria-label="Facção do outro integrante"><span class="cm-choice-label">Aliado:</span><button type="button" data-cm-team="same" aria-pressed="true">Mesma facção</button><button type="button" data-cm-team="mixed" aria-pressed="false">Facção rival</button></div></div>
+ <div class="cm-stage"><svg class="cm-map" id="cmMap" viewBox="0 0 570 315" role="img" aria-label="Mapa ilustrativo de dois trajetos e seis células hexagonais fictícias. A cor mostra apenas o exemplo de evidência comum, não a posição de jogadores reais.">
+ <defs><pattern id="cmGrid" width="22" height="22" patternUnits="userSpaceOnUse"><path d="M22 0H0V22" stroke="#416255" stroke-width=".7" fill="none" opacity=".14"/></pattern></defs><rect width="570" height="315" fill="url(#cmGrid)"/>
+ <path class="cm-road" d="M20 270 Q160 266 190 165 T490 85 M10 35L550 250"/><path class="cm-road-detail" d="M20 270 Q160 266 190 165 T490 85 M10 35L550 250"/>
+ ${cells}
+ <path class="cm-route cm-route-a" id="cmRouteA" d="M56 268 L105 226 L155 202 L215 154 L268 164 L326 117 L394 96 L462 66"/>
+ <path class="cm-route cm-route-b" id="cmRouteB" d="M62 280 L107 240 L158 215 L220 168 L275 177 L336 132 L398 110 L470 80"/>
+ <path class="cm-route cm-route-b" id="cmRouteBFar" d="M65 54 L136 65 L214 32 L291 57 L375 36 L460 51"/>
+ <circle class="cm-origin" cx="56" cy="268" r="9"/><circle class="cm-origin" cx="62" cy="280" r="8"/>
+ <circle id="cmDotA" class="cm-dot" r="8" cx="56" cy="268"/><circle id="cmDotB" class="cm-dot cm-dot-b" r="8" cx="62" cy="280"/>
+ <text x="25" y="30" class="cm-map-title">ZONA DE PATRULHA • MODELO H3</text><text x="25" y="49" class="cm-map-sub">Células e percursos ilustrativos, sem escala real</text>
+ </svg><span class="cm-map-corner" id="cmMapStatus">SALA EM FORMAÇÃO</span></div>
+ <div class="cm-players"><div class="cm-player" id="cmLeader"><span class="cm-avatar">L</span><span><strong>Patrulheiro líder</strong><small id="cmLeaderDetail">Cria o grupo</small></span><span class="cm-status" id="cmLeaderState">PRONTO</span></div><div class="cm-player" id="cmPartner"><span class="cm-avatar">2</span><span><strong id="cmPartnerName">Segundo integrante</strong><small id="cmPartnerDetail">Aguardando convite</small></span><span class="cm-status" id="cmPartnerState">AUSENTE</span></div></div>
+ <div class="cm-metrics"><div class="cm-metric"><small id="cmMetricOneLabel">Integrantes</small><strong id="cmMetricOne">1/6</strong><em id="cmMetricOneHint">mínimo 2</em></div><div class="cm-metric"><small id="cmMetricTwoLabel">Início do GPS</small><strong id="cmMetricTwo">--</strong><em id="cmMetricTwoHint">por pessoa</em></div><div class="cm-metric" id="cmMetricThreeWrap"><small id="cmMetricThreeLabel">Células comuns</small><strong id="cmMetricThree">0</strong><em id="cmMetricThreeHint">exige 2</em></div><div class="cm-metric" id="cmMetricFourWrap"><small id="cmMetricFourLabel">Dia cooperativo</small><strong id="cmMetricFour">--</strong><em id="cmMetricFourHint">somente no servidor</em></div></div>
+ <div class="cm-story" id="cmStory" data-tone="normal" aria-live="polite" aria-atomic="true"><div class="cm-story-top"><span class="cm-counter" id="cmCounter">CENA 01 / 08</span><span class="cm-state" id="cmState">SALA EM FORMAÇÃO</span></div><h5 id="cmSceneTitle">Um grupo começa com uma pessoa</h5><p id="cmSceneText"></p><div class="cm-branch" id="cmBranch"></div></div>
+ <div class="cm-timeline"><div class="cm-scenes" role="group" aria-label="Escolher cena da animação de cooperação">${buttons}</div></div>
+ <div class="cm-playback"><button type="button" id="cmPlay">▶ Reproduzir</button><button type="button" id="cmPause" disabled>Ⅱ Pausar</button><button type="button" id="cmRestart">↺ Reiniciar</button></div><div class="cm-track" aria-hidden="true"><span id="cmProgress"></span></div>
+ <p class="cm-note"><strong>Atenção:</strong> nada é enviado ao jogo. Grupo não liga o GPS dos parceiros, não multiplica influência/XP/Energia e não comprova proximidade física. A qualificação depende de patrulhas e recibos reais validados pelo servidor. Em Caçadas v1.0, a patrulha em grupo com 2+ integrantes é inelegível.</p>
+ </section>`;
+}
+let disposeCoopMotion=()=>{};
+function bindCoopMotion(){
+ const root=$('coopMotion');if(!root)return;
+ const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const scenes=COOP_MOTION_SCENES;
+ let scenario='together',team='same',playing=false,frame=null,elapsed=0,lastTick=0,sceneIndex=-1;
+ const starts=[];let total=0;scenes.forEach(s=>{starts.push(total);total+=s.duration;});
+ const el=id=>root.querySelector('#'+id);
+ const buttons=[...root.querySelectorAll('[data-cm-scene]')];
+ const cells=[...root.querySelectorAll('[data-cm-cell]')];
+ const routeA=el('cmRouteA'),routeB=el('cmRouteB'),routeFar=el('cmRouteBFar');
+ const lengths=[routeA,routeB,routeFar].map(p=>p.getTotalLength());
+ function pathPoint(path,index,progress){const pt=path.getPointAtLength(lengths[index]*Math.max(0,Math.min(progress,1)));return {x:pt.x,y:pt.y};}
+ function routeProgress(index,t){if(index<4)return 0;if(index>=6)return 1;return index===4?Math.min(1,.2+.8*t):1;}
+ function sceneAt(ms){for(let i=0;i<scenes.length;i++)if(ms<starts[i]+scenes[i].duration)return i;return scenes.length-1;}
+ function putText(id,text){el(id).textContent=String(text);}
+ function setMetric(id,value,label,hint){putText('cmMetric'+id,value);putText('cmMetric'+id+'Label',label);putText('cmMetric'+id+'Hint',hint);}
+ function repaint(index){
+  const scene=scenes[index],joined=index>=2,departed=index>=3,started=index>=4,reported=index>=6,done=index>=7;
+  const qualified=done&&scenario==='together';
+  sceneIndex=index;
+  putText('cmCounter',`CENA ${String(index+1).padStart(2,'0')} / 08`);
+  putText('cmState',scene.state);putText('cmSceneTitle',scene.title);
+  let description=scene.desc;
+  if(index===5&&scenario==='apart')description='Exemplo de falha: os percursos não têm duas células H3 qualificadas em comum. Horários parecidos e convite válido não bastam para reconhecimento cooperativo.';
+  if(done&&scenario==='apart')description='As patrulhas podem continuar recebendo recompensas normais individualmente, mas esta dupla não recebe o dia cooperativo sem a evidência comum exigida.';
+  putText('cmSceneText',description);
+  const side=mode==='sport'?'ESPORTISTA: ':'ESTRATEGISTA: ';
+  const detail=index===5&&scenario==='apart'?(mode==='sport'?'Se caminhar longe do parceiro, pode não receber o reconhecimento de grupo.':'Sem ≥2 células comuns e ≥300 m agregados de evidência comum, a dupla não qualifica, mesmo com ≥300 s de sobreposição.'):
+  done&&scenario==='apart'?(mode==='sport'?'Sua caminhada individual continua contando segundo as regras normais.':'Não há medalha nem mérito de apoio por simples ingresso; recibos normais permanecem separados.'):
+  scene[mode];
+  putText('cmBranch',side+detail);
+  el('cmStory').setAttribute('data-tone',index===5&&scenario==='apart'||(done&&!qualified)?'warning':scene.tone);
+  putText('cmMapStatus',index>=5?(scenario==='apart'?'SEM EVIDÊNCIA COMUM':'EVIDÊNCIA H3 ILUSTRATIVA'):departed?'PARTIDA CONFIRMADA':scene.state);
+  putText('cmLeaderDetail',started?'GPS individual • 640 m / 360 s':departed?'Partida confirmada':'Organiza a sala');
+  putText('cmPartnerDetail',!joined?'Aguardando convite':started?'GPS individual • 590 m / 330 s':departed?'Pronto para iniciar GPS':'Convite aceito');
+  putText('cmLeaderState',reported?'RECEBIDA':started?'EM GPS':'PRONTO');
+  putText('cmPartnerState',!joined?'AUSENTE':reported?(qualified?'QUALIFICADA':done?'SEM APOIO':'RECEBIDA'):started?'EM GPS':'PRONTO');
+  putText('cmPartnerName',team==='mixed'?'Parceiro da Horda':'Parceiro da Resistência');
+  el('cmPartner').setAttribute('data-faction',team==='mixed'?'Horda':'Resistência');
+  el('cmPartner').setAttribute('data-distant',String(done&&scenario==='apart'));
+  setMetric('One',joined?'2/6':'1/6','Integrantes',joined?'grupo permitido':'mínimo 2');
+  setMetric('Two',started?'≤5 min':departed?'5 min':'--','Início do GPS',started?'cada celular iniciou':departed?'cada um deve iniciar':'após partida');
+  setMetric('Three',index>=5?(scenario==='together'?'2':'0'):'--','Células comuns',index>=5?(scenario==='together'?'≥300 m agregados':'não atende a regra'):'exige 2');
+  setMetric('Four',done?(qualified?'1':'0'):'--','Dia cooperativo',done?(qualified?'pode ser reconhecido':'sem reconhecimento'):'só com recibo oficial');
+  el('cmMetricThreeWrap').setAttribute('data-alert',String(index>=5&&scenario==='apart'));
+  el('cmMetricFourWrap').setAttribute('data-alert',String(done&&!qualified));
+  cells.forEach((cell,i)=>{cell.setAttribute('data-highlight',String(index>=5&&scenario==='together'&&(i===1||i===4)));cell.setAttribute('data-alert',String(index>=5&&scenario==='apart'&&(i===1||i===4)));});
+  buttons.forEach((b,i)=>b.setAttribute('aria-pressed',String(i===index)));
+ }
+ function drawProgress(){
+  const i=sceneAt(elapsed);if(i!==sceneIndex)repaint(i);
+  const sceneDuration=scenes[i].duration,progress=Math.max(0,Math.min(1,(elapsed-starts[i])/sceneDuration));
+  const v=routeProgress(i,progress),together=scenario==='together',p2=together?routeB:routeFar,p2Index=together?1:2;
+  for(const [p,idx,visible] of [[routeA,0,v>0],[routeB,1,v>0&&together],[routeFar,2,v>0&&!together]]){
+   p.style.display=visible?'':'none';p.style.strokeDasharray=`${(lengths[idx]*v).toFixed(2)} ${lengths[idx]*2}`;
+  }
+  const pointA=pathPoint(routeA,0,v),pointB=pathPoint(p2,p2Index,v);
+  el('cmDotA').setAttribute('cx',pointA.x);el('cmDotA').setAttribute('cy',pointA.y);
+  el('cmDotB').setAttribute('cx',pointB.x);el('cmDotB').setAttribute('cy',pointB.y);
+  el('cmDotA').style.opacity=v?'1':'0';el('cmDotB').style.opacity=v?'1':'0';
+  routeB.setAttribute('data-rival',String(team==='mixed'));routeFar.setAttribute('data-rival',String(team==='mixed'));el('cmDotB').setAttribute('data-rival',String(team==='mixed'));
+  el('cmProgress').style.width=(100*elapsed/total).toFixed(2)+'%';
+ }
+ function stop(){playing=false;if(frame!==null)cancelAnimationFrame(frame);frame=null;lastTick=0;el('cmPause').disabled=true;el('cmPlay').textContent=reduce?'Próxima cena':elapsed>=total?'▶ Reproduzir novamente':'▶ Reproduzir';}
+ function tick(now){if(!playing)return;if(!lastTick)lastTick=now;elapsed=Math.min(total,elapsed+Math.max(0,Math.min(110,now-lastTick)));lastTick=now;drawProgress();if(elapsed>=total){stop();return;}frame=requestAnimationFrame(tick);}
+ function play(){if(reduce){const next=sceneAt(elapsed)+1;elapsed=next>=scenes.length?0:starts[next];sceneIndex=-1;drawProgress();return;}if(playing)return;if(elapsed>=total)elapsed=0;playing=true;lastTick=0;el('cmPlay').textContent='▶ Reproduzindo';el('cmPause').disabled=false;frame=requestAnimationFrame(tick);}
+ function jump(i){stop();elapsed=starts[i];sceneIndex=-1;drawProgress();}
+ function restart(){stop();elapsed=0;sceneIndex=-1;drawProgress();}
+ function choose(key,value){if(key==='scenario'&&scenario===value||key==='team'&&team===value)return;stop();if(key==='scenario')scenario=value;else team=value;root.querySelectorAll(key==='scenario'?'[data-cm-path]':'[data-cm-team]').forEach(b=>b.setAttribute('aria-pressed',String((key==='scenario'?b.dataset.cmPath:b.dataset.cmTeam)===value)));sceneIndex=-1;drawProgress();}
+ function hidden(){if(document.hidden)stop();}
+ el('cmPlay').addEventListener('click',play);el('cmPause').addEventListener('click',stop);el('cmRestart').addEventListener('click',restart);
+ buttons.forEach((b,i)=>b.addEventListener('click',()=>jump(i)));
+ root.querySelectorAll('[data-cm-path]').forEach(b=>b.addEventListener('click',()=>choose('scenario',b.dataset.cmPath)));
+ root.querySelectorAll('[data-cm-team]').forEach(b=>b.addEventListener('click',()=>choose('team',b.dataset.cmTeam)));
+ document.addEventListener('visibilitychange',hidden);
+ if(reduce)el('cmPlay').textContent='Próxima cena';drawProgress();
+ disposeCoopMotion=()=>{stop();document.removeEventListener('visibilitychange',hidden);};
+}
+
 function showEligibilityTool(){
  return `<section class="eligibility-demo" aria-labelledby="demoTitle"><span class="demo-label">SIMULAÇÃO DE TREINO · NÃO ENVIA DADOS</span><h4 id="demoTitle">Sua patrulha passaria pelo básico?</h4><p>Informe apenas os metros e segundos de caminhada comprovada, excluindo trechos descartados. Valores fictícios não substituem a análise do servidor.</p><div class="demo-inputs"><label>Metros GPS aceitos<input id="demoMeters" type="number" min="0" max="200000" inputmode="numeric" value="620" /></label><label>Segundos de movimento comprovado<input id="demoSeconds" type="number" min="0" max="100000" inputmode="numeric" value="380" /></label></div><label class="demo-vehicle"><input id="demoIncident" type="checkbox" /> Houve trecho descartado ou suspeito no percurso</label><label class="demo-vehicle"><input id="demoMock" type="checkbox" /> Há localização simulada comprovada ou prova de movimento contraditória</label><div class="demo-result" id="demoResult" role="status"></div><p class="demo-disclaimer">Uma suspeita isolada não zera a caminhada válida. Ainda são necessárias evidências consistentes por célula H3 (≥50 m e ≥4 segmentos), precisão, ausência de outros bloqueios e confirmação oficial. O simulador não altera o jogo.</p></section>`;
 }
@@ -1401,6 +1538,7 @@ function bindPatrolMotion(){
 }
 
 function renderChapter(){
+ disposeCoopMotion();disposeCoopMotion=()=>{};
  disposeSeasonMotion();disposeSeasonMotion=()=>{};
  disposeTerritoryMotion();disposeTerritoryMotion=()=>{};
  disposeBiologyMotion();disposeBiologyMotion=()=>{};
@@ -1410,7 +1548,7 @@ function renderChapter(){
  const c=CHAPTERS[active];const b=c[mode];const t=mode==='sport'?'ESPORTISTA • OPERAÇÃO AUTOMÁTICA':'ESTRATEGISTA • DECISÃO TÁTICA';
  const steps=c.steps.map(([title,description],i)=>`<li><span class="action-num">${String(i+1).padStart(2,'0')}</span><div class="action-content"><strong>${enc(title)}</strong><p>${enc(description)}</p></div></li>`).join('');
  const faq=c.faq.map(([q,a])=>`<details class="faq-item"><summary>${enc(q)}</summary><p>${enc(a)}</p></details>`).join('');
- const extra=c.id==='patrulha'?`${showPatrolMotion()}${showEligibilityTool()}`:c.id==='cacadas'?showHuntMotion():c.id==='energia'?showEnergyMotion():c.id==='controle'?showTerritoryMotion():c.id==='biologia'?showBiologyMotion():c.id==='temporadas'?showSeasonMotion():'';
+ const extra=c.id==='patrulha'?`${showPatrolMotion()}${showEligibilityTool()}`:c.id==='cacadas'?showHuntMotion():c.id==='energia'?showEnergyMotion():c.id==='controle'?showTerritoryMotion():c.id==='biologia'?showBiologyMotion():c.id==='temporadas'?showSeasonMotion():c.id==='coop'?showCoopMotion():'';
  const links=c.id==='instalacao'?`<div class="chapter-support"><a href="${enc(GUIDE_META.download)}" target="_blank" rel="noopener noreferrer" class="support-link">Baixar APK Alpha ↗</a><a href="${enc(GUIDE_META.changelog)}" target="_blank" rel="noopener noreferrer" class="support-secondary">Ver canal de versões</a></div>`:c.id==='temporadas'?`<div class="chapter-support"><a href="${enc(GUIDE_META.warRoom)}" class="support-link">Abrir Sala de Guerra ↗</a></div>`:'';
  $('chapterContent').innerHTML=`<div class="chapter-inner"><div class="chapter-topline"><span><span class="chapter-number">CAPÍTULO ${enc(c.number)}</span> / ${enc(c.part)}</span><span class="chapter-time">LEITURA ${enc(c.time)}</span></div><h3>${enc(c.title)}</h3><p class="chapter-lead">${enc(c.deck)}</p><div class="location-tag"><svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m10 1 7 4v10l-7 4-7-4V5l7-4Z"/><path d="M10 7v6M7 10h6"/></svg><span>NO APLICATIVO · ${enc(c.where)}</span></div><div class="step-label">PASSO A PASSO · O QUE FAZER</div><ol class="action-list">${steps}</ol>${links}<div class="branch-brief"><span class="branch-prefix">${t}</span><h4>${enc(b.title)}</h4><p>${enc(b.lead)}</p><ul class="focus-list">${b.focus.map(x=>`<li>${enc(x)}</li>`).join('')}</ul></div>${extra}<div class="alert-note"><span class="alert-mark">!</span><span>${enc(c.note)}</span></div><div class="faq-wrap"><h4>DÚVIDAS MAIS COMUNS</h4>${faq}</div><div class="source-tag"><strong>VERIFICADO NO COVIL</strong><span>${enc(c.source)}</span></div></div>`;
  $('chapter').classList.toggle('is-tactical',mode==='tactical');
@@ -1424,6 +1562,7 @@ function renderChapter(){
  if(c.id==='controle') bindTerritoryMotion();
  if(c.id==='biologia') bindBiologyMotion();
  if(c.id==='temporadas') bindSeasonMotion();
+ if(c.id==='coop') bindCoopMotion();
  if(c.id==='patrulha'){
    bindPatrolMotion();
    for(const id of ['demoMeters','demoSeconds','demoIncident','demoMock'])$(id)?.addEventListener('input',updateEligibility);
