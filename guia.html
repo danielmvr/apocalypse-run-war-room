@@ -361,6 +361,87 @@ main{max-width:1380px;margin:auto;padding:0 36px}.kicker{color:#89c7a3;font-size
 @media(max-width:430px){.dm-intro{display:block}.dm-stamp{display:inline-block;margin-top:12px}.dm-choices button{flex:1 1 auto}.dm-stage{margin:0 10px;gap:8px}.dm-metrics{gap:5px;padding:9px 10px 0}.dm-metric{padding:9px 7px}.dm-metric span{font-size:8px}.dm-metric strong{font-size:clamp(22px,6.8vw,31px)}.dm-metric small{font-size:8px}.dm-info{margin:9px 10px 0;padding:13px}.dm-timeline{margin:12px 10px 0}.dm-controls{padding:12px 10px}.dm-controls button{flex:1 1 auto}.dm-counter{margin:4px auto 0}.dm-progress{margin:0 10px 13px}}
 @media(prefers-reduced-motion:reduce){.debrief-motion *, .debrief-motion *:before, .debrief-motion *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
+
+/* Motion Graphic 10 | Missões e Conquistas | simulação educativa, sem integração com o jogo */
+.mission-motion{--mm-accent:#9af1b6;--mm-amber:#f3c88a;--mm-muted:#9ebbae;position:relative;isolation:isolate;overflow:hidden;margin:31px 0 0;border:1px solid #3c6a50;border-radius:13px;background:radial-gradient(ellipse at 30% -15%,#2b604232,transparent 60%),linear-gradient(157deg,#122920,#091716 70%);color:#edf9f0;box-shadow:0 25px 60px #0005;font-family:var(--font)}
+.mm-head{padding:22px 23px 13px;display:flex;justify-content:space-between;align-items:flex-start;gap:14px}
+.mm-tag{font-size:9px;font-weight:900;letter-spacing:2.1px;color:#9af1b6}
+.mm-head h4{margin:7px 0 6px;font:900 clamp(29px,4.6vw,43px)/.99 var(--font-head);letter-spacing:.35px;text-transform:uppercase;color:#f2fff1}
+.mm-head p{font-size:12px;color:#a4c2b0;line-height:1.65;max-width:580px;margin:0}
+.mm-fiction{flex:0 0 auto;border:1px solid #866b4f;background:#41301c55;color:#f1ca92;border-radius:5px;padding:8px 10px;font-size:9px;letter-spacing:1px;font-weight:900;white-space:nowrap}
+.mm-config{padding:2px 22px 17px;display:grid;gap:11px}
+.mm-config-label{display:block;color:#91bca4;font-size:9px;font-weight:900;letter-spacing:1.25px;margin-bottom:7px}
+.mm-tabs{display:flex;flex-wrap:wrap;gap:7px}
+.mm-tabs button{border:1px solid #3c5f4d;border-radius:6px;background:#12251e;color:#b7d3c0;padding:10px 12px;min-height:42px;font:800 11px var(--font);cursor:pointer;transition:background .2s,border-color .2s}
+.mm-tabs button[aria-pressed=true]{color:#f4fff5;background:#26583a;border-color:#a4f6b8;box-shadow:inset 0 0 0 1px #9aedb744}
+.mm-tabs.mm-tabs--evidence button[aria-pressed=true]{background:#253c38;border-color:#9bcebd}
+.mm-config-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.mm-config-grid >div{min-width:0}
+.mm-budget[hidden]{display:none!important}
+.mm-main{margin:0 16px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(212px,.88fr);gap:12px;align-items:stretch}
+.mm-visual{position:relative;overflow:hidden;min-width:0;border:1px solid #3b6450;border-radius:9px;background:radial-gradient(ellipse at 50% 45%,#163c2c,#0b1919 73%)}
+.mm-visual svg{display:block;width:100%;height:100%;min-height:280px;max-height:355px}
+.mm-grid{stroke:#80a28f;stroke-opacity:.1;stroke-width:1}
+.mm-road{fill:none;stroke:#3e6253;stroke-width:13;stroke-linecap:round;opacity:.35}
+.mm-road-inner{fill:none;stroke:#a0baa8;stroke-width:1.4;stroke-linecap:round;opacity:.22}
+.mm-path-shadow{fill:none;stroke:#28533e;stroke-width:14;stroke-linecap:round;stroke-linejoin:round}
+.mm-path-live{fill:none;stroke:#93ffc2;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;filter:url(#mmGlow);transition:stroke .25s}
+.mm-hex{stroke:#75bc8d;stroke-opacity:.45;stroke-width:2;fill:#2e7550;fill-opacity:.14;transition:fill .25s,stroke .25s}
+.mm-hex[data-mm-state=active]{fill:#3d9966;fill-opacity:.52;stroke:#a5ffc4;stroke-opacity:1}
+.mm-hex[data-mm-state=blocked]{fill:#775d3c;fill-opacity:.28;stroke:#f3bd82;stroke-opacity:.9}
+.mm-orbit{fill:none;stroke:#93e6aa;stroke-opacity:.38;stroke-width:1.5;stroke-dasharray:6 11;transform-origin:280px 160px;animation:mm-orbit 22s linear infinite}
+.mm-orbit-two{stroke-opacity:.18;stroke-dasharray:2 12;animation-direction:reverse;animation-duration:32s}
+.mm-center-disc{fill:#133a29;stroke:#a4f9b8;stroke-width:3;filter:url(#mmGlow)}
+.mm-center-initial{fill:#d6ffe3;font:900 22px var(--font-head);text-anchor:middle;letter-spacing:2px}
+.mm-center-icon{fill:none;stroke:#daffe4;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+.mm-visual-label{position:absolute;top:13px;left:13px;color:#bdeacc;background:#0d201be8;border:1px solid #3a6b50;padding:8px 10px;border-radius:5px;font-weight:900;font-size:9px;letter-spacing:1.2px}
+.mm-visual-label:before{content:'';display:inline-block;width:7px;height:7px;border-radius:50%;background:#92f9b7;margin-right:7px;box-shadow:0 0 10px #92efae}
+.mm-index{position:absolute;right:12px;bottom:10px;font-size:9px;letter-spacing:1.2px;color:#93b7a1;background:#091917c2;padding:6px 8px;border-radius:3px}
+.mm-dossier{background:linear-gradient(155deg,#182e24,#10221e);border:1px solid #42674f;border-radius:9px;padding:18px 17px;min-width:0;display:flex;flex-direction:column;gap:8px}
+.mm-small{font-size:9px;color:#8ac69c;letter-spacing:1.5px;font-weight:900}
+.mm-dossier h5{font:900 clamp(24px,2.8vw,33px)/1.02 var(--font-head);text-transform:uppercase;margin:4px 0;color:#f3fff3;overflow-wrap:anywhere}
+.mm-dossier p{font-size:11px;color:#adcbba;line-height:1.6;margin:0}
+.mm-lifetime{color:#cde5ce;font-size:10px;letter-spacing:.7px;font-weight:800}
+.mm-goal{margin-top:9px;display:flex;justify-content:space-between;align-items:baseline;gap:10px;font-size:10px;color:#a8c8ad;font-weight:800}
+.mm-goal strong{font:900 clamp(28px,3.6vw,39px)/1 var(--font-head);color:#d4ffe0;font-variant-numeric:tabular-nums}
+.mm-meter{height:9px;background:#284b39;border-radius:99px;overflow:hidden;border:1px solid #4e7059}
+.mm-meter>span{display:block;height:100%;width:0%;background:linear-gradient(90deg,#4bbf80,#c4ffce);transition:width .45s ease}
+.mm-ledger{margin-top:auto;display:grid;gap:7px;padding-top:12px}
+.mm-ledger-item{font-size:10px;display:flex;gap:8px;align-items:center;color:#a1c0ac}
+.mm-ledger-item:before{content:'◆';font-size:8px;color:#78c69d}
+.mm-ledger-item[data-mm-highlight=true]{color:#e5ffe9;font-weight:800}
+.mm-ledger-item[data-mm-highlight=true]:before{color:#a2ffbc}
+.mm-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;padding:12px 16px 0}
+.mm-stat{border:1px solid #365843;background:#10271e;border-radius:7px;padding:12px;min-width:0}
+.mm-stat label{display:block;font-size:9px;font-weight:900;line-height:1.3;color:#9bbca4;letter-spacing:.6px;text-transform:uppercase}
+.mm-stat strong{display:block;font:900 clamp(25px,4vw,35px)/1.1 var(--font-head);color:#baffce;margin:5px 0;font-variant-numeric:tabular-nums}
+.mm-stat small{font-size:9px;color:#78978a}
+.mm-stat--gold{background:#30251966;border-color:#6b5a3c}.mm-stat--gold strong{color:#f6d6a0}
+.mm-story{margin:12px 16px 0;border:1px solid #426e4f;background:linear-gradient(120deg,#1a3d29,#11271f);border-radius:9px;padding:17px 18px;transition:background .25s}
+.mm-story[data-mm-tone=warning]{border-color:#8e6847;background:linear-gradient(120deg,#3e2d1d,#21271f)}
+.mm-story[data-mm-tone=gold]{border-color:#7d7650;background:linear-gradient(120deg,#3c3921,#1d2821)}
+.mm-story-row{display:flex;justify-content:space-between;gap:9px;flex-wrap:wrap;align-items:center;font-size:9px;font-weight:900;letter-spacing:1.3px;color:#acd8b9}
+.mm-story-row em{font-style:normal;color:#e0f5df;font-size:10px;letter-spacing:0}
+.mm-story h5{font:900 clamp(22px,3.4vw,31px)/1.07 var(--font-head);text-transform:uppercase;margin:9px 0 6px;color:#f3fff3}
+.mm-story p{margin:0;color:#bad4c1;line-height:1.65;font-size:12px}
+.mm-extra{border-top:1px solid #446950;padding-top:11px;margin-top:11px;color:#d3eed7;font-size:11px;line-height:1.6}
+.mm-extra b{color:#a9f6b8}
+.mm-timeline{display:flex;gap:5px;overflow-x:auto;padding:13px 1px 6px;margin:0 16px;scrollbar-width:thin;scrollbar-color:#466c55 transparent;scroll-snap-type:x proximity}
+.mm-timeline button{min-height:39px;border:1px solid #3b594a;border-radius:5px;background:#10241d;color:#92ad9b;white-space:nowrap;font:800 10px var(--font);padding:9px 10px;flex:1 0 auto;min-width:87px;scroll-snap-align:start;cursor:pointer}
+.mm-timeline button[aria-current=step]{border-color:#a2f1b4;color:#effff0;background:#275940}
+.mm-actions{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:8px 16px 13px}
+.mm-actions button{border:1px solid #4a7455;border-radius:6px;min-height:42px;padding:10px 13px;background:#1e3e2a;color:#dcf3df;font:900 11px var(--font);cursor:pointer}
+.mm-actions button.mm-play{background:#adf6bd;color:#102e1e;border-color:#adf6bd}
+.mm-actions .mm-status{margin-left:auto;font-size:10px;color:#a7cbb1;font-weight:800;white-space:nowrap;font-variant-numeric:tabular-nums}
+.mm-bar{height:5px;margin:0 16px 16px;background:#2a4a37;border-radius:100px;overflow:hidden}
+.mm-bar>span{display:block;background:linear-gradient(90deg,#60c68a,#b8f7ba);height:100%;width:12.5%;transition:width .3s ease}
+.mm-caution{border-top:1px solid #365b44;margin:0;color:#9ebba6;font-size:10px;line-height:1.7;padding:13px 17px 16px}
+.mission-motion button:focus-visible{outline:2px solid #d4ffd4;outline-offset:3px}
+@keyframes mm-orbit{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+@media(max-width:760px){.mm-main{grid-template-columns:1fr}.mm-visual svg{height:auto;min-height:215px;max-height:310px}.mm-dossier{gap:8px}.mm-ledger{margin-top:2px}.mm-config-grid{grid-template-columns:1fr}}
+@media(max-width:435px){.mm-head{display:block;padding:19px 16px 13px}.mm-fiction{display:inline-block;margin-top:10px}.mm-config{padding:2px 15px 14px}.mm-tabs button{flex:1 1 auto;padding:10px 8px}.mm-main{margin:0 10px;gap:8px}.mm-visual svg{min-height:200px}.mm-dossier{padding:13px}.mm-stats{padding:9px 10px 0;gap:5px}.mm-stat{padding:9px 7px}.mm-stat label{font-size:8px}.mm-stat strong{font-size:clamp(22px,7vw,32px)}.mm-stat small{font-size:8px}.mm-story{margin:10px 10px 0;padding:13px}.mm-timeline{margin:0 10px}.mm-actions{padding:9px 10px}.mm-actions button{flex:1 1 auto}.mm-actions .mm-status{margin:4px auto 0}.mm-bar{margin:0 10px 13px}}
+@media(prefers-reduced-motion:reduce){.mission-motion *, .mission-motion *:before,.mission-motion *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
 </style>
 </head>
 <body>
@@ -1848,7 +1929,140 @@ function bindDebriefMotion(){
  paint();disposeDebriefMotion=()=>{stop();document.removeEventListener('visibilitychange',onHidden)};
 }
 
+
+/* Motion Graphic 10 | Missões, Conquistas e pontos; conteúdo fictício, regras verificadas no Covil */
+const MISSION10_STAGES=[
+ {label:'A oferta',title:'Uma missão aparece',stamp:'OFERTA / OBJETIVO',sport:'O jogo mostra objetivos disponíveis; não é preciso concluir tudo.',tactical:'Ofertas da Central são geradas pelo servidor. Dificuldade, ciclo, prazo e elegibilidade dependem da conta.'},
+ {label:'A regra',title:'Leia o que realmente conta',stamp:'CRITÉRIO / VALIDAÇÃO',sport:'Não basta caminhar: o jogo verifica se a atividade atende às regras.',tactical:'Missões exigem evidência da patrulha e contribuição real. Conquistas usam métricas comprovadas do próprio jogador.'},
+ {label:'A patrulha',title:'Saia para explorar',stamp:'MOVIMENTO / GPS',sport:'Caminhe ou corra de maneira segura, usando a patrulha GPS.',tactical:'Mínimos, filtros GPS, evidência H3, cota diária e origem do evento são conferidos antes do progresso.'},
+ {label:'Primeiro avanço',title:'O progresso cresce',stamp:'REGISTRO CONFIRMADO',sport:'Depois do reconhecimento, a barra avança. Não vale só abrir a tela da missão.',tactical:'Somente a contribuição canônica PLAYER qualificada progride missões; reenvio e bot não geram crédito duplicado.'},
+ {label:'Último esforço',title:'A meta está perto',stamp:'META / PROGRESSÃO',sport:'Se faltou alguma condição, a tentativa não é somada como progresso válido.',tactical:'Deduplicação por patrulha, célula ou data varia conforme critério; completar a meta exige eventos reais.'},
+ {label:'Meta atingida',title:'Objetivo concluído',stamp:'CONCLUSÃO / SERVIDOR',sport:'A confirmação de uma meta é feita pelo jogo, não pela animação do guia.',tactical:'Concluir a missão não garante pagamento sazonal ou benefício quando as cotas já foram alcançadas.'},
+ {label:'Recompensa',title:'O prêmio tem sua própria regra',stamp:'LEDGER / RECOMPENSA',sport:'Os diferentes prêmios não são a mesma coisa: confira qual foi concedido.',tactical:'Méritos operacionais, méritos permanentes e pontos semanais usam livros separados e limites próprios.'},
+ {label:'Sua história',title:'O marco fica registrado',stamp:'HISTÓRICO / PRÓXIMA MISSÃO',sport:'Reveja o que conquistou e continue sua caminhada no seu ritmo.',tactical:'Histórico fica associado à conta. Não há prêmio retroativo por reenvio, nem duplicação de medalhas desbloqueadas.'}
+];
+const MISSION10_CASES={
+ daily:{title:'Ordem de rotina',kind:'MISSÃO DIÁRIA',where:'Guerra → Ordens',target:2,unit:'patrulhas com contribuição',summary:'Exemplo fictício de uma rotina de duas contribuições reconhecidas. Missões fáceis da Central podem conceder 5 méritos de operação no padrão atual.',desc:'Patrulhas reais elegíveis e com contribuição ao mundo, dentro da oferta e do ciclo.',reward:'5 méritos de operação',metric:'OPERAÇÃO',progress:[0,0,0,1,2,2,2,2],invalid:[0,0,0,1,1,1,1,1]},
+ weekly:{title:'Ritmo de patrulha',kind:'MISSÃO DE TEMPORADA',where:'Guerra → Temporada',target:3,unit:'patrulhas com contribuição',summary:'Meta semanal publicada: três patrulhas elegíveis com contribuição real. Um prêmio de 25 pontos só é lançado se a vaga semanal estiver disponível.',desc:'Patrulhas distintas qualificadas durante a mesma temporada; não basta atividade registrada.',reward:'25 pontos da temporada',metric:'TEMPORADA',progress:[0,0,0,1,2,3,3,3],invalid:[0,0,0,1,2,2,2,2]},
+ achievement:{title:'Primeiro quilômetro',kind:'CONQUISTA PERMANENTE',where:'Sobrevivente → Conquistas',target:1000,unit:'metros GPS aceitos',summary:'O marco walk_1k é desbloqueado após acumular 1.000 m de caminhadas elegíveis; concede 10 méritos permanentes uma única vez.',desc:'Soma pessoal de distância aceita em patrulhas elegíveis; não é uma missão diária com prazo.',reward:'10 méritos permanentes',metric:'PERMANENTE',progress:[0,0,0,620,1150,1150,1150,1150],invalid:[0,0,0,620,620,620,620,620]}
+};
+function showMissionMotion(){
+ const poly=(x,y,r)=>Array.from({length:6},(_,i)=>{const a=(i*60-30)*Math.PI/180;return `${(x+Math.cos(a)*r).toFixed(1)},${(y+Math.sin(a)*r).toFixed(1)}`}).join(' ');
+ const nodes=[[98,204],[166,122],[272,83],[385,142],[463,227]];
+ const hexes=nodes.map(([x,y],i)=>`<polygon class="mm-hex" data-mm-hex="${i}" data-mm-state="idle" points="${poly(x,y,41)}"/>`).join('');
+ const roads=['M-20 105L154 88 325 185 570 75','M50 320L100 206 313 230 560 250','M310 -30L310 100 380 325'];
+ const streets=roads.map(p=>`<path d="${p}" class="mm-road"/><path d="${p}" class="mm-road-inner"/>`).join('');
+ const stages=MISSION10_STAGES.map((st,i)=>`<button type="button" data-mm-scene="${i}" aria-current="${i===0?'step':'false'}">${String(i+1).padStart(2,'0')} ${st.label}</button>`).join('');
+ return `<section class="mission-motion" id="missionMotion" aria-labelledby="mmTitle" data-simulation="true">
+ <div class="mm-head"><div><span class="mm-tag">MOTION GRAPHIC 10 / SUA JORNADA</span><h4 id="mmTitle">Da missão à conquista</h4><p>Como progresso reconhecido se transforma em recompensa, e por que nem toda atividade ou meta concluída gera pontos.</p></div><span class="mm-fiction">EXEMPLO FICTÍCIO</span></div>
+ <div class="mm-config"><div><label class="mm-config-label">ESCOLHA O TIPO DE OBJETIVO</label><div class="mm-tabs" role="group" aria-label="Tipo de objetivo"><button type="button" data-mm-case="daily" aria-pressed="true">Ordem diária</button><button type="button" data-mm-case="weekly" aria-pressed="false">Missão semanal</button><button type="button" data-mm-case="achievement" aria-pressed="false">Conquista</button></div></div>
+ <div class="mm-config-grid"><div><span class="mm-config-label">ÚLTIMA ATIVIDADE</span><div class="mm-tabs mm-tabs--evidence" role="group" aria-label="Evidência da atividade"><button type="button" data-mm-proof="valid" aria-pressed="true">Evidência válida</button><button type="button" data-mm-proof="invalid" aria-pressed="false">Sem comprovação</button></div></div><div class="mm-budget" id="mmBudgetWrap" hidden><span class="mm-config-label">ORÇAMENTO DA TEMPORADA</span><div class="mm-tabs" role="group" aria-label="Vaga para pontos semanais"><button type="button" data-mm-budget="open" aria-pressed="true">Vaga disponível</button><button type="button" data-mm-budget="full" aria-pressed="false">Cota atingida</button></div></div></div></div>
+ <div class="mm-main"><div class="mm-visual"><span class="mm-visual-label" id="mmVisualLabel">MISSÃO EM ANDAMENTO</span>
+ <svg viewBox="0 0 560 310" role="img" aria-label="Mapa fictício de hexágonos ligados a um objetivo e a um símbolo de conquista" preserveAspectRatio="xMidYMid meet"><defs><pattern id="mmBgGrid" width="27" height="27" patternUnits="userSpaceOnUse"><path d="M 27 0 L 0 0 0 27" class="mm-grid" fill="none"/></pattern><filter id="mmGlow"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+ <rect width="560" height="310" fill="url(#mmBgGrid)"/>${streets}
+ <path class="mm-path-shadow" d="M98 204L166 122 272 83 385 142 463 227"/>
+ <path id="mmRoute" class="mm-path-live" d="M98 204L166 122 272 83 385 142 463 227"/>
+ ${hexes}<circle class="mm-orbit" cx="280" cy="160" r="92"/><circle class="mm-orbit mm-orbit-two" cx="280" cy="160" r="110"/>
+ <circle class="mm-center-disc" id="mmCenter" cx="280" cy="160" r="36"/><g id="mmCenterIcon"><path class="mm-center-icon" d="M260 158l13 13 27-29"/></g>
+ <g id="mmMarker" transform="translate(98 204)"><circle r="11" fill="#a1ffd1" stroke="#19422d" stroke-width="4"/><circle r="4" fill="#19422d"/></g></svg><span class="mm-index">SETOR H3 / SIMULADO</span></div>
+ <div class="mm-dossier"><span class="mm-small" id="mmKind">MISSÃO DIÁRIA</span><h5 id="mmCaseTitle">Ordem de rotina</h5><p id="mmCaseText">Missão ilustrativa com critérios reais de contribuição.</p><span class="mm-lifetime" id="mmWhere">GUERRA → ORDENS</span><div class="mm-goal"><span id="mmUnit">PATRULHAS COM CONTRIBUIÇÃO</span><strong id="mmGoalNumber">0/2</strong></div><div class="mm-meter"><span id="mmGoalBar"></span></div><div class="mm-ledger"><div class="mm-ledger-item" data-mm-ledger="0">Objetivo conhecido</div><div class="mm-ledger-item" data-mm-ledger="1">Evidência confirmada</div><div class="mm-ledger-item" data-mm-ledger="2">Recompensa reconhecida</div></div></div></div>
+ <div class="mm-stats"><div class="mm-stat"><label>Méritos de operação</label><strong id="mmOperationPoints">+0</strong><small>não são XP</small></div><div class="mm-stat"><label>Méritos permanentes</label><strong id="mmPermanentPoints">+0</strong><small>medalhas únicas</small></div><div class="mm-stat mm-stat--gold"><label>Pontos da temporada</label><strong id="mmSeasonPoints">+0</strong><small>cota semanal</small></div></div>
+ <div class="mm-story" id="mmStory" data-mm-tone="neutral"><div class="mm-story-row"><span id="mmSceneNumber">CENA 01 / 08</span><em id="mmSceneStamp">OFERTA / OBJETIVO</em></div><h5 id="mmSceneTitle" aria-live="polite">Uma missão aparece</h5><p id="mmSceneText">O jogo mostra objetivos que dependem das regras do servidor.</p><div class="mm-extra"><b id="mmBranchLabel">ESPORTISTA / </b><span id="mmBranchText">Caminhe no seu ritmo.</span></div></div>
+ <div class="mm-timeline" role="group" aria-label="Cenas da animação">${stages}</div><div class="mm-actions"><button type="button" class="mm-play" id="mmPlay">▶ Reproduzir</button><button type="button" id="mmPrev">← Anterior</button><button type="button" id="mmNext">Próxima →</button><button type="button" id="mmReset">↺ Reiniciar</button><span class="mm-status" id="mmCounter">01 / 08</span></div><div class="mm-bar" aria-hidden="true"><span id="mmProgress"></span></div>
+ <p class="mm-caution">Simulação educativa, sem dados da sua conta. Missões são ofertadas e confirmadas pelo servidor. Méritos de operação, méritos permanentes e pontos da semana são distintos; valores e metas exibidos são exemplos ou padrões vigentes, não garantias de disponibilidade ou pagamento.</p>
+ </section>`;
+}
+let disposeMissionMotion=()=>{};
+function bindMissionMotion(){
+ const root=$('missionMotion');if(!root)return;
+ const element=(id)=>root.querySelector('#'+id);
+ const stages=MISSION10_STAGES;
+ const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ let which='daily',proof='valid',budget='open',index=0,playing=false,timeout=null;
+ const sceneButtons=[...root.querySelectorAll('[data-mm-scene]')];
+ const route=element('mmRoute');const marker=element('mmMarker');const length=route.getTotalLength();
+ function stop(){playing=false;if(timeout!==null){clearTimeout(timeout);timeout=null;}element('mmPlay').textContent='▶ Reproduzir';element('mmPlay').setAttribute('aria-label','Reproduzir animação de missões e conquistas')}
+ function progressFor(c){const values=proof==='valid'?c.progress:c.invalid;return Math.min(c.target,values[index]);}
+ function paint(){
+  const c=MISSION10_CASES[which]; const st=stages[index]; const count=progressFor(c);
+  const finished=count>=c.target && index>=5;
+  const rewardActive=finished&&index>=6;
+  const rewarded=rewardActive&&(which!=='weekly'||budget==='open');
+  const noProof=proof==='invalid'&&index>=5;
+  const noBudget=which==='weekly'&&budget==='full'&&rewardActive;
+  let tone=rewarded?'gold':noProof||noBudget?'warning':'neutral';
+  const stat={operation:0,permanent:0,season:0};
+  if(rewarded){if(which==='daily')stat.operation=5;if(which==='weekly')stat.season=25;if(which==='achievement')stat.permanent=10;}
+  element('mmOperationPoints').textContent='+'+stat.operation;
+  element('mmPermanentPoints').textContent='+'+stat.permanent;
+  element('mmSeasonPoints').textContent='+'+stat.season;
+  element('mmKind').textContent=c.kind;element('mmCaseTitle').textContent=c.title;
+  element('mmCaseText').textContent=c.desc;element('mmWhere').textContent=c.where;
+  element('mmUnit').textContent=c.unit.toUpperCase();element('mmGoalNumber').textContent=count.toLocaleString('pt-BR')+'/'+c.target.toLocaleString('pt-BR');
+  element('mmGoalBar').style.width=((100*count/c.target).toFixed(1))+'%';
+  element('mmBudgetWrap').hidden=which!=='weekly';
+  let title=st.title,description='';
+  const caseText=which==='achievement'?'Uma conquista permanente não precisa ser aceita manualmente e não expira a cada dia.':which==='weekly'?'A meta sazonal e a cota de pagamento pertencem à semana aberta, não à pontuação territorial total.':'A missão de rotina é uma oferta temporária. A disponibilidade muda conforme sua conta e o servidor.';
+  if(index===0){description=caseText+' '+c.summary;}
+  else if(index===1){description=c.desc+' Só o que é comprovado pelo jogo pode contar.';}
+  else if(index===2){description='Patrulha GPS iniciada. O app ainda precisa validar os segmentos, o tempo em movimento e a contribuição reconhecida.';}
+  else if(index===3){description=which==='achievement'?'Primeira caminhada elegível fictícia: 620 m aceitos registrados no progresso pessoal.':'Uma contribuição fictícia foi reconhecida. A barra de progresso muda somente depois da confirmação.';}
+  else if(index===4){description=proof==='valid'?'O histórico mostra o avanço pela evidência reconhecida, não pela simples passagem no mapa.':'Parte do percurso continua válida, mas a última tentativa não tem comprovação suficiente para avançar a meta.';}
+  else if(index===5){
+    if(finished){description='Meta do exemplo atingida. O servidor registra a conclusão, mas o pagamento ainda precisa respeitar as condições de cada recompensa.';}
+    else {title='Ainda falta comprovação';description='A última tentativa não contou. Uma missão ou medalha não é liberada porque a simulação alcançou o final.';}
+  }
+  else if(index===6){
+    if(!finished){title='Sem recompensa confirmada';description='A meta não foi completada com evidência elegível. O progresso anterior permanece, sem criar novo crédito.';}
+    else if(noBudget){title='Meta concluída, cota esgotada';description='A missão semanal está concluída, mas os pagamentos sazonais do jogador já atingiram a cota. Não há mais 25 pontos nesta semana.';}
+    else {title='Recompensa reconhecida';description='Exemplo: '+c.reward+'. O registro oficial define o crédito; este painel não concede nada ao jogador.';}
+  }
+  else {
+    if(!finished){title='Histórico sem novo prêmio';description='A próxima tentativa válida poderá avançar a meta, mas a atividade sem prova não cria créditos.';}
+    else if(noBudget){title='Conquista da meta sem pontos novos';description='A conclusão permanece no histórico. O limite de dois prêmios semanais não é contornado por outra missão.';}
+    else {title='Marco registrado';description='O prêmio desta simulação pertence somente à sua categoria: '+c.reward+'. Reenvios não repetem a concessão.';}
+  }
+  element('mmSceneTitle').textContent=title;element('mmSceneText').textContent=description;
+  element('mmSceneStamp').textContent=st.stamp;
+  element('mmSceneNumber').textContent='CENA '+String(index+1).padStart(2,'0')+' / 08';
+  element('mmStory').dataset.mmTone=tone;
+  const profile=mode==='sport'?'esportista':'estrategista';
+  element('mmBranchLabel').textContent=profile==='esportista'?'ESPORTISTA / ':'ESTRATEGISTA / ';
+  element('mmBranchText').textContent=profile==='esportista'?st.sport:st.tactical;
+  const routePct=Math.min(1,Math.max(0,(index/7)*.91+.09));
+  route.style.strokeDasharray=`${(length*routePct).toFixed(1)} ${(length+3).toFixed(1)}`;
+  const p=route.getPointAtLength(length*routePct);
+  marker.setAttribute('transform',`translate(${p.x.toFixed(1)} ${p.y.toFixed(1)})`);
+  const activeHex=Math.min(5,Math.ceil(routePct*5));
+  root.querySelectorAll('[data-mm-hex]').forEach((node,i)=>node.dataset.mmState=(i<activeHex?proof==='invalid'&&i===activeHex-1&&index>=4?'blocked':'active':'idle'));
+  root.querySelectorAll('[data-mm-ledger]').forEach((node,i)=>node.dataset.mmHighlight=String((i===0)||(i===1&&count>0)||(i===2&&rewarded)));
+  element('mmVisualLabel').textContent=rewarded?'RECOMPENSA / EXEMPLO':noProof?'EVIDÊNCIA INSUFICIENTE':noBudget?'LIMITE SEMANAL ATINGIDO':c.kind;
+  sceneButtons.forEach((b,i)=>b.setAttribute('aria-current',i===index?'step':'false'));
+  root.querySelectorAll('[data-mm-case]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mmCase===which)));
+  root.querySelectorAll('[data-mm-proof]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mmProof===proof)));
+  root.querySelectorAll('[data-mm-budget]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mmBudget===budget)));
+  element('mmCounter').textContent=String(index+1).padStart(2,'0')+' / 08';
+  element('mmProgress').style.width=(((index+1)/stages.length)*100).toFixed(1)+'%';
+ }
+ function seek(i){stop();index=Math.min(stages.length-1,Math.max(0,i));paint()}
+ function next(){if(index>=stages.length-1){stop();paint();return;}index++;paint();timeout=setTimeout(next,3200)}
+ function play(){if(playing){stop();return;}if(reduce){seek(index+1);return;}if(index>=stages.length-1)index=0;playing=true;element('mmPlay').textContent='Ⅱ Pausar';element('mmPlay').setAttribute('aria-label','Pausar animação de missões');paint();timeout=setTimeout(next,3200)}
+ root.querySelectorAll('[data-mm-case]').forEach(b=>b.addEventListener('click',()=>{which=b.dataset.mmCase;seek(0)}));
+ root.querySelectorAll('[data-mm-proof]').forEach(b=>b.addEventListener('click',()=>{proof=b.dataset.mmProof;seek(0)}));
+ root.querySelectorAll('[data-mm-budget]').forEach(b=>b.addEventListener('click',()=>{budget=b.dataset.mmBudget;seek(0)}));
+ sceneButtons.forEach((b,i)=>b.addEventListener('click',()=>seek(i)));
+ element('mmPlay').addEventListener('click',play);
+ element('mmPrev').addEventListener('click',()=>seek(index-1));
+ element('mmNext').addEventListener('click',()=>seek(index+1));
+ element('mmReset').addEventListener('click',()=>seek(0));
+ function onHidden(){if(document.hidden)stop()}
+ document.addEventListener('visibilitychange',onHidden);
+ paint();
+ disposeMissionMotion=()=>{stop();document.removeEventListener('visibilitychange',onHidden)};
+}
+
 function renderChapter(){
+ disposeMissionMotion();disposeMissionMotion=()=>{};
  disposeDebriefMotion();disposeDebriefMotion=()=>{};
  disposeAwakeningMotion();disposeAwakeningMotion=()=>{};
  disposeCoopMotion();disposeCoopMotion=()=>{};
@@ -1861,7 +2075,7 @@ function renderChapter(){
  const c=CHAPTERS[active];const b=c[mode];const t=mode==='sport'?'ESPORTISTA • OPERAÇÃO AUTOMÁTICA':'ESTRATEGISTA • DECISÃO TÁTICA';
  const steps=c.steps.map(([title,description],i)=>`<li><span class="action-num">${String(i+1).padStart(2,'0')}</span><div class="action-content"><strong>${enc(title)}</strong><p>${enc(description)}</p></div></li>`).join('');
  const faq=c.faq.map(([q,a])=>`<details class="faq-item"><summary>${enc(q)}</summary><p>${enc(a)}</p></details>`).join('');
- const extra=c.id==='instalacao'?showAwakeningMotion():c.id==='patrulha'?`${showPatrolMotion()}${showEligibilityTool()}`:c.id==='resultado'?showDebriefMotion():c.id==='cacadas'?showHuntMotion():c.id==='energia'?showEnergyMotion():c.id==='controle'?showTerritoryMotion():c.id==='biologia'?showBiologyMotion():c.id==='temporadas'?showSeasonMotion():c.id==='coop'?showCoopMotion():'';
+ const extra=c.id==='instalacao'?showAwakeningMotion():c.id==='patrulha'?`${showPatrolMotion()}${showEligibilityTool()}`:c.id==='resultado'?showDebriefMotion():c.id==='missoes'?showMissionMotion():c.id==='cacadas'?showHuntMotion():c.id==='energia'?showEnergyMotion():c.id==='controle'?showTerritoryMotion():c.id==='biologia'?showBiologyMotion():c.id==='temporadas'?showSeasonMotion():c.id==='coop'?showCoopMotion():'';
  const links=c.id==='instalacao'?`<div class="chapter-support"><a href="${enc(GUIDE_META.download)}" target="_blank" rel="noopener noreferrer" class="support-link">Baixar APK Alpha ↗</a><a href="${enc(GUIDE_META.changelog)}" target="_blank" rel="noopener noreferrer" class="support-secondary">Ver canal de versões</a></div>`:c.id==='temporadas'?`<div class="chapter-support"><a href="${enc(GUIDE_META.warRoom)}" class="support-link">Abrir Sala de Guerra ↗</a></div>`:'';
  $('chapterContent').innerHTML=`<div class="chapter-inner"><div class="chapter-topline"><span><span class="chapter-number">CAPÍTULO ${enc(c.number)}</span> / ${enc(c.part)}</span><span class="chapter-time">LEITURA ${enc(c.time)}</span></div><h3>${enc(c.title)}</h3><p class="chapter-lead">${enc(c.deck)}</p><div class="location-tag"><svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m10 1 7 4v10l-7 4-7-4V5l7-4Z"/><path d="M10 7v6M7 10h6"/></svg><span>NO APLICATIVO · ${enc(c.where)}</span></div><div class="step-label">PASSO A PASSO · O QUE FAZER</div><ol class="action-list">${steps}</ol>${links}<div class="branch-brief"><span class="branch-prefix">${t}</span><h4>${enc(b.title)}</h4><p>${enc(b.lead)}</p><ul class="focus-list">${b.focus.map(x=>`<li>${enc(x)}</li>`).join('')}</ul></div>${extra}<div class="alert-note"><span class="alert-mark">!</span><span>${enc(c.note)}</span></div><div class="faq-wrap"><h4>DÚVIDAS MAIS COMUNS</h4>${faq}</div><div class="source-tag"><strong>VERIFICADO NO COVIL</strong><span>${enc(c.source)}</span></div></div>`;
  $('chapter').classList.toggle('is-tactical',mode==='tactical');
@@ -1872,6 +2086,7 @@ function renderChapter(){
  $('completeChapter').innerHTML=done?'✓ Etapa concluída':'Marcar como concluído <span aria-hidden="true">✓</span>';
  if(c.id==='instalacao') bindAwakeningMotion();
  if(c.id==='resultado') bindDebriefMotion();
+ if(c.id==='missoes') bindMissionMotion();
  if(c.id==='cacadas') bindHuntMotion();
  if(c.id==='energia') bindEnergyMotion();
  if(c.id==='controle') bindTerritoryMotion();
