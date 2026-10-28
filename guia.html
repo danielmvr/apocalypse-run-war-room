@@ -177,6 +177,85 @@ main{max-width:1380px;margin:auto;padding:0 36px}.kicker{color:#89c7a3;font-size
  .bm-meter-ticks{font-size:8px;letter-spacing:-.1px}
 }
 
+
+/* Motion Graphic 06 / Guerra das Temporadas. All data are fictional learning examples. */
+.season-motion{--sm-green:#88f0b3;--sm-red:#ff837b;--sm-amber:#edbd76;--sm-mist:#b0c3bf;position:relative;isolation:isolate;overflow:hidden;margin:30px 0 0;border:1px solid #466b57;border-radius:13px;background:radial-gradient(circle at 83% 11%,#1f443345,transparent 39%),linear-gradient(148deg,#10251e,#0a1718 64%,#10211e);box-shadow:0 23px 54px #0003;color:#e8f7ed}
+.sm-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:22px 23px 14px}
+.sm-overline{display:block;color:#a4e9b7;letter-spacing:2.1px;font-size:9px;font-weight:900}
+.sm-head h4{font:900 clamp(26px,3.5vw,36px)/1.03 var(--font-head);text-transform:uppercase;color:#ebffef;margin:8px 0 8px}
+.sm-head p{font-size:11px;line-height:1.65;color:#a8c0b0;max-width:530px;margin:0}
+.sm-stamp{border:1px solid #766342;color:#f6d8a3;background:#5640253d;border-radius:5px;padding:8px;white-space:nowrap;letter-spacing:.6px;font-size:9px;font-weight:800}
+.sm-selectors{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:0 22px 17px}
+.sm-selectors span{font-size:10px;color:#a3b9b0;letter-spacing:.5px;font-weight:700;margin-right:3px}
+.sm-selectors button{font-size:11px;font-weight:800;min-height:40px;border:1px solid #425b50;padding:7px 12px;background:#182a27;color:#bdd4c7;border-radius:6px;cursor:pointer}
+.sm-selectors button[aria-pressed="true"]{background:#234e38;color:#c0ffda;border-color:#7be4a8;box-shadow:inset 0 0 0 1px #57ac82}
+.sm-selectors button[data-sm-faction="ZOMBIE"][aria-pressed="true"]{background:#482723;border-color:#ff9187;box-shadow:inset 0 0 0 1px #aa5b56;color:#ffe3df}
+.sm-screen{border-top:1px solid #2a483b;border-bottom:1px solid #2c493d;background:linear-gradient(155deg,#081512,#142922 52%,#071714);padding:15px 17px 16px}
+.sm-screen-head{display:flex;gap:9px;align-items:center;justify-content:space-between;margin:0 0 12px}
+.sm-screen-head strong{font:800 11px var(--font);letter-spacing:1.4px;color:#addbbc}
+.sm-screen-head small{font-size:9px;color:#9dacaa;text-align:right}
+.sm-main{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:13px}
+.sm-map{position:relative;overflow:hidden;min-width:0;border:1px solid #3c594c;background:radial-gradient(ellipse at 40% 55%,#173127,#0a1a1c 68%);border-radius:9px;min-height:270px}
+.sm-map svg{display:block;width:100%;height:100%;min-height:270px;max-height:335px}
+.sm-street{fill:none;stroke:#698178;stroke-width:8;stroke-linecap:round;opacity:.21}
+.sm-street2{fill:none;stroke:#94aba1;stroke-width:1.5;stroke-linecap:round;opacity:.3}
+.sm-hex{fill:#3d514b;stroke:#8da49b;stroke-width:2;stroke-linejoin:round;transition:fill .48s,stroke .48s,filter .48s}
+.sm-hex[data-owner="HUMAN"]{fill:#226b4d;stroke:#89ffc1}
+.sm-hex[data-owner="ZOMBIE"]{fill:#713b3b;stroke:#ff928c}
+.sm-hex[data-owner="CONTESTED"]{fill:#3a4d4b;stroke:#a5b9b3;stroke-dasharray:5 4}
+.sm-hex[data-focus="true"]{filter:drop-shadow(0 0 5px #f6daa2);stroke-width:3}
+.sm-hex-code{font:800 13px var(--font);fill:#eff5ea;text-anchor:middle;paint-order:stroke;stroke:#041510;stroke-width:2.2px;stroke-linejoin:round;pointer-events:none}
+.sm-map-banner{position:absolute;top:10px;left:10px;display:flex;align-items:center;gap:7px;background:#0a1714e8;border:1px solid #486951;border-radius:5px;padding:6px 8px;color:#b6dfbf;font-size:9px;letter-spacing:.8px;font-weight:800}
+.sm-map-banner i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#92f9bc;box-shadow:0 0 12px #78e5a4}
+.sm-map-legend{position:absolute;bottom:10px;left:10px;right:10px;display:flex;flex-wrap:wrap;gap:9px;background:#081915e0;padding:8px;border:1px solid #324e42;border-radius:5px;font-size:9px;color:#b9c8c1}
+.sm-dot{display:inline-block;width:6px;height:6px;border-radius:50%;margin-right:4px}.sm-dot.human{background:#7ee9aa}.sm-dot.zombie{background:#f0837c}.sm-dot.contested{background:#aebbb5}
+.sm-ledger{min-width:0;display:flex;flex-direction:column;gap:9px}
+.sm-board{border:1px solid #456453;border-radius:8px;padding:14px;background:#12251e;min-width:0}
+.sm-board--world{background:#101d1f;border-color:#385354}
+.sm-board-head{display:flex;gap:7px;align-items:center;justify-content:space-between;margin-bottom:11px}
+.sm-board-head strong{font-size:10px;letter-spacing:1.45px;color:#c5e8cf}
+.sm-board-head span{font-size:9px;color:#9eafa8}
+.sm-score-row{display:grid;grid-template-columns:78px 1fr 45px;gap:8px;align-items:center;margin:8px 0}
+.sm-score-row label{font-size:10px;color:#d4e2d9;font-weight:800}
+.sm-score-row b{font:900 20px var(--font-head);color:#edf5ea;text-align:right;font-variant-numeric:tabular-nums}
+.sm-score-track{height:8px;background:#2d3e37;border-radius:99px;overflow:hidden}
+.sm-score-track i{display:block;height:100%;border-radius:99px;transition:width .4s ease}
+.sm-score-track .human{background:linear-gradient(90deg,#2a8057,#a0ffd1)}
+.sm-score-track .zombie{background:linear-gradient(90deg,#90463d,#ff9d91)}
+.sm-board-foot{font-size:10px;color:#a9c0b3;margin-top:10px;border-top:1px solid #355244;padding-top:10px;line-height:1.55}
+.sm-balance{display:flex;gap:8px;justify-content:space-between;align-items:center;background:#1e2b24;border:1px solid #43594b;border-radius:6px;padding:9px 11px;font-size:10px;color:#c6d7cb;line-height:1.4}
+.sm-balance b{color:#ffe0a1;text-align:right}
+.sm-day-strip{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:5px;margin:13px 0 2px}
+.sm-day{font:800 9px var(--font);color:#829d8d;border:1px solid #385046;padding:7px 1px;background:#0e211b;text-align:center;border-radius:4px;min-width:0}
+.sm-day[data-active="true"]{color:#e8ffe9;background:#23513a;border-color:#8df8b7}
+.sm-day[data-past="true"]{color:#abd4b6;background:#183729}
+.sm-progress{margin-top:9px;background:#263b2e;height:4px;border-radius:5px;overflow:hidden}.sm-progress i{display:block;width:0;height:100%;background:#8ef6b5;transition:width .4s}
+.sm-story{margin:14px 16px 0;background:#152d24;border:1px solid #477052;border-radius:8px;padding:17px 18px 15px;min-height:160px}
+.sm-story[data-tone="warning"]{background:#30291e;border-color:#8f7248}
+.sm-story[data-tone="ending"]{background:#1d302e;border-color:#709f84}
+.sm-story-top{display:flex;justify-content:space-between;flex-wrap:wrap;align-items:center;gap:6px;margin:0 0 7px}
+.sm-counter{font-size:9px;letter-spacing:1.7px;color:#abcfb9;font-weight:800}
+.sm-state{font-size:9px;color:#aaf0bd;font-weight:800;letter-spacing:.5px}
+.sm-story[data-tone="warning"] .sm-state{color:#e9c28c}
+.sm-story h5{font:800 clamp(21px,3vw,29px)/1.08 var(--font-head);text-transform:uppercase;color:#f2fff2;margin:0 0 8px}
+.sm-story p{font-size:12px;color:#c1d5c8;line-height:1.58;margin:0 0 9px}
+.sm-strategy{font-size:11px;line-height:1.55;border-left:2px solid #93eeb4;color:#cae8d4;padding:5px 0 5px 11px}
+.sm-controls{padding:15px 16px 0;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.sm-controls button{min-height:42px;padding:9px 13px;font-size:11px;font-weight:800;border-radius:6px;border:1px solid #557563;background:#1b3228;color:#d7f7e1;cursor:pointer}
+.sm-controls .sm-main-button{color:#0c281a;background:#90efb3;border-color:#90efb3}
+.sm-controls button:focus-visible,.sm-selectors button:focus-visible,.sm-day-button:focus-visible{outline:2px solid #f8e9b0;outline-offset:3px}
+.sm-controls button:disabled{opacity:.6;cursor:not-allowed}
+.sm-timeline{display:flex;gap:5px;overflow-x:auto;max-width:100%;margin:13px 16px 0;padding:0 0 10px;scrollbar-color:#56765a #14271e;scrollbar-width:thin}
+.sm-day-button{min-width:95px;flex:1 0 95px;min-height:43px;color:#a4b9ab;border:1px solid #3c5c49;background:#14271f;border-radius:6px;padding:7px;font-size:9px;letter-spacing:.2px;font-weight:800;cursor:pointer}
+.sm-day-button[aria-pressed="true"]{color:#132d1d;background:#a0f2b9;border-color:#a0f2b9}
+.sm-disclaimer{padding:12px 19px 18px;color:#9cb3a5;line-height:1.6;font-size:10px;margin:0}
+.sm-branch{display:inline-block;color:#a8f5c2;font-weight:800}
+@media(max-width:850px){.sm-main{grid-template-columns:1fr}.sm-map svg{max-height:270px}.sm-ledger{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}.sm-balance{grid-column:1/-1}.sm-score-row{grid-template-columns:64px 1fr 36px;gap:5px}.sm-board{padding:11px}.sm-score-row b{font-size:19px}}
+@media(max-width:560px){.sm-head{padding:18px 15px 12px;flex-wrap:wrap}.sm-stamp{font-size:8px;padding:6px}.sm-selectors{padding:0 15px 14px}.sm-screen{padding:11px 10px 12px}.sm-screen-head{flex-wrap:wrap}.sm-map{min-height:218px}.sm-map svg{min-height:218px}.sm-ledger{gap:7px}.sm-score-row{grid-template-columns:1fr 35px;gap:3px}.sm-score-row .sm-score-track{grid-column:1/-1;grid-row:2}.sm-score-row label{font-size:9px}.sm-board-head{display:block}.sm-board-head span{display:block;margin-top:3px}.sm-board{padding:9px 8px}.sm-score-row{margin:7px 0}.sm-board-foot{font-size:9px}.sm-story{margin:12px 10px 0;padding:13px;min-height:158px}.sm-story h5{font-size:24px}.sm-day-strip{gap:3px}.sm-day{font-size:8px;padding:7px 1px}.sm-controls{padding:13px 10px 0}.sm-timeline{margin:12px 10px 0}.sm-disclaimer{padding:9px 12px 16px}}
+@media(max-width:360px){.sm-score-row b{font-size:17px}.sm-board-head strong{font-size:9px}.sm-score-row label{font-size:8px}.sm-head h4{font-size:27px}.sm-day{font-size:7px}.sm-map-legend{font-size:8px;gap:6px}.sm-screen-head small{font-size:8px}}
+@media(prefers-reduced-motion:reduce){.season-motion *, .season-motion *:before,.season-motion *:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+@media print{.sm-controls,.sm-timeline,.sm-selectors{display:none}.season-motion{box-shadow:none}.sm-main{grid-template-columns:1fr 1fr}}
+
 </style>
 </head>
 <body>
@@ -440,7 +519,7 @@ const CHAPTERS = [
   },
   {
     id:'temporadas',part:'DOMINE O MUNDO',number:'13',time:'3 MIN',title:'Temporadas e Sala de Guerra',
-    deck:'O conflito é dividido em semanas. A Sala de Guerra pública permite acompanhar o panorama coletivo sem acessar sua conta.',
+    deck:'O conflito é dividido em semanas. Aprenda com a animação interativa como capturas, defesas, missões e a virada alteram os placares sem apagar o mundo.',
     where:'GUERRA → Panorama / War Room pública',icon:'trophy',
     steps:[
       ['Conheça as duas pontuações', 'Pontos territoriais representam estruturas dominadas agora. Pontos de temporada contam realizações válidas no período semanal.'],
@@ -1058,6 +1137,146 @@ function bindBiologyMotion(){
 }
 
 
+/* Motion Graphic 06: season explainer. No API calls, player data or server-side effects. */
+const SEASON_MOTION_SCENES=[
+ {short:'Abertura',day:'SEG',duration:2100,title:'A semana começa',status:'SEMANA ABERTA',tone:'normal',focus:5,
+  description:'A semana começa com zero pontos sazonais. O mapa mantém os territórios que já existiam; não é apagado.',
+  sport:'Comece sua caminhada normalmente. O jogo administra a abertura da temporada.',
+  tactical:'O mundo persiste. O placar sazonal abre em zero, independente das células já dominadas.'},
+ {short:'Captura',day:'TER',duration:2300,title:'Captura confirmada',status:'+100 DA SEMANA',tone:'normal',focus:4,
+  description:'Uma patrulha elegível conquista uma Ruína antes contestada. A facção soma 100 pontos sazonais pela primeira captura qualificada.',
+  sport:'Sua caminhada pode ajudar a conquistar uma área; a pontuação só vem após confirmação.',
+  tactical:'Exemplo: controle atravessa o limiar de posse, gerando uma captura elegível. A Ruína vale 100 no território e 100 na primeira captura da temporada.'},
+ {short:'Pressão NPC',day:'QUA',duration:2300,title:'Ataque não é conquista',status:'0 PONTO NPC',tone:'warning',focus:1,
+  description:'Um NPC adversário pressiona a Ruína. O controle sai da faixa de domínio e ela fica contestada. Nenhuma pontuação sazonal direta é concedida ao NPC.',
+  sport:'Um ataque pode enfraquecer uma área sem tomá-la. O mapa muda, mas não quer dizer que alguém pontuou na semana.',
+  tactical:'A influência pode mudar o controle e os pontos territoriais. O motor NPC não gera diretamente pontos de temporada nem méritos de jogador.'},
+ {short:'Reação rival',day:'QUI',duration:2300,title:'O adversário conquista',status:'+100 DO OPONENTE',tone:'warning',focus:3,
+  description:'Uma patrulha elegível da facção rival conquista outra Ruína. Agora o adversário também soma 100 pontos na semana.',
+  sport:'As duas facções continuam jogando. O placar semanal não é a mesma coisa que o domínio do mapa.',
+  tactical:'O exemplo concede 100 pela primeira captura qualificada da Ruína pelo outro lado; não transfere pontuação já registrada pela facção aliada.'},
+ {short:'Defesa',day:'SEX',duration:2300,title:'Defender também conta',status:'+20 DA SEMANA',tone:'normal',focus:0,
+  description:'Uma defesa válida fortalece uma Ruína aliada. A ação rende 20 pontos sazonais, equivalentes a 20% dos 100 pontos da estrutura.',
+  sport:'Mesmo onde sua facção já domina, caminhar pode contribuir com a defesa.',
+  tactical:'Defesa sazonal: 20% do valor da estrutura. O mesmo limite é compartilhado por facção/célula/data UTC, até três vezes na temporada.'},
+ {short:'Missão',day:'SÁB',duration:2200,title:'Missão semanal concluída',status:'+25 DA SEMANA',tone:'normal',focus:-1,
+  description:'Uma missão semanal qualificada acrescenta 25 pontos à facção. A recompensa não é concedida apenas por caminhar sem atender aos requisitos.',
+  sport:'Missões semanais podem somar pontos extras quando seus objetivos são cumpridos.',
+  tactical:'Exemplo de missão: Ritmo de patrulha ou Presença no território, com contribuição real confirmada. Até duas recompensas de 25 por jogador na temporada.'},
+ {short:'Domingo',day:'DOM',duration:2200,title:'O placar antes da virada',status:'LIDERANÇA PROVISÓRIA',tone:'ending',focus:-1,
+  description:'O placar ilustrativo termina o domingo em 145 a 100. Há uma liderança, mas o resultado só fica oficial quando o servidor fecha a temporada.',
+  sport:'Confira a semana na Sala de Guerra. Ela mostra a disputa coletiva, não uma recompensa pessoal.',
+  tactical:'Liderança provisória: 145 × 100. O servidor fecha e congela o resultado, inclusive com regras próprias de desempate.'},
+ {short:'Virada',day:'VIR',duration:2500,title:'Nova temporada, nova disputa',status:'PLACAR REINICIADO',tone:'ending',focus:5,
+  description:'Na simulação, o servidor encerra a semana, registra o vencedor e abre a seguinte em 0 a 0. O controle das células aproxima-se de 500, sem apagar o mundo.',
+  sport:'Uma nova semana começa do zero no placar. Seu mundo continua vivo, com territórios um pouco mais disputados.',
+  tactical:'Reequilíbrio padrão de 10%: 650 vira 635 e pode ficar contestado. O ajuste não fabrica capturas nem reescreve a temporada encerrada.'}
+];
+function showSeasonMotion(){
+ const labels=['SEG','TER','QUA','QUI','SEX','SÁB','DOM','VIR'];
+ const positions=[[105,92],[230,92],[355,92],[165,212],[290,212],[415,212]];
+ const hex=(x,y,r)=>Array.from({length:6},(_,i)=>{const angle=(i*60-30)*Math.PI/180;return `${(x+Math.cos(angle)*r).toFixed(1)},${(y+Math.sin(angle)*r).toFixed(1)}`;}).join(' ');
+ const cells=positions.map(([x,y],i)=>`<g class="sm-cell" data-sm-cell="${i}" aria-hidden="true"><polygon class="sm-hex" data-owner="CONTESTED" data-focus="false" points="${hex(x,y,61)}"/><text class="sm-hex-code" x="${x}" y="${y+5}">500</text></g>`).join('');
+ return `<section class="season-motion" id="seasonMotion" aria-labelledby="smTitle" data-simulation="true">
+ <div class="sm-head"><div><span class="sm-overline">MOTION GRAPHIC 06 / CAMPANHA SEMANAL</span><h4 id="smTitle">Uma semana. Dois placares.</h4><p>Explore como o mundo muda dia após dia e por que dominar territórios não significa automaticamente vencer a temporada.</p></div><span class="sm-stamp">EXEMPLO FICTÍCIO</span></div>
+ <div class="sm-selectors" role="group" aria-label="Escolha a facção que será acompanhada na simulação"><span>ACOMPANHAR:</span><button type="button" data-sm-faction="HUMAN" aria-pressed="true">✦ Resistência</button><button type="button" data-sm-faction="ZOMBIE" aria-pressed="false">✦ Horda</button></div>
+ <div class="sm-screen"><div class="sm-screen-head"><strong>▥ OBSERVATÓRIO DE TERRITÓRIOS</strong><small id="smDayLabel">SEGUNDA / INÍCIO DA SEMANA</small></div>
+ <div class="sm-main"><div class="sm-map"><svg id="smMap" viewBox="0 0 520 330" role="img" aria-label="Seis células fictícias de Ruínas com controle territorial, atualizadas em cada cena">
+ <path class="sm-street" d="M10 300 Q160 270 180 20 M0 120 Q240 130 520 15 M340 325 Q460 180 495 10 M0 260 Q290 180 520 250"/>
+ <path class="sm-street2" d="M10 300 Q160 270 180 20 M0 120 Q240 130 520 15 M340 325 Q460 180 495 10 M0 260 Q290 180 520 250"/>
+ ${cells}</svg><div class="sm-map-banner"><i></i> RUÍNAS / CONTROLE 0–1.000</div><div class="sm-map-legend"><span><i class="sm-dot human"></i>Resistência ≥650</span><span><i class="sm-dot zombie"></i>Horda ≤350</span><span><i class="sm-dot contested"></i>Contestado</span></div></div>
+ <div class="sm-ledger"><div class="sm-board" aria-label="Placar semanal fictício"><div class="sm-board-head"><strong>PLACAR DA SEMANA</strong><span>eventos elegíveis</span></div>
+ <div class="sm-score-row"><label>RESIST.</label><div class="sm-score-track"><i class="human" id="smSeasonBarH" style="width:0%"></i></div><b id="smSeasonH">0</b></div>
+ <div class="sm-score-row"><label>HORDA</label><div class="sm-score-track"><i class="zombie" id="smSeasonBarZ" style="width:0%"></i></div><b id="smSeasonZ">0</b></div>
+ <div class="sm-board-foot" id="smSeasonFoot">A semana começa zerada; o servidor registra os pontos qualificados.</div></div>
+ <div class="sm-board sm-board--world" aria-label="Pontuação territorial fictícia"><div class="sm-board-head"><strong>DOMÍNIO DO MUNDO</strong><span>Ruínas dominadas</span></div>
+ <div class="sm-score-row"><label>RESIST.</label><div class="sm-score-track"><i class="human" id="smWorldBarH" style="width:0%"></i></div><b id="smWorldH">0</b></div>
+ <div class="sm-score-row"><label>HORDA</label><div class="sm-score-track"><i class="zombie" id="smWorldBarZ" style="width:0%"></i></div><b id="smWorldZ">0</b></div>
+ <div class="sm-board-foot">Cada Ruína dominada vale 100 pontos territoriais. Células contestadas não somam.</div></div>
+ <div class="sm-balance"><span id="smWorldSummary">6 células, algumas já dominadas</span><b id="smWorldHighlight">SEMANA 1</b></div></div></div>
+ <div class="sm-day-strip" role="group" aria-label="Dias ilustrativos da temporada">${labels.map((t,i)=>`<span class="sm-day" data-sm-day="${i}" data-active="${i===0}" data-past="false">${t}</span>`).join('')}</div><div class="sm-progress" aria-hidden="true"><i id="smProgress"></i></div></div>
+ <div class="sm-story" id="smStory" data-tone="normal" role="status" aria-live="polite" aria-atomic="true"><div class="sm-story-top"><span class="sm-counter" id="smCounter">CENA 01 / 08</span><span class="sm-state" id="smState">SEMANA ABERTA</span></div><h5 id="smSceneTitle">A semana começa</h5><p id="smSceneText"></p><div class="sm-strategy" id="smBranchText"></div></div>
+ <div class="sm-controls" role="group" aria-label="Controles da animação"><button class="sm-main-button" type="button" id="smPlay">▶ Reproduzir</button><button type="button" id="smPause" disabled>Ⅱ Pausar</button><button type="button" id="smRestart">↺ Reiniciar</button></div>
+ <div class="sm-timeline" role="group" aria-label="Escolher uma cena da semana">${SEASON_MOTION_SCENES.map((s,i)=>`<button type="button" class="sm-day-button" data-sm-scene="${i}" aria-pressed="${i===0}" aria-label="Cena ${i+1}, ${s.short}">${String(i+1).padStart(2,'0')} · ${s.short}</button>`).join('')}</div>
+ <p class="sm-disclaimer">SIMULAÇÃO EDUCATIVA, SEM GPS REAL OU RECOMPENSAS. Os valores representam seis Ruínas imaginárias e eventos qualificados, não o placar da comunidade. O servidor define elegibilidade, temporada, desempate e resultados reais. A <a href="./" style="color:#b0fbc4;text-decoration:underline">Sala de Guerra</a> é somente leitura.</p>
+ </section>`;
+}
+let disposeSeasonMotion=()=>{};
+function bindSeasonMotion(){
+ const root=$('seasonMotion');if(!root)return;
+ const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const scenes=SEASON_MOTION_SCENES;
+ let faction='HUMAN',elapsed=0,playing=false,frame=null,lastTick=0,stageIndex=-1;
+ const starts=[];let total=0;for(const scene of scenes){starts.push(total);total+=scene.duration;}
+ const $sm=(id)=>root.querySelector('#'+id);
+ const sceneButtons=[...root.querySelectorAll('[data-sm-scene]')];
+ const factionButtons=[...root.querySelectorAll('[data-sm-faction]')];
+ const cellEls=[...root.querySelectorAll('[data-sm-cell]')];
+ const sideName=(s)=>s==='HUMAN'?'Resistência':'Horda';
+ const owner=(v)=>v>=650?'HUMAN':v<=350?'ZOMBIE':'CONTESTED';
+ function stateFor(index){
+  const control=[710,650,300,500,590,650];
+  if(index>=1)control[4]=790;
+  if(index>=2)control[1]=550;
+  if(index>=3)control[3]=300;
+  if(index>=4)control[0]=910;
+  if(index>=7)for(let i=0;i<control.length;i++)control[i]=500+Math.round((control[i]-500)*.90);
+  if(faction==='ZOMBIE')for(let i=0;i<control.length;i++)control[i]=1000-control[i];
+  const allyPoints=index===7?0:index>=5?145:index>=4?120:index>=1?100:0;
+  const enemyPoints=index===7?0:index>=3?100:0;
+  const seasonH=faction==='HUMAN'?allyPoints:enemyPoints;
+  const seasonZ=faction==='ZOMBIE'?allyPoints:enemyPoints;
+  const worldH=control.filter(x=>owner(x)==='HUMAN').length*100;
+  const worldZ=control.filter(x=>owner(x)==='ZOMBIE').length*100;
+  return {control,seasonH,seasonZ,worldH,worldZ,allyPoints,enemyPoints};
+ }
+ function showScene(index){
+  const scene=scenes[index],st=stateFor(index);
+  stageIndex=index;
+  cellEls.forEach((el,i)=>{const value=st.control[i],polygon=el.querySelector('.sm-hex');polygon.setAttribute('data-owner',owner(value));polygon.setAttribute('data-focus',String(scene.focus===i));el.querySelector('.sm-hex-code').textContent=String(value);});
+  for(const type of ['Season','World']){
+   const h=st[type==='Season'?'seasonH':'worldH'],z=st[type==='Season'?'seasonZ':'worldZ'];
+   $sm(`sm${type}H`).textContent=String(h);$sm(`sm${type}Z`).textContent=String(z);
+   const scale=Math.max(150,h,z);
+   $sm(`sm${type}BarH`).style.width=(100*h/scale).toFixed(1)+'%';
+   $sm(`sm${type}BarZ`).style.width=(100*z/scale).toFixed(1)+'%';
+  }
+  $sm('smWorldSummary').textContent=`Resistência: ${st.worldH/100} • Horda: ${st.worldZ/100} • Contestadas: ${6-(st.worldH+st.worldZ)/100}`;
+  $sm('smWorldHighlight').textContent=index===7?'NOVO CICLO':'SEMANA ILUSTRATIVA';
+  $sm('smSeasonFoot').textContent=index===7?`Semana encerrada: ${sideName(faction)} 145 × 100. Novo placar: 0 × 0.`:index===6?`Liderança provisória: ${sideName(faction)} 145 × 100.`:index===2?'NPCs podem pressionar e mudar o mapa, sem pontos sazonais diretos.':index===0?'Zerado no começo da semana, mesmo com território já dominado.':'Somente ações e missões qualificadas entram no placar semanal.';
+  $sm('smDayLabel').textContent=index===7?'SEGUNDA / NOVA TEMPORADA':`${['SEGUNDA','TERÇA','QUARTA','QUINTA','SEXTA','SÁBADO','DOMINGO'][index]} / SEMANA ILUSTRATIVA`;
+  [...root.querySelectorAll('[data-sm-day]')].forEach((el,i)=>{el.setAttribute('data-active',String(i===index));el.setAttribute('data-past',String(i<index));});
+  $sm('smCounter').textContent=`CENA ${String(index+1).padStart(2,'0')} / 08`;
+  $sm('smStory').setAttribute('data-tone',scene.tone);
+  $sm('smState').textContent=scene.status;
+  $sm('smSceneTitle').textContent=scene.title;
+  $sm('smSceneText').textContent=scene.description;
+  $sm('smBranchText').textContent=(mode==='sport'?'ESPORTISTA: ':'ESTRATEGISTA: ')+scene[mode];
+  sceneButtons.forEach((b,i)=>b.setAttribute('aria-pressed',String(i===index)));
+ }
+ function stageAt(ms){let i=scenes.length-1;for(let n=0;n<scenes.length;n++){if(ms<starts[n]+scenes[n].duration){i=n;break;}}return i;}
+ function redraw(){const index=stageAt(elapsed);if(stageIndex!==index)showScene(index);$sm('smProgress').style.width=(100*elapsed/total).toFixed(2)+'%';}
+ function stop(){playing=false;if(frame!==null)cancelAnimationFrame(frame);frame=null;lastTick=0;$sm('smPause').disabled=true;$sm('smPlay').textContent=reduced?'Próxima cena':elapsed>=total?'▶ Reproduzir novamente':'▶ Reproduzir';}
+ function step(time){if(!playing)return;if(!lastTick)lastTick=time;const diff=Math.min(time-lastTick,100);lastTick=time;elapsed=Math.min(total,elapsed+Math.max(0,diff));redraw();if(elapsed>=total){stop();return;}frame=requestAnimationFrame(step);}
+ function play(){if(reduced){const next=stageAt(elapsed)+1;elapsed=next>=scenes.length?0:starts[next];stageIndex=-1;redraw();return;}
+  if(playing)return;if(elapsed>=total)elapsed=0;playing=true;lastTick=0;$sm('smPlay').textContent='▶ Reproduzindo';$sm('smPause').disabled=false;frame=requestAnimationFrame(step);
+ }
+ function jump(i){stop();elapsed=starts[i];stageIndex=-1;redraw();}
+ function restart(){stop();elapsed=0;stageIndex=-1;redraw();}
+ function choose(next){if(next===faction)return;stop();faction=next;factionButtons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.smFaction===faction)));stageIndex=-1;redraw();}
+ function hidden(){if(document.hidden)stop();}
+ $sm('smPlay').addEventListener('click',play);
+ $sm('smPause').addEventListener('click',stop);
+ $sm('smRestart').addEventListener('click',restart);
+ sceneButtons.forEach((button,i)=>button.addEventListener('click',()=>jump(i)));
+ factionButtons.forEach(button=>button.addEventListener('click',()=>choose(button.dataset.smFaction)));
+ document.addEventListener('visibilitychange',hidden);
+ if(reduced)$sm('smPlay').textContent='Próxima cena';
+ redraw();
+ disposeSeasonMotion=()=>{stop();document.removeEventListener('visibilitychange',hidden);};
+}
+
+
 function showEligibilityTool(){
  return `<section class="eligibility-demo" aria-labelledby="demoTitle"><span class="demo-label">SIMULAÇÃO DE TREINO · NÃO ENVIA DADOS</span><h4 id="demoTitle">Sua patrulha passaria pelo básico?</h4><p>Informe apenas os metros e segundos de caminhada comprovada, excluindo trechos descartados. Valores fictícios não substituem a análise do servidor.</p><div class="demo-inputs"><label>Metros GPS aceitos<input id="demoMeters" type="number" min="0" max="200000" inputmode="numeric" value="620" /></label><label>Segundos de movimento comprovado<input id="demoSeconds" type="number" min="0" max="100000" inputmode="numeric" value="380" /></label></div><label class="demo-vehicle"><input id="demoIncident" type="checkbox" /> Houve trecho descartado ou suspeito no percurso</label><label class="demo-vehicle"><input id="demoMock" type="checkbox" /> Há localização simulada comprovada ou prova de movimento contraditória</label><div class="demo-result" id="demoResult" role="status"></div><p class="demo-disclaimer">Uma suspeita isolada não zera a caminhada válida. Ainda são necessárias evidências consistentes por célula H3 (≥50 m e ≥4 segmentos), precisão, ausência de outros bloqueios e confirmação oficial. O simulador não altera o jogo.</p></section>`;
 }
@@ -1182,6 +1401,7 @@ function bindPatrolMotion(){
 }
 
 function renderChapter(){
+ disposeSeasonMotion();disposeSeasonMotion=()=>{};
  disposeTerritoryMotion();disposeTerritoryMotion=()=>{};
  disposeBiologyMotion();disposeBiologyMotion=()=>{};
  disposeEnergyMotion();disposeEnergyMotion=()=>{};
@@ -1190,7 +1410,7 @@ function renderChapter(){
  const c=CHAPTERS[active];const b=c[mode];const t=mode==='sport'?'ESPORTISTA • OPERAÇÃO AUTOMÁTICA':'ESTRATEGISTA • DECISÃO TÁTICA';
  const steps=c.steps.map(([title,description],i)=>`<li><span class="action-num">${String(i+1).padStart(2,'0')}</span><div class="action-content"><strong>${enc(title)}</strong><p>${enc(description)}</p></div></li>`).join('');
  const faq=c.faq.map(([q,a])=>`<details class="faq-item"><summary>${enc(q)}</summary><p>${enc(a)}</p></details>`).join('');
- const extra=c.id==='patrulha'?`${showPatrolMotion()}${showEligibilityTool()}`:c.id==='cacadas'?showHuntMotion():c.id==='energia'?showEnergyMotion():c.id==='controle'?showTerritoryMotion():c.id==='biologia'?showBiologyMotion():'';
+ const extra=c.id==='patrulha'?`${showPatrolMotion()}${showEligibilityTool()}`:c.id==='cacadas'?showHuntMotion():c.id==='energia'?showEnergyMotion():c.id==='controle'?showTerritoryMotion():c.id==='biologia'?showBiologyMotion():c.id==='temporadas'?showSeasonMotion():'';
  const links=c.id==='instalacao'?`<div class="chapter-support"><a href="${enc(GUIDE_META.download)}" target="_blank" rel="noopener noreferrer" class="support-link">Baixar APK Alpha ↗</a><a href="${enc(GUIDE_META.changelog)}" target="_blank" rel="noopener noreferrer" class="support-secondary">Ver canal de versões</a></div>`:c.id==='temporadas'?`<div class="chapter-support"><a href="${enc(GUIDE_META.warRoom)}" class="support-link">Abrir Sala de Guerra ↗</a></div>`:'';
  $('chapterContent').innerHTML=`<div class="chapter-inner"><div class="chapter-topline"><span><span class="chapter-number">CAPÍTULO ${enc(c.number)}</span> / ${enc(c.part)}</span><span class="chapter-time">LEITURA ${enc(c.time)}</span></div><h3>${enc(c.title)}</h3><p class="chapter-lead">${enc(c.deck)}</p><div class="location-tag"><svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m10 1 7 4v10l-7 4-7-4V5l7-4Z"/><path d="M10 7v6M7 10h6"/></svg><span>NO APLICATIVO · ${enc(c.where)}</span></div><div class="step-label">PASSO A PASSO · O QUE FAZER</div><ol class="action-list">${steps}</ol>${links}<div class="branch-brief"><span class="branch-prefix">${t}</span><h4>${enc(b.title)}</h4><p>${enc(b.lead)}</p><ul class="focus-list">${b.focus.map(x=>`<li>${enc(x)}</li>`).join('')}</ul></div>${extra}<div class="alert-note"><span class="alert-mark">!</span><span>${enc(c.note)}</span></div><div class="faq-wrap"><h4>DÚVIDAS MAIS COMUNS</h4>${faq}</div><div class="source-tag"><strong>VERIFICADO NO COVIL</strong><span>${enc(c.source)}</span></div></div>`;
  $('chapter').classList.toggle('is-tactical',mode==='tactical');
@@ -1203,6 +1423,7 @@ function renderChapter(){
  if(c.id==='energia') bindEnergyMotion();
  if(c.id==='controle') bindTerritoryMotion();
  if(c.id==='biologia') bindBiologyMotion();
+ if(c.id==='temporadas') bindSeasonMotion();
  if(c.id==='patrulha'){
    bindPatrolMotion();
    for(const id of ['demoMeters','demoSeconds','demoIncident','demoMock'])$(id)?.addEventListener('input',updateEligibility);
