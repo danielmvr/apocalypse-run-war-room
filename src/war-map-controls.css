@@ -29,3 +29,8 @@
 .ar-season-timer--unavailable{border-color:#3b4a43;background:#15201e}
 @media(max-width:600px){.ar-season-timer{padding:14px 11px}.ar-season-timer__unit strong{font-size:28px}.ar-season-timer__unit{padding:8px 2px 6px}}
 @media(prefers-reduced-motion:reduce){.ar-season-timer__progress span{transition:none}}
+
+/* Nota editorial opcional. O site permanece um painel público sem dados pessoais de Caçadas. */
+.ar-hunt-guide-link{display:inline-flex;align-items:center;gap:8px;margin-top:15px;color:#a6e9c4;border:1px solid #3c6955;background:#142a22;padding:9px 11px;border-radius:6px;text-decoration:none;font-size:10px;font-weight:750;letter-spacing:.65px;line-height:1.5;min-height:44px;max-width:100%}
+.ar-hunt-guide-link:hover{background:#203c30;color:#e8ffe8}
+.ar-hunt-guide-link:focus-visible{outline:2px solid #d9ffe9;outline-offset:3px}
