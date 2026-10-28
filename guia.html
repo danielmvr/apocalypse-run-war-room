@@ -40,6 +40,88 @@ main{max-width:1380px;margin:auto;padding:0 36px}.kicker{color:#89c7a3;font-size
 @media(prefers-reduced-motion:reduce){.pm-valid-line,.pm-discard-line{filter:none}.pm-map *{animation:none!important;transition:none!important}}
 @media print{.patrol-motion{break-inside:avoid}.pm-control-buttons,.pm-steps,.pm-track,.pm-playback{display:none}.pm-map{max-height:250px}}
 
+
+/* Motion Graphic 02 · Caçadas v1.0 · radar didático, sem localizar jogadores ou ameaças reais */
+.hunt-motion{--hm-mint:#97f6bc;--hm-red:#ff897e;--hm-gold:#ffd293;--hm-ink:#eaf6ed;margin:30px 0 0;border:1px solid #476853;border-radius:12px;overflow:hidden;background:linear-gradient(160deg,#10261e 0%,#0a1618 66%,#18241f 100%);box-shadow:0 25px 55px #0002;color:var(--hm-ink)}
+.hm-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;padding:20px 22px 14px}
+.hm-kicker{font-size:9px;font-weight:800;letter-spacing:1.8px;color:#a0ecc0}
+.hm-head h4{font:800 clamp(25px,3.5vw,33px)/1.07 var(--font-head);text-transform:uppercase;letter-spacing:.3px;margin:7px 0;color:#f5fff5}
+.hm-head p{font-size:11px;color:#a3bcac;line-height:1.65;margin:7px 0 0;max-width:530px}
+.hm-stamp{border:1px solid #735e3d;background:#3b301b70;padding:9px 10px;border-radius:5px;color:#f5d4a7;font-size:9px;font-weight:800;white-space:nowrap;letter-spacing:.4px}
+.hm-choices{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin:0 20px 13px;padding:11px;border:1px solid #355344;background:#0a1917;border-radius:8px}
+.hm-choice{display:flex;flex-wrap:wrap;align-items:center;gap:5px;min-width:0}
+.hm-choice-label{font-size:10px;color:#a6c2ae;font-weight:700;margin-right:4px}
+.hm-choice button{font:800 10px var(--font);color:#a3b6a8;border:1px solid #3d5548;background:#1b2a25;padding:9px 12px;min-height:42px;border-radius:5px;transition:background .15s,border-color .15s,color .15s}
+.hm-choice button[aria-pressed="true"]{color:#effff3;border-color:#85c89e;background:#2d513b}
+.hm-choice button:focus-visible,.hm-btn:focus-visible,.hm-step:focus-visible{outline:2px solid #ddffe9;outline-offset:2px}
+.hm-choice button:hover,.hm-btn:hover,.hm-step:hover{border-color:#91c6a4}
+.hm-board{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(195px,.8fr);gap:12px;margin:0 18px}
+.hm-radar{position:relative;background:radial-gradient(circle at 50% 50%,#1e4232 0%,#10201f 50%,#081015 100%);border:1px solid #3b594c;border-radius:8px;overflow:hidden;min-width:0}
+.hm-radar svg{display:block;width:100%;height:auto;max-height:320px;min-height:200px}
+.hm-radar:after{content:'';pointer-events:none;position:absolute;inset:0;opacity:.22;background:repeating-linear-gradient(0deg,transparent 0,transparent 3px,#a1e3b10b 4px,#a1e3b10b 5px)}
+.hm-ring{fill:none;stroke:#62b98c;stroke-opacity:.43;stroke-width:1.25}
+.hm-tick{fill:none;stroke:#8bd3ae;stroke-opacity:.15;stroke-width:1;stroke-dasharray:4 5}
+.hm-cross{stroke:#9bd7ae;stroke-width:1;stroke-opacity:.24;stroke-dasharray:5 6}
+.hm-scan{transform-origin:180px 155px;fill:#8af9bb;fill-opacity:.1;stroke:#c7ffe0;stroke-opacity:.45;stroke-width:1;animation:hm-scan 6s linear infinite;animation-play-state:paused}
+.hm-radar.is-scanning .hm-scan{animation-play-state:running}
+.hm-you-halo{fill:#8ef9b8;fill-opacity:.11;stroke:#83f5ad;stroke-opacity:.3;stroke-width:1}
+.hm-you{fill:#adffcc;stroke:#0c3a28;stroke-width:4}
+.hm-you-core{fill:#0d4a2a}
+.hm-target circle{fill:#ff9486;stroke:#4f1e24;stroke-width:3;filter:drop-shadow(0 0 5px #ff786766)}
+.hm-target.is-friendly circle{fill:#8ce4c7;stroke:#124738;filter:drop-shadow(0 0 5px #76f7cb44)}
+.hm-route-bg{fill:none;stroke:#2e614a;stroke-width:9;stroke-linecap:round}
+.hm-route{fill:none;stroke:#9dfdc5;stroke-width:5;stroke-linecap:round;filter:drop-shadow(0 0 5px #5cfe9d66)}
+.hm-compass{font-size:11px;font-weight:800;letter-spacing:1.7px;fill:#779c89}
+.hm-radar-mark{position:absolute;left:12px;top:11px;color:#c0e5cf;background:#0d211dcf;border:1px solid #456c56;border-radius:4px;padding:7px 9px;font-size:9px;font-weight:800;letter-spacing:.6px}
+.hm-radar-mark::before{content:'';display:inline-block;width:7px;height:7px;margin-right:7px;border-radius:50%;background:#9ef5ba;box-shadow:0 0 10px #80dca5}
+.hm-radar-foot{position:absolute;right:10px;bottom:9px;color:#b5cbbb;background:#0b151add;border:1px solid #374d42;border-radius:4px;font-size:9px;padding:5px 7px}
+.hm-readout{display:flex;flex-direction:column;gap:9px;min-width:0}
+.hm-status{background:linear-gradient(130deg,#203f2c,#152822);border:1px solid #4b7454;border-radius:7px;padding:13px 14px;min-height:118px}
+.hm-status.is-danger{background:linear-gradient(130deg,#382721,#272621);border-color:#945950}
+.hm-status.is-success{background:linear-gradient(130deg,#1a4731,#1b3428);border-color:#79d39e}
+.hm-status.is-wounded{background:linear-gradient(130deg,#463225,#2e2723);border-color:#c48a52}
+.hm-status small{font-size:9px;color:#c0d8c1;font-weight:800;letter-spacing:1.2px}
+.hm-status strong{display:block;margin:9px 0 7px;font:800 clamp(21px,3vw,28px)/1.03 var(--font-head);letter-spacing:.5px;text-transform:uppercase}
+.hm-status p{font-size:11px;line-height:1.6;color:#c3d9c8;margin:0}
+.hm-stats{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.hm-stat{background:#10201c;border:1px solid #2f4b3d;border-radius:7px;padding:12px;min-width:0}
+.hm-stat small{display:block;color:#acc1b3;font-size:9px;font-weight:800;letter-spacing:.5px}
+.hm-stat strong{display:block;margin-top:5px;font:800 clamp(22px,3vw,29px)/1 var(--font-head);font-variant-numeric:tabular-nums;color:#b3fed2}
+.hm-stat em{font:500 10px var(--font);color:#91ad9b}
+.hm-meter{background:#10201b;border:1px solid #375343;border-radius:7px;padding:11px 12px 10px;flex:1}
+.hm-meter-top{display:flex;align-items:center;justify-content:space-between;gap:6px;font-size:10px;color:#a9c1af}
+.hm-meter-top strong{color:#b9fbd5;font-weight:800}
+.hm-bar{height:9px;border-radius:10px;background:#253c30;overflow:hidden;margin-top:10px}
+.hm-bar>span{display:block;background:linear-gradient(90deg,#46b47b,#b8ffcf);height:100%;width:0%;transition:width .15s linear;border-radius:10px}
+.hm-caption{font-size:10px;color:#99b19f;line-height:1.55;margin:2px 18px 0}
+.hm-caption strong{color:#d5eed7}
+.hm-scene{margin:13px 18px 11px;padding:15px 17px;background:#172f24;border:1px solid #426b4c;border-radius:7px}
+.hm-scene.is-danger{background:#302620;border-color:#95644c}
+.hm-scene.is-success{background:#1a3b2a;border-color:#68aa7a}
+.hm-scene.is-wounded{background:#30271f;border-color:#aa7d49}
+.hm-scene-top{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;color:#97caa7;font-size:9px;letter-spacing:1.3px;font-weight:800}
+.hm-scene h5{font:800 clamp(21px,3vw,26px)/1.1 var(--font-head);color:#f0f9eb;margin:8px 0}
+.hm-scene p{color:#c7dbcb;font-size:12px;line-height:1.65;margin:0}
+.hm-actions{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:0 18px}
+.hm-action-buttons{display:flex;gap:8px;flex-wrap:wrap}
+.hm-btn{font:800 11px var(--font);border:1px solid #57775f;background:#1d3228;color:#e5f4e6;border-radius:6px;min-height:44px;padding:11px 15px}
+.hm-btn--primary{color:#0c291a;background:#a5f0bd;border-color:#a5f0bd}
+.hm-playback{font-size:10px;color:#a7b8ae}
+.hm-progress{height:5px;margin:13px 18px;background:#2d4537;border-radius:8px;overflow:hidden}
+.hm-progress>span{height:100%;display:block;background:linear-gradient(90deg,#61d59c,#d3ffdb);width:0}
+.hm-steps{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px;padding:0 18px 13px}
+.hm-step{border:1px solid #354f3f;background:#13241e;color:#acc4af;border-radius:5px;padding:9px 3px;font:700 9px var(--font);min-width:0;min-height:44px;display:flex;align-items:center;flex-direction:column;justify-content:center;gap:4px}
+.hm-step span{font:800 13px var(--font-head);color:#7eab8e}
+.hm-step[aria-current="step"]{background:#31533e;border-color:#98e4b2;color:#f1fff4}
+.hm-step[aria-current="step"] span{color:#d1ffe1}
+.hm-legal{margin:0 18px 16px;padding:11px 12px;border-left:3px solid #ba985f;background:#312a1e55;border-radius:3px;color:#c2cbbd;font-size:10px;line-height:1.7}
+.hm-legal strong{color:#f7d6a9}
+@keyframes hm-scan{to{transform:rotate(360deg)}}
+@media(max-width:730px){.hm-board{grid-template-columns:1fr}.hm-readout{display:grid;grid-template-columns:1fr 1fr}.hm-status{min-height:0}.hm-stats{grid-template-columns:1fr 1fr}.hm-meter{grid-column:1/-1}.hm-radar svg{max-height:270px}}
+@media(max-width:530px){.hm-head{padding:16px 14px 12px;flex-wrap:wrap}.hm-stamp{padding:6px 8px}.hm-choices{margin:0 12px 11px;padding:9px}.hm-choice{width:100%}.hm-choice button{flex:1}.hm-choice-label{width:74px}.hm-board{margin:0 12px}.hm-readout{display:flex}.hm-radar svg{min-height:175px;max-height:235px}.hm-caption{margin:6px 12px 0}.hm-scene{margin:12px 12px;padding:13px}.hm-actions{padding:0 12px}.hm-steps{padding:0 12px 12px;grid-template-columns:repeat(4,minmax(0,1fr))}.hm-step{padding:8px 1px}.hm-legal{margin:0 12px 14px}}
+@media(prefers-reduced-motion:reduce){.hm-scan{animation:none!important;transform:none!important}.hm-bar>span,.hm-choice button{transition:none!important}}
+@media print{.hm-choices,.hm-actions,.hm-steps,.hm-progress{display:none}.hunt-motion{break-inside:avoid}.hm-radar svg{max-height:190px}}
+
 </style>
 </head>
 <body>
@@ -450,6 +532,123 @@ function showPatrolMotion(){
  </section>`;
 }
 
+
+const HUNT_MOTION_STAGES = [
+ {name:'Participação voluntária',badge:'ANTES DA PATRULHA',tone:'neutral',duration:2400,seconds:null,meters:0,approach:0,
+  sport:'Caçadas são opcionais. Ative a participação no app antes da próxima patrulha individual. Você também pode continuar caminhando sem ativar.',
+  tactical:'A participação precisa da conta autorizada, da função habilitada no servidor e de opt-in separado. Caçadas coletivas não fazem parte da v1.'},
+ {name:'Monitoramento discreto',badge:'NÃO É GARANTIDO',tone:'neutral',duration:2400,seconds:null,meters:0,approach:0.22,
+  sport:'Caminhe normalmente. Depois de uma parada elegível, o jogo pode detectar uma ameaça, mas ela não é garantida.',
+  tactical:'Oportunidade inicial: pelo menos 300 m GPS aceitos e parada de 6–12 min. Há probabilidade de 65%, não promessa de perseguição.'},
+ {name:'CAÇADA INICIADA!',badge:'EVENTO CONFIRMADO',tone:'danger',duration:2500,seconds:120,meters:0,approach:0.48,
+  sport:'O alerta apareceu! Você tem uma meta de caminhada: não é necessário correr nem sair da sua rota segura.',
+  tactical:'O servidor confirmou a perseguição individual. Janela inicial de 120 s para acumular 80 m GPS aceitos; o radar não indica posição real de inimigos.'},
+ {name:'Em fuga',badge:'CAMINHADA VÁLIDA',tone:'danger',duration:2600,seconds:76,meters:36,approach:0.67,
+  sport:'Continue caminhando em segurança. Só os metros GPS válidos contam para alcançar a distância da fuga.',
+  tactical:'A distância e o tempo da animação são fictícios. Trechos descartados, GPS sem evidência e pausas não viram metros creditados.'},
+ {name:'Últimos segundos',badge:'AGUARDANDO RESULTADO',tone:'danger',duration:2400,seconds:26,meters:72,approach:0.83,
+  sport:'O contador mostra uma estimativa, não um julgamento. Espere a confirmação do servidor antes de interpretar o resultado.',
+  tactical:'O relógio local e a animação não determinam captura ou fuga. Checkpoints idempotentes e evidências GPS são validados pelo servidor.'},
+ {name:'VOCÊ ESCAPOU!',badge:'RESULTADO CONFIRMADO',tone:'success',duration:2500,seconds:0,meters:80,approach:0.5,
+  sport:'Exemplo de fuga: você alcançou a meta validada. Isso não significa que os pontos da temporada já foram pagos.',
+  tactical:'Fuga validada pode contar para conquistas após conciliação. Os 15 pontos sazonais dependem de recibo, ≥500 m na patrulha, temporada aberta e limite de um prêmio diário.'},
+ {name:'Depois da Caçada',badge:'SEGURO E CONFIRMADO',tone:'success',duration:2600,seconds:0,meters:80,approach:0.22,
+  sport:'A patrulha continua normalmente. Confira o debriefing para saber se houve recompensa, sem esperar pontos automáticos.',
+  tactical:'O resultado confirmado não altera sua facção, biologia, Energia ou XP. Recompensa da temporada e fuga permanente são verificações diferentes.'},
+];
+const HUNT_WOUNDED_STAGES = {
+  4:{name:'A evidência ainda não bastou',badge:'PRAZO SE ENCERRANDO',tone:'danger',seconds:21,meters:39,approach:.9,
+    sport:'O exemplo agora representa uma fuga que não chegou à meta a tempo. Sem GPS confiável, o evento também pode ser suspenso ou cancelado.',
+    tactical:'A meta de 80 m GPS aceitos não foi atingida na janela ilustrativa. Falha de sinal não deve gerar captura automática sem confirmação.'},
+  5:{name:'FERIDO PELO INIMIGO',badge:'CAPTURA CONFIRMADA',tone:'wounded',seconds:0,meters:43,approach:.96,
+    sport:'Você foi alcançado neste exemplo. É um ferimento temporário, não uma conversão para a facção adversária.',
+    tactical:'O ferimento dura inicialmente 10 min e reduz em 20% somente a parcela temporal da contribuição territorial elegível que se sobrepõe ao ferimento.'},
+  6:{name:'Recuperação temporária',badge:'10 MIN · EFEITO TEMPORÁRIO',tone:'wounded',seconds:0,meters:43,approach:.48,
+    sport:'Aguarde a recuperação. Você continua na mesma facção; seu XP e sua Energia não sofrem a penalidade da Caçada.',
+    tactical:'Cooldown inicial de 25 min. O ferimento não afeta toda a patrulha nem desfaz controle já conquistado e não altera contágio, cura ou facção.'}
+};
+function showHuntMotion(){
+ const stepNames=['Opt-in','Vigilância','Alerta','Fuga','Prazo','Resultado','Depois'];
+ return `<section class="hunt-motion" id="huntMotion" aria-labelledby="hmTitle" data-simulation="true">
+  <div class="hm-head"><div><span class="hm-kicker">MOTION GRAPHIC 02 / PROTOCOLO DE CAÇADAS</span><h4 id="hmTitle">Sinal de ameaça</h4><p>Explore uma perseguição ilustrativa, a fuga ou o ferimento, sem expor a localização de ninguém.</p></div><span class="hm-stamp">SIMULAÇÃO FICTÍCIA</span></div>
+  <div class="hm-choices">
+   <div class="hm-choice" role="group" aria-label="Escolher resultado da simulação"><span class="hm-choice-label">Resultado:</span><button type="button" data-hm-outcome="escape" aria-pressed="true">✓ Fuga</button><button type="button" data-hm-outcome="wound" aria-pressed="false">! Ferimento</button></div>
+   <div class="hm-choice" role="group" aria-label="Escolher facção fictícia"><span class="hm-choice-label">Facção:</span><button type="button" data-hm-faction="HUMAN" aria-pressed="true">Resistência</button><button type="button" data-hm-faction="ZOMBIE" aria-pressed="false">Horda</button></div>
+  </div>
+  <div class="hm-board">
+   <div class="hm-radar" id="hmRadar"><svg viewBox="0 0 360 300" role="img" aria-label="Radar ilustrativo, sem coordenadas reais, mostrando ameaças abstratas em torno do jogador e uma rota de fuga fictícia.">
+     <defs><pattern id="hmRadarGrid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#83bf9a" stroke-width=".5" opacity=".11"/></pattern><radialGradient id="hmRadarVignette"><stop offset="0" stop-color="#163d2e" stop-opacity=".62"/><stop offset="1" stop-color="#091519" stop-opacity=".2"/></radialGradient></defs>
+     <rect width="360" height="300" fill="url(#hmRadarGrid)"/><rect width="360" height="300" fill="url(#hmRadarVignette)"/>
+     <g aria-hidden="true"><path class="hm-cross" d="M180 17V293M25 155H335"/><circle class="hm-ring" cx="180" cy="155" r="45"/><circle class="hm-ring" cx="180" cy="155" r="84"/><circle class="hm-ring" cx="180" cy="155" r="123"/><circle class="hm-tick" cx="180" cy="155" r="106"/><text class="hm-compass" x="177" y="17">N</text><text class="hm-compass" x="177" y="295">S</text><text class="hm-compass" x="20" y="151">O</text><text class="hm-compass" x="332" y="151">L</text></g>
+     <path class="hm-scan" d="M180 155 L180 32 A123 123 0 0 1 294 106 Z"/>
+     <path class="hm-route-bg" id="hmEscapeBg" d="M180 155C201 176 234 183 245 217S278 244 314 235" opacity="0"/>
+     <path class="hm-route" id="hmEscapePath" d="M180 155C201 176 234 183 245 217S278 244 314 235" opacity="0"/>
+     <g aria-hidden="true" id="hmThreats"><g class="hm-target" id="hmThreat0" transform="translate(278 104)"><circle r="7"/></g><g class="hm-target" id="hmThreat1" transform="translate(91 80)"><circle r="6"/></g><g class="hm-target" id="hmThreat2" transform="translate(88 224)"><circle r="7"/></g></g>
+     <g aria-hidden="true" id="hmYou" transform="translate(180 155)"><circle class="hm-you-halo" r="22"/><circle class="hm-you" r="10"/><circle class="hm-you-core" r="3.5"/></g>
+   </svg><span class="hm-radar-mark" id="hmRadarMark">MONITORAMENTO FICTÍCIO</span><span class="hm-radar-foot">Radar não geográfico</span></div>
+   <div class="hm-readout"><div class="hm-status" id="hmStatus"><small id="hmStatusBadge">ANTES DE COMEÇAR</small><strong id="hmStatusTitle">Caçadas opcionais</strong><p id="hmStatusText">Escolha um desfecho e reproduza a demonstração.</p></div>
+    <div class="hm-stats"><div class="hm-stat"><small>TEMPO ILUSTRATIVO</small><strong id="hmClock">--:--</strong><em>Janela: 120 s</em></div><div class="hm-stat"><small>GPS ACEITO NA FUGA</small><strong id="hmDistance">0 m</strong><em>Objetivo: 80 m</em></div></div>
+    <div class="hm-meter"><div class="hm-meter-top"><span>Progresso da fuga</span><strong id="hmMeterValue">0 / 80 m</strong></div><div class="hm-bar"><span id="hmMeterFill"></span></div></div></div>
+  </div>
+  <p class="hm-caption" id="hmFactionExplain"><strong>Resistência:</strong> a ameaça ilustrada representa zumbis. Os pontos do radar não correspondem a NPCs ou pessoas reais.</p>
+  <div class="hm-scene" id="hmScene" aria-live="polite" aria-atomic="true"><div class="hm-scene-top"><span id="hmSceneNumber">CENA 01 / 07</span><span id="hmSceneBadge">ANTES DA PATRULHA</span></div><h5 id="hmSceneTitle">Participação voluntária</h5><p id="hmSceneText">As Caçadas são opcionais e não interferem na patrulha normal se você não participar.</p></div>
+  <div class="hm-actions"><div class="hm-action-buttons"><button type="button" class="hm-btn hm-btn--primary" id="hmPlay" aria-label="Reproduzir simulação de Caçadas">▶ Reproduzir</button><button type="button" class="hm-btn" id="hmRestart" aria-label="Reiniciar simulação de Caçadas">↺ Reiniciar</button></div><span id="hmPlayback" class="hm-playback">Interativo · sem dados reais</span></div>
+  <div class="hm-progress" id="hmProgress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Progresso da demonstração"><span id="hmProgressFill"></span></div>
+  <div class="hm-steps" role="group" aria-label="Selecionar cena da simulação">${stepNames.map((name,i)=>`<button type="button" class="hm-step" data-hm-scene="${i}" ${i===0?'aria-current="step"':''} aria-label="Ir à cena ${i+1}: ${name}"><span>${String(i+1).padStart(2,'0')}</span>${name}</button>`).join('')}</div>
+  <p class="hm-legal"><strong>Como funciona de verdade:</strong> o opt-in, a aparição, o resultado e qualquer recompensa dependem do app e do servidor. O radar é somente uma metáfora visual. Nunca corra por obrigação, atravesse vias sem atenção ou caminhe olhando o celular. Nenhuma ação deste tutorial altera o jogo.</p>
+ </section>`;
+}
+function bindHuntMotion(){
+ const root=$('huntMotion');if(!root)return;
+ const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const stages=HUNT_MOTION_STAGES;
+ const offsets=[];let total=0;stages.forEach(s=>{offsets.push(total);total+=s.duration});
+ const escapePath=$('hmEscapePath');const escapeLen=escapePath.getTotalLength();
+ const threats=[{x:278,y:104},{x:91,y:80},{x:88,y:224}].map((a,i)=>({...a,element:$('hmThreat'+i)}));
+ const steps=[...root.querySelectorAll('[data-hm-scene]')];
+ let outcome='escape',faction='HUMAN',time=0,playing=false,frame=null,lastTick=0,lastScene=-1;
+ function current(t){let ix=stages.length-1;for(let i=0;i<stages.length;i++){if(t<offsets[i]+stages[i].duration){ix=i;break}}const part=Math.max(0,Math.min(1,(t-offsets[ix])/stages[ix].duration));const scene={...stages[ix],...(outcome==='wound'?(HUNT_WOUNDED_STAGES[ix]||{}):{})};return {ix,part,scene};}
+ function stateAt(t){const {ix,part,scene}=current(t);const last=ix===0?stages[0]:{...stages[ix-1],...(outcome==='wound'?(HUNT_WOUNDED_STAGES[ix-1]||{}):{})};const lerp=(a,b,v)=>a+(b-a)*v;const m=ix===0?0:lerp(last.meters,scene.meters,part);const sec=ix<2?null:ix===2?120:lerp(last.seconds??120,scene.seconds??0,part);const approach=ix===0?0:lerp(last.approach,scene.approach,part);return {ix,part,scene,m,sec,approach};}
+ function redraw(){const state=stateAt(time);const {ix,scene,m,sec,approach}=state;
+  const route=Math.min(1,m/80);escapePath.style.strokeDasharray=String(escapeLen);escapePath.style.strokeDashoffset=String(escapeLen*(1-route));
+  $('hmEscapeBg').setAttribute('opacity',ix>=3?'0.6':'0');escapePath.setAttribute('opacity',ix>=3?'1':'0');
+  const p=escapePath.getPointAtLength(route*escapeLen);$('hmYou').setAttribute('transform',ix>=3?`translate(${p.x.toFixed(2)} ${p.y.toFixed(2)})`:'translate(180 155)');
+  for(let i=0;i<threats.length;i++){const item=threats[i];const x=180+(item.x-180)*(1-approach*.78),y=155+(item.y-155)*(1-approach*.78);item.element.setAttribute('transform',`translate(${x.toFixed(2)} ${y.toFixed(2)})`);item.element.setAttribute('opacity',ix===0?'0':String(Math.min(1,0.3+approach*1.2)))}
+  const clock=sec===null?'--:--':`${String(Math.floor(Math.max(0,sec)/60)).padStart(2,'0')}:${String(Math.floor(Math.max(0,sec)%60)).padStart(2,'0')}`;
+  $('hmClock').textContent=clock;$('hmDistance').textContent=`${Math.round(m)} m`;$('hmMeterValue').textContent=`${Math.round(m)} / 80 m`;$('hmMeterFill').style.width=`${Math.round(route*100)}%`;
+  $('hmProgressFill').style.width=`${(100*time/total).toFixed(2)}%`;$('hmProgress').setAttribute('aria-valuenow',String(Math.round(100*time/total)));
+  const radar=$('hmRadar');radar.classList.toggle('is-scanning',ix>=1&&ix<6&&playing&&!reduced);root.classList.toggle('hm--zombie',faction==='ZOMBIE');
+  if(ix!==lastScene){lastScene=ix;
+    const tones=['is-danger','is-success','is-wounded'];const status=$('hmStatus'),panel=$('hmScene');tones.forEach(t=>{status.classList.remove(t);panel.classList.remove(t)});
+    if(scene.tone!=='neutral'){status.classList.add('is-'+scene.tone);panel.classList.add('is-'+scene.tone)}
+    $('hmSceneNumber').textContent=`CENA ${String(ix+1).padStart(2,'0')} / 07`;$('hmSceneBadge').textContent=scene.badge;$('hmSceneTitle').textContent=scene.name;$('hmSceneText').textContent=scene[mode];
+    $('hmStatusBadge').textContent=scene.badge;$('hmStatusTitle').textContent=ix>=2?scene.name:'Caçadas opcionais';$('hmStatusText').textContent=ix>=5?(outcome==='escape'?'Exemplo de fuga segura. Pontos somente após recibo.':'Exemplo de ferimento temporário. Facção não muda.'):ix>=2?'O alerta, os metros e o relógio são ilustrativos. Aguarde o servidor.':'Sem dados GPS nem ameaças reais neste radar.';
+    $('hmRadarMark').textContent=ix>=2&&ix<6?'SINAL ILUSTRATIVO · AMEAÇA':'MONITORAMENTO FICTÍCIO';
+    steps.forEach((b,i)=>{if(i===ix)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current')});
+  }
+  $('hmPlayback').textContent=reduced?'Movimento reduzido: navegue pelas cenas':playing?'Reproduzindo simulação':time>=total?'Fim da simulação':'Interativo · sem dados reais';
+ }
+ function stop(){playing=false;if(frame!==null)cancelAnimationFrame(frame);frame=null;lastTick=0;$('hmPlay').textContent=reduced?'Próxima cena':'▶ Reproduzir';$('hmPlay').setAttribute('aria-label',reduced?'Avançar cena de Caçadas':'Reproduzir simulação de Caçadas');}
+ function tick(stamp){if(!playing)return;if(lastTick)time=Math.min(total,time+Math.min(stamp-lastTick,200));lastTick=stamp;redraw();if(time>=total){stop();redraw();return}frame=requestAnimationFrame(tick)}
+ function play(){
+   if(reduced){const ix=current(time).ix;let next=ix+1;if(next>=stages.length)next=0;time=offsets[next]+(next===0?0:stages[next].duration-1);lastScene=-1;redraw();return;}
+   if(playing){stop();redraw();return;}
+   if(time>=total){time=0;lastScene=-1;}
+   playing=true;lastTick=0;$('hmPlay').textContent='Ⅱ Pausar';$('hmPlay').setAttribute('aria-label','Pausar simulação de Caçadas');frame=requestAnimationFrame(tick);
+ }
+ function restart(){stop();time=0;lastScene=-1;redraw();}
+ const onStep=e=>{const i=Number(e.currentTarget.getAttribute('data-hm-scene'));stop();time=offsets[i]+(i===0?0:stages[i].duration-1);lastScene=-1;redraw();};
+ const onOutcome=e=>{outcome=e.currentTarget.dataset.hmOutcome;root.querySelectorAll('[data-hm-outcome]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.hmOutcome===outcome)));restart();};
+ const onFaction=e=>{faction=e.currentTarget.dataset.hmFaction;root.querySelectorAll('[data-hm-faction]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.hmFaction===faction)));const isHorde=faction==='ZOMBIE';$('hmFactionExplain').innerHTML=isHorde?'<strong>Horda:</strong> os adversários ilustrativos representam soldados da Resistência. Os pontos não representam inimigos ou locais reais.':'<strong>Resistência:</strong> os adversários ilustrativos representam zumbis. Os pontos não representam inimigos ou locais reais.';threats.forEach(x=>x.element.classList.toggle('is-friendly',isHorde));restart();};
+ const onHidden=()=>{if(document.visibilityState==='hidden'&&playing){stop();redraw()}};
+ $('hmPlay').addEventListener('click',play);$('hmRestart').addEventListener('click',restart);
+ steps.forEach(b=>b.addEventListener('click',onStep));root.querySelectorAll('[data-hm-outcome]').forEach(b=>b.addEventListener('click',onOutcome));root.querySelectorAll('[data-hm-faction]').forEach(b=>b.addEventListener('click',onFaction));
+ document.addEventListener('visibilitychange',onHidden);
+ if(reduced){$('hmPlay').textContent='Próxima cena';$('hmPlay').setAttribute('aria-label','Avançar cena de Caçadas')}
+ redraw();
+ disposeHuntMotion=()=>{stop();document.removeEventListener('visibilitychange',onHidden)};
+}
+
 function showEligibilityTool(){
  return `<section class="eligibility-demo" aria-labelledby="demoTitle"><span class="demo-label">SIMULAÇÃO DE TREINO · NÃO ENVIA DADOS</span><h4 id="demoTitle">Sua patrulha passaria pelo básico?</h4><p>Informe apenas os metros e segundos de caminhada comprovada, excluindo trechos descartados. Valores fictícios não substituem a análise do servidor.</p><div class="demo-inputs"><label>Metros GPS aceitos<input id="demoMeters" type="number" min="0" max="200000" inputmode="numeric" value="620" /></label><label>Segundos de movimento comprovado<input id="demoSeconds" type="number" min="0" max="100000" inputmode="numeric" value="380" /></label></div><label class="demo-vehicle"><input id="demoIncident" type="checkbox" /> Houve trecho descartado ou suspeito no percurso</label><label class="demo-vehicle"><input id="demoMock" type="checkbox" /> Há localização simulada comprovada ou prova de movimento contraditória</label><div class="demo-result" id="demoResult" role="status"></div><p class="demo-disclaimer">Uma suspeita isolada não zera a caminhada válida. Ainda são necessárias evidências consistentes por célula H3 (≥50 m e ≥4 segmentos), precisão, ausência de outros bloqueios e confirmação oficial. O simulador não altera o jogo.</p></section>`;
 }
@@ -498,6 +697,7 @@ const PATROL_MOTION_STAGES = [
   tactical:'Os mínimos gerais foram satisfeitos no exemplo. Influência exige prova por célula (≥50 m e ≥4 segmentos), limites do servidor e confirmação oficial.'}
 ];
 let disposePatrolMotion = () => {};
+let disposeHuntMotion = () => {};
 function bindPatrolMotion(){
  const root=$('patrolMotion');if(!root)return;
  const mapPaths=['pmPath1','pmPath2','pmPath3'].map(id=>$(id));
@@ -574,10 +774,11 @@ function bindPatrolMotion(){
 
 function renderChapter(){
  disposePatrolMotion();disposePatrolMotion=()=>{};
+ disposeHuntMotion();disposeHuntMotion=()=>{};
  const c=CHAPTERS[active];const b=c[mode];const t=mode==='sport'?'ESPORTISTA • OPERAÇÃO AUTOMÁTICA':'ESTRATEGISTA • DECISÃO TÁTICA';
  const steps=c.steps.map(([title,description],i)=>`<li><span class="action-num">${String(i+1).padStart(2,'0')}</span><div class="action-content"><strong>${enc(title)}</strong><p>${enc(description)}</p></div></li>`).join('');
  const faq=c.faq.map(([q,a])=>`<details class="faq-item"><summary>${enc(q)}</summary><p>${enc(a)}</p></details>`).join('');
- const extra=c.id==='patrulha'?`${showPatrolMotion()}${showEligibilityTool()}`:'';
+ const extra=c.id==='patrulha'?`${showPatrolMotion()}${showEligibilityTool()}`:c.id==='cacadas'?showHuntMotion():'';
  const links=c.id==='instalacao'?`<div class="chapter-support"><a href="${enc(GUIDE_META.download)}" target="_blank" rel="noopener noreferrer" class="support-link">Baixar APK Alpha ↗</a><a href="${enc(GUIDE_META.changelog)}" target="_blank" rel="noopener noreferrer" class="support-secondary">Ver canal de versões</a></div>`:c.id==='temporadas'?`<div class="chapter-support"><a href="${enc(GUIDE_META.warRoom)}" class="support-link">Abrir Sala de Guerra ↗</a></div>`:'';
  $('chapterContent').innerHTML=`<div class="chapter-inner"><div class="chapter-topline"><span><span class="chapter-number">CAPÍTULO ${enc(c.number)}</span> / ${enc(c.part)}</span><span class="chapter-time">LEITURA ${enc(c.time)}</span></div><h3>${enc(c.title)}</h3><p class="chapter-lead">${enc(c.deck)}</p><div class="location-tag"><svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m10 1 7 4v10l-7 4-7-4V5l7-4Z"/><path d="M10 7v6M7 10h6"/></svg><span>NO APLICATIVO · ${enc(c.where)}</span></div><div class="step-label">PASSO A PASSO · O QUE FAZER</div><ol class="action-list">${steps}</ol>${links}<div class="branch-brief"><span class="branch-prefix">${t}</span><h4>${enc(b.title)}</h4><p>${enc(b.lead)}</p><ul class="focus-list">${b.focus.map(x=>`<li>${enc(x)}</li>`).join('')}</ul></div>${extra}<div class="alert-note"><span class="alert-mark">!</span><span>${enc(c.note)}</span></div><div class="faq-wrap"><h4>DÚVIDAS MAIS COMUNS</h4>${faq}</div><div class="source-tag"><strong>VERIFICADO NO COVIL</strong><span>${enc(c.source)}</span></div></div>`;
  $('chapter').classList.toggle('is-tactical',mode==='tactical');
@@ -586,6 +787,7 @@ function renderChapter(){
  $('nextChapter').textContent=active===CHAPTERS.length-1?'Fim do roteiro':'Próximo →';
  const done=completed.has(c.id);$('completeChapter').classList.toggle('is-done',done);
  $('completeChapter').innerHTML=done?'✓ Etapa concluída':'Marcar como concluído <span aria-hidden="true">✓</span>';
+ if(c.id==='cacadas') bindHuntMotion();
  if(c.id==='patrulha'){
    bindPatrolMotion();
    for(const id of ['demoMeters','demoSeconds','demoIncident','demoMock'])$(id)?.addEventListener('input',updateEligibility);
