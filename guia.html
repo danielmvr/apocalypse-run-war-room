@@ -154,6 +154,29 @@ main{max-width:1380px;margin:auto;padding:0 36px}.kicker{color:#89c7a3;font-size
 @media(prefers-reduced-motion:reduce){.territory-motion *, .territory-motion *:before,.territory-motion *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 @media print{.territory-motion{break-inside:avoid}.tm-controls,.tm-scene-list{display:none}}
 
+/* Motion Graphic 05 | Biologia e transformação | HTML/CSS/SVG local */
+.bm-motion{--bm-accent:#9aeac1;--bm-danger:#f4948a;margin:30px 0 0;overflow:hidden;border:1px solid #466958;border-radius:12px;background:linear-gradient(136deg,#142b24 0%,#0b191a 54%,#141f1b 100%);box-shadow:0 24px 64px #0003;font-family:var(--font)}
+.bm-header{padding:21px 22px 14px;display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.bm-kicker{font-size:9px;letter-spacing:2px;color:#91d9af;font-weight:800}.bm-header h4{font:800 clamp(26px,3.4vw,36px)/1.05 var(--font-head);margin:6px 0 8px;color:#f1fbf4;text-transform:uppercase;letter-spacing:.3px}.bm-header p{font-size:11px;line-height:1.65;color:#a7bcb0;margin:0;max-width:530px}.bm-stamp{font-size:9px;white-space:nowrap;letter-spacing:1px;font-weight:800;color:#edc99a;border:1px solid #675d42;background:#3a3025bb;padding:8px;border-radius:5px}
+.bm-controls-top{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 17px 15px}.bm-control-group{min-width:0}.bm-control-group>span{display:block;font-weight:800;letter-spacing:1px;font-size:9px;color:#9bbbac;margin-bottom:7px}.bm-choice-row{display:flex;flex-wrap:wrap;gap:5px}.bm-choice-row button{min-height:42px;font-size:11px;font-weight:750;line-height:1.3;border:1px solid #365246;color:#b6cfbd;background:#122620;border-radius:6px;padding:9px 12px;flex:1;white-space:nowrap}.bm-choice-row button[aria-pressed=true]{border-color:#92e3ac;color:#effff1;background:#29543b;box-shadow:inset 0 0 0 1px #5b936b}.bm-choice-row button:focus-visible,.bm-choice-buttons button:focus-visible,.bm-playback button:focus-visible,.bm-scenes button:focus-visible{outline:2px solid #c2ffdd;outline-offset:2px}
+.bm-visual{position:relative;margin:0 17px;border:1px solid #365448;border-radius:9px;overflow:hidden;background:radial-gradient(ellipse at 48% 45%,#1a342c 0%,#101c20 62%,#081214 100%)}.bm-visual svg{display:block;width:100%;height:auto;max-height:365px;min-height:220px}.bm-visual.is-danger{background:radial-gradient(ellipse at 48% 45%,#3c2927 0%,#201b20 62%,#111516 100%)}.bm-visual.is-treatment{background:radial-gradient(ellipse at 48% 45%,#173e31 0%,#142320 62%,#081614 100%)}
+.bm-grid{fill:none;stroke:#719b86;stroke-width:.7;opacity:.16}.bm-hex{fill:#234936;fill-opacity:.1;stroke:#609980;stroke-opacity:.34;stroke-width:1.7}.bm-hex--enemy{fill:#bd615c;fill-opacity:.12;stroke:#f18e85;stroke-opacity:.65}.bm-hex--friend{fill:#52aa83;fill-opacity:.16;stroke:#90eabd;stroke-opacity:.65}.bm-hex--focus{stroke-width:3;stroke-opacity:1}.bm-signal{stroke:#81e8a9;stroke-width:2.3;fill:none;stroke-dasharray:5 10;opacity:.5}.bm-orbit{stroke:#8bdbae;stroke-width:2;stroke-dasharray:8 7;fill:none;opacity:.64}.bm-orbit--red{stroke:#f28a86;opacity:.9}.bm-avatar-halo{fill:#2a6046;opacity:.28}.bm-avatar-body{fill:#c5ffe0;stroke:#255641;stroke-width:3;stroke-linejoin:round}.bm-avatar-virus{stroke:#f5a29a;fill:none;stroke-width:2.5}.bm-avatar-lab{stroke:#adf5cc;fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}.bm-node-label{font:750 12px var(--font);letter-spacing:1.5px;fill:#a4c8ad}.bm-node-caption{font:550 10px var(--font);fill:#84a196}.bm-visual-tag{position:absolute;left:12px;top:12px;font-size:9px;letter-spacing:.8px;font-weight:800;color:#bed7c6;border:1px solid #456655;background:#0c1919e8;padding:7px 9px;border-radius:4px}.bm-visual-tag i{display:inline-block;border-radius:50%;width:6px;height:6px;margin-right:7px;background:#8fe4b1}
+.bm-orbit-sweep{transform-origin:350px 166px;animation:bm-rotate 12s linear infinite}.bm-motion.is-playing .bm-orbit-sweep{animation-duration:6s}.bm-motion:not(.is-playing) .bm-orbit-sweep{animation-play-state:paused}@keyframes bm-rotate{to{transform:rotate(360deg)}}
+.bm-data{display:grid;grid-template-columns:1.18fr 1fr 1fr;gap:9px;padding:13px 17px 4px}.bm-data-card{border:1px solid #355546;border-radius:7px;background:#0e211e;min-width:0;padding:12px 13px}.bm-data-card span{display:block;font-size:9px;font-weight:800;letter-spacing:.9px;color:#8fb0a0}.bm-data-card strong{display:block;font:800 clamp(22px,3.8vw,38px)/1.1 var(--font-head);color:#b9ffda;margin:5px 0 3px}.bm-data-card:last-child strong{font-size:clamp(15px,2vw,22px);line-height:1.35;overflow-wrap:anywhere}.bm-data-card small{font-size:10px;color:#8eafa0}.bm-data-card.is-danger{border-color:#86514e;background:#2b1c1b}.bm-data-card.is-danger strong{color:#ffaca4}.bm-meter{position:relative;height:9px;background:#243b35;border:1px solid #48665c;border-radius:12px;margin:9px 0 6px;overflow:hidden}.bm-meter-fill{display:block;width:35%;height:100%;border-radius:10px;background:linear-gradient(90deg,#78ddac,#f2d08a,#ed837d);transition:width .6s ease}.bm-meter-ticks{display:flex;justify-content:space-between;font-size:9px;color:#829a8e}
+.bm-story{margin:12px 17px 8px;padding:16px 18px;border:1px solid #496e56;border-radius:7px;background:linear-gradient(100deg,#19352a,#15251f)}.bm-story.is-danger{border-color:#93675d;background:linear-gradient(100deg,#352423,#231d1d)}.bm-story.is-clear{border-color:#558e6a;background:linear-gradient(100deg,#174430,#132d23)}.bm-story-top{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:9px;font-weight:800;letter-spacing:1.2px;color:#a5d3b1}.bm-story-status{font-size:10px;color:#dcf3df;letter-spacing:0}.bm-story h5{font:800 clamp(21px,3.1vw,28px)/1.12 var(--font-head);text-transform:uppercase;color:#f1fff6;margin:7px 0 7px}.bm-story p{font-size:12px;line-height:1.65;color:#bed0c2;margin:0}.bm-choice-section{margin:8px 17px 0;padding:11px 12px;border:1px dashed #54795e;background:#172a22;border-radius:6px}.bm-choice-section[hidden]{display:none}.bm-choice-section>span{display:block;font-size:9px;font-weight:800;color:#b6dcba;letter-spacing:1px;margin-bottom:7px}.bm-choice-buttons{display:flex;gap:7px}.bm-choice-buttons button{flex:1;padding:11px 8px;border-radius:5px;border:1px solid #476852;background:#1b3125;color:#a9cbb5;font-size:11px;min-height:42px;font-weight:800}.bm-choice-buttons button[aria-pressed=true]{color:#eaffee;background:#2b573b;border-color:#a1e5ad}.bm-choice-explain{margin:7px 0 0;font-size:10px;line-height:1.6;color:#a8c4b3}
+.bm-playback{display:flex;gap:9px;align-items:center;margin:13px 17px 0}.bm-playback button{min-height:42px;padding:10px 15px;border-radius:5px;font-size:11px;font-weight:800}.bm-play{background:#9cebbc;border:1px solid #9cebbc;color:#123524}.bm-reset{background:#162923;border:1px solid #4d6b58;color:#bfdcc7}.bm-progress-track{height:5px;flex:1;background:#2f473c;min-width:50px;overflow:hidden;border-radius:4px}.bm-progress-fill{height:100%;width:0;background:#a0eeb9;transition:width .12s linear}.bm-scene-list{display:flex;overflow-x:auto;gap:6px;padding:11px 17px 14px;scrollbar-width:thin;scrollbar-color:#507a61 transparent}.bm-scene-list button{min-width:90px;min-height:40px;flex:1 0 auto;background:#122821;border:1px solid #345646;color:#aac4b2;border-radius:5px;padding:9px 10px;font-size:10px;font-weight:800;white-space:nowrap}.bm-scene-list button[aria-pressed=true]{background:#2b5339;border-color:#91dfaa;color:#fff}
+.bm-disclaimer{border-top:1px solid #345445;color:#97b3a1;font-size:10px;line-height:1.7;margin:0;padding:12px 17px 17px}.bm-disclaimer strong{color:#bad9c7}.bm-motion .bm-status-warning{color:#f4b0a8}.bm-motion .bm-status-ok{color:#8de7b4}
+@media(max-width:580px){.bm-header{padding:17px 15px 12px;flex-wrap:wrap}.bm-controls-top{padding:0 12px 13px;gap:9px}.bm-choice-row{gap:4px}.bm-choice-row button{padding:10px 6px;font-size:10px}.bm-visual{margin:0 12px}.bm-visual svg{min-height:168px}.bm-data{gap:5px;padding:9px 12px 3px}.bm-data-card{padding:10px 7px}.bm-data-card span{font-size:8px;letter-spacing:.15px}.bm-data-card strong{font-size:clamp(19px,6vw,29px)}.bm-data-card:last-child strong{font-size:14px}.bm-data-card small{font-size:9px}.bm-meter-ticks{font-size:8px}.bm-story{margin:10px 12px 7px;padding:13px}.bm-story p{font-size:11px}.bm-choice-section{margin:8px 12px 0}.bm-playback{margin:11px 12px 0}.bm-playback button{padding:10px}.bm-scene-list{padding:10px 12px}.bm-disclaimer{padding:12px}}
+@media(max-width:345px){.bm-controls-top{grid-template-columns:1fr}.bm-data-card strong{font-size:20px}.bm-data-card:last-child strong{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.bm-orbit-sweep{animation:none!important}.bm-meter-fill,.bm-progress-fill{transition:none!important}}
+@media(max-width:400px){
+ .bm-data{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr)}
+ .bm-data-card:last-child{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;column-gap:10px;min-height:58px}
+ .bm-data-card:last-child span{width:100%}
+ .bm-data-card:last-child strong{font-size:19px;margin:2px 0}
+ .bm-data-card:last-child small{max-width:45%;text-align:right}
+ .bm-meter-ticks{font-size:8px;letter-spacing:-.1px}
+}
+
 </style>
 </head>
 <body>
@@ -401,17 +424,17 @@ const CHAPTERS = [
     source:'Covil: missões-2.md · docs/mission-engine-api.md · docs/mission-tactics.md'
   },
   {
-    id:'biologia',part:'DOMINE O MUNDO',number:'12',time:'3 MIN',title:'Contágio, cura e estado biológico',
+    id:'biologia',part:'DOMINE O MUNDO',number:'12',time:'6 MIN',title:'Contágio, cura e estado biológico',
     deck:'O risco não está apenas no território. Sua exposição pode mudar quando você atravessa zonas hostis.',
     where:'SOBREVIVENTE → Perfil e biologia / Laboratórios',icon:'bio',
     steps:[
       ['Consulte Sobrevivente → Perfil e biologia', 'Abra “Sobrevivente” e escolha “Perfil e biologia” para ver os dados confirmados pelo servidor.'],
       ['Entenda o risco', 'Contribuições qualificadas em território inimigo podem elevar a exposição; patrulhas seguras e tratamento em Laboratório aliado podem reduzi-la.'],
-      ['Observe alertas de transformação', 'Uma transformação real é determinada pelo servidor, não pela prévia de aparência da outra facção.'],
+      ['Observe alertas de transformação', 'Uma transformação real é determinada pelo servidor depois da patrulha elegível, não pela prévia visual. Se acontecer, consulte as opções de retornar ou permanecer até o fechamento da temporada.'],
     ],
     sport:{title:'O sistema cuida do cálculo',lead:'Você pode continuar acompanhando suas caminhadas sem fazer escolhas a cada hexágono. Consulte ‘Sobrevivente → Perfil e biologia’ quando surgir um alerta.',focus:['Se sua facção efetiva mudar, a identidade e a progressão continuam vinculadas.', 'O cuidado e a exposição dependem da contribuição real da patrulha.']},
     tactical:{title:'Proteja ou pressione',lead:'Estruturas e rotas têm riscos e oportunidades, com limites por episódio e tratamentos.',focus:['Laboratório inimigo eleva o risco; Laboratório aliado pode tratar uma exposição elegível.', 'Há limites de episódios positivos e tratamentos por temporada.', 'Missões especiais e operações de Energia podem oferecer apoio biológico, sem substituir uma patrulha real.']},
-    note:'As transformações seguem as regras da temporada. Não existe botão livre para trocar de facção a qualquer momento.',
+    note:'Transformações são confirmadas pelo servidor, no máximo uma por temporada. Sem escolha explícita após transformar, o padrão na virada é retornar à facção de origem. O efeito temporário “Ferido pelo inimigo” de Caçadas não altera seu estado biológico.',
     faq:[['Se eu mudar de facção, perco minhas conquistas?', 'O progresso pessoal é preservado. A facção efetiva pode mudar pelo sistema biológico, e escolhas de fim de temporada seguem as regras da campanha.'],['Ferido pelo inimigo causa infecção ou troca de facção?', 'Não. Esse é o efeito temporário de uma Caçada confirmada. Ele reduz apenas a contribuição territorial proporcional durante o ferimento, sem alterar contágio, cura ou facção.']],
     source:'Covil: temporadas-contagio-cura.md · docs/player-biology-api.md'
   },
@@ -907,6 +930,134 @@ function bindTerritoryMotion(){
  redraw();disposeTerritoryMotion=()=>{stop();document.removeEventListener('visibilitychange',hidden)};
 }
 
+/* Motion Graphic 05. Example only; no game/remote data is consulted. */
+const BIO_MOTION_SCENES=[
+ {name:'Sua condição',duration:1800},
+ {name:'Área e GPS',duration:2200},
+ {name:'Laboratório',duration:2300},
+ {name:'Outra patrulha',duration:2200},
+ {name:'Confirmação',duration:2300},
+ {name:'Sua decisão',duration:2200},
+ {name:'Virada semanal',duration:2400}
+];
+function showBiologyMotion(){
+ const buttons=BIO_MOTION_SCENES.map((s,i)=>`<button type="button" data-bm-scene="${i}" aria-pressed="${i===0}" aria-label="Cena ${i+1}: ${s.name}">${String(i+1).padStart(2,'0')} ${s.name}</button>`).join('');
+ const hex=(x,y,r,extra='')=>{const pts=Array.from({length:6},(_,i)=>{const a=(60*i-30)*Math.PI/180;return `${(x+Math.cos(a)*r).toFixed(1)},${(y+Math.sin(a)*r).toFixed(1)}`;}).join(' ');return `<polygon class="bm-hex ${extra}" points="${pts}"/>`;};
+ return `<section class="bm-motion" id="biologyMotion" data-simulation="true" aria-labelledby="bmTitle">
+ <div class="bm-header"><div><span class="bm-kicker">MOTION GRAPHIC 05 / ESTADO BIOLÓGICO</span><h4 id="bmTitle">Entre a infecção e a cura.</h4><p>Uma história simulada de exposição, recuperação e transformação. A facção efetiva só muda com confirmação do servidor.</p></div><span class="bm-stamp">SIMULAÇÃO</span></div>
+ <div class="bm-controls-top"><div class="bm-control-group"><span>SUA FACÇÃO DE ORIGEM</span><div class="bm-choice-row" role="group" aria-label="Escolher facção da simulação"><button type="button" data-bm-faction="HUMAN" aria-pressed="true">Resistência</button><button type="button" data-bm-faction="ZOMBIE" aria-pressed="false">Horda</button></div></div><div class="bm-control-group"><span>CAMINHO ILUSTRATIVO</span><div class="bm-choice-row" role="group" aria-label="Escolher caminho da simulação"><button type="button" data-bm-path="danger" aria-pressed="true">Exposição</button><button type="button" data-bm-path="care" aria-pressed="false">Recuperação</button></div></div></div>
+ <div class="bm-visual" id="bmVisual"><svg viewBox="0 0 700 330" role="img" aria-label="Diagrama ilustrativo: áreas hostis e aliadas, um sobrevivente ao centro e Laboratório conectado à evolução biológica.">
+ <defs><pattern id="bmGrid" width="30" height="30" patternUnits="userSpaceOnUse"><path class="bm-grid" d="M0 30H30M30 0V30"/></pattern><filter id="bmGlow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+ <rect width="700" height="330" fill="url(#bmGrid)"/>
+ <g aria-hidden="true">${hex(126,144,76,'bm-hex--enemy')}${hex(574,144,76,'bm-hex--friend')}${hex(70,246,55)}${hex(630,246,55)}<path class="bm-signal" d="M201 145H277M423 145H499"/><circle cx="350" cy="166" r="108" stroke="#587263" stroke-opacity=".22" stroke-width="1" fill="none"/><circle class="bm-orbit bm-orbit-sweep" id="bmOrbit" cx="350" cy="166" r="100"/>
+ <path class="bm-avatar-halo" d="M350 79l74 43v87l-74 43-74-43v-87z"/><path d="M350 93l63 36v75l-63 36-63-36v-75z" fill="#1e3c31" stroke="#83ba9e" stroke-width="2"/>
+ <circle cx="350" cy="142" r="22" class="bm-avatar-body"/><path class="bm-avatar-body" d="M315 213v-15c0-20 15-30 35-30s35 10 35 30v15z"/>
+ <g id="bmVirus" opacity="1"><circle cx="125" cy="139" r="18" fill="#f39d93" fill-opacity=".16" stroke="#f5aaa4" stroke-width="2"/><g class="bm-avatar-virus"><circle cx="125" cy="139" r="9"/><path d="M125 118v10M125 150v10M104 139h10M136 139h10M110 123l8 8M132 148l8 8M140 123l-8 8M118 148l-8 8"/></g></g>
+ <g id="bmLab" opacity=".75"><path class="bm-avatar-lab" d="M564 117h20M568 117v12l-12 24c-2 4 0 7 6 7h24c6 0 8-3 6-7l-12-24v-12M560 149h28"/><path d="M563 152h23" stroke="#78c6a4" stroke-width="4"/></g>
+ <text x="125" y="252" class="bm-node-label" text-anchor="middle" id="bmEnemyLabel">ÁREA HOSTIL</text><text x="125" y="269" class="bm-node-caption" text-anchor="middle">Exposição possível</text><text x="575" y="252" class="bm-node-label" text-anchor="middle" id="bmLabLabel">LABORATÓRIO</text><text x="575" y="269" class="bm-node-caption" text-anchor="middle" id="bmLabCaption">Risco ou tratamento</text>
+ <text x="350" y="290" class="bm-node-label" text-anchor="middle" id="bmVisualFaction">RESISTÊNCIA</text><text x="350" y="306" class="bm-node-caption" text-anchor="middle" id="bmVisualState">EXPOSIÇÃO PESSOAL</text>
+ </g></svg><div class="bm-visual-tag"><i aria-hidden="true"></i> DIAGRAMA EDUCATIVO • SEM GPS REAL</div></div>
+ <div class="bm-data"><div class="bm-data-card" id="bmMeterCard"><span>EXPOSIÇÃO PESSOAL</span><strong id="bmValue">35 / 100</strong><div class="bm-meter" role="progressbar" aria-label="Exposição biológica fictícia" aria-valuemin="0" aria-valuemax="100" aria-valuenow="35" id="bmMeter"><i class="bm-meter-fill" id="bmMeterFill"></i></div><div class="bm-meter-ticks"><span>ESTÁVEL</span><span>EXPOSTO</span><span>CRÍTICO</span></div></div><div class="bm-data-card"><span>VARIAÇÃO DA CENA</span><strong id="bmDelta">SEM EFEITO</strong><small id="bmDeltaDetail">Aguardando patrulha válida</small></div><div class="bm-data-card"><span>FACÇÃO EFETIVA</span><strong id="bmFactionDisplay">Resistência</strong><small id="bmFactionDetail">Confirmada na simulação</small></div></div>
+ <div class="bm-story" id="bmStory"><div class="bm-story-top"><span id="bmSceneCount">CENA 01 / 07</span><span class="bm-story-status" id="bmStatus">CONDIÇÃO INICIAL</span></div><h5 id="bmSceneTitle">Sua condição no mundo</h5><p id="bmExplanation">Sua exposição é individual e não equivale ao contágio do território.</p></div>
+ <div class="bm-choice-section" id="bmChoiceBox" hidden><span>ESCOLHA APÓS A TRANSFORMAÇÃO • ATÉ A VIRADA</span><div class="bm-choice-buttons" role="group" aria-label="Destino ilustrativo na nova temporada"><button type="button" data-bm-choice="RETURN" aria-pressed="true">Voltar à origem</button><button type="button" data-bm-choice="REMAIN" aria-pressed="false">Permanecer</button></div><p class="bm-choice-explain" id="bmChoiceExplain">Sem escolha explícita, o padrão é retornar à facção de origem.</p></div>
+ <div class="bm-playback"><button type="button" class="bm-play" id="bmPlay" aria-label="Reproduzir animação de biologia">▶ Reproduzir</button><button type="button" class="bm-reset" id="bmRestart">↺ Reiniciar</button><div class="bm-progress-track" role="presentation"><div class="bm-progress-fill" id="bmProgress"></div></div></div>
+ <div class="bm-scene-list" role="group" aria-label="Selecionar cena da animação">${buttons}</div>
+ <p class="bm-disclaimer"><strong>Importante:</strong> números, cenas e facções são exemplos fictícios, com eventos elegíveis distribuídos em dias diferentes. A cura não acontece em uma patrulha com evidência inimiga. Há limites por temporada, e somente o servidor decide os efeitos. <strong>“Ferido pelo inimigo” das Caçadas não é contágio nem transformação.</strong></p>
+ </section>`;
+}
+let disposeBiologyMotion=()=>{};
+function bindBiologyMotion(){
+ const root=$('biologyMotion');if(!root)return;
+ const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const stages=BIO_MOTION_SCENES;const starts=[];let total=0;for(const s of stages){starts.push(total);total+=s.duration;}
+ let faction='HUMAN',scenario='danger',choice='RETURN',choiceExplicit=false,elapsed=0,playing=false,frame=null,lastTick=0,sceneIndex=-1;
+ const buttons=[...root.querySelectorAll('[data-bm-scene]')];
+ const other=(side)=>side==='HUMAN'?'ZOMBIE':'HUMAN';
+ const sideLabel=(side)=>side==='HUMAN'?'Resistência':'Horda';
+ const statusLabel=(v,changed)=>changed?'TRANSFORMAÇÃO CONFIRMADA':v===100?'LIMITE ALCANÇADO':v>=70?'PERIGO CRÍTICO':v>=40?'EXPOSTO':'ESTÁVEL';
+ function model(index){
+  const base=scenario==='danger'?[35,55,98,100,100,100,0]:[65,55,25,15,15,15,0];
+  const deltas=scenario==='danger'?['—','+20','+43','+2*','—','—','RESET']:['—','−10','−30','−10','—','—','RESET'];
+  const value=base[index],transformed=scenario==='danger'&&index>=4&&index<6;
+  let current=faction;
+  if(transformed)current=other(faction);
+  if(scenario==='danger'&&index===6)current=choice==='REMAIN'?other(faction):faction;
+  return {value,delta:deltas[index],current,transformed,alert:scenario==='danger'&&index>=3&&index<=5};
+ }
+ function script(index,m){
+  const fight=faction==='HUMAN'?'infecção':'purificação';
+  const threat=faction==='HUMAN'?'zumbis':'Resistência';
+  const shortDanger=[
+   ['O risco começa no seu perfil',`O medidor de ${fight} é pessoal. O mapa tem seu próprio contágio territorial. Nenhum deles muda só por abrir o jogo.`, `Valor inicial fictício de 35/100. A facção de origem é ${sideLabel(faction)}. GPS, episódios e limites são validados no servidor.`],
+   ['A zona hostil deixa marcas',`Uma patrulha elegível contra a ${threat} aumenta sua exposição. Você continua caminhando normalmente.`, `Exposição comum +20 nesta simulação. Patrulha válida, evidência H3 e nenhuma recompensa fabricada. O servidor escolhe o maior efeito elegível.`],
+   ['Laboratório inimigo: risco alto',`Outra patrulha encontra um Laboratório controlado pelo adversário. Sua condição se aproxima do limite.`, `Em outro dia UTC, um Laboratório inimigo pode aplicar +43, sem somar a exposição de outras células da mesma patrulha.`],
+   ['O limite foi alcançado',`Uma nova patrulha válida completa a exposição. O jogo ainda precisa confirmar a transformação.`, `Valor anterior 98 + exposição comum de 20 seria 118, mas a escala para em 100. Terceiro episódio positivo ilustrativo da temporada, em data UTC distinta.`],
+   ['Transformação confirmada',`A transformação altera sua facção efetiva somente depois do resultado oficial. XP, Energia e conquistas permanecem.`, `No máximo uma transformação por temporada. A mudança acontece após os efeitos territoriais da patrulha; nenhum NPC transforma sozinho.`],
+   ['Voltar ou permanecer?',`Após transformar, escolha como deseja entrar na próxima temporada. Até lá, você continua na facção transformada.`, `RETURN/REMAIN são opções editáveis até a virada. O padrão sem escolha explícita é RETURN. A decisão não altera o histórico de patrulhas.`],
+   ['Começa uma nova semana',choice==='REMAIN'?'Você decidiu permanecer na facção transformada. A nova temporada começa com seu estado biológico reiniciado.':'Você retorna à facção de origem. A nova temporada reinicia exposição e cotas.',`A escolha é aplicada pelo servidor na virada. ${choiceExplicit?'Opção explícita: '+choice+'.':'Sem opção explícita, o padrão RETURN se aplica.'} Não existem pontos sazonais retroativos.`]
+  ];
+  const shortCare=[
+   ['Sua condição pode melhorar','A exposição pessoal não é permanente. É possível reduzir o risco em uma patrulha elegível.','Exemplo fictício com valor inicial 65/100. Para a Horda, a barra representa purificação; para a Resistência, infecção.'],
+   ['Caminhada segura em área aliada','Uma patrulha com contribuição qualificada em território aliado pode aliviar a exposição.','Cura segura: −10. Qualquer evidência inimiga qualificada bloqueia a cura desta patrulha, mesmo sem exposição positiva.'],
+   ['Laboratório aliado trata','Um Laboratório da própria facção pode oferecer tratamento mais forte, se houver elegibilidade.','Tratamento aliado: −30; no máximo dois por temporada. Capturar um laboratório agora não permite usá-lo imediatamente na mesma patrulha.'],
+   ['A recuperação continua','Em outra patrulha segura, uma contribuição aliada pode reduzir mais a exposição.','Cura segura −10 em outro dia ilustrativo. Não há tratamento e exposição na mesma patrulha.'],
+   ['Estado estável','O medidor desceu abaixo da zona de exposição. Nenhuma transformação ocorreu.','0–39: estável; 40–69: exposto; 70–99: perigo crítico; 100: transformação confirmada quando o servidor conclui o evento.'],
+   ['Você mantém sua facção','Sem transformação, não há decisão de retorno ou permanência a fazer.','A facção de origem e a efetiva permanecem iguais. XP, Energia, conquistas e progresso mantêm suas regras próprias.'],
+   ['Virada de temporada','A semana termina e as cotas pessoais são reiniciadas para o novo ciclo.','O fechamento é determinado pelo servidor, na segunda-feira 00h de São Paulo. Patrulhas recebidas depois não pontuam retroativamente na semana encerrada.']
+  ];
+  const item=(scenario==='danger'?shortDanger:shortCare)[index];
+  return {title:item[0],simple:item[1],tactical:item[2]};
+ }
+ function redraw(){
+  const next=starts.findLastIndex(x=>x<=elapsed);const index=Math.max(0,Math.min(stages.length-1,next));
+  const m=model(index),story=script(index,m);let changed=sceneIndex!==index;sceneIndex=index;
+  $('bmValue').textContent=`${m.value} / 100`;
+  $('bmMeterFill').style.width=m.value+'%';$('bmMeter').setAttribute('aria-valuenow',String(m.value));
+  $('bmDelta').textContent=m.delta;
+  $('bmDeltaDetail').textContent=index===3&&scenario==='danger'?'Corte no máximo 100':index===6?'Nova temporada':index===0?'Condição ilustrativa':scenario==='danger'?'Exposição validada':'Cura validada';
+  $('bmFactionDisplay').textContent=sideLabel(m.current);
+  $('bmFactionDetail').textContent=m.current!==faction?'Facção transformada':'Facção de origem';
+  $('bmVisualFaction').textContent=sideLabel(m.current).toUpperCase();
+  $('bmVisualState').textContent=scenario==='danger'?'EXPOSIÇÃO PESSOAL':'RECUPERAÇÃO PESSOAL';
+  const label=statusLabel(m.value,m.transformed);
+  $('bmStory').classList.toggle('is-danger',scenario==='danger'&&m.value>=70&&index!==6);
+  $('bmStory').classList.toggle('is-clear',scenario==='care'&&m.value<40||index===6);
+  $('bmMeterCard').classList.toggle('is-danger',m.value>=70);
+  $('bmVisual').classList.toggle('is-danger',scenario==='danger'&&m.value>=70&&index!==6);
+  $('bmVisual').classList.toggle('is-treatment',scenario==='care'&&index>=2);
+  $('bmOrbit').classList.toggle('bm-orbit--red',scenario==='danger'&&m.value>=70&&index!==6);
+  $('bmVirus').setAttribute('opacity',scenario==='danger'?'1':'.24');
+  $('bmLab').setAttribute('opacity',index>=2?'1':'.5');
+  $('bmSceneTitle').textContent=story.title;
+  $('bmExplanation').textContent=mode==='tactical'?story.tactical:story.simple;
+  $('bmSceneCount').textContent='CENA '+String(index+1).padStart(2,'0')+' / 07';
+  $('bmStatus').textContent=label;
+  $('bmChoiceBox').hidden=scenario!=='danger'||index<5;
+  $('bmChoiceExplain').textContent=choice==='REMAIN'?'Permanecer precisa ser uma escolha explícita; a facção transformada será consolidada na virada.':'Sem escolha explícita, o padrão é retornar. Você também pode confirmar RETURN no jogo.';
+  root.querySelectorAll('[data-bm-choice]').forEach(b=>b.setAttribute('aria-pressed',String(b.getAttribute('data-bm-choice')===choice)));
+  if(changed){buttons.forEach((b,i)=>b.setAttribute('aria-pressed',String(i===index)));}
+  $('bmProgress').style.width=(100*elapsed/total).toFixed(2)+'%';
+ }
+ function stop(){playing=false;if(frame!==null){cancelAnimationFrame(frame);frame=null;}$('bmPlay').textContent=reduced?'Próxima cena':'▶ Reproduzir';root.classList.remove('is-playing');}
+ function tick(t){if(!playing)return;const dt=Math.min(90,Math.max(0,t-lastTick));lastTick=t;elapsed=Math.min(total,elapsed+dt);redraw();if(elapsed>=total){stop();return;}frame=requestAnimationFrame(tick);}
+ function play(){if(reduced){const n=starts.findIndex(x=>x>elapsed+100);elapsed=n===-1?0:starts[n]+20;redraw();return;}
+  if(playing){stop();return;}if(elapsed>=total)elapsed=0;playing=true;root.classList.add('is-playing');lastTick=performance.now();$('bmPlay').textContent='Ⅱ Pausar';frame=requestAnimationFrame(tick);}
+ function restart(){stop();elapsed=0;sceneIndex=-1;redraw();}
+ function setFaction(e){choice='RETURN';choiceExplicit=false;faction=e.currentTarget.getAttribute('data-bm-faction');root.querySelectorAll('[data-bm-faction]').forEach(b=>b.setAttribute('aria-pressed',String(b.getAttribute('data-bm-faction')===faction)));restart();}
+ function setPath(e){choice='RETURN';choiceExplicit=false;scenario=e.currentTarget.getAttribute('data-bm-path');root.querySelectorAll('[data-bm-path]').forEach(b=>b.setAttribute('aria-pressed',String(b.getAttribute('data-bm-path')===scenario)));restart();}
+ function setChoice(e){choice=e.currentTarget.getAttribute('data-bm-choice');choiceExplicit=true;redraw();}
+ function jump(e){stop();const i=Number(e.currentTarget.getAttribute('data-bm-scene'));elapsed=starts[i]+20;sceneIndex=-1;redraw();}
+ function hidden(){if(document.visibilityState==='hidden')stop()}
+ $('bmPlay').addEventListener('click',play);$('bmRestart').addEventListener('click',restart);
+ root.querySelectorAll('[data-bm-faction]').forEach(b=>b.addEventListener('click',setFaction));
+ root.querySelectorAll('[data-bm-path]').forEach(b=>b.addEventListener('click',setPath));
+ root.querySelectorAll('[data-bm-choice]').forEach(b=>b.addEventListener('click',setChoice));
+ buttons.forEach(b=>b.addEventListener('click',jump));document.addEventListener('visibilitychange',hidden);
+ if(reduced)$('bmPlay').textContent='Próxima cena';redraw();
+ disposeBiologyMotion=()=>{stop();document.removeEventListener('visibilitychange',hidden)};
+}
+
+
 function showEligibilityTool(){
  return `<section class="eligibility-demo" aria-labelledby="demoTitle"><span class="demo-label">SIMULAÇÃO DE TREINO · NÃO ENVIA DADOS</span><h4 id="demoTitle">Sua patrulha passaria pelo básico?</h4><p>Informe apenas os metros e segundos de caminhada comprovada, excluindo trechos descartados. Valores fictícios não substituem a análise do servidor.</p><div class="demo-inputs"><label>Metros GPS aceitos<input id="demoMeters" type="number" min="0" max="200000" inputmode="numeric" value="620" /></label><label>Segundos de movimento comprovado<input id="demoSeconds" type="number" min="0" max="100000" inputmode="numeric" value="380" /></label></div><label class="demo-vehicle"><input id="demoIncident" type="checkbox" /> Houve trecho descartado ou suspeito no percurso</label><label class="demo-vehicle"><input id="demoMock" type="checkbox" /> Há localização simulada comprovada ou prova de movimento contraditória</label><div class="demo-result" id="demoResult" role="status"></div><p class="demo-disclaimer">Uma suspeita isolada não zera a caminhada válida. Ainda são necessárias evidências consistentes por célula H3 (≥50 m e ≥4 segmentos), precisão, ausência de outros bloqueios e confirmação oficial. O simulador não altera o jogo.</p></section>`;
 }
@@ -1032,13 +1183,14 @@ function bindPatrolMotion(){
 
 function renderChapter(){
  disposeTerritoryMotion();disposeTerritoryMotion=()=>{};
+ disposeBiologyMotion();disposeBiologyMotion=()=>{};
  disposeEnergyMotion();disposeEnergyMotion=()=>{};
  disposePatrolMotion();disposePatrolMotion=()=>{};
  disposeHuntMotion();disposeHuntMotion=()=>{};
  const c=CHAPTERS[active];const b=c[mode];const t=mode==='sport'?'ESPORTISTA • OPERAÇÃO AUTOMÁTICA':'ESTRATEGISTA • DECISÃO TÁTICA';
  const steps=c.steps.map(([title,description],i)=>`<li><span class="action-num">${String(i+1).padStart(2,'0')}</span><div class="action-content"><strong>${enc(title)}</strong><p>${enc(description)}</p></div></li>`).join('');
  const faq=c.faq.map(([q,a])=>`<details class="faq-item"><summary>${enc(q)}</summary><p>${enc(a)}</p></details>`).join('');
- const extra=c.id==='patrulha'?`${showPatrolMotion()}${showEligibilityTool()}`:c.id==='cacadas'?showHuntMotion():c.id==='energia'?showEnergyMotion():c.id==='controle'?showTerritoryMotion():'';
+ const extra=c.id==='patrulha'?`${showPatrolMotion()}${showEligibilityTool()}`:c.id==='cacadas'?showHuntMotion():c.id==='energia'?showEnergyMotion():c.id==='controle'?showTerritoryMotion():c.id==='biologia'?showBiologyMotion():'';
  const links=c.id==='instalacao'?`<div class="chapter-support"><a href="${enc(GUIDE_META.download)}" target="_blank" rel="noopener noreferrer" class="support-link">Baixar APK Alpha ↗</a><a href="${enc(GUIDE_META.changelog)}" target="_blank" rel="noopener noreferrer" class="support-secondary">Ver canal de versões</a></div>`:c.id==='temporadas'?`<div class="chapter-support"><a href="${enc(GUIDE_META.warRoom)}" class="support-link">Abrir Sala de Guerra ↗</a></div>`:'';
  $('chapterContent').innerHTML=`<div class="chapter-inner"><div class="chapter-topline"><span><span class="chapter-number">CAPÍTULO ${enc(c.number)}</span> / ${enc(c.part)}</span><span class="chapter-time">LEITURA ${enc(c.time)}</span></div><h3>${enc(c.title)}</h3><p class="chapter-lead">${enc(c.deck)}</p><div class="location-tag"><svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m10 1 7 4v10l-7 4-7-4V5l7-4Z"/><path d="M10 7v6M7 10h6"/></svg><span>NO APLICATIVO · ${enc(c.where)}</span></div><div class="step-label">PASSO A PASSO · O QUE FAZER</div><ol class="action-list">${steps}</ol>${links}<div class="branch-brief"><span class="branch-prefix">${t}</span><h4>${enc(b.title)}</h4><p>${enc(b.lead)}</p><ul class="focus-list">${b.focus.map(x=>`<li>${enc(x)}</li>`).join('')}</ul></div>${extra}<div class="alert-note"><span class="alert-mark">!</span><span>${enc(c.note)}</span></div><div class="faq-wrap"><h4>DÚVIDAS MAIS COMUNS</h4>${faq}</div><div class="source-tag"><strong>VERIFICADO NO COVIL</strong><span>${enc(c.source)}</span></div></div>`;
  $('chapter').classList.toggle('is-tactical',mode==='tactical');
@@ -1050,6 +1202,7 @@ function renderChapter(){
  if(c.id==='cacadas') bindHuntMotion();
  if(c.id==='energia') bindEnergyMotion();
  if(c.id==='controle') bindTerritoryMotion();
+ if(c.id==='biologia') bindBiologyMotion();
  if(c.id==='patrulha'){
    bindPatrolMotion();
    for(const id of ['demoMeters','demoSeconds','demoIncident','demoMock'])$(id)?.addEventListener('input',updateEligibility);
