@@ -139,6 +139,21 @@ main{max-width:1380px;margin:auto;padding:0 36px}.kicker{color:#89c7a3;font-size
 /* Compact phones: keep chapter names readable instead of squeezing seven buttons. */
 @media(max-width:610px){.em-steps{display:flex;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;scrollbar-width:thin;padding-bottom:6px}.em-steps button{flex:0 0 78px;scroll-snap-align:start;font-size:10px;letter-spacing:0;min-height:56px}.em-steps button strong{font-size:16px}}
 
+
+
+/* Motion Graphic 04 | Conquista territorial | inteiramente ilustrativo, acessível e offline */
+.territory-motion{--tm-green:#88eeb6;--tm-red:#f08e82;--tm-amber:#f4c788;--tm-muted:#a5bcaf;--tm-ink:#e9f7ed;background:radial-gradient(ellipse 65% 75% at 28% -25%,#23543b7a,transparent),linear-gradient(148deg,#12211c,#0b1618 85%);color:var(--tm-ink);border:1px solid #4c6e5b;border-radius:13px;margin:32px 0 0;overflow:hidden;isolation:isolate;box-shadow:0 20px 60px #0002}
+.tm-top{display:flex;align-items:start;justify-content:space-between;gap:12px;padding:22px 23px 14px}.tm-eyebrow{font-size:9px;font-weight:800;letter-spacing:1.7px;color:#95eeb8}.tm-top h4{font:800 clamp(26px,4vw,37px)/1.05 var(--font-head);text-transform:uppercase;letter-spacing:.3px;margin:7px 0;color:#eaf9ec}.tm-top p{font:400 12px/1.65 var(--font);max-width:560px;color:#a1b9a8;margin:8px 0 0}.tm-stamp{font-size:9px;font-weight:800;letter-spacing:.7px;color:#efc992;border:1px solid #716044;background:#3b2d1f66;padding:7px 9px;border-radius:4px;white-space:nowrap}
+.tm-choices{display:grid;grid-template-columns:1fr 1fr;gap:13px;padding:0 20px 15px}.tm-selector{min-width:0}.tm-selector>span{display:block;margin:0 0 6px;font-size:10px;color:#97b2a0;letter-spacing:1px;font-weight:800}.tm-choice-row{display:flex;gap:5px;flex-wrap:wrap}.tm-choice-row button{background:#152923;border:1px solid #37594b;color:#aec9b7;padding:8px 12px;min-height:44px;border-radius:5px;font-size:11px;font-weight:700;flex:1 1 auto}.tm-choice-row button[aria-pressed="true"]{background:#284e39;border-color:#91d7ab;color:#effff3}.tm-choice-row button[data-tm-faction="ZOMBIE"][aria-pressed="true"]{background:#52302c;border-color:#f6a498;color:#ffe3dd}.tm-choice-row button:focus-visible,.tm-controls button:focus-visible,.tm-scene-list button:focus-visible{outline:2px solid #d9ffde;outline-offset:3px}
+.tm-diagram{margin:0 16px;position:relative;border:1px solid #344d42;border-radius:9px;overflow:hidden;background:linear-gradient(130deg,#0b1519,#0f221f)}.tm-svg{display:block;width:100%;height:auto;max-height:335px;min-height:180px}.tm-bg-grid{stroke:#648c7b;stroke-width:1;stroke-opacity:.10}.tm-road{fill:none;stroke:#65796f;stroke-width:14;stroke-opacity:.13;stroke-linecap:round}.tm-road-in{fill:none;stroke:#7ca08a;stroke-width:2;stroke-opacity:.19}.tm-hex-small{fill:#1c382b;fill-opacity:.4;stroke:#658d79;stroke-width:2;stroke-opacity:.38}.tm-hex-small.tm-opponent{fill:#4c2827;stroke:#e18883;stroke-opacity:.58}.tm-hex-small.tm-neutral{fill:#253434;stroke:#869998;stroke-opacity:.58}.tm-hex-main{fill:#6e786f;fill-opacity:.22;stroke:#a9c4b9;stroke-width:3;transition:fill .25s,stroke .25s,fill-opacity .25s}.tm-hex-glow{fill:none;stroke:#89efac;stroke-width:5;opacity:.0;transform-origin:350px 164px}.territory-motion.tm-acted .tm-hex-glow{animation:tm-pulse 1.65s ease-out infinite}.territory-motion.tm-acted.tm-zombie .tm-hex-glow{stroke:#f4a395}.territory-motion.tm-enemy-action .tm-hex-glow{stroke:#ef8a82}.territory-motion.tm-enemy-action.tm-zombie .tm-hex-glow{stroke:#8fe9ac}.tm-line{fill:none;stroke:#9df3bc;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:10 12;filter:url(#tm-route-glow);opacity:.7}.tm-map-marker{fill:#b3ffd0;stroke:#10271e;stroke-width:4}.tm-map-label{font:800 11px var(--font);letter-spacing:1.5px;fill:#8daca1}.tm-marker-text{font:800 52px var(--font-head);fill:#eafbea;text-anchor:middle;dominant-baseline:middle}.tm-marker-caption{font:800 11px var(--font);fill:#c7dacf;text-anchor:middle;letter-spacing:2px}.tm-map-badge{position:absolute;top:10px;left:12px;background:#0b1618ec;border:1px solid #456755;border-radius:5px;padding:6px 9px;font-size:10px;letter-spacing:.7px;font-weight:800;color:#b3dcc2;pointer-events:none}.tm-map-badge:before{content:'⬡';color:#95e9b3;margin-right:7px}.tm-map-mapkey{position:absolute;right:12px;bottom:10px;display:flex;gap:12px;background:#0b1618db;border:1px solid #37584a;padding:6px 9px;border-radius:5px;font:700 10px var(--font);color:#afc9b9;pointer-events:none}.tm-key-red:before,.tm-key-green:before{content:'';display:inline-block;width:7px;height:7px;border-radius:2px;background:#ed8682;margin-right:5px}.tm-key-green:before{background:#8beab2}
+.tm-dashboard{margin:14px 16px 0;background:#0d1b1a;border:1px solid #304e42;border-radius:8px;padding:13px 15px 14px}.tm-dashboard-head{display:flex;align-items:center;justify-content:space-between;gap:8px}.tm-dashboard-head span{font-size:10px;font-weight:800;color:#a0c0ac;letter-spacing:1px}.tm-dashboard-head strong{font:800 23px var(--font-head);color:#f2f8f1}.tm-meter{position:relative;height:13px;border-radius:4px;margin:12px 0 7px;background:linear-gradient(90deg,#b65d5b 0% 35%,#7c908e 35% 65%,#4ca87b 65% 100%);border:1px solid #ffffff16}.tm-meter-needle{position:absolute;top:-8px;left:50%;height:29px;width:3px;background:#f5f5e9;box-shadow:0 0 0 2px #081511,0 0 9px #fff9;transform:translateX(-50%);transition:left .25s}.tm-range{display:grid;grid-template-columns:35% 30% 35%;gap:0;color:#98b3a4;font-size:10px;font-weight:700}.tm-range span:nth-child(2){text-align:center}.tm-range span:nth-child(3){text-align:right}.tm-scoreline{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding-top:11px;font-size:11px;color:#a5bdad}.tm-scoreline strong{font-weight:800;color:#dcefe0}.tm-scoreline .tm-swatch{display:inline-block;width:7px;height:7px;border-radius:50%;background:#9aaca8;margin-right:6px}.tm-scoreline .tm-swatch.is-human{background:#8de8b5}.tm-scoreline .tm-swatch.is-zombie{background:#f0938a}
+.tm-scene{margin:13px 16px 0;padding:16px 19px;border:1px solid #486d56;border-radius:8px;background:linear-gradient(110deg,#173525,#102420)}.tm-scene.tm-contested{border-color:#748784;background:linear-gradient(110deg,#24312f,#121c1f)}.tm-scene.tm-threat{border-color:#866551;background:linear-gradient(110deg,#34291e,#181f1d)}.tm-scene-top{display:flex;align-items:center;justify-content:space-between;gap:9px}.tm-step{font:800 10px var(--font);letter-spacing:1.25px;color:#9cddb7}.tm-status{font-size:10px;font-weight:800;color:#b4e3c4}.tm-scene h5{font:800 clamp(22px,3vw,29px)/1.12 var(--font-head);text-transform:uppercase;margin:7px 0 5px;color:#f1f8f0}.tm-scene p{font-size:12px;line-height:1.65;color:#acc4b2;margin:0;min-height:40px}.tm-delta{display:inline-flex;margin-top:10px;padding:5px 9px;background:#101b1b;border:1px solid #54705b;color:#c1e6cb;border-radius:4px;font-size:10px;font-weight:800;letter-spacing:.55px}
+.tm-scene-list{display:flex;gap:6px;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:#53735e transparent;padding:14px 16px 3px;scroll-snap-type:x proximity}.tm-scene-list button{flex:0 0 auto;scroll-snap-align:start;white-space:nowrap;min-height:44px;padding:10px 11px;background:#12231e;border:1px solid #365c47;border-radius:5px;color:#a3c5ae;font-size:10px;font-weight:800}.tm-scene-list button[aria-pressed="true"]{background:#2a5038;border-color:#8ae1aa;color:#e9ffef}.tm-controls{display:flex;gap:8px;flex-wrap:wrap;padding:13px 16px 15px}.tm-controls button{min-height:44px;flex:1 1 150px;border-radius:5px;border:1px solid #77c79c;background:#7cdb9f;color:#0e241b;font-weight:800;font-size:12px}.tm-controls button:last-child{flex:0 1 136px;background:#142922;color:#c4dccd;border-color:#486c54}.tm-footer{border-top:1px solid #324c3d;background:#0b1516;padding:12px 18px;color:#8eac9b;font-size:10px;line-height:1.7}.tm-footer strong{color:#c8e6d1}
+@keyframes tm-pulse{0%{opacity:.72;transform:scale(1)}100%{opacity:0;transform:scale(1.19)}}
+@media(max-width:640px){.tm-top{padding:18px 16px 12px;flex-direction:column-reverse;gap:8px}.tm-stamp{font-size:8px;padding:5px;align-self:flex-start}.tm-top h4{font-size:clamp(26px,7.5vw,32px)}.tm-choices{grid-template-columns:1fr;padding:0 13px 11px;gap:9px}.tm-diagram{margin:0 10px}.tm-svg{min-height:150px;max-height:245px}.tm-dashboard{margin:11px 10px 0;padding:11px 11px}.tm-range{font-size:9px}.tm-scene{margin:11px 10px 0;padding:13px 13px}.tm-scene p{min-height:55px}.tm-scene-list{padding:11px 10px 2px}.tm-controls{padding:10px}.tm-footer{padding:11px 12px}.tm-map-mapkey{font-size:8px;gap:6px;right:5px;bottom:5px}.tm-map-badge{font-size:8px;top:5px;left:5px}}
+@media(prefers-reduced-motion:reduce){.territory-motion *, .territory-motion *:before,.territory-motion *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media print{.territory-motion{break-inside:avoid}.tm-controls,.tm-scene-list{display:none}}
+
 </style>
 </head>
 <body>
@@ -772,6 +787,126 @@ function bindHuntMotion(){
  disposeHuntMotion=()=>{stop();document.removeEventListener('visibilitychange',onHidden)};
 }
 
+
+const TERRITORY_MOTION_SCENES=[
+ {name:'Descobrir',duration:2200},
+ {name:'Validar GPS',duration:2300},
+ {name:'Influência',duration:2300},
+ {name:'Pressão NPC',duration:2300},
+ {name:'Apoio aliado',duration:2200},
+ {name:'Novo avanço',duration:2300},
+ {name:'Placar',duration:2400}
+];
+function showTerritoryMotion(){
+ const steps=TERRITORY_MOTION_SCENES.map((s,i)=>`<button type="button" data-tm-scene="${i}" aria-label="Cena ${i+1}: ${s.name}" aria-pressed="${i===0}">${String(i+1).padStart(2,'0')} ${s.name}</button>`).join('');
+ const hex=(x,y,r,extra='')=>{const vertices=Array.from({length:6},(_,i)=>{const a=Math.PI*(i*60-30)/180;return `${(x+Math.cos(a)*r).toFixed(1)},${(y+Math.sin(a)*r).toFixed(1)}`}).join(' ');return `<polygon points="${vertices}" class="tm-hex-small ${extra}"/>`;};
+ return `<section class="territory-motion" id="territoryMotion" aria-labelledby="tmTitle" data-simulation="true">
+  <div class="tm-top"><div><span class="tm-eyebrow">MOTION GRAPHIC 04 / CONTROLE TERRITORIAL</span><h4 id="tmTitle">Um hexágono. Uma guerra.</h4><p>Veja uma célula mudar de domínio conforme patrulhas elegíveis e oposição. Valores ilustrativos baseados nos limites reais do jogo.</p></div><span class="tm-stamp">EXEMPLO FICTÍCIO</span></div>
+  <div class="tm-choices"><div class="tm-selector"><span>SUA FACÇÃO</span><div class="tm-choice-row" role="group" aria-label="Simular facção"><button type="button" data-tm-faction="HUMAN" aria-pressed="true">Resistência</button><button type="button" data-tm-faction="ZOMBIE" aria-pressed="false">Horda</button></div></div>
+  <div class="tm-selector"><span>TIPO DE OPERAÇÃO</span><div class="tm-choice-row" role="group" aria-label="Simular disputa"><button type="button" data-tm-scenario="neutral" aria-pressed="true">Neutro</button><button type="button" data-tm-scenario="enemy" aria-pressed="false">Inimigo</button><button type="button" data-tm-scenario="defense" aria-pressed="false">Defesa</button></div></div></div>
+  <div class="tm-diagram"><svg class="tm-svg" id="tmSvg" viewBox="0 0 700 330" role="img" aria-label="Mapa ilustrativo com Ruína no centro e células hexagonais ao redor">
+    <defs><pattern id="tmGrid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" class="tm-bg-grid" fill="none"/></pattern><filter id="tm-route-glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="1.7" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+    <rect width="700" height="330" fill="url(#tmGrid)"/>
+    <path class="tm-road" d="M0 266 L90 224 178 254 272 175 396 210 515 117 700 60"/><path class="tm-road-in" d="M0 266 L90 224 178 254 272 175 396 210 515 117 700 60"/>
+    ${hex(135,89,72,'tm-neutral')}${hex(135,233,72,'')}${hex(265,20,72,'')}${hex(265,306,72,'tm-neutral')}${hex(435,20,72,'tm-opponent')}${hex(435,306,72,'')}${hex(565,89,72,'tm-opponent')}${hex(565,233,72,'')}
+    <polygon id="tmGlow" class="tm-hex-glow" points="350,52 447,108 447,220 350,276 253,220 253,108" />
+    <polygon id="tmCentral" class="tm-hex-main" points="350,57 442,110 442,218 350,271 258,218 258,110"/>
+    <path id="tmRoute" class="tm-line" d="M104 254 L180 239 250 203 309 184" stroke-dasharray="11 13"/>
+    <circle id="tmRunner" cx="104" cy="254" r="7" class="tm-map-marker"/>
+    <text x="350" y="138" class="tm-marker-caption">RUÍNAS • H3</text><text x="350" y="185" id="tmHexValue" class="tm-marker-text">500</text><text x="350" y="211" id="tmHexOwner" class="tm-marker-caption">CONTESTADO</text>
+    <text x="55" y="45" class="tm-map-label">ZONA 01</text><text x="526" y="298" class="tm-map-label">ZONA 02</text>
+  </svg><span class="tm-map-badge">CÉLULA ILUSTRATIVA</span><div class="tm-map-mapkey"><span class="tm-key-red">Horda</span><span class="tm-key-green">Resistência</span></div></div>
+  <div class="tm-dashboard"><div class="tm-dashboard-head"><span>CONTROLE TERRITORIAL</span><strong id="tmControlValue">500 / 1.000</strong></div><div class="tm-meter" role="img" aria-label="Limites de domínio: Horda até 350, disputado entre 350 e 650, Resistência a partir de 650"><span class="tm-meter-needle" id="tmNeedle" style="left:50%"></span></div><div class="tm-range"><span>Horda ≤350</span><span>Disputa</span><span>Resistência ≥650</span></div><div class="tm-scoreline"><span><span class="tm-swatch" id="tmSwatch"></span><strong id="tmOwner">Contestado</strong></span><span>SUA FACÇÃO: <strong id="tmScore">0 pts territoriais</strong></span></div></div>
+  <div class="tm-scene" id="tmScenePanel" role="status" aria-live="polite" aria-atomic="true"><div class="tm-scene-top"><span class="tm-step" id="tmSceneStep">CENA 01 / 07</span><span class="tm-status" id="tmSceneStatus">RECONHECIMENTO</span></div><h5 id="tmSceneTitle">Um setor foi descoberto</h5><p id="tmSceneDescription">Descobrir não significa conquistar.</p><span class="tm-delta" id="tmSceneDelta">Ainda sem contribuição</span></div>
+  <div class="tm-scene-list" role="group" aria-label="Escolher cena da conquista">${steps}</div><div class="tm-controls"><button type="button" id="tmPlay">▶ Reproduzir</button><button type="button" id="tmRestart">↺ Reiniciar</button></div>
+  <div class="tm-footer"><strong>Como ler:</strong> os valores simulam Ruínas (ataque humano 200, defesa 200, pressão NPC 100). Cada contribuição exige uma patrulha válida e elegibilidade H3. Ações adicionais representam pessoas ou dias diferentes. O servidor define o resultado real. Pontos territoriais não são pontos da temporada.</div>
+ </section>`;
+}
+let disposeTerritoryMotion=()=>{};
+function bindTerritoryMotion(){
+ const root=$('territoryMotion');if(!root)return;
+ const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ let faction='HUMAN',scenario=mode==='tactical'?'enemy':'neutral',elapsed=0,playing=false,frame=null,lastTick=0,stageIndex=-1;
+ const stages=TERRITORY_MOTION_SCENES,starts=[];let total=0;stages.forEach(st=>{starts.push(total);total+=st.duration});
+ const buttons=[...root.querySelectorAll('[data-tm-scene]')], svg=$('tmSvg'), route=$('tmRoute'), runner=$('tmRunner'), routeLen=route.getTotalLength();
+ function owner(value){return value>=650?'HUMAN':value<=350?'ZOMBIE':null;}
+ function humanToText(o){return o==='HUMAN'?'RESISTÊNCIA':o==='ZOMBIE'?'HORDA':'CONTESTADO';}
+ function points(value){return owner(value)===faction?100:0;}
+ function model(index){
+   const dir=faction==='HUMAN'?1:-1;
+   const base=scenario==='neutral'?500:scenario==='defense'?(faction==='HUMAN'?700:300):(faction==='HUMAN'?300:700);
+   const delta=[0,0,200,100,300,500,500][index];
+   const value=Math.min(1000,Math.max(0,base+dir*delta));
+   const previous=Math.min(1000,Math.max(0,base+dir*[0,0,0,200,100,300,500][index]));
+   return {value,previous,dir,base,o:owner(value),mine:owner(value)===faction,opposite:faction==='HUMAN'?'ZOMBIE':'HUMAN'};
+ }
+ function words(index,m){
+  const deltaText=(n)=>n===0?'Sem mudança':`${n>0?'+':''}${n} de controle`;
+  const effect=m.value-m.previous;
+  const scenarioTitle=scenario==='neutral'?'neutra':scenario==='enemy'?'adversária':'aliada';
+  const short=['Descubra um território','Comprove sua caminhada',scenario==='defense'?'A defesa ganha força':'O ataque altera o controle','NPCs também influenciam','Aliados reforçam a área',m.mine?'O domínio se consolida':'A disputa continua','Quem domina pontua'];
+  const status=['RECONHECIMENTO','GPS ELEGÍVEL','AÇÃO HUMANA','PRESSÃO NPC','APOIO DA FACÇÃO','NOVO AVANÇO','RESULTADO'][index];
+  const sport=[
+    `Esta Ruína está ${scenarioTitle}. Passar por ela não garante a conquista.`,
+    'Sua caminhada precisa passar pelos filtros. Aqui imaginamos 620 metros e 380 segundos aceitos, incluindo 75 metros e 5 segmentos nesta célula.',
+    scenario==='defense'?'Sua patrulha ajuda a manter a área. A cor mostra a facção que continua dominando.':'Uma contribuição aceita muda o controle. Observe se o hexágono já mudou de dono ou ainda está em disputa.',
+    'Um NPC da facção oposta exerce pressão. Um ataque não equivale automaticamente a uma captura.',
+    'Outra patrulha elegível ajuda sua facção a recuperar ou ampliar a influência.',
+    m.mine?'Com mais apoio, a célula termina dominada pela sua facção.':'Ainda pode ser necessária outra contribuição antes de dominar.',
+    `O exemplo termina com ${points(m.value)} pontos territoriais desta Ruína para a sua facção. Pontos da temporada são calculados à parte.`
+  ];
+  const tactical=[
+    `Ruína ${scenarioTitle}: controle inicial ${m.base}/1.000. Horda domina até 350; Resistência a partir de 650. Entre os limiares, ninguém consolida a posse.`,
+    'Patrulha fictícia elegível: ≥500 m GPS, ≥300 s móveis, ≥50 m e ≥4 segmentos H3 nesta célula. Descoberta isolada não concede influência.',
+    `Ruínas usam influência humana base 200 para ataque ou defesa. Variação ilustrativa: ${deltaText(effect)}. O servidor valida limites e autoria.`,
+    `Exemplo de pressão NPC adversária em Ruínas: ${deltaText(effect)}. NPCs atuam apenas em áreas já descobertas e não geram pontuação sazonal direta.`,
+    `Outro jogador ou outro dia UTC acrescenta ${deltaText(effect)}. Uma pessoa não pode contribuir repetidamente na mesma célula no mesmo dia UTC.`,
+    `Novo evento elegível: ${deltaText(effect)} após o clamp 0–1.000. Mesmo com influência, a posse só muda ao cruzar o limiar correspondente.`,
+    `Ruínas dominadas valem 100 pts territoriais para sua facção neste exemplo; estado final ${m.value}/1.000. Contestado = 0 e placar semanal usa regras independentes.`
+  ];
+  return {title:short[index],status,desc:(mode==='tactical'?tactical:sport)[index],delta:index===0?'Nenhuma influência aplicada':index===1?'Exemplo: 620 m GPS • 380 s • 75 m H3':index===6?`${points(m.value)} pontos de Ruínas para sua facção`:deltaText(effect)};
+ }
+ function stageAt(time){let i=stages.length-1;for(let n=0;n<stages.length;n++){if(time<starts[n]+stages[n].duration){i=n;break}}return i;}
+ function redraw(){
+  const ix=stageAt(elapsed),m=model(ix),copy=words(ix,m),actualOwner=owner(m.value);
+  root.classList.toggle('tm-zombie',faction==='ZOMBIE');root.classList.toggle('tm-acted',ix===2||ix===3||ix===4||ix===5);root.classList.toggle('tm-enemy-action',ix===3);
+  const polygon=$('tmCentral');polygon.setAttribute('fill',actualOwner==='HUMAN'?'#2e8b59':actualOwner==='ZOMBIE'?'#a34e4a':'#707c78');polygon.setAttribute('stroke',actualOwner==='HUMAN'?'#89edb1':actualOwner==='ZOMBIE'?'#ffa69d':'#c1d0c9');polygon.setAttribute('fill-opacity',actualOwner?'.53':'.3');
+  $('tmControlValue').textContent=`${m.value.toLocaleString('pt-BR')} / 1.000`;
+  $('tmHexValue').textContent=String(m.value);$('tmHexOwner').textContent=humanToText(actualOwner);
+  $('tmNeedle').style.left=`${m.value/10}%`;
+  $('tmOwner').textContent=humanToText(actualOwner);
+  $('tmSwatch').className='tm-swatch'+(actualOwner==='HUMAN'?' is-human':actualOwner==='ZOMBIE'?' is-zombie':'');
+  $('tmScore').textContent=`${points(m.value)} pts territoriais`;
+  if(ix!==stageIndex){
+   stageIndex=ix;$('tmSceneStep').textContent=`CENA ${String(ix+1).padStart(2,'0')} / 07`;
+   $('tmSceneTitle').textContent=copy.title;$('tmSceneStatus').textContent=copy.status;
+   $('tmSceneDescription').textContent=copy.desc;$('tmSceneDelta').textContent=copy.delta;
+   $('tmScenePanel').classList.toggle('tm-contested',actualOwner==null);
+   $('tmScenePanel').classList.toggle('tm-threat',ix===3);
+   buttons.forEach((btn,n)=>btn.setAttribute('aria-pressed',String(n===ix)));
+  }
+  const sceneProgress=Math.max(0,Math.min(1,(elapsed-starts[ix])/stages[ix].duration));
+  const routeProgress=ix===0?0:ix===1?sceneProgress:1;
+  route.style.strokeDasharray=`${(routeLen*routeProgress).toFixed(1)} ${routeLen.toFixed(1)}`;
+  const p=route.getPointAtLength(Math.max(0.01,routeLen*routeProgress));runner.setAttribute('cx',String(p.x));runner.setAttribute('cy',String(p.y));
+ }
+ function stop(){playing=false;if(frame!==null)cancelAnimationFrame(frame);frame=null;lastTick=0;$('tmPlay').textContent=reduced?'Próxima cena':'▶ Reproduzir';}
+ function tick(stamp){if(!playing)return;if(lastTick)elapsed=Math.min(total,elapsed+Math.min(200,stamp-lastTick));lastTick=stamp;redraw();if(elapsed>=total){stop();redraw();return}frame=requestAnimationFrame(tick)}
+ function play(){if(reduced){const next=stageAt(elapsed)+1;elapsed=next>=stages.length?0:starts[next]+1;stageIndex=-1;redraw();return}
+   if(playing){stop();return}if(elapsed>=total){elapsed=0;stageIndex=-1}playing=true;lastTick=0;$('tmPlay').textContent='Ⅱ Pausar';frame=requestAnimationFrame(tick)}
+ function restart(){stop();elapsed=0;stageIndex=-1;redraw()}
+ function selectFaction(ev){faction=ev.currentTarget.getAttribute('data-tm-faction');root.querySelectorAll('[data-tm-faction]').forEach(b=>b.setAttribute('aria-pressed',String(b.getAttribute('data-tm-faction')===faction)));stageIndex=-1;redraw()}
+ function selectScenario(ev){scenario=ev.currentTarget.getAttribute('data-tm-scenario');root.querySelectorAll('[data-tm-scenario]').forEach(b=>b.setAttribute('aria-pressed',String(b.getAttribute('data-tm-scenario')===scenario)));stageIndex=-1;redraw()}
+ function jump(ev){const i=Number(ev.currentTarget.getAttribute('data-tm-scene'));stop();elapsed=starts[i]+Math.min(stages[i].duration-1,50);stageIndex=-1;redraw()}
+ function hidden(){if(document.visibilityState==='hidden'&&playing){stop()}}
+ $('tmPlay').addEventListener('click',play);$('tmRestart').addEventListener('click',restart);
+ root.querySelectorAll('[data-tm-faction]').forEach(b=>{b.addEventListener('click',selectFaction);b.setAttribute('aria-pressed',String(b.getAttribute('data-tm-faction')===faction))});
+ root.querySelectorAll('[data-tm-scenario]').forEach(b=>{b.addEventListener('click',selectScenario);b.setAttribute('aria-pressed',String(b.getAttribute('data-tm-scenario')===scenario))});
+ buttons.forEach(b=>b.addEventListener('click',jump));document.addEventListener('visibilitychange',hidden);
+ if(reduced){$('tmPlay').textContent='Próxima cena'}
+ redraw();disposeTerritoryMotion=()=>{stop();document.removeEventListener('visibilitychange',hidden)};
+}
+
 function showEligibilityTool(){
  return `<section class="eligibility-demo" aria-labelledby="demoTitle"><span class="demo-label">SIMULAÇÃO DE TREINO · NÃO ENVIA DADOS</span><h4 id="demoTitle">Sua patrulha passaria pelo básico?</h4><p>Informe apenas os metros e segundos de caminhada comprovada, excluindo trechos descartados. Valores fictícios não substituem a análise do servidor.</p><div class="demo-inputs"><label>Metros GPS aceitos<input id="demoMeters" type="number" min="0" max="200000" inputmode="numeric" value="620" /></label><label>Segundos de movimento comprovado<input id="demoSeconds" type="number" min="0" max="100000" inputmode="numeric" value="380" /></label></div><label class="demo-vehicle"><input id="demoIncident" type="checkbox" /> Houve trecho descartado ou suspeito no percurso</label><label class="demo-vehicle"><input id="demoMock" type="checkbox" /> Há localização simulada comprovada ou prova de movimento contraditória</label><div class="demo-result" id="demoResult" role="status"></div><p class="demo-disclaimer">Uma suspeita isolada não zera a caminhada válida. Ainda são necessárias evidências consistentes por célula H3 (≥50 m e ≥4 segmentos), precisão, ausência de outros bloqueios e confirmação oficial. O simulador não altera o jogo.</p></section>`;
 }
@@ -896,13 +1031,14 @@ function bindPatrolMotion(){
 }
 
 function renderChapter(){
+ disposeTerritoryMotion();disposeTerritoryMotion=()=>{};
  disposeEnergyMotion();disposeEnergyMotion=()=>{};
  disposePatrolMotion();disposePatrolMotion=()=>{};
  disposeHuntMotion();disposeHuntMotion=()=>{};
  const c=CHAPTERS[active];const b=c[mode];const t=mode==='sport'?'ESPORTISTA • OPERAÇÃO AUTOMÁTICA':'ESTRATEGISTA • DECISÃO TÁTICA';
  const steps=c.steps.map(([title,description],i)=>`<li><span class="action-num">${String(i+1).padStart(2,'0')}</span><div class="action-content"><strong>${enc(title)}</strong><p>${enc(description)}</p></div></li>`).join('');
  const faq=c.faq.map(([q,a])=>`<details class="faq-item"><summary>${enc(q)}</summary><p>${enc(a)}</p></details>`).join('');
- const extra=c.id==='patrulha'?`${showPatrolMotion()}${showEligibilityTool()}`:c.id==='cacadas'?showHuntMotion():c.id==='energia'?showEnergyMotion():'';
+ const extra=c.id==='patrulha'?`${showPatrolMotion()}${showEligibilityTool()}`:c.id==='cacadas'?showHuntMotion():c.id==='energia'?showEnergyMotion():c.id==='controle'?showTerritoryMotion():'';
  const links=c.id==='instalacao'?`<div class="chapter-support"><a href="${enc(GUIDE_META.download)}" target="_blank" rel="noopener noreferrer" class="support-link">Baixar APK Alpha ↗</a><a href="${enc(GUIDE_META.changelog)}" target="_blank" rel="noopener noreferrer" class="support-secondary">Ver canal de versões</a></div>`:c.id==='temporadas'?`<div class="chapter-support"><a href="${enc(GUIDE_META.warRoom)}" class="support-link">Abrir Sala de Guerra ↗</a></div>`:'';
  $('chapterContent').innerHTML=`<div class="chapter-inner"><div class="chapter-topline"><span><span class="chapter-number">CAPÍTULO ${enc(c.number)}</span> / ${enc(c.part)}</span><span class="chapter-time">LEITURA ${enc(c.time)}</span></div><h3>${enc(c.title)}</h3><p class="chapter-lead">${enc(c.deck)}</p><div class="location-tag"><svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m10 1 7 4v10l-7 4-7-4V5l7-4Z"/><path d="M10 7v6M7 10h6"/></svg><span>NO APLICATIVO · ${enc(c.where)}</span></div><div class="step-label">PASSO A PASSO · O QUE FAZER</div><ol class="action-list">${steps}</ol>${links}<div class="branch-brief"><span class="branch-prefix">${t}</span><h4>${enc(b.title)}</h4><p>${enc(b.lead)}</p><ul class="focus-list">${b.focus.map(x=>`<li>${enc(x)}</li>`).join('')}</ul></div>${extra}<div class="alert-note"><span class="alert-mark">!</span><span>${enc(c.note)}</span></div><div class="faq-wrap"><h4>DÚVIDAS MAIS COMUNS</h4>${faq}</div><div class="source-tag"><strong>VERIFICADO NO COVIL</strong><span>${enc(c.source)}</span></div></div>`;
  $('chapter').classList.toggle('is-tactical',mode==='tactical');
@@ -913,6 +1049,7 @@ function renderChapter(){
  $('completeChapter').innerHTML=done?'✓ Etapa concluída':'Marcar como concluído <span aria-hidden="true">✓</span>';
  if(c.id==='cacadas') bindHuntMotion();
  if(c.id==='energia') bindEnergyMotion();
+ if(c.id==='controle') bindTerritoryMotion();
  if(c.id==='patrulha'){
    bindPatrolMotion();
    for(const id of ['demoMeters','demoSeconds','demoIncident','demoMock'])$(id)?.addEventListener('input',updateEligibility);
