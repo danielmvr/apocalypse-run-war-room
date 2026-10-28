@@ -122,6 +122,23 @@ main{max-width:1380px;margin:auto;padding:0 36px}.kicker{color:#89c7a3;font-size
 @media(prefers-reduced-motion:reduce){.hm-scan{animation:none!important;transform:none!important}.hm-bar>span,.hm-choice button{transition:none!important}}
 @media print{.hm-choices,.hm-actions,.hm-steps,.hm-progress{display:none}.hunt-motion{break-inside:avoid}.hm-radar svg{max-height:190px}}
 
+
+/* Motion Graphic 03 · Energia 2.0 (educativo, local, sem chamadas à API) */
+.energy-motion{--em-a:#9cf2b5;--em-b:#eed099;margin:31px 0 0;color:#e9f6ed;background:radial-gradient(ellipse at 65% -30%,#1a4734 0%,transparent 55%),linear-gradient(150deg,#101f1a,#0b1518);border:1px solid #52705c;border-radius:13px;overflow:hidden;isolation:isolate}
+.em-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:22px 22px 12px}.em-kicker{font-size:9px;letter-spacing:1.7px;color:#8bf4b3;font-weight:800}.em-head h4{font:800 clamp(26px,4vw,36px)/1.05 var(--font-head);margin:8px 0 6px;letter-spacing:.3px;text-transform:uppercase}.em-head p{font-size:11px;color:#a7beb1;max-width:540px;margin:0;line-height:1.6}.em-stamp{border:1px solid #655744;background:#4b3a1e55;color:#f3d8a7;font-size:9px;font-weight:800;letter-spacing:.5px;padding:9px 10px;border-radius:5px;white-space:nowrap}
+.em-choices{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:8px 22px 17px}.em-choice{display:flex;align-items:center;flex-wrap:wrap;gap:7px}.em-choice-label{font-size:10px;color:#a8c1b1;font-weight:700;min-width:64px}.em-choice button{min-height:44px;border:1px solid #42634d;background:#15261e;color:#bbd4c5;border-radius:6px;padding:10px;font-size:11px;font-weight:800}.em-choice button[aria-pressed=true]{background:#244c35;border-color:#92e5ad;color:#eafff0}.em-choice button:focus-visible,.em-action button:focus-visible,.em-steps button:focus-visible{outline:2px solid #dcffe2;outline-offset:2px}
+.em-board{margin:0 16px;display:grid;grid-template-columns:minmax(0,1.45fr) minmax(230px,1fr);gap:12px}.em-circuit{position:relative;background:radial-gradient(circle at 51% 47%,#1b4034 0%,#0b1c21 66%);border:1px solid #3c6150;min-height:255px;border-radius:8px;overflow:hidden}.em-circuit svg{width:100%;height:100%;min-height:255px;display:block}.em-circuit .em-gridline{stroke:#507863;stroke-width:.8;opacity:.16}.em-circuit .em-wire{stroke:#517b62;stroke-width:3;opacity:.4;fill:none;stroke-linecap:round}.em-circuit .em-wire-active{stroke:#b5f6c9;stroke-width:4.5;fill:none;stroke-linecap:round;filter:url(#emGlow)}.em-circuit .em-casing{fill:#10261e;stroke:#649b76;stroke-width:2}.em-circuit .em-hex{fill:#133f2e;stroke:#9cedb6;stroke-width:2.5}.em-circuit .em-hex-target{fill:#33321f;stroke:#ddc68b}.em-circuit .em-centre{fill:#1d543a;stroke:#acffd1;stroke-width:2.5}.em-circuit .em-energy-symbol{stroke:#d0ffe1;stroke-width:4;fill:none;stroke-linecap:round;stroke-linejoin:round}.em-circuit .em-target-symbol{fill:none;stroke:#ffe2a2;stroke-width:3.6;stroke-linejoin:round}.em-circuit .em-graph-label{font:800 13px var(--font);fill:#a7c9b2;letter-spacing:2px}.em-circuit .em-core-value{font:800 40px var(--font-head);fill:#d1ffe2}.em-circuit .em-target-cost{font:800 21px var(--font-head);fill:#ffdf9e}.em-circuit .em-glow{opacity:.36}.em-circuit.is-moving .em-glow{animation:emPulse 1.7s ease-in-out infinite}.em-circuit.is-manual .em-hex{stroke:#ffcf90}.em-circuit .em-flowdot{fill:#c9ffe0;filter:url(#emGlow)}.em-circuit .em-marks{font:800 12px var(--font);fill:#87b59b}.em-floater{position:absolute;top:11px;left:11px;background:#0d201ddc;border:1px solid #416854;color:#b4f6ca;border-radius:5px;font-size:9px;font-weight:800;letter-spacing:.5px;padding:7px;pointer-events:none}
+.em-wallet{background:#0d1c1b;border:1px solid #3b564b;border-radius:8px;padding:14px;display:flex;flex-direction:column;gap:10px}.em-wallet-head{display:flex;justify-content:space-between;gap:9px;align-items:center}.em-wallet-head strong{font:800 20px var(--font-head);letter-spacing:.5px}.em-wallet-head span{font-size:9px;color:#9cc3ac;font-weight:700}.em-wallet-stats{display:grid;grid-template-columns:1fr 1fr;gap:8px}.em-wallet-stat{min-width:0;border:1px solid #2d5440;background:#153025;border-radius:7px;padding:10px}.em-wallet-stat span{display:block;color:#a5c7b1;font-size:9px;letter-spacing:.7px;font-weight:800}.em-wallet-stat strong{display:block;font:800 35px/1.1 var(--font-head);color:#b4f9cd;margin-top:4px}.em-wallet-stat.is-reserved{border-color:#675637;background:#2b261c}.em-wallet-stat.is-reserved strong{color:#f5d09a}.em-wallet-stat.is-consumed strong{color:#e7eacb}.em-wallet-stat small{display:block;color:#9bb8a9;font-size:9px;margin-top:2px}.em-wallet-note{font-size:11px;line-height:1.6;color:#a4bcb1;margin:auto 0 0;border-top:1px solid #355143;padding-top:11px;min-height:55px}.em-wallet-note b{color:#c3f7d1}
+.em-story{margin:13px 16px 0;border:1px solid #456a52;background:linear-gradient(110deg,#19392a,#102b26);border-radius:9px;padding:17px 19px;min-height:148px}.em-story.is-waiting{border-color:#796343;background:linear-gradient(110deg,#30291b,#1c2421)}.em-story-top{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}.em-story-top span{color:#a4e7b8;font-size:10px;font-weight:800;letter-spacing:1px}.em-story .em-status{border:1px solid #507863;border-radius:5px;padding:4px 8px;color:#e1ffea;letter-spacing:.3px}.em-story h5{font:800 clamp(22px,3.2vw,29px)/1.06 var(--font-head);text-transform:uppercase;margin:10px 0 7px;letter-spacing:.2px}.em-story p{font-size:12px;color:#c2d8c9;line-height:1.7;margin:0;max-width:760px}
+.em-action{margin:13px 16px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px}.em-buttons{display:flex;gap:8px;flex-wrap:wrap}.em-action button{min-height:44px;border-radius:6px;background:#1a3427;border:1px solid #466b54;color:#dff3e5;padding:10px 15px;font-size:12px;font-weight:800}.em-action button.em-primary{background:#8ce1a8;color:#0d2518;border-color:#8ce1a8}.em-action>span{font-size:10px;color:#91b49e}.em-progress{height:5px;margin:0 16px;border-radius:5px;background:#274437;overflow:hidden}.em-progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#7ecda2,#d7ffcf)}.em-steps{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px;margin:12px 16px 16px}.em-steps button{min-height:51px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;border:1px solid #314c3d;background:#132620;border-radius:6px;color:#9db5a8;font-size:9px;font-weight:700;padding:6px 2px;line-height:1.25}.em-steps button strong{font:800 14px var(--font-head);color:#c1dac7}.em-steps button[aria-current=step]{border-color:#91dda7;background:#25513a;color:#f1fff3}.em-steps button[aria-current=step] strong{color:#fff}.em-legal{font-size:10px;line-height:1.7;color:#9eb8a9;padding:0 20px 19px;margin:0}.em-legal strong{color:#d4e9db}
+@keyframes emPulse{0%,100%{opacity:.23}50%{opacity:.64}}
+@media(max-width:730px){.em-choices{grid-template-columns:1fr;gap:9px}.em-board{grid-template-columns:1fr}.em-circuit{min-height:225px}.em-circuit svg{min-height:215px;max-height:295px}.em-wallet{gap:9px}.em-wallet-note{min-height:0}.em-head{padding:17px 15px 11px}.em-choices{padding:8px 15px 13px}.em-stamp{font-size:8px}.em-wallet-stat strong{font-size:31px}.em-steps button{font-size:8px;word-break:normal;letter-spacing:-.2px}}
+@media(max-width:390px){.em-head{flex-wrap:wrap}.em-stamp{white-space:normal}.em-choice-label{width:100%}.em-choice button{flex:1}.em-steps{gap:3px;margin:10px 9px 13px}.em-steps button{min-height:50px;font-size:7px;padding:4px 1px}.em-story{padding:13px 14px}.em-action{margin:12px 11px}.em-buttons{width:100%}.em-buttons button{flex:1}.em-wallet{padding:12px}}
+@media(prefers-reduced-motion:reduce){.energy-motion *, .energy-motion *::before, .energy-motion *::after{animation:none!important;transition:none!important}}
+
+/* Compact phones: keep chapter names readable instead of squeezing seven buttons. */
+@media(max-width:610px){.em-steps{display:flex;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;scrollbar-width:thin;padding-bottom:6px}.em-steps button{flex:0 0 78px;scroll-snap-align:start;font-size:10px;letter-spacing:0;min-height:56px}.em-steps button strong{font-size:16px}}
+
 </style>
 </head>
 <body>
@@ -567,6 +584,112 @@ const HUNT_WOUNDED_STAGES = {
     sport:'Aguarde a recuperação. Você continua na mesma facção; seu XP e sua Energia não sofrem a penalidade da Caçada.',
     tactical:'Cooldown inicial de 25 min. O ferimento não afeta toda a patrulha nem desfaz controle já conquistado e não altera contágio, cura ou facção.'}
 };
+
+// Motion Graphic 03 · Energia 2.0 · valores e território estritamente ilustrativos.
+const ENERGY_MOTION_SCENES = [
+ {name:'Sua carteira',badge:'SALDO CONFIRMADO',duration:2450,wire:0,earned:false,reserve:false,effect:false,
+  auto:{sport:'Você tem uma carteira online. Aqui usamos 40 de Energia apenas para aprender; não é seu saldo de verdade.',tactical:'A carteira por UUID tem saldo disponível, reservado e lançamento auditável. O exemplo começa com 40 fictícios, sem consultar a conta.'},
+  manual:{sport:'O modo Manual usa a mesma carteira e regras. Neste exemplo começamos com 40 de Energia fictícia.',tactical:'O Manual não cria uma carteira separada: saldo, teto e lançamentos usam o mesmo mecanismo do Automático.'}},
+ {name:'Caminhada confirmada',badge:'GPS + RECIBO',duration:3300,wire:.32,earned:true,reserve:false,effect:false,
+  auto:{sport:'Uma caminhada elegível de 1 km recebe confirmação do servidor. No exemplo, entram 7 de Energia. Só caminhar no mapa não cria créditos.',tactical:'Exemplo de 1 km GPS válido, com recibo aceito: a carteira credita 7 Energia. Bônus inicial e diário, quando elegíveis, seguem regras próprias.'},
+  manual:{sport:'A mesma caminhada de 1 km elegível credita 7 de Energia, qualquer que seja o modo escolhido.',tactical:'Mesmo recebimento e critérios do Automático: 7 Energia por quilômetro GPS aceito, com bônus condicionais separados.'}},
+ {name:'Duas maneiras de planejar',badge:'MESMO MOTOR',duration:2750,wire:.46,earned:true,reserve:false,effect:false,
+  auto:{sport:'No Automático, você escolhe Equilibrado, Defensivo ou Ofensivo. O jogo procura uma oportunidade útil quando ela existir.',tactical:'O motor prioriza operações elegíveis conforme Equilibrado, Defensivo ou Ofensivo, respeitando fontes, orçamento e limites.'},
+  manual:{sport:'No Manual, você escolhe antecipadamente o tipo de operação que deseja preparar. É mais controle, não mais poder.',tactical:'No Manual você escolhe uma estrutura aliada reconhecida e prepara uma operação específica antes da patrulha; as mesmas verificações continuam valendo.'}},
+ {name:'Preparação e reserva',badge:'ANTES DA OPERAÇÃO',duration:3300,wire:.63,earned:true,reserve:true,effect:false,
+  auto:{sport:'O Automático não exige reservar uma operação manualmente. Seu saldo continua disponível até uma oportunidade elegível.',tactical:'Nesta demonstração não há preparo manual: 47 disponíveis, 0 reservados; débito ocorre apenas com benefício validado.'},
+  manual:{sport:'Você prepara um reconhecimento de Ruínas que custa 10. Essa Energia fica reservada, mas ainda não foi gasta.',tactical:'Operação manual de RUÍNAS: custo 10. Dos 47, 37 ficam disponíveis e 10 reservados. Uma preparação não é débito.'}},
+ {name:'Oportunidade no território',badge:'PATRULHA ELEGÍVEL',duration:3350,wire:.83,earned:true,reserve:true,effect:false,
+  auto:{sport:'Durante uma patrulha de verdade, o jogo só pode usar Energia quando encontra uma oportunidade válida. Não conquista células sozinho.',tactical:'A elegibilidade territorial, o controle da estrutura e os limites precisam ser confirmados no servidor antes de qualquer consumo.'},
+  manual:{sport:'Se a patrulha confirmar uma oportunidade válida na Ruína preparada, a operação poderá ser aplicada.',tactical:'Preparo armado até efeito válido, cancelamento ou expiração. Sem evidência GPS/benefício adicional, a reserva não pode virar débito.'}},
+ {name:'O servidor decide',badge:'EFEITO CONFIRMADO',duration:3200,wire:1,earned:true,reserve:true,effect:true,
+  auto:{sport:'Com benefício válido, o servidor desconta 10. Se nada acrescentar, não há gasto. Isso não é uma conquista automática.',tactical:'O motor efetiva o custo 10 apenas após confirmar benefício adicional. Sem efeito útil, nem crédito territorial nem débito são inventados.'},
+  manual:{sport:'O servidor pode usar os 10 reservados quando o reconhecimento realmente ajuda. Sem efeito, a reserva permanece até cancelamento ou expiração.',tactical:'Um efeito útil debita os 10 reservados e libera a reserva. Sem benefício, a operação segue armada até cancelamento, expiração ou resultado elegível.'}},
+ {name:'Resultado da carteira',badge:'SEM ATALHOS',duration:3100,wire:1,earned:true,reserve:true,effect:true,
+  auto:{sport:'Automático e Manual respeitam as mesmas regras. Continue caminhando: nenhuma animação dá pontos ou Energia reais.',tactical:'Teto 90 incluindo reservas; até 1 efeito consumido por patrulha e 3 por dia UTC, com elegibilidade e recibos oficiais.'},
+  manual:{sport:'Planejar manualmente ajuda a escolher, mas não garante vantagem. A caminhada continua sendo sua parte mais importante.',tactical:'Uma operação preparada por jogador, validade máxima de 24 h ou fim da temporada, e consumo condicionado ao efeito real.'}}
+];
+function showEnergyMotion(){
+ const names=['Carteira','GPS válido','Estratégia','Reserva','Oportunidade','Confirmação','Resumo'];
+ return `<section class="energy-motion" id="energyMotion" aria-labelledby="emTitle" data-simulation="true">
+ <div class="em-head"><div><span class="em-kicker">MOTION GRAPHIC 03 / RECURSOS E ESTRATÉGIA</span><h4 id="emTitle">Energia que trabalha com você</h4><p>Entenda Automático e Manual sem arriscar Energia verdadeira. Você decide o exemplo; o servidor decide o jogo.</p></div><span class="em-stamp">CARTEIRA FICTÍCIA</span></div>
+ <div class="em-choices"><div class="em-choice" role="group" aria-label="Modo simulado de Energia"><span class="em-choice-label">Como jogar</span><button type="button" data-em-mode="auto" aria-pressed="true">Automático</button><button type="button" data-em-mode="manual" aria-pressed="false">Manual</button></div>
+ <div class="em-choice" role="group" aria-label="Resultado hipotético da operação"><span class="em-choice-label">Oportunidade</span><button type="button" data-em-result="useful" aria-pressed="true">Com benefício</button><button type="button" data-em-result="none" aria-pressed="false">Sem benefício</button></div></div>
+ <div class="em-board"><div class="em-circuit" id="emCircuit"><svg viewBox="0 0 700 265" role="img" aria-label="Circuito ilustrativo: caminhada elegível leva à carteira de Energia e, se houver benefício confirmado, a uma operação de Ruínas. Sem coordenadas reais.">
+ <defs><pattern id="emGrid" width="28" height="28" patternUnits="userSpaceOnUse"><path class="em-gridline" d="M0 28H28M28 0V28" fill="none"/></pattern><filter id="emGlow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="3.3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+ <rect width="700" height="265" fill="url(#emGrid)"/>
+ <path class="em-wire" d="M187 126H281M417 126H509"/><path id="emWire" class="em-wire-active" d="M187 126H281M417 126H509"/><circle class="em-flowdot" id="emFlowDot" cx="187" cy="126" r="5"/>
+ <g aria-hidden="true"><polygon class="em-casing" points="129,48 187,79 187,173 129,206 70,173 70,79"/><path class="em-energy-symbol" d="M98 147l22-27 14 11 18-34M97 159h59"/><circle class="em-glow" cx="129" cy="125" r="69" fill="#3f8c63" opacity=".17"/><text class="em-graph-label" x="129" y="235" text-anchor="middle">GPS VÁLIDO</text></g>
+ <g aria-hidden="true"><polygon class="em-hex" points="350,40 417,78 417,174 350,213 283,174 283,78"/><circle class="em-centre" cx="350" cy="126" r="50"/><path class="em-energy-symbol" d="M354 80l-19 43h22l-15 46 42-59h-25l8-30"/><text class="em-graph-label" x="350" y="235" text-anchor="middle">CARTEIRA</text></g>
+ <g aria-hidden="true"><polygon class="em-casing em-hex-target" points="569,48 629,79 629,173 569,206 509,173 509,79"/><path class="em-target-symbol" d="M544 146v-34h50v34M540 152h59M548 112v-9h42v9M553 146v-25h13v25M575 146v-25h13v25M544 100l25-14 25 14"/><text class="em-graph-label" x="569" y="235" text-anchor="middle">RUÍNAS</text></g>
+ <text id="emEarnLabel" x="238" y="111" text-anchor="middle" class="em-marks">+7</text><text id="emCostLabel" x="464" y="111" text-anchor="middle" class="em-marks">−10</text></svg><span class="em-floater" id="emVisualLabel">EXEMPLO · SEM DADOS REAIS</span></div>
+ <div class="em-wallet"><div class="em-wallet-head"><strong>Carteira ilustrativa</strong><span>Máximo real: 90</span></div><div class="em-wallet-stats"><div class="em-wallet-stat"><span>DISPONÍVEL</span><strong id="emAvailable">40</strong><small>Energia</small></div><div class="em-wallet-stat is-reserved"><span>RESERVADA</span><strong id="emReserved">0</strong><small>Não foi gasta</small></div><div class="em-wallet-stat"><span>GANHA NO EXEMPLO</span><strong id="emEarned">0</strong><small>Após recibo</small></div><div class="em-wallet-stat is-consumed"><span>CONSUMIDA</span><strong id="emConsumed">0</strong><small>Só com benefício</small></div></div><p class="em-wallet-note" id="emWalletNote">Valores fictícios, não vinculados a nenhum jogador.</p></div></div>
+ <div class="em-story" id="emStory" aria-live="polite" aria-atomic="true"><div class="em-story-top"><span id="emSceneNumber">CENA 01 / 07</span><span class="em-status" id="emSceneBadge">SALDO CONFIRMADO</span></div><h5 id="emSceneTitle">Sua carteira</h5><p id="emSceneText">Este é um exemplo fictício de carteira.</p></div>
+ <div class="em-action"><div class="em-buttons"><button type="button" class="em-primary" id="emPlay" aria-label="Reproduzir simulação de Energia">▶ Reproduzir</button><button type="button" id="emRestart" aria-label="Reiniciar simulação de Energia">↺ Reiniciar</button></div><span id="emPlayback">Interativo · sem efeitos no jogo</span></div>
+ <div class="em-progress" id="emProgress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Progresso da animação de Energia"><span id="emProgressFill"></span></div>
+ <div class="em-steps" role="group" aria-label="Selecionar cena da Energia">${names.map((name,i)=>`<button type="button" data-em-scene="${i}" ${i===0?'aria-current="step"':''} aria-label="Ir à cena ${i+1}: ${name}"><strong>${String(i+1).padStart(2,'0')}</strong>${name}</button>`).join('')}</div>
+ <p class="em-legal"><strong>Importante:</strong> simulação didática com valores inventados e uma Ruína ilustrativa. No aplicativo, ganhos, reservas, benefícios e consumo dependem das regras e do servidor. Automático não substitui caminhada real e Manual não cria vantagens garantidas. Nenhuma ação aqui altera sua conta.</p>
+ </section>`;
+}
+let disposeEnergyMotion=()=>{};
+function bindEnergyMotion(){
+ const root=$('energyMotion');if(!root)return;
+ const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const stages=ENERGY_MOTION_SCENES;
+ const offsets=[];let total=0;stages.forEach(s=>{offsets.push(total);total+=s.duration});
+ let emMode=mode==='tactical'?'manual':'auto',result='useful',elapsed=0,playing=false,frame=null,lastTick=0,sceneIndex=-1;
+ const steps=[...root.querySelectorAll('[data-em-scene]')];
+ const wire=$('emWire'),wireLen=wire.getTotalLength();
+ function state(t){let ix=stages.length-1;for(let i=0;i<stages.length;i++){if(t<offsets[i]+stages[i].duration){ix=i;break}}let part=Math.min(1,Math.max(0,(t-offsets[ix])/stages[ix].duration));return{ix,part,stage:stages[ix]};}
+ function redraw(){
+   const {ix,part,stage}=state(elapsed),earned=ix>=1,reserved=emMode==='manual'&&ix>=3,applied=ix>=5&&result==='useful';
+   // The hypothetical operation can remain reserved without spending.
+   const available=(earned?47:40)-(reserved?10:0)-(applied&&!reserved?10:0);
+   const reservedValue=reserved&&!applied?10:0;
+   const availableValue=reserved&&applied?37:available;
+   $('emAvailable').textContent=String(availableValue);
+   $('emReserved').textContent=String(reservedValue);
+   $('emEarned').textContent=earned?'7':'0';$('emConsumed').textContent=applied?'10':'0';
+   const fraction=ix===0?0:Math.max(0,Math.min(1,stages[ix-1].wire+(stage.wire-stages[ix-1].wire)*part));
+   wire.style.strokeDasharray=String(wireLen);wire.style.strokeDashoffset=String(wireLen*(1-fraction));
+   const dot=wire.getPointAtLength(wireLen*fraction);$('emFlowDot').setAttribute('cx',String(dot.x));$('emFlowDot').setAttribute('cy',String(dot.y));
+   $('emFlowDot').setAttribute('opacity',ix===0?'0':'1');$('emEarnLabel').setAttribute('opacity',earned?'1':'0');
+   $('emCostLabel').setAttribute('opacity',applied?'1':(ix>=3&&result==='useful'?'.38':'0'));
+   $('emCircuit').classList.toggle('is-manual',emMode==='manual');$('emCircuit').classList.toggle('is-moving',playing&&!reduced);
+   $('emVisualLabel').textContent=ix>=5?(applied?'BENEFÍCIO HIPOTÉTICO':'SEM DÉBITO / EXEMPLO'):'EXEMPLO · SEM DADOS REAIS';
+   const note=ix===0?'Saldo de exemplo: 40 Energia, sem crédito ou consumo.':ix===1?'Exemplo de crédito após 1 km elegível e recibo: +7.':ix<3?'Ambas as modalidades usam o mesmo motor e os mesmos limites.':ix<5?reserved?'10 reservados; a operação ainda não foi consumida.':'Nenhum preparo manual necessário para esta simulação.':applied?'Benefício fictício: 10 consumidos somente após confirmação.':reserved?'Sem benefício: 10 permanecem reservados até cancelamento ou expiração.':'Sem benefício: saldo intacto; não houve débito.';
+   $('emWalletNote').textContent=note;
+   if(ix!==sceneIndex){
+     sceneIndex=ix;
+     const item=stages[ix];
+     $('emSceneNumber').textContent=`CENA ${String(ix+1).padStart(2,'0')} / 07`;
+     $('emSceneBadge').textContent=ix>=5&&result==='none'?'SEM EFEITO':' '+item.badge;
+     $('emSceneTitle').textContent=ix>=5&&result==='none'?'Nenhum débito sem benefício':item.name;
+     const message=result==='none'&&ix>=5?(emMode==='manual'?(mode==='sport'?'Não apareceu um benefício útil. Nada foi gasto: a operação manual continua reservada até cancelamento, expiração ou uma oportunidade válida.':'Sem efeito adicional confirmado: 0 de débito. A preparação segue armada com 10 reservados, sujeita à validade e ao cancelamento.'):(mode==='sport'?'Não apareceu um benefício útil. O Automático não gastou nada. Você continua caminhando normalmente.':'Sem elegibilidade/benefício adicional, o motor automático não consome Energia. O saldo permanece 47 no exemplo.')):item[emMode][mode];
+     $('emSceneText').textContent=message;
+     $('emStory').classList.toggle('is-waiting',result==='none'&&ix>=5);
+     steps.forEach((b,i)=>{if(i===ix)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current')});
+   }
+   $('emProgressFill').style.width=`${(100*elapsed/total).toFixed(1)}%`;
+   $('emProgress').setAttribute('aria-valuenow',String(Math.round(100*elapsed/total)));
+   $('emPlayback').textContent=reduced?'Movimento reduzido: escolha uma cena':playing?'Reproduzindo simulação':elapsed>=total?'Fim da simulação':'Interativo · sem efeitos no jogo';
+ }
+ function stop(){playing=false;if(frame!==null)cancelAnimationFrame(frame);frame=null;lastTick=0;$('emPlay').textContent=reduced?'Próxima cena':'▶ Reproduzir';$('emPlay').setAttribute('aria-label',reduced?'Avançar cena de Energia':'Reproduzir simulação de Energia');root.querySelector('#emCircuit').classList.remove('is-moving')}
+ function tick(stamp){if(!playing)return;if(lastTick)elapsed=Math.min(total,elapsed+Math.min(200,stamp-lastTick));lastTick=stamp;redraw();if(elapsed>=total){stop();redraw();return}frame=requestAnimationFrame(tick)}
+ function play(){if(reduced){const next=offsets.findIndex(x=>x>elapsed);elapsed=next<0?0:offsets[next]+(stages[next].duration-1);sceneIndex=-1;redraw();return}
+   if(playing){stop();redraw();return}if(elapsed>=total){elapsed=0;sceneIndex=-1}playing=true;lastTick=0;$('emPlay').textContent='Ⅱ Pausar';$('emPlay').setAttribute('aria-label','Pausar simulação de Energia');frame=requestAnimationFrame(tick)}
+ function restart(){stop();elapsed=0;sceneIndex=-1;redraw()}
+ const onScene=(event)=>{const i=Number(event.currentTarget.getAttribute('data-em-scene'));stop();elapsed=offsets[i]+Math.min(stages[i].duration-1,stages[i].duration*.99);sceneIndex=-1;redraw()};
+ const onMode=(event)=>{const value=event.currentTarget.getAttribute('data-em-mode');if(value!==emMode){emMode=value;root.querySelectorAll('[data-em-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.getAttribute('data-em-mode')===value)));sceneIndex=-1;redraw()}};
+ const onResult=(event)=>{const value=event.currentTarget.getAttribute('data-em-result');if(value!==result){result=value;root.querySelectorAll('[data-em-result]').forEach(b=>b.setAttribute('aria-pressed',String(b.getAttribute('data-em-result')===value)));sceneIndex=-1;redraw()}};
+ const onHidden=()=>{if(document.visibilityState==='hidden'&&playing){stop();redraw()}};
+ root.querySelectorAll('[data-em-mode]').forEach(b=>{b.setAttribute('aria-pressed',String(b.getAttribute('data-em-mode')===emMode));b.addEventListener('click',onMode)});
+ $('emPlay').addEventListener('click',play);$('emRestart').addEventListener('click',restart);
+ steps.forEach(b=>b.addEventListener('click',onScene));root.querySelectorAll('[data-em-result]').forEach(b=>b.addEventListener('click',onResult));document.addEventListener('visibilitychange',onHidden);
+ if(reduced){$('emPlay').textContent='Próxima cena';$('emPlay').setAttribute('aria-label','Avançar cena de Energia')}
+ redraw();disposeEnergyMotion=()=>{stop();document.removeEventListener('visibilitychange',onHidden)};
+}
+
 function showHuntMotion(){
  const stepNames=['Opt-in','Vigilância','Alerta','Fuga','Prazo','Resultado','Depois'];
  return `<section class="hunt-motion" id="huntMotion" aria-labelledby="hmTitle" data-simulation="true">
@@ -773,12 +896,13 @@ function bindPatrolMotion(){
 }
 
 function renderChapter(){
+ disposeEnergyMotion();disposeEnergyMotion=()=>{};
  disposePatrolMotion();disposePatrolMotion=()=>{};
  disposeHuntMotion();disposeHuntMotion=()=>{};
  const c=CHAPTERS[active];const b=c[mode];const t=mode==='sport'?'ESPORTISTA • OPERAÇÃO AUTOMÁTICA':'ESTRATEGISTA • DECISÃO TÁTICA';
  const steps=c.steps.map(([title,description],i)=>`<li><span class="action-num">${String(i+1).padStart(2,'0')}</span><div class="action-content"><strong>${enc(title)}</strong><p>${enc(description)}</p></div></li>`).join('');
  const faq=c.faq.map(([q,a])=>`<details class="faq-item"><summary>${enc(q)}</summary><p>${enc(a)}</p></details>`).join('');
- const extra=c.id==='patrulha'?`${showPatrolMotion()}${showEligibilityTool()}`:c.id==='cacadas'?showHuntMotion():'';
+ const extra=c.id==='patrulha'?`${showPatrolMotion()}${showEligibilityTool()}`:c.id==='cacadas'?showHuntMotion():c.id==='energia'?showEnergyMotion():'';
  const links=c.id==='instalacao'?`<div class="chapter-support"><a href="${enc(GUIDE_META.download)}" target="_blank" rel="noopener noreferrer" class="support-link">Baixar APK Alpha ↗</a><a href="${enc(GUIDE_META.changelog)}" target="_blank" rel="noopener noreferrer" class="support-secondary">Ver canal de versões</a></div>`:c.id==='temporadas'?`<div class="chapter-support"><a href="${enc(GUIDE_META.warRoom)}" class="support-link">Abrir Sala de Guerra ↗</a></div>`:'';
  $('chapterContent').innerHTML=`<div class="chapter-inner"><div class="chapter-topline"><span><span class="chapter-number">CAPÍTULO ${enc(c.number)}</span> / ${enc(c.part)}</span><span class="chapter-time">LEITURA ${enc(c.time)}</span></div><h3>${enc(c.title)}</h3><p class="chapter-lead">${enc(c.deck)}</p><div class="location-tag"><svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m10 1 7 4v10l-7 4-7-4V5l7-4Z"/><path d="M10 7v6M7 10h6"/></svg><span>NO APLICATIVO · ${enc(c.where)}</span></div><div class="step-label">PASSO A PASSO · O QUE FAZER</div><ol class="action-list">${steps}</ol>${links}<div class="branch-brief"><span class="branch-prefix">${t}</span><h4>${enc(b.title)}</h4><p>${enc(b.lead)}</p><ul class="focus-list">${b.focus.map(x=>`<li>${enc(x)}</li>`).join('')}</ul></div>${extra}<div class="alert-note"><span class="alert-mark">!</span><span>${enc(c.note)}</span></div><div class="faq-wrap"><h4>DÚVIDAS MAIS COMUNS</h4>${faq}</div><div class="source-tag"><strong>VERIFICADO NO COVIL</strong><span>${enc(c.source)}</span></div></div>`;
  $('chapter').classList.toggle('is-tactical',mode==='tactical');
@@ -788,6 +912,7 @@ function renderChapter(){
  const done=completed.has(c.id);$('completeChapter').classList.toggle('is-done',done);
  $('completeChapter').innerHTML=done?'✓ Etapa concluída':'Marcar como concluído <span aria-hidden="true">✓</span>';
  if(c.id==='cacadas') bindHuntMotion();
+ if(c.id==='energia') bindEnergyMotion();
  if(c.id==='patrulha'){
    bindPatrolMotion();
    for(const id of ['demoMeters','demoSeconds','demoIncident','demoMock'])$(id)?.addEventListener('input',updateEligibility);
