@@ -442,6 +442,60 @@ main{max-width:1380px;margin:auto;padding:0 36px}.kicker{color:#89c7a3;font-size
 @media(max-width:435px){.mm-head{display:block;padding:19px 16px 13px}.mm-fiction{display:inline-block;margin-top:10px}.mm-config{padding:2px 15px 14px}.mm-tabs button{flex:1 1 auto;padding:10px 8px}.mm-main{margin:0 10px;gap:8px}.mm-visual svg{min-height:200px}.mm-dossier{padding:13px}.mm-stats{padding:9px 10px 0;gap:5px}.mm-stat{padding:9px 7px}.mm-stat label{font-size:8px}.mm-stat strong{font-size:clamp(22px,7vw,32px)}.mm-stat small{font-size:8px}.mm-story{margin:10px 10px 0;padding:13px}.mm-timeline{margin:0 10px}.mm-actions{padding:9px 10px}.mm-actions button{flex:1 1 auto}.mm-actions .mm-status{margin:4px auto 0}.mm-bar{margin:0 10px 13px}}
 @media(prefers-reduced-motion:reduce){.mission-motion *, .mission-motion *:before,.mission-motion *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
+
+/* HERO MOTION / Protocolo // 001 - animação SVG local, sem mídia ou rede */
+.hero-motion{isolation:isolate;contain:paint;--hero-signal:#8ff0b5}
+.hero-motion::before{content:"";position:absolute;z-index:0;top:-100%;bottom:-100%;left:-60%;width:60%;pointer-events:none;background:linear-gradient(90deg,transparent,rgba(144,239,174,.06),transparent);transform:rotate(16deg);animation:hero-light-sweep 14s linear infinite}
+.hero-motion .art-grid{animation:hero-grid-drift 32s linear infinite;opacity:.65}
+.hero-motion .art-center{z-index:1;pointer-events:none}
+.hero-motion .art-sketch{position:relative;filter:drop-shadow(0 0 12px #40bb6f24)}
+.hero-motion .hero-diagram{overflow:visible}
+.hero-hex-trace{stroke-dasharray:640;stroke-dashoffset:640;animation:hero-trace 2.3s ease-out forwards,hero-line-glow 7s 2.3s ease-in-out infinite}
+.hero-radar-beam{transform-origin:120px 120px;animation:hero-spin 8s linear infinite;opacity:.66}
+.hero-radar-ring{transform-origin:120px 120px;animation:hero-spin 22s linear infinite reverse}
+.hero-radar-orbit{transform-origin:120px 120px;animation:hero-spin 9s linear infinite}
+.hero-hex-pulse{animation:hero-dash 18s linear infinite}
+.hero-core-glow{transform-origin:120px 120px;animation:hero-glow 3.8s ease-in-out infinite}
+.hero-core-dot{transform-origin:120px 120px;animation:hero-heartbeat 2.7s ease-in-out infinite}
+.hero-signal{animation:hero-blink 3.4s ease-in-out infinite}.hero-signal:nth-of-type(even){animation-delay:-1.6s}
+.hero-phase{opacity:0;transform-origin:120px 120px;transition:opacity .45s ease,transform .5s ease;transform:scale(.93)}
+.hero-motion[data-stage="0"] .hero-phase-0,.hero-motion[data-stage="1"] .hero-phase-1,.hero-motion[data-stage="2"] .hero-phase-2,.hero-motion[data-stage="3"] .hero-phase-3{opacity:1;transform:scale(1)}
+.hero-route-line{stroke-dasharray:140;stroke-dashoffset:140;animation:hero-route 3.5s ease-in-out infinite}
+.hero-route-dot{animation:hero-heartbeat 2s ease-in-out infinite;transform-origin:120px 120px}
+.hero-motion .art-label{z-index:3}
+.hero-motion .art-label small{font-size:8px;color:#688976;letter-spacing:1px}
+.hero-motion-toggle{position:absolute;top:25px;right:66px;z-index:5;display:inline-flex;align-items:center;gap:6px;border:1px solid #557c65;background:#0b211ac9;color:#b9edce;border-radius:4px;padding:6px 9px;min-height:32px;font:800 9px/1 var(--font);letter-spacing:.65px;transition:background .18s,border-color .18s}
+.hero-motion-toggle:hover{border-color:#91eeb6;background:#1b4030}.hero-motion-toggle .hero-toggle-icon{font-size:13px;font-weight:700;min-width:12px;text-align:center}.hero-motion-toggle:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+.hero-hud-readout{position:absolute;left:31px;top:68px;font:700 8px/1 var(--font);letter-spacing:1.35px;color:#648977;opacity:.8;z-index:2}
+.hero-readout-dot{display:inline-block;height:5px;width:5px;border-radius:50%;background:#93f0b5;margin-right:7px;vertical-align:middle;animation:hero-blink 2.3s ease-in-out infinite}
+.hero-motion .art-center>span.hero-status{color:#91dfb0;letter-spacing:2px;transition:color .3s}
+.hero-motion .hero-status-detail{margin-top:4px;font:800 8px/1.5 var(--font);letter-spacing:1.25px;color:#6d9980;text-align:center}
+.hero-motion .mission-route{z-index:3}
+.hero-motion .mission-route .hero-step{position:relative;appearance:none;border:0;border-radius:2px;background:transparent;font:700 9px/1.5 var(--font);color:#7f9e8c;letter-spacing:1.05px;display:inline-flex;align-items:center;gap:5px;min-height:32px;padding:6px 4px;white-space:nowrap;transition:color .3s ease}
+.hero-motion .mission-route .hero-step b{color:#7abf99}
+.hero-motion .mission-route .hero-step.is-current{color:#e3ffed}
+.hero-motion .mission-route .hero-step.is-current b{color:#a9ffca}
+.hero-motion .mission-route .hero-step:after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:#9ef1b8;transform:scaleX(0);transform-origin:left;transition:transform .34s ease;box-shadow:0 0 8px #74dfa4aa}
+.hero-motion .mission-route .hero-step.is-current:after{transform:scaleX(1)}
+.hero-motion .mission-route .hero-step:hover{color:#c9f5d6}
+.hero-motion .mission-route .hero-step:focus-visible{outline:2px solid #a6ffcc;outline-offset:2px}
+.hero-motion.is-paused,.hero-motion.is-paused *,.hero-motion.is-paused *:before,.hero-motion.is-paused *:after{animation-play-state:paused!important}
+.hero-motion.is-paused .hero-hex-trace{stroke-dashoffset:0}
+.hero-motion.is-paused .hero-route-line{stroke-dashoffset:0}
+@keyframes hero-trace{to{stroke-dashoffset:0}}
+@keyframes hero-spin{to{transform:rotate(360deg)}}
+@keyframes hero-dash{to{stroke-dashoffset:-130}}
+@keyframes hero-glow{0%,100%{opacity:.42;transform:scale(.87)}50%{opacity:1;transform:scale(1.16)}}
+@keyframes hero-heartbeat{0%,100%{opacity:.8;transform:scale(1)}52%{opacity:1;transform:scale(1.38)}}
+@keyframes hero-blink{0%,100%{opacity:.25}48%{opacity:1}}
+@keyframes hero-route{0%{stroke-dashoffset:140}48%,100%{stroke-dashoffset:0}}
+@keyframes hero-line-glow{0%,100%{opacity:.75}50%{opacity:1}}
+@keyframes hero-grid-drift{to{background-position:31px 31px}}
+@keyframes hero-light-sweep{0%{transform:translateX(-130%) rotate(16deg)}48%,100%{transform:translateX(420%) rotate(16deg)}}
+@media(max-width:900px){.hero-hud-readout{display:none}}
+@media(max-width:590px){.hero-motion .art-center{inset:30px 10px 47px}.hero-motion .art-sketch{height:135px;width:135px}.hero-motion .art-center>b{font-size:16px;line-height:1.1;text-align:center}.hero-motion .art-center>span.hero-status{font-size:7px;letter-spacing:1.1px}.hero-motion .hero-status-detail{font-size:6.5px;letter-spacing:.7px;margin-top:3px}.hero-motion .art-label small{font-size:6px}.hero-motion-toggle{top:16px;right:49px;min-width:33px;padding:7px;min-height:32px;justify-content:center}.hero-motion-toggle .hero-toggle-label{display:none}.hero-motion .mission-route{bottom:8px;gap:1px}.hero-motion .mission-route .hero-step{font-size:7px;letter-spacing:.25px;gap:3px;padding:4px 2px;min-height:31px}}
+@media(max-width:340px){.hero-motion .art-label small{display:none}.hero-motion .mission-route .hero-step{font-size:6.5px}}
+@media(prefers-reduced-motion:reduce){.hero-motion .hero-hex-trace,.hero-motion .hero-route-line{stroke-dashoffset:0}.hero-motion .hero-radar-beam{opacity:.25}.hero-motion .hero-phase{transition:none}}
 </style>
 </head>
 <body>
@@ -462,12 +516,52 @@ main{max-width:1380px;margin:auto;padding:0 36px}.kicker{color:#89c7a3;font-size
         <p>Do convite à sua primeira patrulha, chegando às Caçadas opcionais da Alpha. Aprenda no seu ritmo, sem precisar dominar toda a guerra de uma vez.</p>
         <div class="hero-actions"><button type="button" class="primary-cta" id="startGuide">Começar tutorial <span aria-hidden="true">↗</span></button><button type="button" class="quiet-cta" id="showGlossaryIntro">Entender os termos <span aria-hidden="true">＋</span></button></div>
       </div>
-      <div class="hero-art" aria-label="Sequência de início de jogo: convite, facção, patrulha e guerra">
+      <div class="hero-art hero-motion" id="heroMotion" data-stage="0" role="group" aria-label="Motion Graphic ilustrativo de entrada no jogo, sem acesso ao GPS ou à localização do visitante">
         <div class="art-grid" aria-hidden="true"></div><div class="art-cross" aria-hidden="true">✛</div>
-        <div class="art-corner tl"></div><div class="art-corner tr"></div><div class="art-corner bl"></div><div class="art-corner br"></div>
-        <div class="art-label">PROTOCOLO // 001</div>
-        <div class="art-center"><div class="art-sketch"><svg viewBox="0 0 240 240" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width="1.4"><path d="m120 17 89 51v104l-89 51-89-51V68l89-51Z"/><path d="m120 42 68 39v78l-68 39-68-39V81l68-39Z" opacity=".5"/><path d="M120 17v206M31 68l178 104M209 68 31 172" opacity=".35"/><circle cx="120" cy="120" r="43" stroke-dasharray="5 8"/><circle cx="120" cy="120" r="26"/><path d="M120 84v72M84 120h72"/><circle cx="120" cy="120" r="5" fill="currentColor"/></g></svg></div><span>LOCALIZAÇÃO CONFIRMADA</span><b>O INÍCIO DA SUA JORNADA</b></div>
-        <div class="mission-route"><span><b>01</b> CONVITE</span><span><b>02</b> FACÇÃO</span><span><b>03</b> PATRULHA</span><span><b>04</b> GUERRA</span></div>
+        <div class="art-corner tl" aria-hidden="true"></div><div class="art-corner tr" aria-hidden="true"></div><div class="art-corner bl" aria-hidden="true"></div><div class="art-corner br" aria-hidden="true"></div>
+        <div class="art-label">PROTOCOLO // <span id="heroProtocol">001</span><small> · SIMULAÇÃO</small></div>
+        <button type="button" class="hero-motion-toggle" id="heroMotionToggle" aria-label="Pausar animação do protocolo" aria-pressed="false" title="Pausar animação"><span class="hero-toggle-icon" aria-hidden="true">Ⅱ</span><span class="hero-toggle-label">PAUSAR</span></button>
+        <div class="hero-hud-readout" aria-hidden="true"><span class="hero-readout-dot"></span> TRANSMISSÃO DE CAMPO</div>
+        <div class="art-center">
+          <div class="art-sketch">
+            <svg class="hero-diagram" viewBox="0 0 240 240" fill="none" role="presentation" aria-hidden="true">
+              <defs>
+                <linearGradient id="heroScanBeam" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a8ffca" stop-opacity=".28"/><stop offset="1" stop-color="#73dda1" stop-opacity="0"/></linearGradient>
+                <radialGradient id="heroCoreGlow"><stop stop-color="#8effba" stop-opacity=".34"/><stop offset="1" stop-color="#8effba" stop-opacity="0"/></radialGradient>
+              </defs>
+              <g class="hero-outer-hex" stroke="#7cdaa5" stroke-width="1.35">
+                <path class="hero-hex-trace" d="M120 17L209 68V172L120 223L31 172V68Z"/>
+                <path d="M120 42L188 81V159L120 198L52 159V81Z" opacity=".47"/>
+              </g>
+              <g class="hero-geometry" stroke="#8cddab" stroke-width="1" opacity=".38">
+                <path d="M120 17V223M31 68L209 172M209 68L31 172"/>
+                <path class="hero-hex-pulse" d="M120 33L196 76V164L120 207L44 164V76Z" stroke-dasharray="3 10"/>
+              </g>
+              <g class="hero-radar-beam" fill="url(#heroScanBeam)"><path d="M120 120L120 77A43 43 0 0 1 163 120Z"/></g>
+              <circle class="hero-radar-ring" cx="120" cy="120" r="43" stroke="#85e4b0" stroke-width="1.4" stroke-dasharray="4 8"/>
+              <circle class="hero-radar-orbit" cx="120" cy="120" r="54" stroke="#85e4b0" stroke-width="1" stroke-dasharray="25 314" opacity=".65"/>
+              <circle cx="120" cy="120" r="26" stroke="#85e4b0" stroke-width="1.25" opacity=".68"/>
+              <circle class="hero-core-glow" cx="120" cy="120" r="34" fill="url(#heroCoreGlow)"/>
+              <path d="M120 88V152M88 120H152" stroke="#90ebba" stroke-width="1.1" opacity=".56"/>
+              <circle class="hero-core-dot" cx="120" cy="120" r="4.8" fill="#9affc3"/>
+              <circle class="hero-signal" cx="190" cy="81" r="3" fill="#aaffc8"/>
+              <circle class="hero-signal" cx="49" cy="160" r="2.4" fill="#8aefbb"/>
+              <g class="hero-phase hero-phase-0"><circle cx="120" cy="120" r="13" stroke="#a4ffce" stroke-width="1.5" opacity=".72"/><path d="M120 98V142M98 120H142" stroke="#a4ffce" stroke-width=".9" opacity=".7"/></g>
+              <g class="hero-phase hero-phase-1"><path d="M79 107L93 98L107 107V127L93 136L79 127Z" stroke="#7effb0" stroke-width="1.8"/><path d="M133 107L147 98L161 107V127L147 136L133 127Z" stroke="#f39186" stroke-width="1.8"/><circle cx="93" cy="117" r="4" fill="#81efaf"/><circle cx="147" cy="117" r="4" fill="#f39186"/></g>
+              <g class="hero-phase hero-phase-2"><path class="hero-route-line" d="M81 151Q104 145 106 126T133 114T158 83" stroke="#b2ffcd" stroke-width="3" stroke-linecap="round"/><circle cx="81" cy="151" r="4" fill="#8ee9b1"/><circle cx="158" cy="83" r="4" fill="#a7ffcc"/><circle class="hero-route-dot" cx="120" cy="120" r="5" fill="#b8ffce"/></g>
+              <g class="hero-phase hero-phase-3" stroke-width="1.5"><path d="M85 110L102 120V140L85 150L68 140V120Z" stroke="#7defb0" fill="#386a4a" fill-opacity=".32"/><path d="M151 83L168 93V113L151 123L134 113V93Z" stroke="#f08d7b" fill="#63342f" fill-opacity=".30"/><path d="M151 145L168 155V175L151 185L134 175V155Z" stroke="#7defb0" fill="#386a4a" fill-opacity=".2"/></g>
+            </svg>
+          </div>
+          <span class="hero-status" id="heroStatusText">LOCALIZAÇÃO CONFIRMADA</span>
+          <b>O INÍCIO DA SUA JORNADA</b>
+          <small class="hero-status-detail" id="heroDetailText">SEU CONVITE ABRE O CAMINHO</small>
+        </div>
+        <div class="mission-route" role="group" aria-label="Etapas ilustradas do protocolo">
+          <button class="hero-step is-current" type="button" data-hero-step="0" aria-current="step"><b>01</b> CONVITE</button>
+          <button class="hero-step" type="button" data-hero-step="1"><b>02</b> FACÇÃO</button>
+          <button class="hero-step" type="button" data-hero-step="2"><b>03</b> PATRULHA</button>
+          <button class="hero-step" type="button" data-hero-step="3"><b>04</b> GUERRA</button>
+        </div>
       </div>
     </section>
 
@@ -2127,6 +2221,59 @@ $('headerVersion').textContent=`GUIA ${GUIDE_META.appVersion}`;
 $('footerVersion').textContent=`Base ${GUIDE_META.appVersion} · build ${GUIDE_META.build}`;
 $('footerReview').textContent=`Covil verificado em ${GUIDE_META.reviewedAt}`;
 window.addEventListener('popstate',()=>{const p=new URL(window.location.href).searchParams;const newMode=p.get('modo')==='estrategista'?'tactical':'sport';const ix=CHAPTERS.findIndex(c=>c.id===p.get('etapa'));mode=newMode;completed=loadProgress();active=ix>=0?ix:0;render()});
+
+/* Motion Graphic do topo: visual ilustrativo, não consulta GPS, rede ou conta. */
+function initHeroMotion(){
+ const hero=document.getElementById('heroMotion');
+ const toggle=document.getElementById('heroMotionToggle');
+ if(!hero||!toggle)return;
+ const reduce=window.matchMedia('(prefers-reduced-motion: reduce)');
+ const labels=[
+   ['001','LOCALIZAÇÃO CONFIRMADA','SEU CONVITE ABRE O CAMINHO'],
+   ['002','FACÇÕES IDENTIFICADAS','RESISTÊNCIA OU HORDA: VOCÊ DECIDE'],
+   ['003','ROTA ILUSTRATIVA INICIADA','CAMINHE A PÉ E REGISTRE SUA PATRULHA'],
+   ['004','TERRITÓRIOS EM DISPUTA','SUAS AÇÕES PODEM MUDAR O MUNDO']
+ ];
+ let stage=0,interval=null,userPaused=false,inViewport=true;
+ const buttons=[...hero.querySelectorAll('[data-hero-step]')];
+ function display(n){
+   stage=(n+labels.length)%labels.length;
+   hero.dataset.stage=String(stage);
+   document.getElementById('heroProtocol').textContent=labels[stage][0];
+   document.getElementById('heroStatusText').textContent=labels[stage][1];
+   document.getElementById('heroDetailText').textContent=labels[stage][2];
+   for(const btn of buttons){
+     const active=Number(btn.dataset.heroStep)===stage;
+     btn.classList.toggle('is-current',active);
+     if(active)btn.setAttribute('aria-current','step');else btn.removeAttribute('aria-current');
+   }
+ }
+ function sync(){
+   const stopped=userPaused||reduce.matches||!inViewport||document.hidden;
+   hero.classList.toggle('is-paused',stopped);
+   if(interval!==null){window.clearInterval(interval);interval=null;}
+   if(!stopped)interval=window.setInterval(()=>display(stage+1),4500);
+   toggle.disabled=reduce.matches;
+   toggle.setAttribute('aria-pressed',String(userPaused));
+   toggle.setAttribute('aria-label',reduce.matches?'Movimento reduzido ativo':userPaused?'Reproduzir animação do protocolo':'Pausar animação do protocolo');
+   toggle.title=reduce.matches?'Movimento reduzido ativo':userPaused?'Reproduzir animação':'Pausar animação';
+   toggle.querySelector('.hero-toggle-icon').textContent=userPaused?'▶':'Ⅱ';
+   toggle.querySelector('.hero-toggle-label').textContent=userPaused?'REPRODUZIR':'PAUSAR';
+ }
+ toggle.addEventListener('click',()=>{userPaused=!userPaused;sync();});
+ for(const btn of buttons)btn.addEventListener('click',()=>{display(Number(btn.dataset.heroStep));sync();});
+ document.addEventListener('visibilitychange',sync);
+ if(reduce.addEventListener)reduce.addEventListener('change',sync);
+ else if(reduce.addListener)reduce.addListener(sync);
+ if('IntersectionObserver' in window){
+   const observer=new IntersectionObserver(entries=>{inViewport=entries[0]?.isIntersecting??false;sync();},{threshold:.08});
+   observer.observe(hero);
+ }
+ display(0);
+ sync();
+}
+
+initHeroMotion();
 render();linkState(true);
 
 </script>
