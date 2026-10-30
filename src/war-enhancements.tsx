@@ -7,11 +7,12 @@ import { renderToStaticMarkup } from 'react-dom/server';
 import maplibregl, { type GeoJSONSource, type Map as MapLibreMap, type Marker as MapLibreMarker } from 'maplibre-gl';
 import { cellToBoundary, cellToLatLng, isValidCell } from 'h3-js';
 import {
-  Activity, Castle, Crosshair, Eye, EyeOff, FlaskConical, Landmark, MapPin,
-  RadioTower, Shield, Skull, Tent, Warehouse, X,
+  Activity, Bot, Castle, Crosshair, Eye, EyeOff, FlaskConical, Landmark, MapPin,
+  RadioTower, Shield, Skull, Tent, UserRound, Warehouse, X,
 } from 'lucide-react';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import './war-enhancements.css';
+import './war-event-origin.css';
 
 export type WarFaction = 'HUMAN' | 'ZOMBIE';
 export type WarTerritory = {
@@ -278,30 +279,85 @@ function validDate(raw: string) {
   return Number.isNaN(parsed.getTime()) ? null : parsed;
 }
 
+/** The public API tags NPC events as BOT, regardless of event.kind. */
+export type EventOrigin = 'PLAYER' | 'BOT' | 'UNKNOWN';
+
+export function eventOrigin(event: WarEventRecord): EventOrigin {
+  const type = event.actorType?.trim().toUpperCase();
+  if (type === 'PLAYER') return 'PLAYER';
+  if (type === 'BOT' || type === 'NPC') return 'BOT';
+  // BOT_ATTACK is explicit in older public feeds even if actorType is absent.
+  if (!type && event.kind === 'BOT_ATTACK') return 'BOT';
+  return 'UNKNOWN';
+}
+
+/** Reusable predicate: source flags and faction buttons remain independent. */
+export function matchesWarEventFilters(
+  event: WarEventRecord,
+  faction: 'ALL' | WarFaction,
+  includePeople: boolean,
+  includeNpcs: boolean,
+): boolean {
+  if (faction !== 'ALL' && event.faction !== faction) return false;
+  switch (eventOrigin(event)) {
+    case 'PLAYER': return includePeople;
+    case 'BOT': return includeNpcs;
+    // Preserve previous "Todos" behavior without guessing unknown authorship:
+    // uncategorized historical events appear only when BOTH origins are enabled.
+    default: return includePeople && includeNpcs;
+  }
+}
+
 export function WarEventFeed({ events, available }: { events: WarEventRecord[]; available: boolean }) {
   const [filter, setFilter] = useState<'ALL' | WarFaction>('ALL');
-  const current = events.filter((event) => filter === 'ALL' || event.faction === filter).slice(0, 12);
+  const [includePeople, setIncludePeople] = useState(true);
+  const [includeNpcs, setIncludeNpcs] = useState(true);
+  const matches = events.filter((event) => matchesWarEventFilters(event, filter, includePeople, includeNpcs));
+  const current = matches.slice(0, 12);
+  const sourceMode = includePeople && includeNpcs ? 'Ambas' : includePeople ? 'Pessoas' : includeNpcs ? 'NPCs' : 'Nenhuma';
+  const counter = matches.length > current.length
+    ? `${current.length} de ${matches.length} ${matches.length === 1 ? 'ocorrência' : 'ocorrências'}`
+    : `${matches.length} ${matches.length === 1 ? 'ocorrência' : 'ocorrências'}`;
   return (
     <div className="ar-activity-feed">
       <div className="ar-event-filter" role="group" aria-label="Filtrar eventos por facção">
         {([['ALL', 'Todos'], ['HUMAN', 'Resistência'], ['ZOMBIE', 'Horda']] as const).map(([id, label]) => (
           <button type="button" key={id} onClick={() => setFilter(id)} aria-pressed={filter === id} className={filter === id ? 'active' : ''}>{label}</button>
         ))}
-        <span className="ar-event-filter__count">{current.length} {current.length === 1 ? 'ocorrência' : 'ocorrências'}</span>
+        <span className="ar-event-filter__count" role="status">{counter}</span>
       </div>
+      <fieldset className="ar-event-origin">
+        <legend>ORIGEM DAS AÇÕES</legend>
+        <div className="ar-event-origin__row">
+          <label className={`ar-event-origin__flag ar-event-origin__flag--people ${includePeople ? 'is-on' : ''}`}>
+            <input type="checkbox" checked={includePeople} onChange={(event) => setIncludePeople(event.target.checked)} />
+            <UserRound size={17} aria-hidden="true" />
+            <span>Pessoas</span>
+          </label>
+          <label className={`ar-event-origin__flag ar-event-origin__flag--npc ${includeNpcs ? 'is-on' : ''}`}>
+            <input type="checkbox" checked={includeNpcs} onChange={(event) => setIncludeNpcs(event.target.checked)} />
+            <Bot size={18} aria-hidden="true" />
+            <span>Autônomas (NPCs)</span>
+          </label>
+          <span className="ar-event-origin__summary" role="status">{sourceMode}</span>
+        </div>
+      </fieldset>
       {current.length ? (
         <ol className="ar-event-list">
           {current.map((event) => {
             const factionClass = event.faction === 'HUMAN' ? 'human' : event.faction === 'ZOMBIE' ? 'zombie' : 'neutral';
             const Icon = event.faction === 'HUMAN' ? Shield : event.faction === 'ZOMBIE' ? Skull : Activity;
             const date = validDate(event.at);
-            const source = event.actorType === 'BOT' ? 'Ação de NPC' : event.actorType === 'PLAYER' ? 'Ação de jogador' : 'Registro de guerra';
+            const origin = eventOrigin(event);
+            const source = origin === 'BOT' ? 'Ação de NPC' : origin === 'PLAYER' ? 'Ação de pessoa' : 'Origem não informada';
             return (
               <li key={event.id} className="ar-event-entry">
                 <div className={`ar-event-entry__icon ar-event-entry__icon--${factionClass}`}><Icon size={17} aria-hidden="true" /></div>
                 <div className="ar-event-entry__body">
                   <strong>{eventNarrative(event)}</strong>
-                  <div className="ar-event-entry__meta"><span>{source}</span><span className="ar-event-entry__separator">·</span><span>{OPERATIONS[event.kind] ?? 'Movimentação'}</span></div>
+                  <div className="ar-event-entry__meta"><span className={`ar-event-entry__source ar-event-entry__source--${origin.toLowerCase()}`}>
+                    {origin === 'BOT' ? <Bot size={12} aria-hidden="true" /> : origin === 'PLAYER' ? <UserRound size={12} aria-hidden="true" /> : null}{source}
+                  </span><span className="ar-event-entry__separator">·</span><span>{OPERATIONS[event.kind] ?? 'Movimentação'}</span></div>
                 </div>
                 <time dateTime={date?.toISOString()} className="ar-event-entry__time">{date ? date.toLocaleString('pt-BR', {day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}) : 'Hora n/d'}</time>
               </li>
@@ -309,9 +365,15 @@ export function WarEventFeed({ events, available }: { events: WarEventRecord[]; 
           })}
         </ol>
       ) : (
-        <div className="ar-event-empty">{!available ? 'O histórico será exibido quando a API estiver conectada.' : events.length ? 'Nenhuma ocorrência dessa facção nos eventos recebidos.' : 'Ainda não há ocorrências no reporte público.'}</div>
+        <div className="ar-event-empty" role="status">{!available
+          ? 'O histórico será exibido quando a API estiver conectada.'
+          : !includePeople && !includeNpcs
+            ? 'Marque Pessoas e/ou Autônomas (NPCs) para visualizar os eventos.'
+            : !events.length
+              ? 'Ainda não há ocorrências no reporte público.'
+              : 'Nenhuma ocorrência corresponde à facção e à origem selecionadas.'}</div>
       )}
-      <div className="ar-event-disclaimer">Horários arredondados pela API pública. Nenhuma localização individual de jogadores é exibida.</div>
+      <div className="ar-event-disclaimer">Exibindo no máximo 12 eventos recebidos da API pública. Registros antigos sem origem identificada só aparecem com ambas as flags ativadas. Horários arredondados pela API pública; nenhuma localização individual de jogadores é exibida.</div>
     </div>
   );
 }

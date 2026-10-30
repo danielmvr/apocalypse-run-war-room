@@ -1,0 +1,86 @@
+/* APOCALYPSE RUN — origem do Report de Guerra.
+   Flags independentes do filtro de facção. Sem alterar mapas, API ou pontuação. */
+.ar-event-origin {
+  min-width: 0;
+  margin: 14px 0 3px;
+  padding: 10px 13px 12px;
+  border: 1px solid #365047;
+  border-radius: 9px;
+  background: linear-gradient(125deg, #10231f, #111e1d);
+}
+.ar-event-origin legend {
+  padding: 0 7px;
+  color: #9ecfb3;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+}
+.ar-event-origin__row { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; }
+.ar-event-origin__flag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  border: 1px solid #35483f;
+  background: #13231f;
+  color: #a5b8ad;
+  border-radius: 7px;
+  padding: 10px 12px;
+  min-height: 44px;
+  font-size: 11px;
+  font-weight: 750;
+  cursor: pointer;
+  transition: border-color .16s, background .16s;
+  user-select: none;
+}
+.ar-event-origin__flag input {
+  appearance: auto;
+  width: 16px;
+  height: 16px;
+  margin: 0 3px 0 0;
+  flex: none;
+  cursor: pointer;
+  accent-color: #8ae6ae;
+}
+.ar-event-origin__flag svg { flex: none; }
+.ar-event-origin__flag--people.is-on { background: #1c382a; border-color: #68b78e; color: #c9f6d7; }
+.ar-event-origin__flag--npc.is-on { background: #382f23; border-color: #b79a62; color: #f6dfa9; }
+.ar-event-origin__flag--npc input { accent-color: #e8c381; }
+.ar-event-origin__flag:hover { border-color: #aacdb8; }
+.ar-event-origin__flag:focus-within { outline: 2px solid #dbffe5; outline-offset: 3px; }
+.ar-event-origin__summary {
+  margin-left: auto;
+  color: #afc6b7;
+  border: 1px solid #3e5848;
+  border-radius: 6px;
+  padding: 6px 9px;
+  font-size: 10px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.ar-event-entry__source {
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid #526658;
+  background: #1d2e27;
+  color: #aed8b9;
+  font-size: 10px;
+  font-weight: 700;
+}
+.ar-event-entry__source--bot { color: #edd4a3; border-color: #756347; background: #342b21; }
+.ar-event-entry__source--unknown { color: #bac9c2; border-color: #4b5d58; background: #26302c; }
+@media (max-width: 600px) {
+  .ar-event-origin { padding: 9px 9px 11px; }
+  .ar-event-origin__row { gap: 7px; }
+  .ar-event-origin__flag { flex: 1 1 auto; padding: 9px 8px; justify-content: center; }
+  .ar-event-origin__summary { margin-left: 0; }
+}
+@media (max-width: 340px) {
+  .ar-event-origin__flag { flex: 1 1 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ar-event-origin__flag { transition: none; }
+}
