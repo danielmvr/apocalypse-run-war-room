@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import { resolve } from 'node:path';
 
 export default defineConfig({
-  base: '/apocalypse-run-war-room/',
+  base: './',
   build: {
     rollupOptions: {
       input: {
