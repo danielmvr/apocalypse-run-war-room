@@ -9,6 +9,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         guia: resolve(__dirname, 'guia.html'),
         beta: resolve(__dirname, 'beta.html'),
+        comando: resolve(__dirname, 'comando.html'),
       },
     },
   },
