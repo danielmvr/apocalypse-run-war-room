@@ -6,18 +6,26 @@
   <meta name="theme-color" content="#0b1113"/>
   <title>Apocalypse Run | War Room</title>
   <style>
-    .beta-invite-entry{position:fixed;bottom:19px;right:18px;z-index:30;display:flex;align-items:center;gap:10px;max-width:calc(100vw - 35px);background:#123225f4;color:#d5ffdf;border:1px solid #8bd7a4;border-radius:10px;padding:12px 16px;text-decoration:none;font:800 11px/1.3 system-ui,Arial,sans-serif;letter-spacing:.2px;box-shadow:0 9px 35px #0008;transition:transform .16s}
+    .beta-invite-entry,.archive-entry-link{position:fixed;right:18px;z-index:30;display:flex;align-items:center;gap:10px;max-width:calc(100vw - 35px);border-radius:10px;padding:12px 16px;text-decoration:none;font:800 11px/1.3 system-ui,Arial,sans-serif;letter-spacing:.2px;box-shadow:0 9px 35px #0008;transition:transform .16s}
+    .beta-invite-entry{bottom:19px;background:#123225f4;color:#d5ffdf;border:1px solid #8bd7a4}
     .beta-invite-entry:hover{transform:translateY(-2px);background:#214532;color:#fff}
-    .beta-invite-entry:focus-visible{outline:3px solid #fff;outline-offset:3px}
-    .beta-invite-entry strong{display:block;font-size:12px}
-    .beta-invite-entry small{display:block;color:#a5d3b5;font-size:9px;letter-spacing:.6px;margin-top:3px}
-    .beta-invite-entry .symbol{font-size:24px;line-height:1}
-    @media(max-width:600px){.beta-invite-entry{bottom:10px;right:10px;padding:10px 12px}.beta-invite-entry small{display:none}.beta-invite-entry strong{font-size:11px}}
-    @media(prefers-reduced-motion:reduce){.beta-invite-entry{transition:none}}
+    .archive-entry-link{bottom:89px;background:#111e1cf2;color:#d7f1db;border:1px solid #658c76}
+    .archive-entry-link:hover{transform:translateY(-2px);background:#254436;color:#fff}
+    .archive-entry-link:focus-visible,.beta-invite-entry:focus-visible{outline:3px solid #fff;outline-offset:3px}
+    .beta-invite-entry strong,.archive-entry-link strong{display:block;font-size:12px}
+    .beta-invite-entry small,.archive-entry-link small{display:block;color:#a5d3b5;font-size:9px;letter-spacing:.6px;margin-top:3px}
+    .beta-invite-entry .symbol,.archive-entry-link .symbol{font-size:24px;line-height:1}
+    @media(max-width:600px){.beta-invite-entry,.archive-entry-link{right:10px;padding:10px 12px}.beta-invite-entry{bottom:10px}.archive-entry-link{bottom:61px}.beta-invite-entry small,.archive-entry-link small{display:none}.beta-invite-entry strong,.archive-entry-link strong{font-size:11px}.archive-entry-link .symbol{font-size:20px}}
+    @media(prefers-reduced-motion:reduce){.beta-invite-entry,.archive-entry-link{transition:none}}
   </style>
 </head>
 <body>
   <div id="root"></div>
+  <a href="./temporadas.html" target="_blank" rel="noopener noreferrer" class="archive-entry-link" aria-label="Abrir Arquivo de Temporadas em nova aba">
+    <span class="symbol" aria-hidden="true">◈</span>
+    <span><strong>ARQUIVO DE TEMPORADAS</strong><small>CONHEÇA OS VENCEDORES E A HISTÓRIA DA GUERRA</small></span>
+    <span aria-hidden="true">↗</span>
+  </a>
   <a href="./beta.html" class="beta-invite-entry" aria-label="Solicitar participação nos testes Beta do Apocalypse Run">
     <span class="symbol" aria-hidden="true">✦</span>
     <span><strong>QUERO TESTAR O BETA</strong><small>SOLICITE SEU ACESSO À GOOGLE PLAY</small></span>
