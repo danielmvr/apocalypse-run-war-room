@@ -6,31 +6,72 @@
   <meta name="theme-color" content="#0b1113"/>
   <title>Apocalypse Run | War Room</title>
   <style>
-    .beta-invite-entry,.archive-entry-link{position:fixed;right:18px;z-index:30;display:flex;align-items:center;gap:10px;max-width:calc(100vw - 35px);border-radius:10px;padding:12px 16px;text-decoration:none;font:800 11px/1.3 system-ui,Arial,sans-serif;letter-spacing:.2px;box-shadow:0 9px 35px #0008;transition:transform .16s}
-    .beta-invite-entry{bottom:19px;background:#123225f4;color:#d5ffdf;border:1px solid #8bd7a4}
-    .beta-invite-entry:hover{transform:translateY(-2px);background:#214532;color:#fff}
-    .archive-entry-link{bottom:89px;background:#111e1cf2;color:#d7f1db;border:1px solid #658c76}
-    .archive-entry-link:hover{transform:translateY(-2px);background:#254436;color:#fff}
-    .archive-entry-link:focus-visible,.beta-invite-entry:focus-visible{outline:3px solid #fff;outline-offset:3px}
-    .beta-invite-entry strong,.archive-entry-link strong{display:block;font-size:12px}
-    .beta-invite-entry small,.archive-entry-link small{display:block;color:#a5d3b5;font-size:9px;letter-spacing:.6px;margin-top:3px}
-    .beta-invite-entry .symbol,.archive-entry-link .symbol{font-size:24px;line-height:1}
-    @media(max-width:600px){.beta-invite-entry,.archive-entry-link{right:10px;padding:10px 12px}.beta-invite-entry{bottom:10px}.archive-entry-link{bottom:61px}.beta-invite-entry small,.archive-entry-link small{display:none}.beta-invite-entry strong,.archive-entry-link strong{font-size:11px}.archive-entry-link .symbol{font-size:20px}}
-    @media(prefers-reduced-motion:reduce){.beta-invite-entry,.archive-entry-link{transition:none}}
+    /* Recrutamento é o único atalho fixo da página. */
+    .beta-invite-entry{position:fixed;right:18px;bottom:19px;z-index:30;display:flex;align-items:center;gap:11px;max-width:calc(100vw - 35px);padding:13px 17px;border:1px solid #a1f3bd;border-radius:10px;background:linear-gradient(115deg,#173d29,#0c291c);color:#e4ffed;text-decoration:none;font:800 11px/1.4 system-ui,Arial,sans-serif;letter-spacing:.3px;box-shadow:0 0 0 1px #69c18e33,0 10px 30px #0009;animation:ar-recruit-pulse 3.6s ease-in-out infinite;transition:background .2s ease,transform .2s ease}
+    .beta-invite-entry:hover{transform:translateY(-2px);background:linear-gradient(115deg,#24653c,#133f29);color:#fff}
+    .beta-invite-entry:focus-visible{outline:3px solid #fff;outline-offset:3px}
+    .beta-invite-entry strong{display:block;font-size:12px}
+    .beta-invite-entry small{display:block;font-size:9px;letter-spacing:.6px;margin-top:3px;color:#b0ecca}
+    .beta-invite-entry .symbol{font-size:25px;line-height:1;color:#a9fbc7}
+    @keyframes ar-recruit-pulse{0%,100%{box-shadow:0 0 0 1px #69c18e33,0 10px 30px #0009;filter:brightness(1)}50%{box-shadow:0 0 0 5px #78eda522,0 0 24px #58e99066,0 13px 34px #000a;filter:brightness(1.09)}}
+    /* Botão secundário dentro de Campanha Atual. */
+    .ar-season-archive-link{display:flex;align-items:center;justify-content:center;gap:8px;width:fit-content;min-height:38px;margin-top:13px;padding:9px 12px;border:1px solid #476756;background:#152a21;border-radius:6px;color:#bbdfc7;font-size:10px;font-weight:800;letter-spacing:.65px;text-decoration:none;transition:background .18s ease,border-color .18s ease}
+    .ar-season-archive-link:hover{background:#204132;border-color:#86c69b;color:#f1fff4}
+    .ar-season-archive-link:focus-visible{outline:2px solid #b4ffd0;outline-offset:3px}
+    .ar-season-archive-link svg{width:15px;height:15px;flex:none}
+    @media(max-width:600px){.beta-invite-entry{right:10px;bottom:10px;padding:11px 13px;gap:8px}.beta-invite-entry strong{font-size:11px}.beta-invite-entry small{display:none}.beta-invite-entry .symbol{font-size:20px}}
+    @media(max-width:420px){.ar-season-archive-link{font-size:9px;padding:9px 10px}}
+    @media(prefers-reduced-motion:reduce){.beta-invite-entry{animation:none;transition:none}.beta-invite-entry:hover{transform:none}.ar-season-archive-link{transition:none}}
   </style>
 </head>
 <body>
   <div id="root"></div>
-  <a href="./temporadas.html" target="_blank" rel="noopener noreferrer" class="archive-entry-link" aria-label="Abrir Arquivo de Temporadas em nova aba">
-    <span class="symbol" aria-hidden="true">◈</span>
-    <span><strong>ARQUIVO DE TEMPORADAS</strong><small>CONHEÇA OS VENCEDORES E A HISTÓRIA DA GUERRA</small></span>
-    <span aria-hidden="true">↗</span>
-  </a>
   <a href="./beta.html" class="beta-invite-entry" aria-label="Solicitar participação nos testes Beta do Apocalypse Run">
     <span class="symbol" aria-hidden="true">✦</span>
     <span><strong>QUERO TESTAR O BETA</strong><small>SOLICITE SEU ACESSO À GOOGLE PLAY</small></span>
     <span aria-hidden="true">↗</span>
   </a>
   <script type="module" src="/src/main.tsx"></script>
+  <script type="module">
+/**
+ * Progressive enhancement for the War Room's current-season panel.
+ * Leaves its existing React/MapLibre logic untouched.
+ * This adapter may be replaced with a first-class JSX link if that component is edited.
+ */
+(() => {
+  const root = document.getElementById('root');
+  if (!root) return;
+
+  const mountArchiveLink = () => {
+    const seasonLabel = root.querySelector('.season-label');
+    const currentSeason = seasonLabel?.closest('article.panel');
+    if (!currentSeason || currentSeason.querySelector('.ar-season-archive-link')) return;
+
+    const link = document.createElement('a');
+    link.className = 'ar-season-archive-link';
+    link.href = new URL('temporadas.html', document.baseURI).toString();
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.setAttribute('aria-label', 'Abrir Arquivo de Temporadas em nova aba');
+    link.title = 'Campeões, rankings e resultados de temporadas encerradas';
+    const symbol = document.createElement('span');
+    symbol.setAttribute('aria-hidden', 'true');
+    symbol.textContent = '▤';
+    const text = document.createTextNode('ARQUIVO DE TEMPORADAS');
+    const arrow = document.createElement('span');
+    arrow.setAttribute('aria-hidden', 'true');
+    arrow.textContent = '↗';
+    link.append(symbol, text, arrow);
+    const hunts = currentSeason.querySelector('.ar-hunt-guide-link');
+    if (hunts) hunts.insertAdjacentElement('afterend', link);
+    else currentSeason.appendChild(link);
+  };
+  // The War Room mounts React asynchronously; listen for the campaign panel.
+  const observer = new MutationObserver(mountArchiveLink);
+  observer.observe(root, { childList: true, subtree: true });
+  mountArchiveLink();
+})();
+
+  </script>
 </body>
 </html>
