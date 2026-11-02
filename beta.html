@@ -1,86 +1,78 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0b1713" />
-  <meta name="description" content="Solicite participação nos testes Beta fechados do Apocalypse Run na Google Play." />
-  <title>Solicitar acesso Beta | Apocalypse Run</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1713">
+  <meta name="description" content="Solicite acesso aos testes do Apocalypse Run na Google Play.">
+  <title>Solicitar acesso aos testes | Apocalypse Run</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap');
     :root{font-family:'DM Sans',system-ui,sans-serif;color:#e8f5ed;background:#09130f;color-scheme:dark}
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;min-height:100vh;background:radial-gradient(ellipse 55% 35% at 74% 2%,#21503a66,transparent),radial-gradient(ellipse 40% 20% at 4% 36%,#1d443444,transparent),#09130f}
-    button,input{font:inherit}
-    a{color:inherit}
-    a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid #baffd3;outline-offset:3px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:radial-gradient(ellipse 55% 35% at 74% 2%,#21503a66,transparent),radial-gradient(ellipse 40% 20% at 4% 36%,#1d443444,transparent),#09130f}
+    button,input{font:inherit}a{color:inherit}a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid #baffd3;outline-offset:3px}
     .shell{width:min(1020px,calc(100% - 36px));margin:0 auto}
     header{border-bottom:1px solid #31504377;background:#07110d9c;backdrop-filter:blur(8px)}
     .header{min-height:76px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px}
-    .brand{font:800 27px/1 'Barlow Condensed',sans-serif;letter-spacing:1.5px;text-decoration:none}
-    .brand span{color:#85e8a9}
-    .back{padding:10px 14px;border:1px solid #456e53;border-radius:6px;color:#a7e6bf;text-decoration:none;font-size:12px;font-weight:700}
-    .back:hover{background:#193629}
-    main{padding:62px 0 72px}
-    .eyebrow{color:#92d6a8;letter-spacing:2.3px;font-size:11px;font-weight:800}
-    h1,h2,h3{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase}
+    .brand{font:800 27px/1 'Barlow Condensed',sans-serif;letter-spacing:1.5px;text-decoration:none}.brand span{color:#85e8a9}
+    .back{padding:10px 14px;border:1px solid #456e53;border-radius:6px;color:#a7e6bf;text-decoration:none;font-size:12px;font-weight:700}.back:hover{background:#193629}
+    main{padding:62px 0 72px}.eyebrow{color:#92d6a8;letter-spacing:2.3px;font-size:11px;font-weight:800}
+    h1,h2{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase}
     h1{font-size:clamp(49px,8vw,84px);line-height:.94;letter-spacing:.4px;max-width:770px;margin:17px 0 23px}
-    h1 em{font-style:normal;color:#8fe6b0}
-    .lead{max-width:710px;font-size:15px;line-height:1.85;color:#b4cbbe;margin:0 0 37px}
+    h1 em{font-style:normal;color:#8fe6b0}.lead{max-width:710px;font-size:15px;line-height:1.85;color:#b4cbbe;margin:0 0 37px}
     .grid{display:grid;grid-template-columns:minmax(0,1fr) 315px;gap:22px;align-items:start}
     .form-card,.steps-card{min-width:0;border:1px solid #3c674d;border-radius:12px;background:linear-gradient(150deg,#152a20,#101b18);box-shadow:0 20px 60px #0003;padding:27px}
-    .form-card h2{font-size:30px;line-height:1;margin:0 0 10px}
-    .desc{font-size:13px;line-height:1.7;color:#a8c1ae;margin:0 0 24px}
+    .form-card h2{font-size:30px;line-height:1;margin:0 0 10px}.desc{font-size:13px;line-height:1.7;color:#a8c1ae;margin:0 0 24px}
+    .mail-warning{display:flex;align-items:flex-start;gap:13px;padding:18px;margin:0 0 27px;border:1px solid #b98d4d;border-left:4px solid #efc377;border-radius:9px;background:linear-gradient(120deg,#423321,#292a21);color:#f4e2c8}
+    .mail-warning__icon{font-size:25px;line-height:1.2;flex:none}.mail-warning strong{display:block;color:#ffe4ae;font-size:14px;line-height:1.5;margin-bottom:8px}
+    .mail-warning p{font-size:12px;line-height:1.75;margin:0}.mail-warning__address{display:inline;font-weight:800;overflow-wrap:anywhere;color:#d3f8dc}
+    .mail-warning__copy{display:inline-block;border:1px solid #9fbb98;color:#e6ffe4;border-radius:5px;padding:5px 9px;margin:10px 0 0;background:#253c2b;cursor:pointer;font-size:11px;font-weight:700}
+    .mail-warning__copy:hover{background:#34553b}.mail-warning__copy-note{font-size:11px;margin-left:8px;color:#d0e9ce}
     label.field{display:block;margin:0 0 9px;font-weight:700;font-size:12px;color:#d3ecdc}
-    input[type=email]{width:100%;border:1px solid #5a7969;background:#081610;color:#effff2;border-radius:7px;padding:15px 14px;font-size:15px;min-height:48px}
-    input[type=email]::placeholder{color:#6b8877}
-    .hint{font-size:11px;color:#9dbbaa;margin:10px 0 23px;line-height:1.65}
-    .consent{display:flex;align-items:flex-start;gap:11px;font-size:12px;line-height:1.8;color:#c2d9c9;margin:19px 0}
-    .consent input{width:18px;height:18px;flex:none;margin:3px 0 0;accent-color:#82e6aa}
-    .consent a{color:#91eeb6;text-underline-offset:3px}
-    .hp{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
-    .verify{min-height:65px;margin:10px 0 16px}
-    .submit{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:50px;border:0;border-radius:7px;background:#90efb5;color:#082417;font-size:13px;font-weight:800;letter-spacing:.4px;cursor:pointer}
-    .submit:hover:not(:disabled){background:#bcffd4}
-    .submit:disabled{opacity:.5;cursor:not-allowed}
+    input[type=email]{width:100%;border:1px solid #5a7969;background:#081610;color:#effff2;border-radius:7px;padding:15px 14px;font-size:15px;min-height:48px}input[type=email]::placeholder{color:#6b8877}
+    .hint{font-size:11px;color:#a7c5b0;margin:10px 0 23px;line-height:1.65}
+    .consent{display:flex;align-items:flex-start;gap:11px;font-size:12px;line-height:1.8;color:#c2d9c9;margin:19px 0}.consent input{width:18px;height:18px;flex:none;margin:3px 0 0;accent-color:#82e6aa}
+    .consent a{color:#a5f2bc;text-underline-offset:3px}.hp{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+    .verify{min-height:65px;margin:10px 0 16px}.submit{display:flex;align-items:center;justify-content:center;width:100%;min-height:50px;border:0;border-radius:7px;background:#90efb5;color:#082417;font-size:13px;font-weight:800;cursor:pointer}
+    .submit:hover:not(:disabled){background:#bcffd4}.submit:disabled{opacity:.5;cursor:not-allowed}
     .feedback{margin-top:13px;padding:12px 14px;border:1px solid #426d51;color:#c9edda;background:#193424;border-radius:6px;font-size:12px;line-height:1.65;display:none}
-    .feedback[role=alert],.feedback[role=status]{display:block}
-    .feedback.error{border-color:#a86460;color:#ffd4ce;background:#402320}
-    .steps-card{border-color:#3c5543;background:#111d18}
-    .steps-card h2{font-size:25px;margin:0 0 16px}
-    .steps{margin:0;padding:0;list-style:none;display:grid;gap:17px}
+    .feedback[role=alert],.feedback[role=status]{display:block}.feedback.error{border-color:#a86460;color:#ffd4ce;background:#402320}
+    .steps-card{border-color:#3c5543;background:#111d18}.steps-card h2{font-size:25px;margin:0 0 16px}.steps{margin:0;padding:0;list-style:none;display:grid;gap:17px}
     .steps li{display:grid;grid-template-columns:29px 1fr;gap:9px;align-items:start;color:#bdd1c3;font-size:12px;line-height:1.6}
     .num{height:27px;width:27px;display:grid;place-items:center;background:#25432f;color:#aef2c7;border:1px solid #557b5b;border-radius:5px;font-weight:800;font-size:11px}
-    .steps strong{color:#eefbef;display:block;font-size:12px;margin:0 0 2px}
-    .note{padding-top:18px;margin:23px 0 0;border-top:1px solid #355444;color:#9eae9e;font-size:11px;line-height:1.7}
-    .policy{border-top:1px solid #334d3e;padding-top:32px;margin-top:53px;max-width:880px}
-    .policy h2{font-size:25px;margin:0 0 10px}
-    .policy p{font-size:12px;color:#a9c2b3;line-height:1.85;margin:0 0 12px}
-    footer{border-top:1px solid #334d3e;padding:22px 0 32px;color:#7b9d88;font-size:11px}
-    footer .shell{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .steps strong{color:#eefbef;display:block;font-size:12px;margin:0 0 2px}.note{padding-top:18px;margin:23px 0 0;border-top:1px solid #355444;color:#9eae9e;font-size:11px;line-height:1.7}
+    .policy{border-top:1px solid #334d3e;padding-top:32px;margin-top:53px;max-width:880px}.policy h2{font-size:25px;margin:0 0 10px}.policy p{font-size:12px;color:#a9c2b3;line-height:1.85;margin:0 0 12px}
+    footer{border-top:1px solid #334d3e;padding:22px 0 32px;color:#7b9d88;font-size:11px}footer .shell{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     @media(max-width:790px){.grid{grid-template-columns:minmax(0,1fr)}main{padding:45px 0 65px}.form-card,.steps-card{padding:22px}.steps{grid-template-columns:1fr 1fr}}
-    @media(max-width:500px){.shell{width:calc(100% - 26px)}.brand{font-size:22px}.back{font-size:10px;padding:8px}.steps{grid-template-columns:1fr}main{padding-top:35px}h1{font-size:clamp(38px,10.5vw,49px);overflow-wrap:anywhere}.form-card,.steps-card{padding:20px}}
+    @media(max-width:500px){.shell{width:calc(100% - 26px)}.brand{font-size:22px}.back{font-size:10px;padding:8px}.steps{grid-template-columns:1fr}main{padding-top:35px}h1{font-size:clamp(38px,10.5vw,49px);overflow-wrap:anywhere}.form-card,.steps-card{padding:19px}.mail-warning{padding:14px 12px;gap:10px}.mail-warning__icon{font-size:19px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
   </style>
 </head>
 <body>
 <header><div class="shell header"><a class="brand" href="./">APOCALYPSE <span>RUN</span></a><a class="back" href="./">← Voltar à Sala de Guerra</a></div></header>
 <main class="shell">
-  <div class="eyebrow">RECRUTAMENTO // PROGRAMA BETA</div>
+  <div class="eyebrow">RECRUTAMENTO // PROGRAMA DE TESTES</div>
   <h1>VOCÊ ESTÁ PRONTO PARA <em>SOBREVIVER?</em></h1>
-  <p class="lead">Solicite uma vaga nos testes fechados do Apocalypse Run para Android. As inscrições são analisadas individualmente e os convites serão enviados quando houver vagas e uma versão disponível na Google Play.</p>
+  <p class="lead">Solicite uma vaga nos testes do Apocalypse Run para Android. As inscrições são analisadas individualmente, e os convites serão enviados quando houver vagas e uma versão disponível na Google Play.</p>
   <div class="grid">
     <section class="form-card" aria-labelledby="betaTitle">
       <h2 id="betaTitle">Entre na lista de espera</h2>
-      <p class="desc">Basta informar o e-mail associado à conta Google usada na <strong>Play Store do seu Android</strong>. Não precisa ser um endereço @gmail.com.</p>
+      <p class="desc">Informe o e-mail associado à conta Google usada na <strong>Play Store do seu Android</strong>. Ele não precisa terminar em @gmail.com.</p>
+      <aside class="mail-warning" role="note" aria-label="Orientações para receber o convite">
+        <span class="mail-warning__icon" aria-hidden="true">✉</span>
+        <div>
+          <strong>Atenção: o convite pode cair no Spam!</strong>
+          <p>Se sua inscrição for aprovada, enviaremos o convite de <span class="mail-warning__address">appcalypserun@gmail.com</span>. Confira também <b>Spam</b> e <b>Lixo eletrônico</b>, e adicione esse endereço aos seus contatos ou remetentes confiáveis. <b>O convite não é enviado imediatamente:</b> ele depende da aprovação.</p>
+          <button type="button" class="mail-warning__copy" id="copySender">Copiar e-mail oficial</button><span id="copyStatus" class="mail-warning__copy-note" aria-live="polite"></span>
+        </div>
+      </aside>
       <form id="betaForm" novalidate>
         <label class="field" for="playEmail">E-mail da sua conta Google Play *</label>
-        <input id="playEmail" name="playEmail" type="email" autocomplete="email" inputmode="email" maxlength="254" required placeholder="seu-email@exemplo.com" aria-describedby="emailHint" />
-        <p id="emailHint" class="hint">Use exatamente a conta que estará selecionada na Play Store para aceitar o futuro convite. Isso não cria nem recupera sua conta dentro do jogo.</p>
-        <label class="hp" aria-hidden="true">Site pessoal <input name="website" id="website" type="text" tabindex="-1" autocomplete="off" /></label>
-        <label class="consent"><input id="consent" type="checkbox" required /><span>Autorizo o Apocalypse Run a usar este e-mail para analisar minha solicitação e, se aprovada, enviar informações e convite para os testes Beta. Li o <a href="#privacidade">aviso de privacidade</a>. *</span></label>
-        <div class="verify" id="turnstileArea" aria-label="Verificação de segurança"><p class="hint" id="verifyStatus">Verificação de segurança em preparação.</p></div>
+        <input id="playEmail" name="playEmail" type="email" autocomplete="email" inputmode="email" maxlength="254" required placeholder="seu-email@exemplo.com" aria-describedby="emailHint">
+        <p id="emailHint" class="hint">Use a mesma conta que estará selecionada na Play Store ao aceitar o futuro convite. Esta solicitação não cria nem recupera sua conta dentro do jogo.</p>
+        <label class="hp" aria-hidden="true">Site pessoal <input name="website" id="website" type="text" tabindex="-1" autocomplete="off"></label>
+        <label class="consent"><input id="consent" type="checkbox" required><span>Autorizo o Apocalypse Run a usar este e-mail para analisar minha solicitação e, se aprovada, enviar informações e convite para os testes. Li o <a href="#privacidade">aviso de privacidade</a>. *</span></label>
+        <div class="verify" id="turnstileArea" aria-label="Verificação de segurança"><p class="hint" id="verifyStatus">Carregando verificação de segurança...</p></div>
         <button class="submit" id="submitButton" type="submit" disabled>Solicitar participação →</button>
         <div id="feedback" class="feedback" aria-live="polite"></div>
       </form>
@@ -89,71 +81,66 @@
       <ol class="steps">
         <li><span class="num">01</span><span><strong>Solicitação</strong>Você informa o e-mail utilizado no Google Play.</span></li>
         <li><span class="num">02</span><span><strong>Análise</strong>A equipe avalia os pedidos e a disponibilidade de vagas.</span></li>
-        <li><span class="num">03</span><span><strong>Liberação</strong>Se aprovado, o e-mail é adicionado à lista do teste fechado na Play Console.</span></li>
-        <li><span class="num">04</span><span><strong>Convite</strong>Você recebe o link oficial e aceita a participação usando a mesma conta Google.</span></li>
+        <li><span class="num">03</span><span><strong>Liberação</strong>Se aprovado, o e-mail é adicionado à lista de testadores da Play Console.</span></li>
+        <li><span class="num">04</span><span><strong>Convite</strong>Você recebe o link oficial e aceita participar usando a mesma conta Google.</span></li>
       </ol>
       <p class="note">O envio do formulário <strong>não garante aprovação ou acesso imediato</strong>. Não solicitamos senha, códigos de autenticação nem dados de pagamento.</p>
     </aside>
   </div>
   <section id="privacidade" class="policy" aria-labelledby="privacyHeading">
-    <h2 id="privacyHeading">Privacidade da lista Beta</h2>
-    <p>Responsável: equipe do Apocalypse Run. Coletamos somente o e-mail da conta Google Play, a confirmação de consentimento e as datas de solicitação e tratamento. Os dados são usados exclusivamente para organizar a fila de seleção, administrar os convites do teste fechado na Google Play e manter o histórico da solicitação.</p>
+    <h2 id="privacyHeading">Privacidade da lista de testes</h2>
+    <p>Responsável: equipe do Apocalypse Run. Coletamos somente o e-mail da conta Google Play, a confirmação de consentimento e as datas de solicitação e tratamento. Os dados são usados exclusivamente para organizar a seleção, administrar convites de testes na Google Play e manter o histórico da solicitação.</p>
     <p>O e-mail será acessível apenas à administração do projeto e, quando aprovado, incluído na lista privada de testadores do Google Play. Não será publicado no Report de Guerra, usado para publicidade ou vendido. Solicitações não aprovadas serão revisadas para exclusão após 180 dias, por rotina administrativa.</p>
-    <p>Para solicitar acesso, correção ou exclusão do e-mail, entre em contato pelo <a href="https://www.instagram.com/apocalypserun/" target="_blank" rel="noopener noreferrer">Instagram oficial @apocalypserun</a>. O pedido pode ser removido da fila; se o e-mail já estiver na Play Console, também precisará ser removido da lista de testes. O tratamento usa medidas de proteção e o fornecimento do e-mail é voluntário.</p>
+    <p>Para solicitar acesso, correção ou exclusão, entre em contato pelo <a href="https://www.instagram.com/apocalypserun/" target="_blank" rel="noopener noreferrer">Instagram oficial @apocalypserun</a>. Se o e-mail já estiver na lista da Play Console, a remoção também deverá ocorrer lá. O fornecimento do endereço é voluntário.</p>
   </section>
 </main>
-<footer><div class="shell"><span>APOCALYPSE RUN · BETA FECHADO</span><span>Sua jornada começa com uma escolha.</span></div></footer>
+<footer><div class="shell"><span>APOCALYPSE RUN · TESTES ANDROID</span><span>Sua jornada começa com uma escolha.</span></div></footer>
 <script>
 (function(){
   'use strict';
-  const EDGE = 'https://uhafxqvaetsrwobpyuak.supabase.co/functions/v1/beta-signup';
-  // PUBLIC SITE KEY somente. Nunca insira a SECRET KEY no HTML.
-  const SITE_KEY = '0x4AAAAAAFvkzWUra8_c_lmZ';
-  const form = document.getElementById('betaForm');
-  const btn = document.getElementById('submitButton');
-  const feedback = document.getElementById('feedback');
-  const verifyArea = document.getElementById('turnstileArea');
-  let widgetId = null;
-  let processing = false;
+  const EDGE='https://uhafxqvaetsrwobpyuak.supabase.co/functions/v1/beta-signup';
+  const SITE_KEY='0x4AAAAAAFvkzWUra8_c_lmZ'; // Site key PÚBLICA; nunca a Secret Key.
+  const OFFICIAL_SENDER='appcalypserun@gmail.com';
+  const form=document.getElementById('betaForm');
+  const btn=document.getElementById('submitButton');
+  const feedback=document.getElementById('feedback');
+  const verifyArea=document.getElementById('turnstileArea');
+  let widgetId=null,processing=false;
   function message(value,isError){
-    feedback.textContent = value;
-    feedback.className = 'feedback' + (isError?' error':'');
+    feedback.textContent=value;feedback.className='feedback'+(isError?' error':'');
     feedback.setAttribute('role',isError?'alert':'status');
   }
-  const configured = SITE_KEY.length > 18 && !SITE_KEY.startsWith('COLE_A_SITEKEY');
-  if(configured){
-    const script = document.createElement('script');
-    script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
-    script.async = true;
-    script.onload = function(){
-      if(!window.turnstile){message('Verificação indisponível. Atualize a página.',true);return;}
-      verifyArea.innerHTML = '';
-      widgetId = window.turnstile.render(verifyArea,{sitekey:SITE_KEY,theme:'dark',size:'flexible',callback:()=>{btn.disabled=false;},'expired-callback':()=>{btn.disabled=true;},'error-callback':()=>{btn.disabled=true;}});
-    };
-    script.onerror = function(){message('Não foi possível carregar a verificação de segurança.',true);};
-    document.head.appendChild(script);
-  } else {
-    document.getElementById('verifyStatus').textContent = 'Inscrições em preparação. A lista abrirá após a ativação da verificação de segurança.';
-  }
+  document.getElementById('copySender').addEventListener('click',async function(){
+    const status=document.getElementById('copyStatus');
+    try{await navigator.clipboard.writeText(OFFICIAL_SENDER);status.textContent='Copiado! Adicione aos contatos.';}
+    catch{status.textContent='Selecione e copie o endereço exibido acima.';}
+  });
+  const script=document.createElement('script');
+  script.src='https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';script.async=true;
+  script.onload=function(){
+    if(!window.turnstile){message('Verificação indisponível. Atualize a página.',true);return;}
+    verifyArea.textContent='';
+    widgetId=window.turnstile.render(verifyArea,{sitekey:SITE_KEY,theme:'dark',size:'flexible',callback:()=>{btn.disabled=false;},'expired-callback':()=>{btn.disabled=true;},'error-callback':()=>{btn.disabled=true;}});
+  };
+  script.onerror=function(){message('Não foi possível carregar a verificação de segurança.',true);};
+  document.head.appendChild(script);
   form.addEventListener('submit',async function(ev){
-    ev.preventDefault();
-    if(processing||!configured||widgetId===null) return;
-    const email = document.getElementById('playEmail').value.trim().toLowerCase();
-    const consent = document.getElementById('consent').checked;
-    const token = window.turnstile && window.turnstile.getResponse(widgetId);
-    if(!email||!document.getElementById('playEmail').validity.valid){message('Informe um endereço de e-mail válido.',true);return;}
-    if(!consent){message('É necessário concordar com o uso do e-mail para o Beta.',true);return;}
+    ev.preventDefault();if(processing||widgetId===null)return;
+    const field=document.getElementById('playEmail');
+    const email=field.value.trim().toLowerCase();
+    const consent=document.getElementById('consent').checked;
+    const token=window.turnstile&&window.turnstile.getResponse(widgetId);
+    if(!email||!field.validity.valid){message('Informe um endereço de e-mail válido.',true);return;}
+    if(!consent){message('É necessário concordar com o uso do e-mail para os testes.',true);return;}
     if(!token){message('Conclua a verificação de segurança.',true);return;}
-    processing=true;btn.disabled=true;btn.textContent='Enviando solicitação…';
+    processing=true;btn.disabled=true;btn.textContent='Enviando solicitação...';
     try{
-      const controller = new AbortController();
-      const timeout = setTimeout(()=>controller.abort(),15000);
-      let result;
-      try{
-        result=await fetch(EDGE,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,consent:true,consentVersion:'beta-2026-11',website:document.getElementById('website').value,turnstileToken:token}),signal:controller.signal});
-      }finally{clearTimeout(timeout)}
-      if(!result.ok) throw new Error(result.status===400?'Verifique os dados e tente novamente.':'Não foi possível registrar sua solicitação. Tente novamente.');
-      message('Solicitação recebida para análise! Se selecionado, você receberá instruções no e-mail informado.',false);
+      const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),15000);
+      let response;
+      try{response=await fetch(EDGE,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,consent:true,consentVersion:'beta-2026-11',website:document.getElementById('website').value,turnstileToken:token}),signal:controller.signal});}
+      finally{clearTimeout(timeout);}
+      if(!response.ok)throw Error(response.status===400?'Verifique os dados e tente novamente.':'Não foi possível registrar sua solicitação. Tente novamente.');
+      message('Solicitação recebida para análise! Se aprovada, o convite virá de '+OFFICIAL_SENDER+'. Verifique também o Spam e adicione o endereço aos contatos.',false);
       form.reset();
     }catch(err){message(err instanceof Error?err.message:'Não foi possível enviar. Tente novamente.',true);}
     finally{processing=false;btn.textContent='Solicitar participação →';if(window.turnstile)window.turnstile.reset(widgetId);btn.disabled=true;}
