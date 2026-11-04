@@ -11,6 +11,8 @@ Base: `a71a0c371768bddc00ec9002d0d216b2a87eec16`. Alteração exclusivamente edi
 
 Os perfis Esportista/Estrategista permanecem estilos de aprendizado, sem definir se a pessoa é nova ou veterana. O botão flutuante de recrutamento foi preservado.
 
+A conferência da primeira publicação identificou dois rótulos remanescentes: o índice ainda dizia “APK atual” e a demonstração de abertura mostrava o onboarding antigo. O índice agora explicita a referência build 128; um aviso junto à demonstração distingue ficção histórica de instruções atuais, sem modificar a animação.
+
 ## Validação local
 
 - `npm test`: 19 testes existentes aprovados.

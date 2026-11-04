@@ -46,6 +46,9 @@ test('field guide preserves profiles and animations while first chapter offers t
   await expect(page.locator('#headerVersion')).toContainText('TUTORIAL · BASE 0.20.0');
   await expect(page.locator('#chapterContent')).toContainText('versionCode 1140');
   await expect(page.locator('#chapterContent')).toContainText('referência 0.20.0/build 128');
+  await expect(page.locator('#chapterContent')).toContainText('DEMONSTRAÇÃO HISTÓRICA · BUILD 128');
+  await expect(page.locator('#chapterContent')).toContainText('não são instruções atuais de instalação');
+  await expect(page.getByText('CONTEÚDO BASEADO NO APK ATUAL', { exact: true })).toHaveCount(0);
   await expect(page.locator('#chapterContent a[href*="app-debug.apk"]')).toHaveCount(0);
   await expect(page.locator('#chapterContent a[href="./beta.html"]')).toBeVisible();
   await expect(page.locator('#chapterContent a[href="./migracao.html"]')).toBeVisible();
