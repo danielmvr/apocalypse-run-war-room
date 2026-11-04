@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1411">
+  <meta name="description" content="Preserve seu jogador Alpha: vínculo Google, cópia externa da Arca e preparação segura para os testes da Google Play.">
+  <title>Migração dos veteranos Alpha | Apocalypse Run</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="./migration-entry.css">
+</head>
+<body class="migration-page">
+<header class="migration-header"><div class="migration-shell"><a class="migration-brand" href="./">APOCALYPSE RUN</a><a class="migration-back" href="./">← Sala de Guerra</a></div></header>
+<main class="migration-shell migration-main">
+  <div class="migration-eyebrow">ÚLTIMA EVACUAÇÃO // VETERANOS DA ALPHA</div>
+  <h1>Preserve seu sobrevivente.</h1>
+  <p class="migration-lead">Já tem um jogador na Alpha? Prepare sua identidade e seu histórico antes de trocar de instalação. A última Alpha de transição é <strong>0.20.0-recovery-alpha · versionCode 1140 · build local 140</strong>. O futuro do Apocalypse Run é a Google Play, inicialmente em testes com acesso autorizado.</p>
+  <aside class="migration-warning" role="note" aria-label="Proteja sua instalação Alpha">
+    <strong>NÃO DESINSTALE A ALPHA ANTES DE VINCULAR O GOOGLE E SALVAR A ARCA FORA DO APARELHO.</strong>
+    <p>Desinstalar ou limpar os dados antes dessas confirmações pode causar perda de identidade ou histórico local. Se uma etapa falhar, mantenha a Alpha e peça orientação; não crie outro jogador para substituir o original.</p>
+  </aside>
+  <div class="migration-actions">
+    <a class="migration-action" href="https://github.com/danielmvr/apocalypse-run-downloads/releases/tag/alpha-debug-latest" target="_blank" rel="noopener noreferrer">Atualizar minha Alpha existente ↗</a>
+    <a class="migration-action" href="https://github.com/danielmvr/apocalypse-run-downloads/releases/download/alpha-debug-latest/GUIA-MIGRACAO.md" target="_blank" rel="noopener noreferrer">Guia técnico oficial ↗</a>
+  </div>
+  <section class="migration-card" aria-labelledby="prepare"><h2 id="prepare">1. Ainda na Alpha</h2>
+    <ol class="migration-steps">
+      <li><strong>Atualize sem desinstalar.</strong><p>Use a release oficial acima e instale a Alpha 1140 sobre a instalação Alpha atual. Não limpe dados nem tente usar este APK como atualização da Play.</p></li>
+      <li><strong>Confira seu jogador e as atividades.</strong><p>Verifique facção, progresso, atividades recebidas e possíveis pendências. Encerre a patrulha antes de preparar a mudança. Não apague pendências nem force sincronização para liberar o backup.</p></li>
+      <li><strong>Vincule o Google ao jogador original.</strong><p>Em Configurações → Conta e sincronização, escolha Vincular Conta Google. Use a conta que continuará com você; o vínculo deve preservar a identidade original.</p></li>
+      <li><strong>Confirme o vínculo pelo servidor.</strong><p>Em Configurações → Permissões e diagnósticos → Abrir Arca · backup e restauração, toque em Confirmar identidade atual. Prossiga somente após a confirmação. Não compartilhe UUID, tokens ou credenciais.</p></li>
+      <li><strong>Crie a Arca 2.0 e uma cópia externa.</strong><p>Informe e repita uma senha exclusiva da Arca, com 16–256 caracteres, sem acentos ou quebras de linha. Toque em Criar Arca, escolha o destino e aguarde a confirmação de arquivo criado e verificado. Copie o arquivo para fora deste aparelho, por exemplo para um computador, e confira a cópia. Guarde a senha separadamente: o Google não a recupera.</p></li>
+    </ol>
+  </section>
+  <section class="migration-card" aria-labelledby="play"><h2 id="play">2. Só então, prepare a passagem para a Play</h2>
+    <ol class="migration-steps" start="6">
+      <li><strong>Confirme as duas autorizações.</strong><p>É necessário acesso ao Teste interno da Google Play e autorização da conta usada no Google OAuth, que ainda está em modo de teste. Estar na lista da Play não garante autorização OAuth. Aguarde aprovação e convite oficial; se o vínculo ou acesso falhar, não desinstale a Alpha.</p></li>
+      <li><strong>Planeje a troca de instalação.</strong><p>Alpha e Play usam assinaturas diferentes: uma não atualiza diretamente a outra. Só avance com Google confirmado, Arca verificada, cópia externa, senha guardada e acesso à loja autorizado. Esta página não executa nem autoriza uma limpeza de dados.</p></li>
+      <li><strong>Recupere a conta existente.</strong><p>Na instalação da Play, escolha Recuperar minha conta com o mesmo Google antes de criar outro jogador. Confira o jogador, a facção e o progresso remoto. Não use outro convite para substituir a identidade.</p></li>
+      <li><strong>Recupere histórico local somente quando necessário.</strong><p>Selecione a Arca e toque em Analisar Arca com sua senha: isso verifica o arquivo, sem importar dados. Para mesclar, use Verificar destino e prévia. Confira proprietário, créditos novos e duplicados, dados atuais e progresso previsto antes da confirmação explícita. Preserve as novas atividades da Play; diante de conflitos ou erros, pare e peça suporte.</p></li>
+    </ol>
+  </section>
+  <section class="migration-card" aria-labelledby="limits"><h2 id="limits">O que volta pelo Google e o que depende da Arca?</h2>
+    <ul>
+      <li><strong>Google:</strong> recupera a identidade vinculada e permite consultar os dados remotos do jogador. Não restaura sozinho bancos locais, XP local, quilômetros ou filas deste aparelho.</li>
+      <li><strong>Arca:</strong> guarda dados locais cifrados. Importação não é automática: depende de propriedade, integridade, ausência de conflitos e prévia aprovada.</li>
+      <li><strong>Histórico legado:</strong> nem todo crédito antigo possui comprovação individual de GPS. Após a importação confirmada, somente a parcela verificável entra na progressão ativa; legado pode permanecer separado e rotas simuladas não são caminhada real. Não há garantia de recuperar integralmente o antigo nível, XP ou distância.</li>
+      <li><strong>Privacidade:</strong> não envie a Arca, sua senha, tokens ou trajetos em chats. O local escolhido para salvar pode sincronizar o arquivo; proteja sua cópia.</li>
+    </ul>
+    <p>O canal histórico e o servidor não foram desligados. A publicação automática da Alpha permanece pausada; esta é sua versão final de transição. A migração e os testes internos não significam lançamento em produção.</p>
+  </section>
+  <aside class="veteran-notice" role="note"><strong>Ainda não tem jogador?</strong><p>Comece pela Google Play: solicite participação, aguarde aprovação e convite. Não instale a Alpha para começar a jogar.</p><a href="./beta.html">Solicitar participação nos testes →</a></aside>
+</main>
+<footer class="migration-footer"><div class="migration-shell">APOCALYPSE RUN · TRANSIÇÃO SEGURA · <a href="./guia.html">Guia de Campo</a> · <a href="./beta.html">Recrutamento</a></div></footer>
+</body>
+</html>

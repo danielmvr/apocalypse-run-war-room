@@ -1,0 +1,24 @@
+/* Editorial routes only: no map, ranking, timer or form selectors. */
+.entry-paths{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:4px 0 24px}
+.entry-path{min-width:0;padding:18px 20px;border:1px solid #355747;border-radius:9px;background:linear-gradient(120deg,#14271e,#101b1d);color:#e8f5ed}
+.entry-path--veteran{border-color:#6b603e;background:linear-gradient(120deg,#26271c,#141d19)}
+.entry-path small{font:700 10px/1.5 system-ui,sans-serif;letter-spacing:1.5px;color:#a7e9bd}
+.entry-path--veteran small{color:#f0cf91}.entry-path h3{font:700 24px/1.15 'Barlow Condensed',system-ui,sans-serif;margin:7px 0 9px}
+.entry-path p{font:400 12px/1.75 'DM Sans',system-ui,sans-serif;color:#b8ccbf;margin:0 0 12px;max-width:65ch}
+.entry-path a,.migration-action{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:10px 14px;box-sizing:border-box;border:1px solid #78ad8a;border-radius:6px;color:#eaffef;background:#1c3b29;font:700 12px/1.5 'DM Sans',system-ui,sans-serif;text-decoration:none;text-align:center;overflow-wrap:anywhere}
+.entry-path--veteran a{border-color:#a39060;background:#343421;color:#fff0cd}
+.entry-path a:hover,.migration-action:hover{background:#2a4e35;color:#fff}
+.entry-path a:focus-visible,.migration-action:focus-visible,.veteran-notice a:focus-visible{outline:3px solid #fff;outline-offset:4px}
+.veteran-notice{border:1px solid #8c7953;border-left:4px solid #e1bd79;border-radius:9px;background:#292b1e;color:#f4e6cb;padding:18px 20px;margin:0 0 26px;font:400 13px/1.8 'DM Sans',system-ui,sans-serif}
+.veteran-notice strong{display:block;font-size:15px;color:#fff0cd}.veteran-notice p{margin:7px 0}.veteran-notice a{display:inline-flex;align-items:center;min-height:48px;color:#d0f5dc;font-weight:700;text-underline-offset:4px}
+.migration-page{margin:0;background:radial-gradient(ellipse at 85% 0%,#22403188,transparent 50%),#0b1411;color:#e8f5ed;font:400 15px/1.8 'DM Sans',system-ui,sans-serif;color-scheme:dark;overflow-wrap:anywhere}
+.migration-page *{box-sizing:border-box}.migration-shell{width:min(960px,calc(100% - 36px));margin:auto}
+.migration-header{border-bottom:1px solid #355043}.migration-header .migration-shell{display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap;padding:20px 0}
+.migration-page a{color:#b8f1cb}.migration-page a:focus-visible{outline:3px solid #fff;outline-offset:4px}.migration-brand{font:800 25px/1.2 'Barlow Condensed',system-ui,sans-serif;letter-spacing:1px;text-decoration:none}
+.migration-back{display:inline-flex;align-items:center;min-height:48px;font-size:12px;text-underline-offset:4px}.migration-main{padding:42px 0 65px}
+.migration-eyebrow{color:#a6dcb9;font-size:11px;font-weight:700;letter-spacing:2px}.migration-page h1,.migration-page h2{font-family:'Barlow Condensed',system-ui,sans-serif;line-height:1.15}
+.migration-page h1{font-size:clamp(38px,7vw,68px);margin:14px 0 20px}.migration-lead{max-width:75ch;color:#c0d2c6}.migration-warning{border:1px solid #d2ad65;border-left:5px solid #f2cb7b;padding:20px;background:#342c1b;color:#fff0ce;border-radius:8px;margin:24px 0;overflow-wrap:anywhere}
+.migration-warning strong{font-size:clamp(15px,2.4vw,19px);line-height:1.65;display:block}.migration-warning p{margin:12px 0 0}
+.migration-actions{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0 30px}.migration-card{border:1px solid #375243;border-radius:10px;padding:24px;margin:20px 0;background:#14221a}
+.migration-page h2{font-size:30px;margin:0 0 16px}.migration-steps{padding-left:25px;margin:0}.migration-steps li{padding:0 0 18px 8px}.migration-steps li:last-child{padding-bottom:0}.migration-steps li::marker{color:#a1e2b5;font-weight:700}.migration-steps strong{color:#f3fff4}.migration-steps p{margin:5px 0;color:#bfd0c3}.migration-page ul li{margin-bottom:10px}.migration-footer{border-top:1px solid #355043;padding:22px 0 30px;color:#9eb8a6;font-size:12px}
+@media(max-width:620px){.entry-paths{grid-template-columns:minmax(0,1fr)}.entry-path{padding:17px}.entry-path a{width:100%}.migration-card{padding:18px}.migration-shell{width:calc(100% - 28px)}.migration-main{padding-top:30px}.migration-actions .migration-action{width:100%}.migration-warning{padding:16px}.veteran-notice{padding:16px}}

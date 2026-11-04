@@ -513,7 +513,7 @@ main{max-width:1380px;margin:auto;padding:0 36px}.kicker{color:#89c7a3;font-size
       <div class="hero-copy">
         <div class="eyebrow"><span class="tiny-diamond"></span> ARQUIVO 001 <span class="line"></span> MANUAL DE SOBREVIVÊNCIA</div>
         <h1 id="heroTitle">O mundo mudou.<br/><em>Seu primeiro passo</em><br/>muda com ele.</h1>
-        <p>Do convite à sua primeira patrulha, chegando às Caçadas opcionais da Alpha. Aprenda no seu ritmo, sem precisar dominar toda a guerra de uma vez.</p>
+        <p>Encontre seu caminho de entrada: novos recrutas pela Play, veteranos pela migração segura. Depois, explore o tutorial de jogabilidade no seu ritmo, sem precisar dominar toda a guerra de uma vez.</p>
         <div class="hero-actions"><button type="button" class="primary-cta" id="startGuide">Começar tutorial <span aria-hidden="true">↗</span></button><button type="button" class="quiet-cta" id="showGlossaryIntro">Entender os termos <span aria-hidden="true">＋</span></button></div>
       </div>
       <div class="hero-art hero-motion" id="heroMotion" data-stage="0" role="group" aria-label="Motion Graphic ilustrativo de entrada no jogo, sem acesso ao GPS ou à localização do visitante">
@@ -592,7 +592,7 @@ main{max-width:1380px;margin:auto;padding:0 36px}.kicker{color:#89c7a3;font-size
 
     <section class="last-call" aria-labelledby="lastCallTitle"><span class="kicker">REDE DE SOBREVIVÊNCIA</span><h2 id="lastCallTitle">O caminho está lá fora.</h2><p>Quando terminar, volte à Sala de Guerra para observar o mundo que está ajudando a construir.</p><div class="last-call-actions"><a href="./" class="primary-cta">Abrir Sala de Guerra <span aria-hidden="true">↗</span></a><button class="quiet-cta" type="button" id="openGlossary">Glossário rápido <span aria-hidden="true">＋</span></button></div></section>
   </main>
-  <footer class="site-footer"><div><strong>APOCALYPSE RUN</strong><span>GUIA DE CAMPO • VERSÃO ALPHA</span></div><div class="footer-meta"><span id="footerVersion">Base 0.20.0 · build 128</span><span id="footerReview">Covil verificado em 28/10/2026</span><span>Material público. Sem dados pessoais.</span></div></footer>
+  <footer class="site-footer"><div><strong>APOCALYPSE RUN</strong><span>GUIA DE CAMPO • REFERÊNCIA DE JOGABILIDADE</span></div><div class="footer-meta"><span id="footerVersion">Tutorial: base 0.20.0 · build 128</span><span id="footerReview">Covil verificado em 28/10/2026</span><span>Material público. Sem dados pessoais.</span></div></footer>
 
   <dialog id="glossaryDialog" class="glossary-dialog" aria-labelledby="glossaryTitle"><div class="glossary-head"><div><span class="kicker">REFERÊNCIA RÁPIDA</span><h2 id="glossaryTitle">Dicionário da guerra</h2></div><button type="button" class="close-dialog" id="closeGlossary" aria-label="Fechar glossário">✕</button></div><div class="glossary-list" id="glossaryList"></div><div class="glossary-footer"><button type="button" id="closeGlossaryBottom">Voltar ao tutorial</button></div></dialog>
   <script type="module">
@@ -615,20 +615,71 @@ const GUIDE_META = {
 
 const CHAPTERS = [
   {
-    id:'instalacao', part:'COMECE AQUI', number:'01', time:'2 MIN', title:'Sua entrada na zona de sobrevivência',
-    deck:'Antes de caminhar, instale a versão Alpha e confirme que tem o convite individual de acesso.',
-    where:'Android · instalação do APK', icon:'download',
-    steps:[
-      ['Garanta seu convite', 'O acesso online está em testes e usa um código individual, de uso único e com validade. Peça-o ao responsável pela Alpha; o APK sozinho não libera sua conta.'],
-      ['Baixe o aplicativo', 'Use o canal público oficial de APKs e abra o arquivo no seu Android. A versão publicada nesta revisão é a 0.20.0/build 128. O mesmo link recebe novas versões; confirme a versão mostrada no canal oficial. Se o Android pedir confirmação para instalar o APK, examine a solicitação antes de prosseguir.'],
-      ['Abra o jogo', 'O aplicativo pode mostrar uma abertura curta com frases da Resistência, da Horda ou neutras enquanto lê os dados locais. A tela de progresso só aparece se houver carregamento real; não há espera nem porcentagem inventadas. Depois siga para a escolha da facção. Não é necessário criar senha ou informar e-mail na Alpha.'],
+    "id": "instalacao",
+    "part": "COMECE AQUI",
+    "number": "01",
+    "time": "3 MIN",
+    "title": "Escolha sua entrada: Play ou transição Alpha",
+    "deck": "Novo recruta começa pelos testes da Google Play, após aprovação e convite. Quem já tem jogador na Alpha segue o guia de migração antes de trocar de instalação.",
+    "where": "Novos: Google Play · Veteranos: Alpha de transição",
+    "icon": "download",
+    "steps": [
+        [
+            "Novo recruta: solicite acesso à Play",
+            "Abra a página de recrutamento, solicite participação e aguarde aprovação e convite oficial. A solicitação não libera acesso imediato. Não instale a Alpha para começar a jogar."
+        ],
+        [
+            "Veterano: preserve sua instalação Alpha",
+            "Atualize a Alpha existente para 0.20.0-recovery-alpha, versionCode 1140 (build local 140), sem desinstalar nem limpar dados. Confira jogador e atividades; vincule Google e confirme a identidade no servidor. Crie a Arca 2.0 e guarde uma cópia fora do aparelho, com a senha separada. Siga o guia de migração completo."
+        ],
+        [
+            "Confirme o acesso antes da troca",
+            "A conta precisa estar autorizada no OAuth Google e no Teste interno da Play. Alpha e Play têm assinaturas diferentes: uma não atualiza diretamente a outra. Com vínculo, backup externo e acesso confirmados, use Recuperar minha conta com o mesmo Google na Play, antes de criar outro jogador."
+        ],
+        [
+            "Use este tutorial como referência de jogabilidade",
+            "As mecânicas e demonstrações dos próximos capítulos têm como referência 0.20.0/build 128. Esse número não indica a última Alpha: a versão de transição é a 1140. Textos de convite/Alpha nos capítulos históricos não substituem o fluxo atual de entrada e recuperação descrito aqui."
+        ]
     ],
-    sport:{ title:'O que você precisa fazer', lead:'Instalar, ter o convite em mãos e abrir o aplicativo. Não há nenhum ajuste de estratégia necessário agora.', focus:['Convite e instalação são etapas diferentes.', 'Se já instalou, avance para a escolha da facção.']},
-    tactical:{title:'Antes de começar',lead:'Confirme a versão instalada e preserve a instalação durante os testes.',focus:['O link oficial é atualizado com novos APKs; confira versão e build no canal de distribuição. Na revisão deste guia, 0.20.0/build 128.', 'A identidade da Alpha está vinculada à instalação. Evite limpar os dados ou desinstalar antes de confirmar uma forma de recuperar o acesso.', 'Uma atualização do APK deve ser instalada por cima da anterior quando compatível.']},
-    note:'Distribuição Alpha Android. Não é um cadastro público aberto nem um aplicativo já lançado na Play Store.',
-    faq:[['Preciso de um e-mail ou senha?', 'Não para este fluxo. A Alpha cria uma sessão autenticada internamente e vincula seu convite e apelido à identidade desta instalação.'],['Posso usar o mesmo convite de outra pessoa?', 'Não. Os convites são individuais e de uso único.'],['Por que aparece uma frase diferente ao abrir o jogo?', 'A partir da 0.19.1, o jogo tem um catálogo offline de 100 frases de abertura (40 Resistência, 40 Horda e 20 neutras). Elas são decorativas: não indicam o estado da guerra e não exigem esperar mais para entrar.'],['Onde ficam as telas na versão 0.20.0?', 'A navegação tem três áreas: Patrulha (atividade e mapa), Guerra (Panorama, Ordens, Energia) e Sobrevivente (Perfil e biologia, Conquistas). Conta e sincronização ficam em Configurações.']],
-    source:'Covil: distribuição pública de APK · docs/online-api-v1.md'
-  },
+    "sport": {
+        "title": "Seu próximo passo, sem atalhos",
+        "lead": "O estilo Esportista não muda a forma de acesso. Escolha o caminho conforme sua instalação atual.",
+        "focus": [
+            "Novo recruta: solicite testes pela Play e aguarde aprovação e convite; não comece pela Alpha.",
+            "Veterano da Alpha: preserve a instalação, confirme Google e salve a Arca fora do aparelho antes de planejar a troca.",
+            "Os dois links acima levam ao roteiro adequado. Este perfil apenas simplifica a explicação da jogabilidade."
+        ]
+    },
+    "tactical": {
+        "title": "Confira a rota antes da travessia",
+        "lead": "O estilo Estrategista não define se você é novo ou veterano. As verificações de conta são as mesmas em qualquer perfil.",
+        "focus": [
+            "Novo recruta: inscrição não é liberação automática; aguarde aprovação na Play.",
+            "Veterano: confira identidade original, backup externo e autorizações OAuth e Play. As assinaturas diferentes impedem atualização direta Alpha → Play.",
+            "A Arca depende de análise, prévia e confirmação; legado sem comprovação pode permanecer apenas no histórico."
+        ]
+    },
+    "note": "NÃO DESINSTALE A ALPHA ANTES DE VINCULAR O GOOGLE E SALVAR A ARCA FORA DO APARELHO. Na dúvida, preserve a instalação e peça suporte.",
+    "faq": [
+        [
+            "A Play atualiza minha Alpha por cima?",
+            "Não. As assinaturas são diferentes. Primeiro proteja sua conta e os dados locais pelo procedimento completo de migração."
+        ],
+        [
+            "Google recupera todos os meus quilômetros e XP?",
+            "Não. Google recupera a identidade vinculada e os dados remotos. O histórico local depende da Arca e das verificações; nem todo legado possui comprovação GPS suficiente."
+        ],
+        [
+            "Qual versão este tutorial descreve?",
+            "As demonstrações de jogabilidade usam a referência 0.20.0/build 128. O fluxo de entrada deste capítulo foi atualizado para Play e para a última Alpha de transição, 0.20.0-recovery-alpha/versionCode 1140."
+        ],
+        [
+            "Por que aparece uma frase diferente ao abrir?",
+            "O catálogo offline tem 100 frases (40 Resistência, 40 Horda e 20 neutras), sem espera artificial. As animações didáticas deste guia não são operações reais do jogo."
+        ]
+    ],
+    "source": "Covil: evacuação Alpha · guia oficial de migração · referência de jogabilidade 0.20.0/build 128"
+},
   {
     id:'faccao',part:'COMECE AQUI',number:'02',time:'3 MIN',title:'Escolha quem você será',
     deck:'O mundo se divide entre a Resistência humana e a Horda zumbi. Conheça os dois lados antes de confirmar.',
@@ -2170,7 +2221,7 @@ function renderChapter(){
  const steps=c.steps.map(([title,description],i)=>`<li><span class="action-num">${String(i+1).padStart(2,'0')}</span><div class="action-content"><strong>${enc(title)}</strong><p>${enc(description)}</p></div></li>`).join('');
  const faq=c.faq.map(([q,a])=>`<details class="faq-item"><summary>${enc(q)}</summary><p>${enc(a)}</p></details>`).join('');
  const extra=c.id==='instalacao'?showAwakeningMotion():c.id==='patrulha'?`${showPatrolMotion()}${showEligibilityTool()}`:c.id==='resultado'?showDebriefMotion():c.id==='missoes'?showMissionMotion():c.id==='cacadas'?showHuntMotion():c.id==='energia'?showEnergyMotion():c.id==='controle'?showTerritoryMotion():c.id==='biologia'?showBiologyMotion():c.id==='temporadas'?showSeasonMotion():c.id==='coop'?showCoopMotion():'';
- const links=c.id==='instalacao'?`<div class="chapter-support"><a href="${enc(GUIDE_META.download)}" target="_blank" rel="noopener noreferrer" class="support-link">Baixar APK Alpha ↗</a><a href="${enc(GUIDE_META.changelog)}" target="_blank" rel="noopener noreferrer" class="support-secondary">Ver canal de versões</a></div>`:c.id==='temporadas'?`<div class="chapter-support"><a href="${enc(GUIDE_META.warRoom)}" class="support-link">Abrir Sala de Guerra ↗</a></div>`:'';
+ const links=c.id==='instalacao'?`<div class="chapter-support"><a href="./beta.html" class="support-link">NOVO RECRUTA · Comece pela Google Play →</a><a href="./migracao.html" class="support-secondary">VETERANO DA ALPHA · Preserve seu sobrevivente →</a></div>`:c.id==='temporadas'?`<div class="chapter-support"><a href="${enc(GUIDE_META.warRoom)}" class="support-link">Abrir Sala de Guerra ↗</a></div>`:'';
  $('chapterContent').innerHTML=`<div class="chapter-inner"><div class="chapter-topline"><span><span class="chapter-number">CAPÍTULO ${enc(c.number)}</span> / ${enc(c.part)}</span><span class="chapter-time">LEITURA ${enc(c.time)}</span></div><h3>${enc(c.title)}</h3><p class="chapter-lead">${enc(c.deck)}</p><div class="location-tag"><svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m10 1 7 4v10l-7 4-7-4V5l7-4Z"/><path d="M10 7v6M7 10h6"/></svg><span>NO APLICATIVO · ${enc(c.where)}</span></div><div class="step-label">PASSO A PASSO · O QUE FAZER</div><ol class="action-list">${steps}</ol>${links}<div class="branch-brief"><span class="branch-prefix">${t}</span><h4>${enc(b.title)}</h4><p>${enc(b.lead)}</p><ul class="focus-list">${b.focus.map(x=>`<li>${enc(x)}</li>`).join('')}</ul></div>${extra}<div class="alert-note"><span class="alert-mark">!</span><span>${enc(c.note)}</span></div><div class="faq-wrap"><h4>DÚVIDAS MAIS COMUNS</h4>${faq}</div><div class="source-tag"><strong>VERIFICADO NO COVIL</strong><span>${enc(c.source)}</span></div></div>`;
  $('chapter').classList.toggle('is-tactical',mode==='tactical');
  $('previousChapter').disabled=active===0;
@@ -2217,8 +2268,8 @@ for(const id of ['openGlossary','showGlossaryIntro'])$(id).addEventListener('cli
 for(const id of ['closeGlossary','closeGlossaryBottom'])$(id).addEventListener('click',closeGlossary);
 $('glossaryDialog').addEventListener('click',event=>{if(event.target===$('glossaryDialog'))closeGlossary()});
 $('glossaryList').innerHTML=GLOSSARY.map(([term,definition])=>`<dl class="glossary-row"><dt>${enc(term)}</dt><dd>${enc(definition)}</dd></dl>`).join('');
-$('headerVersion').textContent=`GUIA ${GUIDE_META.appVersion}`;
-$('footerVersion').textContent=`Base ${GUIDE_META.appVersion} · build ${GUIDE_META.build}`;
+$('headerVersion').textContent=`TUTORIAL · BASE ${GUIDE_META.appVersion}`;
+$('footerVersion').textContent=`Tutorial: base ${GUIDE_META.appVersion} · build ${GUIDE_META.build}`;
 $('footerReview').textContent=`Covil verificado em ${GUIDE_META.reviewedAt}`;
 window.addEventListener('popstate',()=>{const p=new URL(window.location.href).searchParams;const newMode=p.get('modo')==='estrategista'?'tactical':'sport';const ix=CHAPTERS.findIndex(c=>c.id===p.get('etapa'));mode=newMode;completed=loadProgress();active=ix>=0?ix:0;render()});
 
