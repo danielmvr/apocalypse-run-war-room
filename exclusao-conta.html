@@ -16,8 +16,28 @@
   <div class="migration-eyebrow">CONTA E DADOS // APOCALYPSE RUN</div>
   <h1>Solicitar exclusão de conta</h1>
   <p class="privacy-meta">Versão candidata · revisão de 5 de novembro de 2026</p>
-  <aside class="privacy-status" role="note" aria-label="Estado do caminho de exclusão"><strong>CAMINHO CANDIDATO · AINDA NÃO ATIVO</strong><p>O registro autenticado de pedidos e a operação de exclusão ainda precisam de ativação e validação. Esta página não registra um pedido, não comprova identidade e não apaga conta ou dados.</p></aside>
+  <aside class="privacy-status" role="note" aria-label="Estado do caminho de exclusão"><strong>PORTAL CANDIDATO · AINDA NÃO ATIVO EM PRODUÇÃO</strong><p>Este portal e a operação de exclusão ainda dependem de ativação e validação. Entrar com Google não cria um pedido. Solicitação, confirmação e execução são etapas distintas, sujeitas à disponibilidade informada pelo servidor. A política de privacidade continua candidata.</p></aside>
   <p class="migration-lead">A exclusão envolve a conta do Apocalypse Run e seus dados associados. Para proteger o jogador, o pedido deve ser vinculado à conta autenticada; conhecer um e-mail ou apelido não é prova suficiente de titularidade.</p>
+  <section class="migration-card account-portal" aria-labelledby="portalTitle">
+    <h2 id="portalTitle" tabindex="-1">Acessar minha conta pelo navegador</h2>
+    <p>Você pode usar este caminho mesmo sem o aplicativo instalado, com o Google já vinculado à sua conta. Este portal não oferece cadastro nem pede a senha Google. O login é feito na janela oficial do provedor.</p>
+    <p id="portalAvailability" role="status">Verificando a disponibilidade local do portal…</p>
+    <div class="account-actions"><button type="button" id="accountLogin">Entrar com Google</button><button type="button" id="accountLoginCancel" hidden>Cancelar este login</button><button type="button" id="accountLogout" hidden>Sair deste navegador</button></div>
+    <p id="accountIdentity"></p><p id="accountFeedback" role="status" aria-live="polite"></p>
+    <div id="accountRequest" hidden>
+      <h3>Meu pedido</h3><p id="accountRequestState"></p><p id="accountProtocol"></p>
+      <button type="button" id="accountRefresh">Atualizar situação do pedido</button>
+      <div id="accountIntent" hidden>
+        <p><strong>Você está solicitando a exclusão da conta Apocalypse Run e dos dados associados.</strong> A execução pode ser irreversível e não apaga arquivos da Arca ou imagens que você guardou em outros destinos. Leia a <a href="./privacidade.html#retencao">política candidata e os limites de retenção</a> antes de continuar.</p>
+        <label for="accountConfirmation">Para solicitar ou confirmar, digite exatamente EXCLUIR MINHA CONTA</label>
+        <input id="accountConfirmation" type="text" autocomplete="off" spellcheck="false" maxlength="19" aria-describedby="accountConfirmationHelp">
+        <p id="accountConfirmationHelp">Registrar o pedido ainda não confirma sua execução. A confirmação exige outra ação explícita e login Google recente.</p>
+      </div>
+      <div class="account-actions"><button type="button" id="accountRequestButton" hidden>Registrar pedido de exclusão</button><button type="button" id="accountConfirmButton" hidden>Confirmar exclusão da minha conta</button><button type="button" id="accountCancelButton" hidden>Cancelar pedido de exclusão</button></div>
+    </div>
+    <details class="account-receipt"><summary>Já tenho protocolo e quero conferir a conclusão</summary><p>Use somente o protocolo recebido para seu pedido. Esta consulta não procura contas por e-mail ou apelido e não mostra dados pessoais.</p><label for="receiptProtocol">Protocolo do pedido</label><input id="receiptProtocol" type="text" autocomplete="off" spellcheck="false" maxlength="36"><button type="button" id="receiptCheck">Consultar conclusão</button><p id="receiptFeedback" role="status"></p></details>
+    <p class="privacy-meta">A sessão fica somente na memória desta página. Fechar ou recarregar exige novo login. Não há pedido automático, arquivo da Arca, trajetória GPS ou senha a enviar por este portal.</p>
+  </section>
   <section class="migration-card" aria-labelledby="protocolo"><h2 id="protocolo">Caminho proposto pelo aplicativo</h2>
     <ol class="migration-steps">
       <li><strong>Entre na sua conta existente.</strong><p>Use a instalação que já conserva a sessão ou a recuperação Google disponível na sua versão. Se não conseguir acessar, peça assistência abaixo. Não crie outra conta para substituir a original.</p></li>
@@ -38,5 +58,6 @@
   </section>
 </main>
 <footer class="migration-footer"><div class="migration-shell privacy-footer">APOCALYPSE RUN <a href="./">Sala de Guerra</a><a href="./privacidade.html">Privacidade</a><a href="./migracao.html">Preservar jogador Alpha</a></div></footer>
+<script type="module" src="/src/account-portal.ts"></script>
 </body>
 </html>

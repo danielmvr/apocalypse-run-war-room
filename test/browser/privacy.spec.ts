@@ -17,8 +17,13 @@ test('privacy candidates describe actual data and do not present an active delet
     await expect(page.getByRole('heading', { level: 1 })).toContainText(path.includes('privacidade') ? 'Política de Privacidade' : 'Solicitar exclusão');
     await expect(page.getByRole('note')).toContainText('AINDA NÃO ATIV');
     await expect(page.locator('main')).toContainText('não há');
-    await expect(page.locator('form,input,textarea,button')).toHaveCount(0);
-    await expect(page.locator('script:not([src="/@vite/client"])')).toHaveCount(0);
+    await expect(page.locator('form,input[type=password],textarea')).toHaveCount(0);
+    if (path === '/privacidade.html') {
+      await expect(page.locator('input,button')).toHaveCount(0);
+      await expect(page.locator('script:not([src="/@vite/client"])')).toHaveCount(0);
+    } else {
+      await expect(page.getByRole('button', { name: 'Entrar com Google', exact: true })).toBeVisible();
+    }
   }
   await page.goto('/privacidade.html');
   for (const text of ['pares de posições GPS', 'células territoriais H3', 'passos', 'Google', 'Supabase', 'OpenFreeMap', 'CARTO', 'Cloudflare', 'GitHub', 'Guia de Campo', 'Arca']) {

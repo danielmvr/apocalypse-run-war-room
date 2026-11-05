@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex">
+  <script>
+  // Keep this first and non-module: remove code/error parameters before assets load.
+  (() => {
+    const url = new URL(location.href);
+    const attempt = url.searchParams.get('attempt');
+    const code = url.searchParams.get('code');
+    const failed = Boolean(url.hash || url.searchParams.has('error') || url.searchParams.has('error_code') ||
+      url.searchParams.getAll('attempt').length !== 1 || url.searchParams.getAll('code').length !== 1 ||
+      !/^[A-Za-z0-9_-]{32}$/.test(attempt || '') || !/^[A-Za-z0-9_-]{8,512}$/.test(code || ''));
+    history.replaceState(null, '', url.pathname);
+    Object.defineProperty(window, '__aprunOAuthResult', { configurable: true,
+      value: { type: 'aprun-oauth-result', attempt, code: failed ? null : code, failed } });
+  })();
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Retorno de login | Apocalypse Run</title>
+  <link rel="stylesheet" href="./migration-entry.css">
+  <link rel="stylesheet" href="./privacy-pages.css">
+</head>
+<body class="migration-page privacy-page">
+<main class="migration-shell migration-main"><div class="migration-eyebrow">APOCALYPSE RUN // CONTA</div><h1>Retorno de login</h1><p id="callbackStatus" role="status">Retornando à página que iniciou o login…</p><p>Não há solicitação de exclusão automática ao entrar. Se a página original foi fechada, volte ao portal e inicie um novo login.</p><p><a class="privacy-contact" href="./exclusao-conta.html">Voltar ao portal de conta</a></p></main>
+<script type="module" src="/src/account-callback.ts"></script>
+</body>
+</html>

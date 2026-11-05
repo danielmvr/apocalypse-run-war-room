@@ -7,7 +7,8 @@ export default defineConfig({
   webServer: {
     command: 'npm run dev -- --host 127.0.0.1 --port 4173 --strictPort',
     url: 'http://127.0.0.1:4173/',
-    env: { VITE_PUBLIC_WAR_API: 'http://127.0.0.1:4173/public-war-fixture' },
+    env: { VITE_PUBLIC_WAR_API: 'http://127.0.0.1:4173/public-war-fixture',
+      VITE_ACCOUNT_WEB_ENABLED: 'true', VITE_ACCOUNT_PUBLISHABLE_KEY: 'sb_publishable_synthetic06d' },
     reuseExistingServer: false,
   },
 });

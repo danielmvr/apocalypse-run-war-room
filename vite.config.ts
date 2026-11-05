@@ -14,6 +14,7 @@ export default defineConfig({
         temporadas: resolve(__dirname, 'temporadas.html'),
         privacidade: resolve(__dirname, 'privacidade.html'),
         exclusao: resolve(__dirname, 'exclusao-conta.html'),
+        contaCallback: resolve(__dirname, 'auth-callback.html'),
       },
     },
   },
