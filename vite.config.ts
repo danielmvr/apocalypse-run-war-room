@@ -12,6 +12,8 @@ export default defineConfig({
         beta: resolve(__dirname, 'beta.html'),
         comando: resolve(__dirname, 'comando.html'),
         temporadas: resolve(__dirname, 'temporadas.html'),
+        privacidade: resolve(__dirname, 'privacidade.html'),
+        exclusao: resolve(__dirname, 'exclusao-conta.html'),
       },
     },
   },

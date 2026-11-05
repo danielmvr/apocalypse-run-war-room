@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0b1411">
+  <meta name="description" content="Versão candidata da política de privacidade do Apocalypse Run, em revisão e ainda não ativa.">
+  <title>Política de Privacidade | Apocalypse Run</title>
+  <link rel="stylesheet" href="./migration-entry.css">
+  <link rel="stylesheet" href="./privacy-pages.css">
+</head>
+<body class="migration-page privacy-page">
+<header class="migration-header"><div class="migration-shell"><a class="migration-brand" href="./">APOCALYPSE RUN</a><nav class="privacy-nav" aria-label="Navegação de privacidade"><a href="./">Sala de Guerra</a><a href="./exclusao-conta.html">Exclusão de conta</a></nav></div></header>
+<main class="migration-shell migration-main">
+  <div class="migration-eyebrow">PRIVACIDADE // APOCALYPSE RUN</div>
+  <h1>Política de Privacidade</h1>
+  <p class="privacy-meta">Versão candidata · revisão de 5 de novembro de 2026</p>
+  <aside class="privacy-status" role="note" aria-label="Estado desta política"><strong>CANDIDATA EM REVISÃO · AINDA NÃO ATIVA</strong><p>Este texto foi preparado para revisão e ainda não é uma política publicada ou vigente. O processo de solicitação autenticada e a operação de exclusão também aguardam ativação e validação. Não há prazo geral de retenção aprovado nesta candidata.</p></aside>
+  <p class="migration-lead">Apocalypse Run combina atividades de caminhada e corrida iniciadas pelo jogador com um jogo territorial. Esta candidata descreve o aplicativo Android, os recursos online, a War Room e a inscrição nos testes. O tratamento depende da versão instalada e das funcionalidades habilitadas.</p>
+  <nav class="privacy-toc" aria-label="Seções desta política"><a href="#dados">Dados e finalidades</a><a href="#destinos">Destinatários</a><a href="#controles">Seus controles</a><a href="#retencao">Retenção e exclusão</a><a href="#contato">Contato</a></nav>
+  <section class="migration-card" aria-labelledby="dados"><h2 id="dados">1. Dados e finalidades</h2>
+    <dl class="privacy-data">
+      <dt>Localização e percurso</dt><dd>O aplicativo usa coordenadas, precisão e horários de GPS para mostrar a posição e registrar atividades. Percursos e pontos ficam no histórico local. A sincronização normal de patrulhas não envia a sequência de coordenadas brutas, mas transmite células territoriais H3, horários, distância e evidências de movimento. Esses dados de área e atividade continuam sendo dados de localização vinculados à conta.</dd>
+      <dt>Caçadas opcionais</dt><dd>Quando o recurso está habilitado e você participa, pares de posições GPS são enviados ao servidor para validar o movimento. As tabelas de Caçadas revisadas guardam eventos e intervalos, não essas coordenadas. Isso não garante ausência de registros técnicos nos serviços de infraestrutura.</dd>
+      <dt>Atividade e integridade</dt><dd>Distância, duração, passos, cadência e resumos de movimento ajudam a registrar a atividade e verificar sua validade. Decisões de GPS, precisão, velocidades, contadores e versão do app podem integrar os diagnósticos enviados. Não há transmissão contínua do acelerômetro bruto no fluxo revisado. Facção, contágio e estado biológico são ficção do jogo, não avaliação médica.</dd>
+      <dt>Conta e participação online</dt><dd>Identificador de usuário, apelido, facção, avatar, consentimentos, progresso, missões, conquistas e ações online permitem manter o jogador e a disputa. O fluxo Alpha usa sessão autenticada associada à instalação. Nas versões com vínculo ou recuperação Google, Google e o serviço de autenticação processam a prova de login e os dados da identidade, inclusive o e-mail associado ao provedor. A senha Google não é solicitada pelo jogo.</dd>
+      <dt>Sessão e credenciais</dt><dd>Tokens permitem autenticação e renovação da sessão. A sessão é cifrada no aparelho com proteção do Android Keystore. Tokens, senhas e códigos de autenticação não devem ser enviados ao suporte ou publicados.</dd>
+      <dt>Arca e compartilhamento escolhido por você</dt><dd>A Arca guarda dados locais em um arquivo cifrado com a senha escolhida por você. O jogo grava o arquivo no destino que você selecionar; esse destino pode sincronizá-lo com um serviço externo. O compartilhamento de imagens de atividades também depende de sua ação e pode incluir percurso e estatísticas. A recuperação pelo Google não substitui o histórico local ou a Arca.</dd>
+      <dt>Inscrição em testes e atendimento</dt><dd>A página de recrutamento solicita o e-mail da conta Google Play e consentimento para analisar o pedido e organizar convites. A solicitação envia também a versão do consentimento e a resposta da verificação de segurança; há registros de solicitação e tratamento. Se você nos escrever, o serviço de e-mail recebe o remetente e o conteúdo que você enviar.</dd>
+      <dt>Navegação e dados técnicos</dt><dd>Serviços de hospedagem, autenticação, mapas, fontes e proteção do formulário recebem requisições, endereço IP e metadados de transporte necessários ao acesso. O Guia de Campo guarda no navegador a preferência de perfil e o progresso dos capítulos. Esses registros locais não são o progresso da conta no jogo.</dd>
+    </dl>
+  </section>
+  <section class="migration-card" aria-labelledby="destinos"><h2 id="destinos">2. Quem recebe e quem pode ver</h2>
+    <p>O serviço online utiliza Supabase para autenticação, banco e funções do servidor. O vínculo Google utiliza os serviços de identidade Google. Mapas podem carregar recursos de OpenFreeMap no app e CARTO na War Room, com dados cartográficos OpenStreetMap. O site usa hospedagem GitHub Pages e fontes Google; o canal Alpha distribui arquivos pelo GitHub. O recrutamento utiliza Cloudflare Turnstile para verificação de segurança. Os provedores também tratam dados de conexão conforme seus serviços.</p>
+    <p>Outros jogadores habilitados podem ver informações de jogo como apelido, facção, ações e territórios, conforme o recurso online. A War Room pública mostra placares, células territoriais e eventos com campos limitados; não apresenta a rota individual de uma patrulha ou credenciais. Células e eventos não devem ser tratados como garantia de anonimato.</p>
+    <p>No código revisado, não foi identificado mecanismo de anúncios, venda de dados ou SDK de publicidade. Isso não equivale a ausência de destinatários externos: os serviços acima e os destinos escolhidos para compartilhamento continuam envolvidos.</p>
+  </section>
+  <section class="migration-card" aria-labelledby="controles"><h2 id="controles">3. Permissões, proteção e seus controles</h2>
+    <p>Você controla as permissões de localização, reconhecimento de atividade e notificações nas configurações Android. A patrulha é iniciada pelo jogador e pode continuar com a tela apagada por meio de um serviço em primeiro plano. Encerre a atividade para parar a coleta dessa patrulha. Acesso aproximado ou permissão negada pode limitar os recursos.</p>
+    <p>As opções existentes do app permitem controlar a participação e o envio online. Pausar o envio não apaga o que já foi transmitido. Apagar dados do navegador remove preferências locais do Guia, mas não exclui a conta do jogo. Desinstalar o app também não é um pedido de exclusão e pode remover dados locais sem cópia.</p>
+    <p>A comunicação de autenticação e sincronização usa HTTPS. O histórico fica no armazenamento privado do aplicativo; a cifragem da sessão e da Arca não significa que todo o banco local esteja cifrado ou que a recuperação esteja garantida.</p>
+  </section>
+  <section class="migration-card" aria-labelledby="retencao"><h2 id="retencao">4. Retenção e exclusão de conta</h2>
+    <p>Ainda não há um prazo geral aprovado para conservar conta, patrulhas, progresso, auditoria e cópias de segurança. A duração e o tratamento dos registros dos provedores também precisam ser confirmados antes de ativar esta política. Não prometemos exclusão automática ou atendimento em um número de dias que ainda não foi definido.</p>
+    <p>O <a href="./exclusao-conta.html">caminho de solicitação de exclusão</a> está preparado como candidato, mas ainda não ativo. A proposta é registrar um pedido autenticado no aplicativo e gerar um protocolo. Registrar um pedido não apaga a conta: a verificação e a execução são etapas distintas, ainda dependentes de um procedimento validado. Identidade, dados associados e eventual retenção precisam ser tratados explicitamente antes de confirmar uma exclusão.</p>
+    <p>Para esclarecimentos, acesso, correção ou assistência sobre seus dados, use o contato abaixo. Um e-mail ou apelido isolado não comprova que você é titular de uma conta. Não envie dados sensíveis para tentar provar identidade.</p>
+  </section>
+  <section class="migration-card" aria-labelledby="contato"><h2 id="contato">5. Responsável e contato</h2><p>Apocalypse Run — equipe responsável pelo jogo.</p><p><a class="privacy-contact" href="mailto:appcalypserun@gmail.com">appcalypserun@gmail.com</a></p><p>Não envie senha Google, senha ou arquivo da Arca, tokens, códigos de autenticação, convites ou trajetos GPS. O contato permite solicitar assistência; não realiza exclusão automática.</p><p>As mudanças desta candidata serão revistas antes de sua publicação. A versão vigente deverá refletir as práticas efetivamente habilitadas no aplicativo e no serviço.</p></section>
+</main>
+<footer class="migration-footer"><div class="migration-shell privacy-footer">APOCALYPSE RUN <a href="./">Sala de Guerra</a><a href="./exclusao-conta.html">Exclusão de conta</a><a href="./beta.html">Recrutamento</a></div></footer>
+</body>
+</html>
