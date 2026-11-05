@@ -30,6 +30,9 @@ test('privacy candidates describe actual data and do not present an active delet
     await expect(page.locator('main')).toContainText(text);
   }
   await expect(page.locator('#retencao').locator('..')).toContainText('Ainda não há um prazo geral aprovado');
+  await expect(page.locator('#contato').locator('..')).toContainText('desenvolvimento independente, mantido por pessoa física');
+  await expect(page.locator('#responsavelPublico')).toContainText('aguarda confirmação');
+  await expect(page.getByRole('link', { name: 'appcalypserun@gmail.com', exact: true })).toHaveAttribute('href', 'mailto:appcalypserun@gmail.com');
 });
 
 test('assistance link has no credential payload and cannot silently submit or delete anything', async ({ page }) => {
