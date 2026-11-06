@@ -11,3 +11,29 @@
 @media(max-width:900px){.patrol-workspace{grid-template-columns:1fr}.patrol-map-panel{position:static}.patrol-map-frame{height:52vh;min-height:360px}.patrol-editor{grid-template-columns:repeat(2,minmax(0,1fr))}.patrol-editor .patrol-card:first-child{grid-row:span 2}}
 @media(max-width:610px){.patrol-header{padding:12px 13px}.patrol-logo-symbol{width:34px;height:34px;font-size:20px}.patrol-logo strong{font-size:17px}.patrol-logo small{display:none}.patrol-nav a{padding:8px;font-size:10px}.patrol-nav a:nth-child(2){display:none}.patrol-shell{padding:25px 12px}.patrol-hero h1{font-size:45px}.patrol-hero p{font-size:12px}.patrol-editor{grid-template-columns:1fr}.patrol-editor .patrol-card:first-child{grid-row:auto}.patrol-panel-head{padding:14px}.patrol-panel-head h2{font-size:23px}.patrol-mode-pill{font-size:8px;padding:6px}.patrol-map-frame{min-height:355px;height:49vh}.patrol-map-hint{bottom:10px;font-size:9px;max-width:calc(100% - 20px)}.patrol-map-tools{padding:9px}.patrol-map-tools button{flex:1 1 calc(33% - 7px);padding:9px 7px;font-size:10px}.patrol-card{padding:15px}.patrol-metrics strong{font-size:26px}.patrol-footer{padding:20px 12px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+/* v2 - lookup de endereços, sugestões e rota viária */
+.patrol-address-search{margin:0 16px 15px;padding:14px;border:1px solid #416f53;border-radius:9px;background:linear-gradient(110deg,#163626,#101d1a)}
+.patrol-address-search label{display:block;color:#cbf1d6;font-weight:800;font-size:12px;margin-bottom:10px}
+.patrol-address-line{display:flex;gap:8px}
+.patrol-address-line input{flex:1;min-width:0;background:#091c14;color:#f0fff5;border:1px solid #58896a;border-radius:6px;padding:10px 12px;font-size:13px;min-height:42px}
+.patrol-address-line input:focus-visible{outline:2px solid #94ffb4;outline-offset:2px}
+.patrol-address-line button{flex:none}
+.patrol-address-helper{font-size:11px;color:#95bba7;line-height:1.6;margin:10px 0 0}
+.patrol-address-results{list-style:none;display:grid;gap:6px;margin:11px 0 0;padding:0;max-height:260px;overflow:auto}
+.patrol-address-results[hidden]{display:none}
+.patrol-address-results button{width:100%;text-align:left;border-radius:6px;background:#1b3b29;color:#ebfff3;border:1px solid #416f51;padding:12px;font-size:11px;line-height:1.6;cursor:pointer}
+.patrol-address-results button:hover{background:#2b5839;border-color:#9fe5ae}
+.patrol-address-results button:focus-visible{outline:2px solid #b7ffd0;outline-offset:2px}
+.patrol-address-results small{display:block;color:#9bcaaa;margin-top:4px}
+.patrol-route-status{background:#112d21;border-left:3px solid #71daa0;border-radius:4px;margin:2px 16px 14px;padding:11px 12px;color:#cbe7d0;font-size:11px;line-height:1.65}
+.patrol-route-status[data-kind="success"]{border-color:#81f6a8;background:#163c29;color:#e1ffeb}
+.patrol-route-status[data-kind="error"]{border-color:#ed9d76;background:#3d2b22;color:#ffe0c2}
+.patrol-route-status strong{font-weight:800}
+.patrol-map-tools #route-compute{margin-left:auto;background:#245b39;color:#e9ffed;border-color:#70c68c;font-size:12px;font-weight:900}
+.patrol-map-tools #route-compute:hover:not(:disabled){background:#347a50}
+.patrol-mode-pill.is-routed{background:#235037;border-color:#8feaab;color:#e3ffee}
+.point-xy .point-label{display:block;color:#d8f3e0;font-weight:700;margin-bottom:3px;font-size:11px;overflow-wrap:anywhere}
+.point-xy .point-coordinate{display:block;opacity:.75;font-size:10px}
+@media(max-width:650px){.patrol-address-line{align-items:stretch}.patrol-address-line button{font-size:11px;padding:8px 9px}.patrol-address-search{margin:0 10px 12px;padding:11px}.patrol-map-tools #route-compute{width:100%;margin:4px 0 0;min-height:44px}}
+@media(prefers-reduced-motion:reduce){.patrol-route-status,.patrol-address-results *{transition:none!important;animation:none!important}}

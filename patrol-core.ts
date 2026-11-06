@@ -1,15 +1,22 @@
 /**
- * Apocalypse Run | Patrol planner v1: portable plan format, no remote storage.
- * Import/export contract for future Android ACTION_SEND (JSON file).
+ * Apocalypse Run | Portable patrol plan contract v2.
+ * v1 manual files remain importable; routed v2 geometry remains local and is only an overlay.
  */
 export const PLAN_KIND = 'apocalypse-run.patrol-plan' as const;
-export const PLAN_VERSION = 1 as const;
+export const PLAN_VERSION = 2 as const;
 export const MAX_POINTS = 250;
+export const MAX_ROUTE_STOPS = 20;
+export const MAX_ROUTE_GEOMETRY_POINTS = 1800;
 export const MAX_LOCAL_PLANS = 20;
 export const MAX_DISTANCE_METERS = 100_000;
-export type LngLat = [number, number]; // Longitude, latitude (GeoJSON order)
+export type LngLat = [number, number];
 export type TravelMode = 'WALK' | 'RUN';
-
+export type RouteShape = {
+  provider: 'openrouteservice';
+  coordinates: LngLat[];
+  distanceMeters: number;
+  calculatedAt: string;
+};
 export interface PatrolPlan {
   kind: typeof PLAN_KIND;
   schemaVersion: typeof PLAN_VERSION;
@@ -20,8 +27,9 @@ export interface PatrolPlan {
   mode: TravelMode;
   speedKmh: number;
   waypoints: LngLat[];
-  /** Travel geometry follows manual waypoints; not a pedestrian routing calculation. */
-  geometryMode: 'MANUAL';
+  waypointLabels: string[];
+  geometryMode: 'MANUAL' | 'ROUTED';
+  route?: RouteShape;
 }
 const deg = Math.PI / 180;
 const rounding = (x: number) => Math.round(x * 1e6) / 1e6;
@@ -48,12 +56,22 @@ export function estimateSeconds(meters: number, kmh: number): number {
 export function blankPlan(): PatrolPlan {
   const now = new Date().toISOString();
   return { kind: PLAN_KIND, schemaVersion: PLAN_VERSION, id: crypto.randomUUID(), title: 'Minha patrulha',
-    createdAt: now, updatedAt: now, mode: 'WALK', speedKmh: 4.5, waypoints: [], geometryMode: 'MANUAL' };
+    createdAt: now, updatedAt: now, mode: 'WALK', speedKmh: 4.5, waypoints: [], waypointLabels: [], geometryMode: 'MANUAL' };
+}
+export function invalidateRoute(plan: PatrolPlan) {
+  plan.geometryMode = 'MANUAL';
+  delete plan.route;
+}
+export function routePoints(plan: PatrolPlan): LngLat[] {
+  return plan.geometryMode === 'ROUTED' && plan.route ? plan.route.coordinates : plan.waypoints;
+}
+export function effectiveMeters(plan: PatrolPlan): number {
+  return plan.geometryMode === 'ROUTED' && plan.route ? plan.route.distanceMeters : totalMeters(plan.waypoints);
 }
 export function parsePlan(data: unknown): PatrolPlan {
   if (!data || typeof data !== 'object' || Array.isArray(data)) throw Error('Arquivo de patrulha inválido.');
   const p = data as Record<string, unknown>;
-  if (p.kind !== PLAN_KIND || p.schemaVersion !== PLAN_VERSION || p.geometryMode !== 'MANUAL')
+  if (p.kind !== PLAN_KIND || (p.schemaVersion !== 1 && p.schemaVersion !== 2))
     throw Error('Formato ou versão de plano não reconhecido.');
   if (typeof p.id !== 'string' || p.id.length > 100 || p.id.length < 8 || !/^[0-9A-Za-z-]+$/.test(p.id))
     throw Error('Identificador de plano inválido.');
@@ -68,9 +86,29 @@ export function parsePlan(data: unknown): PatrolPlan {
     throw Error('Pontos do percurso inválidos ou acima do limite.');
   const waypoints = (p.waypoints as LngLat[]).map(cleanPoint);
   if (totalMeters(waypoints) > MAX_DISTANCE_METERS) throw Error('Rota acima de 100 km. Divida o percurso.');
+  const labels = p.schemaVersion === 2 && Array.isArray(p.waypointLabels) ? p.waypointLabels : [];
+  if (!labels.every(v => typeof v === 'string' && v.length <= 140) || labels.length > waypoints.length)
+    throw Error('Referências de endereço inválidas.');
+  const waypointLabels = waypoints.map((_, i) => (labels[i] ?? '').trim());
+  let route: RouteShape | undefined;
+  if (p.schemaVersion === 1 && p.geometryMode !== 'MANUAL') throw Error('Modo de rota inválido.');
+  if (p.schemaVersion === 2 && p.geometryMode !== 'MANUAL' && p.geometryMode !== 'ROUTED')
+    throw Error('Modo de rota inválido.');
+  if (p.geometryMode === 'ROUTED') {
+    const r = p.route as Record<string, unknown> | undefined;
+    if (!r || r.provider !== 'openrouteservice' || !Array.isArray(r.coordinates) ||
+      r.coordinates.length < 2 || r.coordinates.length > MAX_ROUTE_GEOMETRY_POINTS ||
+      !r.coordinates.every(pointIsValid) || typeof r.distanceMeters !== 'number' ||
+      !Number.isFinite(r.distanceMeters) || r.distanceMeters <= 0 || r.distanceMeters > MAX_DISTANCE_METERS ||
+      typeof r.calculatedAt !== 'string' || Number.isNaN(Date.parse(r.calculatedAt)) || waypoints.length < 2)
+      throw Error('Dados da rota viária inválidos.');
+    route = { provider: 'openrouteservice', coordinates: (r.coordinates as LngLat[]).map(cleanPoint),
+      distanceMeters: Math.round(r.distanceMeters), calculatedAt: new Date(r.calculatedAt).toISOString() };
+  }
   return { kind: PLAN_KIND, schemaVersion: PLAN_VERSION, id: p.id, title: p.title.trim(),
     createdAt: new Date(p.createdAt).toISOString(), updatedAt: new Date(p.updatedAt).toISOString(),
-    mode: p.mode, speedKmh: p.speedKmh, waypoints, geometryMode: 'MANUAL' };
+    mode: p.mode, speedKmh: p.speedKmh, waypoints, waypointLabels,
+    geometryMode: route ? 'ROUTED' : 'MANUAL', ...(route ? { route } : {}) };
 }
 export function xmlEscape(s: string): string {
   return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
@@ -78,7 +116,7 @@ export function xmlEscape(s: string): string {
 }
 export function toGPX(plan: PatrolPlan): string {
   const p = parsePlan(plan);
-  const nodes = p.waypoints.map(([lon, lat]) => `      <trkpt lat="${lat}" lon="${lon}" />`).join('\n');
+  const nodes = routePoints(p).map(([lon, lat]) => `      <trkpt lat="${lat}" lon="${lon}" />`).join('\n');
   return `<?xml version="1.0" encoding="UTF-8"?>\n<gpx version="1.1" creator="Apocalypse Run - Planejador" xmlns="http://www.topografix.com/GPX/1/1">\n  <metadata><name>${xmlEscape(p.title)}</name></metadata>\n  <trk><name>${xmlEscape(p.title)}</name><type>${p.mode === 'RUN' ? 'running' : 'walking'}</type>\n    <trkseg>\n${nodes}\n    </trkseg>\n  </trk>\n</gpx>\n`;
 }
 /** Explicitly simplified Google Maps launch: max 3 intermediate waypoints on mobile browser. */
