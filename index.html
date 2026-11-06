@@ -21,9 +21,15 @@
     .ar-season-archive-link:hover{background:#204132;border-color:#86c69b;color:#f1fff4}
     .ar-season-archive-link:focus-visible{outline:2px solid #b4ffd0;outline-offset:3px}
     .ar-season-archive-link svg{width:15px;height:15px;flex:none}
+    .ar-patrol-entry-link{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:40px;padding:8px 12px;border:1px solid #56866b;border-radius:6px;text-decoration:none;background:#112d21;color:#b5efc7;font:800 10px/1.1 system-ui,Arial,sans-serif;letter-spacing:.45px;white-space:nowrap;transition:background .2s ease}
+    .ar-patrol-entry-link:hover{background:#27513a;color:#effff3}
+    .ar-patrol-entry-link:focus-visible{outline:2px solid #b8ffd2;outline-offset:2px}
+    .ar-patrol-entry-symbol{font-size:19px;line-height:1}
+    @media(max-width:850px){.ar-patrol-entry-label{display:none}.ar-patrol-entry-link{min-height:38px;padding:7px 10px}.ar-patrol-entry-symbol{font-size:22px}}
+    @media(max-width:520px){.header-quicklinks{gap:4px}.header-quicklinks .sync{gap:4px}.header-quicklinks .sync>span:not(.live){display:none}}
     @media(max-width:600px){.beta-invite-entry{right:10px;bottom:10px;padding:11px 13px;gap:8px}.beta-invite-entry strong{font-size:11px}.beta-invite-entry small{display:none}.beta-invite-entry .symbol{font-size:20px}}
-    @media(max-width:420px){.ar-season-archive-link{font-size:9px;padding:9px 10px}}
-    @media(prefers-reduced-motion:reduce){.beta-invite-entry{animation:none;transition:none}.beta-invite-entry:hover{transform:none}.ar-season-archive-link{transition:none}}
+    @media(max-width:420px){.ar-season-archive-link{font-size:9px;padding:9px 10px}.ar-patrol-entry-link{padding:7px;min-width:37px}}
+    @media(prefers-reduced-motion:reduce){.beta-invite-entry{animation:none;transition:none}.beta-invite-entry:hover{transform:none}.ar-season-archive-link,.ar-patrol-entry-link{transition:none}}
   </style>
 </head>
 <body>
@@ -35,6 +41,7 @@
   </a>
   <script type="module" src="/src/main.tsx"></script>
   <script type="module" src="/season-ranking.js"></script>
+  <script type="module" src="/src/patrol-entry.js"></script>
   <script type="module">
 /**
  * Progressive enhancement for the War Room's current-season panel.

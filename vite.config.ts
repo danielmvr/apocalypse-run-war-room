@@ -12,6 +12,7 @@ export default defineConfig({
         beta: resolve(__dirname, 'beta.html'),
         comando: resolve(__dirname, 'comando.html'),
         temporadas: resolve(__dirname, 'temporadas.html'),
+        patrulha: resolve(__dirname, 'patrulha.html'),
       },
     },
   },

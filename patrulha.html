@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c1412">
+  <meta name="description" content="Planeje uma patrulha do Apocalypse Run. Trace pontos no mapa, estime distância e tempo e salve localmente, sem enviar rotas ao servidor do jogo.">
+  <title>Planejador de Patrulha | Apocalypse Run</title>
+</head>
+<body class="patrol-page">
+  <header class="patrol-header">
+    <a class="patrol-logo" href="./" aria-label="Voltar à Sala de Guerra"><span class="patrol-logo-symbol">⬡</span><span><strong>APOCALYPSE RUN</strong><small>PROTOCOLO DE EXPLORAÇÃO / 001</small></span></a>
+    <div class="patrol-nav"><a href="./">← Sala de Guerra</a><a href="./guia.html" target="_blank" rel="noopener noreferrer">Guia de Campo ↗</a></div>
+  </header>
+  <main class="patrol-shell">
+    <section class="patrol-hero">
+      <div class="patrol-eyebrow">ESTAÇÃO TÁTICA / PLANEJAMENTO LOCAL</div>
+      <h1>PREPARE SUA <span>PATRULHA.</span></h1>
+      <p>Marque os pontos do percurso, estime distância e duração e leve o plano com você. Seu caminho fica no seu dispositivo, não no banco de dados do jogo.</p>
+    </section>
+    <div class="patrol-workspace">
+      <section class="patrol-map-panel" aria-labelledby="map-heading">
+        <div class="patrol-panel-head"><div><span class="patrol-overline">01 / TRAÇADO</span><h2 id="map-heading">Mapa da operação</h2></div><span class="patrol-mode-pill">DESENHO MANUAL</span></div>
+        <div class="patrol-map-frame"><div id="patrol-map" role="application" aria-label="Mapa interativo para adicionar pontos de patrulha"></div>
+          <div id="map-fallback" class="map-fallback" hidden>O mapa não carregou. Confira sua conexão; os dados já salvos continuam neste dispositivo.</div>
+          <div class="patrol-map-hint">Clique ou toque no mapa para adicionar pontos • rota por segmentos</div>
+        </div>
+        <div class="patrol-map-tools">
+          <button type="button" id="locate" class="patrol-btn minor">◎ Minha localização</button>
+          <button type="button" id="undo" class="patrol-btn minor">↶ Desfazer ponto</button>
+          <button type="button" id="reverse" class="patrol-btn minor">⇄ Inverter</button>
+          <button type="button" id="close-loop" class="patrol-btn minor">⟳ Fechar circuito</button>
+          <button type="button" id="fit-route" class="patrol-btn minor">⌗ Enquadrar</button>
+        </div>
+        <p class="patrol-caution">O traçado conecta pontos diretamente. Ele <strong>não calcula ruas, travessias, segurança ou aclives</strong>. Para um itinerário de pedestre pelas vias, use a opção Google Maps.</p>
+      </section>
+      <aside class="patrol-editor" aria-label="Configurar e salvar patrulha">
+        <section class="patrol-card">
+          <span class="patrol-overline">02 / CONFIGURAÇÃO</span><h2>Seu plano</h2>
+          <label class="patrol-label" for="plan-title">Nome da patrulha</label>
+          <input id="plan-title" maxlength="60" placeholder="Ex.: Circuito da Rodoviária" value="Minha patrulha">
+          <div class="patrol-two-fields">
+            <div><label class="patrol-label" for="plan-mode">Modalidade</label><select id="plan-mode"><option value="WALK">Caminhada</option><option value="RUN">Corrida</option></select></div>
+            <div><label class="patrol-label" for="plan-speed">Ritmo estimado</label><div class="patrol-speed-box"><strong id="speed-number">4,5</strong><small>km/h</small></div></div>
+          </div>
+          <input id="plan-speed" type="range" min="2" max="8.5" step="0.5" value="4.5" aria-label="Velocidade média estimada em quilômetros por hora">
+          <div class="patrol-range-label"><span>2 km/h</span><span>8,5 km/h</span></div>
+          <div class="patrol-metrics" aria-label="Estimativas do percurso">
+            <div><small>DISTÂNCIA TRAÇADA</small><strong id="distance">0 m</strong></div>
+            <div><small>DURAÇÃO ESTIMADA</small><strong id="duration">0 min</strong></div>
+            <div><small>PONTOS DA ROTA</small><strong id="waypoints-count">0</strong></div>
+            <div><small>RITMO MÉDIO</small><strong id="pace">--</strong></div>
+          </div>
+          <div class="patrol-point-head"><h3>Pontos do percurso</h3><button type="button" id="clear-route" class="patrol-text-danger">Limpar pontos</button></div>
+          <ol id="waypoints" class="patrol-waypoints"><li class="patrol-empty">Adicione o início tocando no mapa.</li></ol>
+          <button type="button" class="patrol-btn primary wide" id="save-plan">⬡ Salvar neste dispositivo</button>
+          <p class="patrol-subnote" id="storage-note">Os planos não são sincronizados entre aparelhos. Faça exportação para ter uma cópia.</p>
+        </section>
+        <section class="patrol-card">
+          <span class="patrol-overline">03 / LEVE COM VOCÊ</span><h2>Exportar e compartilhar</h2>
+          <div class="patrol-actions">
+            <button type="button" class="patrol-btn minor" id="export-json">↓ Plano JSON</button>
+            <button type="button" class="patrol-btn minor" id="export-gpx">↓ Trilha GPX</button>
+            <button type="button" class="patrol-btn minor" id="share-plan">↗ Compartilhar</button>
+            <button type="button" class="patrol-btn minor" id="open-google">↗ Conferir nas ruas</button>
+          </div>
+          <p class="patrol-subnote">O JSON já usa o contrato planejado para o app. Compartilhamento só entrega o arquivo; a importação dentro do Android será implementada depois.</p>
+          <label for="import-plan" class="patrol-import-label">↑ Importar plano JSON</label>
+          <input type="file" accept=".json,.arpatrol.json,application/json" id="import-plan" class="patrol-visually-hidden">
+        </section>
+        <section class="patrol-card">
+          <div class="patrol-saved-head"><div><span class="patrol-overline">04 / ARQUIVO LOCAL</span><h2>Planos salvos</h2></div><button type="button" id="new-plan" class="patrol-btn minor">+ Novo</button></div>
+          <div id="saved-plans" class="patrol-saved-plans"><p class="patrol-empty">Nenhuma patrulha salva neste navegador.</p></div>
+          <small class="patrol-subnote">Até 20 planos guardados localmente. Limpar dados do navegador pode apagar tudo.</small>
+        </section>
+      </aside>
+    </div>
+    <section class="patrol-fineprint"><strong>Planejar não é patrulhar.</strong> A distância oficial do Apocalypse Run depende do GPS real e das regras antifraude do app; a estimativa deste site não concede XP, energia ou território. O limite de recompensa por patrulha continua independente do planejamento.</section>
+  </main>
+  <footer class="patrol-footer">APOCALYPSE RUN / SALA DE PLANEJAMENTO <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">Dados cartográficos: © OpenStreetMap contributors</a><span>SEM SINCRONIZAÇÃO COM O SERVIDOR DO JOGO</span></footer>
+  <div id="patrol-toast" class="patrol-toast" role="status" aria-live="polite" hidden></div>
+  <script type="module" src="/src/patrulha.ts"></script>
+</body>
+</html>
