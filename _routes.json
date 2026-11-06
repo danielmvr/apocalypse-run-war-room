@@ -1,0 +1,5 @@
+{
+  "version": 1,
+  "include": ["/api/patrol-geocode", "/api/patrol-route"],
+  "exclude": []
+}
