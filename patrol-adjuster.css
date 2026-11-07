@@ -1,0 +1,19 @@
+/* Apocalypse Run | manual address refinement (independent module) */
+.patrol-waypoints li .ar-adjust-point-button{flex:none;min-width:69px;min-height:30px;padding:5px 8px;background:#254c35;border:1px solid #72bd86;color:#d3ffe0;border-radius:6px;font-size:10px;font-weight:700;white-space:nowrap;cursor:pointer}
+.patrol-waypoints li .ar-adjust-point-button:hover{background:#346347}
+.patrol-waypoints li .ar-adjust-point-button:focus-visible{outline:2px solid #9cf5b2;outline-offset:2px}
+#ar-adjust-dialog{width:min(700px,94vw);max-height:94dvh;margin:auto;padding:0;border:1px solid #75b98c;border-radius:12px;background:#0e1e18;color:#e3f7e9;box-shadow:0 20px 95px #000d;overflow:auto}
+#ar-adjust-dialog::backdrop{background:#000c;backdrop-filter:blur(4px)}
+.ar-adjust-panel{padding:17px}.ar-adjust-header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.ar-adjust-header h2{font:800 25px/1.15 'Barlow Condensed',Impact,system-ui,sans-serif;margin:4px 0 9px;color:#baf5cc}
+.ar-adjust-close{border:1px solid #6d9379;background:#152b20;color:#baf5cc;border-radius:7px;width:38px;height:38px;font-size:23px;cursor:pointer}
+.ar-adjust-description{margin:5px 0 14px;font-size:12px;line-height:1.7;color:#c2dac9}
+#ar-adjust-map{width:100%;height:clamp(290px,48vh,470px);border:1px solid #446b51;border-radius:8px;overflow:hidden;background:#15251f}
+.ar-adjust-coords{font-size:12px;font-variant-numeric:tabular-nums;color:#a1cfae;margin:11px 0 15px}
+.ar-adjust-actions{display:flex;justify-content:flex-end;flex-wrap:wrap;gap:8px}
+.ar-adjust-actions button{border-radius:7px;border:1px solid #567d62;padding:11px 15px;font:700 12px/1.25 system-ui,sans-serif;min-height:44px;cursor:pointer}
+.ar-adjust-cancel{background:#24372a;color:#d7ede0}.ar-adjust-save{background:#a5edbc;color:#103021;border-color:#bcf5cb!important}
+.ar-adjust-actions button:focus-visible{outline:2px solid white;outline-offset:2px}
+.ar-geocode-attribution a{color:#a3f4c6}
+@media(max-width:650px){#ar-adjust-dialog{width:97vw;max-height:95dvh}.ar-adjust-panel{padding:10px}.ar-adjust-header h2{font-size:21px}.ar-adjust-description{font-size:11px}#ar-adjust-map{height:47dvh}.patrol-waypoints li .ar-adjust-point-button{min-width:58px;padding:4px;font-size:9px}}
+@media(prefers-reduced-motion:reduce){#ar-adjust-dialog *,#ar-adjust-dialog *::before{animation:none!important;transition:none!important}}
