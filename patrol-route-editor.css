@@ -1,0 +1,25 @@
+/* Apocalypse Run 2.3 | user-defined pedestrian route corrections */
+#ar-route-edit-button{border:1px solid #efb86a;color:#ffe5b2;background:#2e2a1c}
+#ar-route-edit-button:hover{background:#433621}
+#ar-route-edit-button:focus-visible{outline:2px solid #ffd38f;outline-offset:2px}
+#ar-route-edit-dialog{box-sizing:border-box;width:min(730px,96vw);max-height:95dvh;margin:auto;padding:0;
+  border:1px solid #7fae8d;border-radius:13px;background:#0d201a;color:#e3f7e9;
+  box-shadow:0 24px 100px #000c;overflow:auto}
+#ar-route-edit-dialog::backdrop{background:#000c;backdrop-filter:blur(3px)}
+.ar-route-edit-panel{padding:18px}.ar-route-edit-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.ar-route-edit-head h2{font:800 26px/1.15 'Barlow Condensed',Impact,system-ui,sans-serif;color:#baf5cc;margin:5px 0 12px}
+.ar-route-edit-close{width:40px;height:40px;border-radius:8px;border:1px solid #5a9875;background:#143128;color:#daffe7;font-size:25px;cursor:pointer}
+.ar-route-edit-explain,.ar-route-edit-note{color:#c3d9c7;font:400 13px/1.65 system-ui,sans-serif;margin:0 0 13px}
+.ar-route-edit-label{font:700 12px system-ui,sans-serif;color:#aaf4c4;display:block;margin-bottom:6px}
+#ar-route-edit-segment{width:100%;min-height:44px;padding:9px 10px;margin-bottom:12px;
+  border:1px solid #607d6e;border-radius:7px;background:#13271e;color:#e5f7e9;font:600 12px system-ui,sans-serif}
+#ar-route-edit-map{height:clamp(300px,48vh,485px);width:100%;border:1px solid #526b5b;border-radius:9px;overflow:hidden;background:#101b17}
+.ar-route-edit-coords{font:600 12px/1.5 system-ui,sans-serif;color:#ffc987;margin:11px 0;font-variant-numeric:tabular-nums}
+.ar-route-edit-note{border-left:3px solid #e5b974;padding-left:11px}
+.ar-route-edit-actions{display:flex;flex-wrap:wrap;gap:9px;justify-content:flex-end;margin-top:12px}
+.ar-route-edit-actions button{min-height:44px;border-radius:7px;padding:10px 15px;font:700 12px system-ui,sans-serif;cursor:pointer}
+.ar-route-edit-cancel{background:#25392e;color:#def7e8;border:1px solid #789082}
+.ar-route-edit-confirm{background:#abf2c3;color:#0c2c19;border:1px solid #d4ffe3}
+.ar-route-edit-actions button:focus-visible,.ar-route-edit-close:focus-visible{outline:2px solid #fefef1;outline-offset:2px}
+@media(max-width:650px){.ar-route-edit-panel{padding:11px}.ar-route-edit-head h2{font-size:22px}#ar-route-edit-map{height:44dvh}.ar-route-edit-explain,.ar-route-edit-note{font-size:12px}}
+@media(prefers-reduced-motion:reduce){#ar-route-edit-dialog *,#ar-route-edit-dialog *::before{animation:none!important;transition:none!important}}
